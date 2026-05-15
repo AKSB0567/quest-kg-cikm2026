@@ -1,0 +1,74 @@
+# ===== Core =====
+numpy>=1.24,<2.0
+scipy>=1.10
+pandas>=2.0
+scikit-learn>=1.3
+tqdm>=4.65
+pyyaml>=6.0
+omegaconf>=2.3
+
+# ===== Deep learning (CUDA 12.6 wheels) =====
+# NOTE: install torch first matching your CUDA version, then the rest.
+# torch==2.4.* with cu126 wheels:
+#   pip install torch==2.4.* --index-url https://download.pytorch.org/whl/cu126
+torch>=2.4,<2.6
+torchvision
+torchaudio
+
+# ===== GNN / graph =====
+torch-geometric>=2.5
+torch-scatter
+torch-sparse
+networkx>=3.1
+
+# ===== Retrieval / embeddings =====
+faiss-gpu-cu12>=1.8 ; sys_platform != "win32"
+faiss-cpu>=1.8 ; sys_platform == "win32"
+sentence-transformers>=2.7
+
+# ===== LLM inference / training =====
+transformers>=4.44
+accelerate>=0.33
+bitsandbytes>=0.43
+peft>=0.12
+trl>=0.9
+datasets>=2.20
+huggingface-hub>=0.24
+tokenizers>=0.19
+einops
+
+# Quantization (AWQ 4-bit)
+autoawq>=0.2.6
+
+# Fast batched inference (Colab)
+# vllm requires Linux for full features; on Windows use transformers directly
+vllm>=0.5.0 ; sys_platform != "win32"
+
+# ===== KG storage / ontology =====
+neo4j>=5.20
+rdflib>=7.0
+owlready2>=0.46
+
+# ===== Calibration / uncertainty =====
+netcal>=1.3
+torchmetrics>=1.4
+
+# ===== Plotting / figures =====
+matplotlib>=3.7
+seaborn>=0.13
+plotly>=5.20
+
+# ===== Bayesian / posterior =====
+pgmpy>=0.1.25
+pomegranate>=1.0
+
+# ===== Datasets-specific helpers =====
+gdown>=5.2
+requests>=2.31
+
+# ===== Dev =====
+pytest>=8.0
+black>=24.0
+ruff>=0.5
+ipykernel>=6.29
+jupyterlab>=4.2

@@ -1,0 +1,134 @@
+# ============================================================
+# Claude Code / agent working files (you asked these to be gitignored)
+# ============================================================
+.claude/
+.claude_*
+**/.claude/
+*claude*.log
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# ============================================================
+# Notebooks
+# ============================================================
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# ============================================================
+# Data, models, checkpoints (kept in Drive, not git)
+# ============================================================
+data/raw/
+data/processed/
+data/*.zip
+data/*.tar.gz
+data/*.gz
+models/
+weights/
+checkpoints/
+ckpts/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.gguf
+*.awq
+
+# ============================================================
+# Experiment outputs
+# ============================================================
+results/
+logs/
+runs/
+wandb/
+mlruns/
+outputs/
+artifacts/
+figures/*.pdf
+figures/*.png
+!figures/*.tex
+!figures/architecture/*.pdf
+
+# ============================================================
+# Secrets / credentials
+# ============================================================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+credentials.json
+token.json
+gdrive_credentials.json
+hf_token.txt
+openai_key.txt
+anthropic_key.txt
+.huggingface/
+.cache/huggingface/
+
+# ============================================================
+# IDE / OS
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# LaTeX / paper build artifacts
+# ============================================================
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+paper/_build/
+
+# ============================================================
+# Misc
+# ============================================================
+*.tmp
+*.bak
+*.orig
+node_modules/

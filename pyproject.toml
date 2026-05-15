@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quest_kg"
+version = "0.1.0"
+description = "QUEST-KG: Evidence-aware uncertainty-calibrated Graph-RAG (CIKM 2026)"
+requires-python = ">=3.10"
+authors = [{ name = "Anonymous" }]
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["quest_kg*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
