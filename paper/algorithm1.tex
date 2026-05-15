@@ -1,0 +1,68 @@
+% Algorithm 1: QUEST-KG inference pipeline.
+% Drop-in LaTeX. Requires algorithm + algpseudocode packages.
+
+\begin{algorithm}[t]
+\caption{QUEST-KG inference for a single query}
+\label{alg:quest-kg}
+\begin{algorithmic}[1]
+\Require Query $q$; global KG $\mathcal{G}=(V,E,R,\Pi)$;
+         encoder $\textsc{Enc}$; hops $k$; top-$K$;
+         learned $(\gamma_1,\gamma_2,\gamma_3,\gamma_4)$, $\{W_r\}$, $\{w_r^{\textsf{pos}},w_r^{\textsf{neg}}\}$;
+         abstention thresholds $p^\star, H^\star$.
+\Ensure Prediction $\hat{y}$ or \textsc{Abstain};
+        retrieved subgraph $\mathcal{G}_q$; per-node $(b_i,u_i)$; top path $\pi^\star$.
+
+\Statex \textbf{Stage 1: Schema-aware retrieval}
+\State $\mathbf{q}_{\text{emb}} \gets \textsc{Enc}(q)$
+\State $A \gets \textsc{TopK-Anchors}(\mathbf{q}_{\text{emb}}, V; K)$ \Comment{ontology-type filtered}
+\State $\mathcal{F}_0 \gets A$;\quad $V_q \gets A$;\quad $E_q \gets \emptyset$
+\For{$h = 1 \ldots k$}
+  \State $\mathcal{F}_h \gets \emptyset$
+  \For{each $v_i \in \mathcal{F}_{h-1}$}
+    \For{each candidate edge $(v_i, r, v_j)$ in $\mathcal{G}$}
+      \State $s^{\text{sem}}_{ij} \gets \cos(\mathbf{q}_{\text{emb}}, \textsc{Enc}(\langle v_i, r, v_j \rangle))$
+      \State $s^{\text{prov}}_{ij} \gets \sigma(\alpha\,\pi_t.\text{conf} + \beta\,\pi_t.\text{trust} - \gamma\,\textsc{Decay}(\pi_t.\text{age}))$
+      \State $s^{\text{schema}}_{ij} \gets \mathbb{1}[\text{type}(v_i, r, v_j) \in \text{schema}]$
+      \State $\text{EdgeScore} \gets \gamma_1 s^{\text{sem}}_{ij} + \gamma_2 s^{\text{prov}}_{ij} + \gamma_3 s^{\text{schema}}_{ij}$
+      \If{EdgeScore $\geq \varepsilon_{\text{keep}}$}
+         \State $E_q \gets E_q \cup \{(v_i, r, v_j)\}$;\quad $V_q \gets V_q \cup \{v_j\}$
+         \State add $v_j$ to $\mathcal{F}_h$
+      \EndIf
+    \EndFor
+  \EndFor
+\EndFor
+\State $\mathcal{G}_q \gets (V_q, E_q, R_q)$
+
+\Statex \textbf{Stage 2: Evidential message passing}
+\For{each $v_i \in V_q$}
+  \State $(\alpha_i^{\text{pos}}, \alpha_i^{\text{neg}}) \gets$
+         \Call{InitDirichlet}{$v_i, q$}  \Comment{anchors: $(1{+}\kappa s^{\text{sem}}, 1)$; else $(1,1)$}
+\EndFor
+\For{$t = 1 \ldots k$}
+  \For{each $v_i \in V_q$}
+    \State compute $\varphi_{ij}$ for each neighbor $j$:
+           $\varphi_{ij} = \gamma_1 s^{\text{sem}}_{ji} + \gamma_2 s^{\text{prov}}_{ji} + \gamma_3 s^{\text{schema}}_{ji} - \gamma_4 u_j$
+    \State $\alpha_{ij} \gets \softmax_j(\varphi_{ij})$
+    \State $\Delta\alpha_i^{\text{pos}} \gets \sum_j \alpha_{ij}\,b_j\,w_r^{\text{pos}}$;\quad
+           $\Delta\alpha_i^{\text{neg}} \gets \sum_j \alpha_{ij}\,(1{-}b_j)\,w_r^{\text{neg}}$
+    \State update $(\alpha_i^{\text{pos}}, \alpha_i^{\text{neg}})$
+  \EndFor
+\EndFor
+\State $b_i \gets \alpha_i^{\text{pos}} / (\alpha_i^{\text{pos}} + \alpha_i^{\text{neg}} + 2)$;\quad
+       $u_i \gets 2 / (\alpha_i^{\text{pos}} + \alpha_i^{\text{neg}} + 2)$
+
+\Statex \textbf{Stage 3: Neuro-symbolic path scoring + abstention}
+\State $\Pi_q \gets$ \Call{EnumeratePaths}{$\mathcal{G}_q$, anchors, length $\leq k$}
+\State $\Pi_q^{\text{valid}} \gets \{\pi \in \Pi_q : \delta(\pi) = 0\}$
+       \Comment{$\delta$ = symbolic-constraint violation}
+\State $S(\pi) \gets \exp\big(\sum_{(i,j)\in\pi}\log\alpha_{ij} + \log w_r + \sum_{v_i \in \pi}\log b_i\big)$
+\State $Z \gets \sum_{\pi \in \Pi_q^{\text{valid}}} S(\pi)$;\quad $M_q \gets Z / \sum_{\pi \in \Pi_q} S(\pi)$
+\State $H_q \gets -\sum_a P(a|\mathcal{G}_q)\log P(a|\mathcal{G}_q)$
+\If{$M_q < p^\star$ \textbf{or} $H_q > H^\star$}
+  \State \Return \textsc{Abstain}
+\Else
+  \State $\pi^\star \gets \argmax_{\pi \in \Pi_q^{\text{valid}}} S(\pi)$;\quad $\hat{y} \gets \text{tail}(\pi^\star)$
+  \State \Return $\hat{y}, \mathcal{G}_q, \{(b_i, u_i)\}, \pi^\star$
+\EndIf
+\end{algorithmic}
+\end{algorithm}

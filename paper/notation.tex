@@ -1,0 +1,48 @@
+% Notation table for §3 of QUEST-KG.
+% Drop-in LaTeX.
+
+\begin{table}[t]
+\centering
+\caption{Notation used throughout the methodology section.}
+\label{tab:notation}
+\small
+\begin{tabular}{@{}p{0.18\linewidth}p{0.74\linewidth}@{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} \\
+\midrule
+$q$                 & input query (natural language) \\
+$\mathcal{G}=(V,E,R,\Pi)$ & global KG: entities $V$, edges $E$, relations $R$, provenance index $\Pi$ \\
+$\mathcal{G}_q=(V_q,E_q,R_q)$ & query-specific retrieved subgraph \\
+$t = (s,r,o)$       & triple (subject, relation, object) \\
+$\pi_t \in \Pi$     & provenance record for $t$: $\{$source\_id, extraction\_conf, edit\_age, source\_trust$\}$ \\
+$\mathbf{q}_{\text{emb}} \in \mathbb{R}^d$ & query embedding ($d=768$ default) \\
+$\mathbf{v}_i \in \mathbb{R}^d$    & entity embedding for $v_i$ \\
+$\mathbf{h}_i \in \mathbb{R}^d$    & node representation at MP iteration $t$ \\
+$b_i \in [0,1]$     & evidential belief at $v_i$ (Dirichlet expected probability) \\
+$u_i \in [0,1]$     & evidential uncertainty at $v_i$ (Dirichlet vacuity) \\
+$\alpha_i^{\text{pos}}, \alpha_i^{\text{neg}}$ & Dirichlet pseudo-counts at $v_i$ \\
+$s^{\text{sem}}_{ij}$    & semantic similarity score for edge $(v_i, r, v_j)$ \\
+$s^{\text{prov}}_{ij}$   & provenance reliability score \\
+$s^{\text{schema}}_{ij}$ & schema-consistency indicator $\in \{0,1\}$ \\
+$\varphi_{ij}$      & unnormalized attention logit for edge $(j{\rightarrow}i)$ \\
+$\alpha_{ij}$       & normalized attention weight, $\alpha_{ij}=\softmax_j(\varphi_{ij})$ \\
+$W_r$               & relation-specific transformation, $\mathbb{R}^{d\times d}$ \\
+$\gamma_1,\dots,\gamma_4$ & learned attention component weights, $\sum_k\gamma_k=1, \gamma_k\geq0$ \\
+$w_r^{\text{pos}}, w_r^{\text{neg}}$ & learned per-relation propagation scalars \\
+$k$                 & retrieval hop budget (default 2; swept) \\
+$K$                 & top-K candidates retained per hop (default 32) \\
+$\varepsilon_{\text{keep}}$ & edge-keep threshold during expansion (default 0.05) \\
+$\kappa$            & anchor prior boost (default 4) \\
+$\tau_{\text{decay}}$ & provenance recency decay constant (default 365 days) \\
+$(\alpha,\beta,\gamma)$ & provenance score weights, fixed $(1.0, 0.7, 0.3)$ \\
+$\delta(\pi)$       & symbolic-constraint violation indicator for path $\pi$ \\
+$S(\pi)$            & composite path score \\
+$\Pi_q$             & candidate reasoning paths for query $q$ \\
+$M_q$               & retained posterior mass after $\delta$ filtering \\
+$H_q$               & posterior entropy over candidate answers \\
+$p^\star$           & posterior-mass admission threshold (default 0.05) \\
+$H^\star$           & entropy threshold for abstention (default 0.6 bits) \\
+$\lambda_1, \lambda_2$ & training-loss weights (defaults 0.1, 0.5) \\
+\bottomrule
+\end{tabular}
+\end{table}
