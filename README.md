@@ -24,11 +24,10 @@ scripts/
 └── quantize/             4-bit AWQ quantization for 7-8B LLMs
 
 notebooks/
-├── 00_setup.ipynb              Colab: mount Drive, clone repo, install
-├── 01_download_data.ipynb      Colab: download all data → Drive
-├── 02_quantize_models.ipynb    Colab: quantize all LLMs → Drive
-├── 03_smoke_test.ipynb         Colab: end-to-end smoke test
-└── template_resumable.ipynb    Template for checkpoint-resumable Colab experiments
+├── setup_all.ipynb            One-shot: mount Drive + clone + install + HF login +
+│                              download data + quantize 4 LLMs + smoke test.
+│                              Fully idempotent. Re-runs skip everything already done.
+└── template_resumable.ipynb   Template for checkpoint-resumable experiment notebooks
 
 baselines/                Per-baseline reproduction harnesses
 configs/                  Hyperparameters
@@ -75,9 +74,8 @@ tests/                    Unit tests
    ```
    pip install -r requirements.txt
    ```
-3. In Colab Pro: open `notebooks/00_setup.ipynb` and follow the cells. It will mount Drive, clone this repo, install deps, and verify GPU.
-4. Run `notebooks/01_download_data.ipynb` to populate Drive with all datasets.
-5. Run `notebooks/02_quantize_models.ipynb` to populate Drive with 4-bit AWQ models.
+3. In Colab Pro: open `notebooks/setup_all.ipynb` and Run All. It performs every setup step in sequence: mount Drive, clone repo, install deps, verify CUDA, HF login, download all 5 datasets, quantize all 4 LLMs to 4-bit AWQ, smoke-test models, print summary. Every step is idempotent — re-running skips anything already done (via `.done` markers).
+4. Optional: prep secrets for less friction. In Colab's secret manager (key icon in left sidebar), add `HF_TOKEN` (HuggingFace read token) and optionally `GH_TOKEN` (if the repo is private).
 
 ## Sprint timeline
 
