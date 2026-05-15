@@ -13,12 +13,12 @@ import tarfile
 from pathlib import Path
 from urllib.parse import urlparse
 
-import requests
-from tqdm import tqdm
-
 
 def download_file(url: str, dest: str | os.PathLike, chunk: int = 1 << 20, resume: bool = True) -> Path:
     """Stream a URL to disk with progress bar; resume if partial file exists."""
+    import requests  # lazy import so synthetic-only paths don't require it
+    from tqdm import tqdm
+
     dest = Path(dest)
     dest.parent.mkdir(parents=True, exist_ok=True)
     headers = {}

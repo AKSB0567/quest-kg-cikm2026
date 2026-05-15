@@ -110,15 +110,62 @@ def generate(seed: int, n_users: int, n_resources: int, n_policies: int,
                 return True
         return False
 
-    # Generate queries
+    # Build a fast index for stratified sampling: for each (t, role) -> set of users with that role
+    user_role_events = [e for e in events if e.r == "has_role"]
+    revoked_role_events = [e for e in events if e.r == "revoked_at"]
+
+    def positive_candidates(t_q: int) -> list[tuple[str, str]]:
+        """Return (user, resource) pairs that should evaluate to ACCESS at time t_q."""
+        # Roles each user has at t_q (minus revoked)
+        user_roles_at_t: dict[str, set[str]] = {}
+        for e in user_role_events:
+            if e.t <= t_q:
+                user_roles_at_t.setdefault(e.s, set()).add(e.o)
+        revoked_roles = {e.s for e in revoked_role_events if e.t <= t_q}
+        for u, rs in user_roles_at_t.items():
+            user_roles_at_t[u] = rs - revoked_roles
+        # Resources granted to those roles, governed by policies valid in active ctx
+        active_ctx = ctx_schedule[t_q - 1]
+        valid_policies = {tr.s for tr in triples if tr.r == "valid_in" and tr.o == active_ctx}
+        valid_resources = {
+            tr.s for tr in triples
+            if tr.r == "governed_by" and tr.o in valid_policies
+        }
+        grants_by_role: dict[str, set[str]] = {}
+        for tr in triples:
+            if tr.r == "grants" and tr.o in valid_resources:
+                grants_by_role.setdefault(tr.s, set()).add(tr.o)
+        out = []
+        for u, rs in user_roles_at_t.items():
+            for role in rs:
+                for res in grants_by_role.get(role, set()):
+                    out.append((u, res))
+        return out
+
+    # Generate queries with stratified sampling: target ~50% positives
     queries = []
-    for i in range(n_queries):
-        u = rng.choice(users)
-        res = rng.choice(resources)
+    target_pos = n_queries // 2
+    n_pos = 0
+    attempts = 0
+    while len(queries) < n_queries and attempts < n_queries * 20:
+        attempts += 1
         t_q = rng.randint(50, T_horizon)
-        label = can_access(u, res, t_q)
+        if n_pos < target_pos:
+            # Try to sample a positive
+            cands = positive_candidates(t_q)
+            if cands:
+                u, res = rng.choice(cands)
+                label = True
+                n_pos += 1
+            else:
+                u, res = rng.choice(users), rng.choice(resources)
+                label = can_access(u, res, t_q)
+        else:
+            # Sample random (likely negative)
+            u, res = rng.choice(users), rng.choice(resources)
+            label = can_access(u, res, t_q)
         queries.append({
-            "qid": i,
+            "qid": len(queries),
             "user": u,
             "resource": res,
             "timestamp": t_q,
@@ -126,6 +173,9 @@ def generate(seed: int, n_users: int, n_resources: int, n_policies: int,
             "label": 1 if label else 0,
             "question": f"At time {t_q} in context {ctx_schedule[t_q - 1]}, can {u} access {res}?",
         })
+    rng.shuffle(queries)
+    for i, q in enumerate(queries):
+        q["qid"] = i
 
     return {
         "triples": [asdict(t) for t in triples],
