@@ -33,7 +33,7 @@ from pathlib import Path
 # Map shortnames to (HF base id, pre-quantized AWQ id or None, is_gated)
 MODEL_REGISTRY: dict[str, tuple[str, str | None, bool]] = {
     # Non-gated (default)
-    "qwen25-3b":   ("Qwen/Qwen2.5-3B-Instruct",            None,                                     False),
+    "qwen25-3b":   ("Qwen/Qwen2.5-3B-Instruct",            "Qwen/Qwen2.5-3B-Instruct-AWQ",           False),
     "mistral-7b":  ("mistralai/Mistral-7B-Instruct-v0.2",  "TheBloke/Mistral-7B-Instruct-v0.2-AWQ",  False),
     "qwen25-7b":   ("Qwen/Qwen2.5-7B-Instruct",            "Qwen/Qwen2.5-7B-Instruct-AWQ",           False),
 
