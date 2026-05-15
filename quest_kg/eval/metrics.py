@@ -52,7 +52,9 @@ def aurc(confidences: np.ndarray, correct: np.ndarray) -> float:
     order = np.argsort(-confidences)
     risks = (1 - correct[order]).cumsum() / (np.arange(len(order)) + 1)
     coverages = (np.arange(len(order)) + 1) / len(order)
-    return float(np.trapz(risks, coverages))
+    # np.trapezoid in NumPy >= 2.0, np.trapz in older versions
+    trapezoid = getattr(np, "trapezoid", None) or np.trapz  # type: ignore[attr-defined]
+    return float(trapezoid(risks, coverages))
 
 
 def hits_at_k(scores: np.ndarray, gold_idx: np.ndarray, k: int) -> float:
