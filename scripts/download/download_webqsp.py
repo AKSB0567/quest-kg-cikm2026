@@ -1,8 +1,7 @@
-"""Download WebQSP (WebQuestionsSP, Microsoft).
+"""Download WebQSP (Microsoft) via HuggingFace datasets library.
 
-Public mirrors of WebQSP are widely available via huggingface datasets and
-direct mirrors. We try the rmanluo mirror that packages the full v1 release
-with Freebase subgraph dumps as used by RoG/ToG papers.
+The `rmanluo/RoG-webqsp` HF dataset packages WebQSP with Freebase subgraphs
+in the format used by RoG/ToG/GraphRAG papers.
 
 Usage:
     python -m scripts.download.download_webqsp --root /content/drive/MyDrive/quest_kg/data
@@ -10,42 +9,48 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import subprocess
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from scripts.download.common import download_file, extract, have_marker, safe_target, write_marker
+from scripts.download.common import have_marker, safe_target, write_marker
 
 
-URLS = [
-    # rmanluo's mirror used by recent KGQA papers (RoG, ToG)
-    "https://huggingface.co/datasets/rmanluo/RoG-webqsp/resolve/main/data.zip",
-    # raw v1 from Microsoft (license-gated; manual fallback)
+HF_CANDIDATES = [
+    "rmanluo/RoG-webqsp",
+    "rmanluo/WebQuestionsSP",
 ]
 
 
 def main(root: str) -> None:
     name = "webqsp"
     if have_marker(root, name):
-        print(f"[webqsp] already present at {root}/raw/{name}; skipping.")
+        print(f"[webqsp] already present; skipping.")
         return
     out = safe_target(root, name)
-    archive = out / "webqsp.zip"
+
+    try:
+        from datasets import load_dataset
+    except ImportError:
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "datasets"], check=True)
+        from datasets import load_dataset
+
     last_err = None
-    for url in URLS:
+    for repo_id in HF_CANDIDATES:
         try:
-            download_file(url, archive)
-            extract(archive, out)
+            ds = load_dataset(repo_id, cache_dir=str(out / "_cache"))
+            ds.save_to_disk(str(out / "dataset"))
             write_marker(root, name)
-            print(f"[webqsp] OK -> {out}")
+            print(f"[webqsp] OK via {repo_id} -> {out}")
             return
         except Exception as e:
-            print(f"[webqsp] failed from {url}: {e}")
+            print(f"[webqsp] {repo_id} failed: {e}")
             last_err = e
+
     raise RuntimeError(
-        f"WebQSP download failed: {last_err}\n"
-        "Manual fallback: download https://www.microsoft.com/en-us/download/details.aspx?id=52763 "
-        "and place the unpacked files under data/raw/webqsp/."
+        f"WebQSP download failed via HF: {last_err}\n"
+        "Manual fallback: https://www.microsoft.com/en-us/download/details.aspx?id=52763"
     )
 
 

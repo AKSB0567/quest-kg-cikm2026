@@ -20,7 +20,7 @@ quest_kg/                 Core package
 └── utils/                Shared utilities incl. Colab checkpoint helpers
 
 scripts/
-├── download/             Dataset download scripts (DWY100K, WebQSP, CWQ, ICEWS18, OrgAccess)
+├── download/             Dataset download scripts (DBP15K, WebQSP, CWQ, ICEWS18, OrgAccess)
 └── quantize/             4-bit AWQ quantization for 7-8B LLMs
 
 notebooks/
@@ -46,8 +46,7 @@ tests/                    Unit tests
 
 | Dataset | Task | Source |
 |---|---|---|
-| DWY100K | Entity alignment (DBpedia/Wikidata/YAGO) | OpenEA |
-| IDS100K | Cross-lingual entity alignment | OpenEA |
+| DBP15K (zh_en, ja_en, fr_en) | Cross-lingual entity alignment between DBpedia editions | HF mirrors / JAPE |
 | WebQSP | Multi-hop QA over Freebase | Microsoft |
 | ComplexWebQuestions (CWQ) | Compositional multi-hop QA | TAU-NLP |
 | ICEWS18 | Temporal event reasoning | RE-Net / TKG-Benchmark |
@@ -55,13 +54,15 @@ tests/                    Unit tests
 
 ## LLM backbones
 
-| Model | Use | Storage |
-|---|---|---|
-| LLaMA-3.1-8B-QLoRA (from T1) | Triple extractor | Drive `/models/extractor_t1/` |
-| LLaMA-3.2-3B-Instruct | QUEST-KG backbone (small) | Drive `/models/llama32_3b/` |
-| Mistral-7B-Instruct-v0.3 (AWQ 4-bit) | QUEST-KG backbone | Drive `/models/mistral7b_awq/` |
-| Qwen-2.5-7B-Instruct (AWQ 4-bit) | QUEST-KG backbone | Drive `/models/qwen25_7b_awq/` |
-| GPT-4o (API, added later) | Proprietary baseline | API |
+| Model | Gating | Use | Storage |
+|---|---|---|---|
+| Qwen-2.5-3B-Instruct (AWQ 4-bit) | open | QUEST-KG backbone (small) | Drive `/models/qwen25-3b/` |
+| Mistral-7B-Instruct-v0.2 (AWQ 4-bit) | open | QUEST-KG backbone (medium, different family) | Drive `/models/mistral-7b/` |
+| Qwen-2.5-7B-Instruct (AWQ 4-bit) | open | QUEST-KG backbone (medium) | Drive `/models/qwen25-7b/` |
+| LLaMA-3.1-8B-Instruct (AWQ 4-bit) | **gated** (optional) | QUEST-KG backbone (large) | Drive `/models/llama31-8b/` |
+| GPT-4o (API, added later) | API | Proprietary baseline | OpenAI API |
+
+**Note on gated LLaMA:** request access at https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct (usually auto-approved). The quantize script skips gated models gracefully if you don't have access; the other 3 backbones still cover the open-source LLM-grid story.
 
 ## Quick start
 

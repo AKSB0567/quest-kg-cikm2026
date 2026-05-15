@@ -1,8 +1,4 @@
-"""Download ComplexWebQuestions (CWQ) v1.1.
-
-Sources:
-  - HuggingFace mirror via rmanluo (used in RoG/ToG)
-  - TAU-NLP: https://www.tau-nlp.org/compwebq
+"""Download ComplexWebQuestions (CWQ) via HuggingFace datasets library.
 
 Usage:
     python -m scripts.download.download_cwq --root /content/drive/MyDrive/quest_kg/data
@@ -10,39 +6,49 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import subprocess
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from scripts.download.common import download_file, extract, have_marker, safe_target, write_marker
+from scripts.download.common import have_marker, safe_target, write_marker
 
 
-URLS = [
-    "https://huggingface.co/datasets/rmanluo/RoG-cwq/resolve/main/data.zip",
+HF_CANDIDATES = [
+    "rmanluo/RoG-cwq",
+    "drt/complex_web_questions",
+    "complexwebquestions",
 ]
 
 
 def main(root: str) -> None:
     name = "cwq"
     if have_marker(root, name):
-        print(f"[cwq] already present at {root}/raw/{name}; skipping.")
+        print(f"[cwq] already present; skipping.")
         return
     out = safe_target(root, name)
-    archive = out / "cwq.zip"
+
+    try:
+        from datasets import load_dataset
+    except ImportError:
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "datasets"], check=True)
+        from datasets import load_dataset
+
     last_err = None
-    for url in URLS:
+    for repo_id in HF_CANDIDATES:
         try:
-            download_file(url, archive)
-            extract(archive, out)
+            ds = load_dataset(repo_id, cache_dir=str(out / "_cache"))
+            ds.save_to_disk(str(out / "dataset"))
             write_marker(root, name)
-            print(f"[cwq] OK -> {out}")
+            print(f"[cwq] OK via {repo_id} -> {out}")
             return
         except Exception as e:
-            print(f"[cwq] failed from {url}: {e}")
+            print(f"[cwq] {repo_id} failed: {e}")
             last_err = e
+
     raise RuntimeError(
-        f"CWQ download failed: {last_err}\n"
-        "Manual fallback: download from https://www.tau-nlp.org/compwebq and unpack to data/raw/cwq/."
+        f"CWQ download failed via HF: {last_err}\n"
+        "Manual fallback: https://www.tau-nlp.org/compwebq"
     )
 
 
