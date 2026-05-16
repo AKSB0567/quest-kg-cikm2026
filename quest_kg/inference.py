@@ -72,6 +72,13 @@ class QuestKG:
       p_star = 0.0       -> never abstain on low retained mass
       h_star = 999.0     -> never abstain on entropy
     Calibration analysis (§4.6) will sweep these for the R-C curve.
+
+    `task_type` selects the answer-extraction strategy:
+      - "entity"    : default. Returns the tail of the top scoring valid path.
+                      (WebQSP, CWQ, ICEWS18 tail prediction.)
+      - "yes_no"    : Returns "1" if a valid path connects any anchor to the
+                      designated target entity (passed via query_meta['target']),
+                      else "0". (OrgAccess.)
     """
 
     def __init__(
@@ -84,6 +91,7 @@ class QuestKG:
         kappa: float = 4.0,
         max_path_length: int | None = None,
         path_cap: int = 256,
+        task_type: str = "entity",
     ):
         self.retriever = retriever
         self.symbolic_checker = symbolic_checker
@@ -93,14 +101,36 @@ class QuestKG:
         self.kappa = kappa
         self.max_path_length = max_path_length or retriever.k
         self.path_cap = path_cap
+        assert task_type in ("entity", "yes_no")
+        self.task_type = task_type
 
     def predict(
         self,
         query: str,
         expected_types: set[str] | None = None,
+        query_meta: dict | None = None,
     ) -> PredictResult:
         # ---- Stage 1: retrieval -------------------------------------------------
-        sg = self.retriever.retrieve(query, expected_types=expected_types)
+        explicit_anchors = None
+        if query_meta:
+            # Combine user/resource/q_entity/head/etc. into anchor set.
+            cand: list[str] = []
+            for k in ("user", "resource", "head", "target"):
+                v = query_meta.get(k)
+                if isinstance(v, str):
+                    cand.append(v)
+                elif isinstance(v, (list, tuple, set)):
+                    cand.extend(x for x in v if isinstance(x, str))
+            if "q_entity" in query_meta and query_meta["q_entity"]:
+                qe = query_meta["q_entity"]
+                if isinstance(qe, str):
+                    cand.append(qe)
+                else:
+                    cand.extend(x for x in qe if isinstance(x, str))
+            explicit_anchors = cand or None
+        sg = self.retriever.retrieve(
+            query, expected_types=expected_types, explicit_anchors=explicit_anchors,
+        )
 
         # Anchor similarities for MP init (use cached entity embeddings)
         anchor_sims: dict[str, float] = {}
@@ -149,7 +179,20 @@ class QuestKG:
 
         valid = [p for p in candidate_paths if not p.violates_symbolic]
         top = max(valid, key=lambda x: x.score) if valid else None
-        prediction = top.tail if (top and not abstained) else None
+
+        # ---- Task-specific answer extraction ----------------------------------
+        if abstained:
+            prediction = None
+        elif self.task_type == "yes_no":
+            user   = (query_meta or {}).get("user")   or (query_meta or {}).get("head")
+            target = (query_meta or {}).get("resource") or (query_meta or {}).get("target")
+            # Predict "1" iff a valid (non-violating) path connects user to target.
+            granted = bool(user and target and any(
+                p.head == user and p.tail == target for p in valid
+            ))
+            prediction = "1" if granted else "0"
+        else:
+            prediction = top.tail if top else None
 
         return PredictResult(
             query=query,
@@ -160,5 +203,9 @@ class QuestKG:
             subgraph=sg,
             top_path=top,
             candidate_paths=candidate_paths,
-            extra={"answer_probs": probs, "n_valid_paths": len(valid)},
+            extra={
+                "answer_probs": probs,
+                "n_valid_paths": len(valid),
+                "task_type": self.task_type,
+            },
         )

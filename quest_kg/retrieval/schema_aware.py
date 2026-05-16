@@ -141,13 +141,37 @@ class SchemaAwareRetriever:
     # Retrieval
     # -----------------------------------------------------------------------
 
-    def retrieve(self, query: str, expected_types: Optional[set[str]] = None) -> Subgraph:
-        """Run Stage 1 retrieval and return Subgraph Gq."""
+    def retrieve(
+        self,
+        query: str,
+        expected_types: Optional[set[str]] = None,
+        explicit_anchors: Optional[Iterable[str]] = None,
+    ) -> Subgraph:
+        """Run Stage 1 retrieval and return Subgraph Gq.
+
+        Args:
+            query:            natural-language query string (used for semantic edge scoring)
+            expected_types:   set of admissible answer types (passed to type_compat)
+            explicit_anchors: if provided, use these as the anchor set directly,
+                              skipping semantic-similarity anchor linking. Use this
+                              when the query metadata names specific KG entities
+                              (e.g. OrgAccess: user + resource; WebQSP: q_entity).
+                              Unknown anchor names are silently dropped.
+        """
         expected_types = expected_types or set()
         q_emb = self._l2norm(np.asarray(self.encoder(query), dtype=np.float32))
 
-        # ---- Anchor linking: matmul over precomputed entity embeddings -----
-        if self._entity_emb is None:
+        # ---- Anchor linking ------------------------------------------------
+        if explicit_anchors is not None:
+            anchors = {a for a in explicit_anchors if a in self._entity_idx}
+            # If no explicit anchors resolved, fall back to top-K semantic
+            if not anchors and self._entity_emb is not None:
+                ent_norm = self._l2norm(self._entity_emb)
+                sims = ent_norm @ q_emb
+                top_idx = np.argpartition(-sims, min(self.top_k, len(sims) - 1))[: self.top_k]
+                top_idx = top_idx[np.argsort(-sims[top_idx])]
+                anchors = {self._entities[i] for i in top_idx if sims[i] > 0}
+        elif self._entity_emb is None:
             # Fallback path (slow; tests only)
             anchor_scores = []
             for e in self._entities:

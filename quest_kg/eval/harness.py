@@ -23,11 +23,22 @@ from dataclasses import asdict, dataclass
 import numpy as np
 
 
+# Map yes/no surface forms to canonical "1"/"0" so QA harness + access-control task align.
+_YES_TOKENS = {"yes", "y", "true", "t", "1", "allow", "allowed", "permit", "permitted", "grant", "granted"}
+_NO_TOKENS  = {"no", "n", "false", "f", "0", "deny", "denied", "refuse", "refused", "reject", "rejected"}
+
+
 def _normalize(s: str) -> str:
-    """Lowercase, strip punctuation, collapse whitespace."""
+    """Lowercase, strip punctuation, collapse whitespace, normalize yes/no."""
     s = s.lower()
     s = re.sub(rf"[{re.escape(string.punctuation)}]", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
+    # Canonicalize yes/no surface forms to "1"/"0" so 'no' matches '0' under EM.
+    head = s.split()[0] if s else s
+    if head in _YES_TOKENS:
+        return "1"
+    if head in _NO_TOKENS:
+        return "0"
     return s
 
 
@@ -85,7 +96,11 @@ def run_method(
         t0 = time.perf_counter()
         try:
             if is_questkg:
-                pred = method.predict(question, expected_types=q.get("expected_types") or None)
+                pred = method.predict(
+                    question,
+                    expected_types=q.get("expected_types") or None,
+                    query_meta=q,
+                )
                 prediction = pred.prediction
                 confidence = pred.confidence
                 abstained = pred.abstained

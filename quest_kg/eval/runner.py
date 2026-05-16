@@ -43,17 +43,22 @@ def build_method(method_name: str, dataset, encoder, llm, **kwargs):
         )
         if dataset.name in ("webqsp", "cwq"):
             checker = FreebaseChecker()  # permissive (no schema dict)
+            task_type = "entity"
         elif dataset.name == "icews18":
             checker = ICEWS18Checker()
+            task_type = "entity"
         elif dataset.name == "orgaccess":
             ctx = {int(i + 1): c for i, c in enumerate(dataset.metadata.get("context_schedule", []))}
             checker = OrgAccessChecker(active_contexts_at_t=ctx, strict=False)
+            task_type = "yes_no"
         else:
             checker = FreebaseChecker()
+            task_type = "entity"
         # Permissive abstention at inference; calibration sweeps the thresholds in §4.6
         return QuestKG(
             retriever=retriever, symbolic_checker=checker,
             p_star=0.0, h_star=999.0,
+            task_type=task_type,
         ), True
 
     if method_name == "vanilla_rag":
