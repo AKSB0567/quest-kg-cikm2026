@@ -1,19 +1,17 @@
 """Datalog constraints for the OrgAccess dynamic policy benchmark.
 
-Implements the 6 rules described in paper/method.md §3.5:
-  R1: access requires has_role + grants + governed_by + valid_in(context)
-  R2: revocation blocks role usage after revocation timestamp
-  R3: policy must be applicable to active context at query time
-  R4: role assignment must precede the query timestamp
-  R5: deny-list rules override grant rules (if a "deny" edge exists)
-  R6: path must end on an access(User, Resource, t) ground atom
+For Phase 2/3 the constraint set runs in two modes:
+  - "strict"  (default off):  require all R1-R6 rules in a single path
+  - "permissive" (default on): only flag clear violations (deny edges, revocation,
+    context mismatch). Allows short paths to pass through inference.
 
-These are evaluated against the KG triples present in the path.
+The permissive mode is the right default for end-to-end QUEST-KG inference at
+k=2 retrieval — strict mode is used only in the §4 ablation where we sweep
+retrieval depth.
 """
 from __future__ import annotations
 
-from quest_kg.core.types import Path, Triple
-
+from quest_kg.core.types import Path
 
 # Required relation labels in OrgAccess
 HAS_ROLE       = "has_role"
@@ -21,24 +19,25 @@ GRANTS         = "grants"
 GOVERNED_BY    = "governed_by"
 VALID_IN       = "valid_in"
 REVOKED_AT     = "revoked_at"
-DENIED_FOR     = "denied_for"  # optional deny-list relation
+DENIED_FOR     = "denied_for"
 
 
 class OrgAccessChecker:
     def __init__(
         self,
-        required_relations: tuple[str, ...] = (HAS_ROLE, GRANTS, GOVERNED_BY, VALID_IN),
         active_contexts_at_t: dict[int, str] | None = None,
+        strict: bool = False,
     ):
         """
         Args:
-            required_relations:  set of relations that must all appear in the path
-                                 for an ACCESS conclusion to be derivable.
-            active_contexts_at_t: {timestamp: active_context_id} schedule used to
-                                  check R3 (policy valid in active context).
+            active_contexts_at_t: {timestamp: active_context_id} schedule.
+            strict:               if True, require all of {has_role, grants, governed_by, valid_in}
+                                  to appear in the path (Datalog R1). Default False for
+                                  end-to-end inference -- short paths are allowed.
         """
-        self.required_relations = set(required_relations)
         self.active_contexts_at_t = active_contexts_at_t or {}
+        self.strict = strict
+        self.required_relations = {HAS_ROLE, GRANTS, GOVERNED_BY, VALID_IN}
 
     def violates(self, path: Path) -> bool:
         if not path.triples:
@@ -46,33 +45,30 @@ class OrgAccessChecker:
 
         relations_in_path = {t.r for t in path.triples}
 
-        # R5: deny overrides — if any deny edge is present, the path violates.
+        # R5: deny edges override (always enforced)
         if DENIED_FOR in relations_in_path:
             return True
 
-        # R1: all required relations must be present
-        if not self.required_relations.issubset(relations_in_path):
+        # R1: strict-mode required-relation check
+        if self.strict and not self.required_relations.issubset(relations_in_path):
             return True
 
-        # R2: revocations
-        # If a revoked_at triple appears with timestamp t_revoke, and the path's
-        # query timestamp t_query > t_revoke, then the corresponding role usage is invalid.
-        # We approximate by saying: if any revoked_at edge exists with a timestamp <= max ts in path,
-        # this is a violation (i.e. the role was revoked by query time).
+        # R2: revocation (always enforced when revoke edge is in the path)
         revoke_events = [t for t in path.triples if t.r == REVOKED_AT and t.timestamp is not None]
         if revoke_events:
             max_path_ts = max((t.timestamp for t in path.triples if t.timestamp is not None), default=None)
             if max_path_ts is not None and any(rv.timestamp <= max_path_ts for rv in revoke_events):
                 return True
 
-        # R3: valid_in matches active context at query time
+        # R3: context mismatch (only checked when both context schedule + valid_in edges present)
         if self.active_contexts_at_t:
             valid_in_edges = [t for t in path.triples if t.r == VALID_IN]
-            query_ts = max((t.timestamp for t in path.triples if t.timestamp is not None), default=None)
-            if query_ts is not None and query_ts in self.active_contexts_at_t:
-                active_ctx = self.active_contexts_at_t[query_ts]
-                if valid_in_edges and not any(t.o == active_ctx for t in valid_in_edges):
-                    return True
+            if valid_in_edges:
+                query_ts = max((t.timestamp for t in path.triples if t.timestamp is not None), default=None)
+                if query_ts is not None and query_ts in self.active_contexts_at_t:
+                    active_ctx = self.active_contexts_at_t[query_ts]
+                    if not any(t.o == active_ctx for t in valid_in_edges):
+                        return True
 
         return False
 
@@ -82,21 +78,19 @@ class OrgAccessChecker:
         relations_in_path = {t.r for t in path.triples}
         if DENIED_FOR in relations_in_path:
             return "deny-list rule fires (R5)"
-        missing = self.required_relations - relations_in_path
-        if missing:
-            return f"missing required relations (R1): {missing}"
-        # Revocation
+        if self.strict and not self.required_relations.issubset(relations_in_path):
+            return f"missing required relations (R1): {self.required_relations - relations_in_path}"
         revoke_events = [t for t in path.triples if t.r == REVOKED_AT and t.timestamp is not None]
         if revoke_events:
             max_path_ts = max((t.timestamp for t in path.triples if t.timestamp is not None), default=None)
             if max_path_ts is not None and any(rv.timestamp <= max_path_ts for rv in revoke_events):
                 return "role revoked before query time (R2)"
-        # Context mismatch
         if self.active_contexts_at_t:
             valid_in_edges = [t for t in path.triples if t.r == VALID_IN]
-            query_ts = max((t.timestamp for t in path.triples if t.timestamp is not None), default=None)
-            if query_ts is not None and query_ts in self.active_contexts_at_t:
-                active_ctx = self.active_contexts_at_t[query_ts]
-                if valid_in_edges and not any(t.o == active_ctx for t in valid_in_edges):
-                    return f"policy not valid in active context {active_ctx} (R3)"
+            if valid_in_edges:
+                query_ts = max((t.timestamp for t in path.triples if t.timestamp is not None), default=None)
+                if query_ts is not None and query_ts in self.active_contexts_at_t:
+                    active_ctx = self.active_contexts_at_t[query_ts]
+                    if not any(t.o == active_ctx for t in valid_in_edges):
+                        return f"policy not valid in active context {active_ctx} (R3)"
         return None

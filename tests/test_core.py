@@ -25,11 +25,7 @@ from quest_kg.symbolic.orgaccess_datalog import OrgAccessChecker
 from quest_kg.symbolic.webqsp_freebase import FreebaseChecker
 
 
-def dummy_encoder(s: str, d: int = 64) -> np.ndarray:
-    """Deterministic encoder based on token-level hashing.
-
-    Maps any string to a unit-norm vector in R^d. Token overlap -> cosine > 0.
-    """
+def _hash_one(s: str, d: int = 64) -> np.ndarray:
     v = np.zeros(d, dtype=np.float64)
     for tok in s.lower().split():
         h = hashlib.md5(tok.encode("utf-8")).digest()
@@ -37,6 +33,13 @@ def dummy_encoder(s: str, d: int = 64) -> np.ndarray:
             v[i] += b
     n = np.linalg.norm(v)
     return v / n if n > 0 else v
+
+
+def dummy_encoder(s, d: int = 64):
+    """Deterministic encoder; accepts a single str or a list of str."""
+    if isinstance(s, str):
+        return _hash_one(s, d)
+    return np.stack([_hash_one(x, d) for x in s])
 
 
 # ---------------------------------------------------------------------------
@@ -139,13 +142,14 @@ def test_icews_checker_monotone_timestamps():
     assert c.violates(bad)
 
 
-def test_orgaccess_checker_required_relations():
-    c = OrgAccessChecker()
-    missing_grant = KGPath(triples=[
-        Triple("u1", "has_role", "r1"),
-        # missing grants / governed_by / valid_in
-    ])
-    assert c.violates(missing_grant)
+def test_orgaccess_checker_required_relations_strict():
+    # Permissive mode (default): short paths allowed.
+    permissive = OrgAccessChecker(strict=False)
+    short = KGPath(triples=[Triple("u1", "has_role", "r1")])
+    assert not permissive.violates(short)
+    # Strict mode: enforce R1 (all required relations must appear).
+    strict = OrgAccessChecker(strict=True)
+    assert strict.violates(short)
 
 
 def test_orgaccess_checker_revocation():

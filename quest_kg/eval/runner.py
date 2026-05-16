@@ -14,9 +14,8 @@ import argparse
 import json
 import os
 import time
+import traceback
 from pathlib import Path
-
-# Lazy imports inside main() so this module doesn't pull heavy deps on import
 
 
 METHOD_CHOICES = [
@@ -39,17 +38,23 @@ def build_method(method_name: str, dataset, encoder, llm, **kwargs):
         from quest_kg.symbolic.orgaccess_datalog import OrgAccessChecker
         from quest_kg.symbolic.webqsp_freebase import FreebaseChecker
 
-        retriever = SchemaAwareRetriever(triples=triples, encoder=encoder, k=2, top_k=32)
+        retriever = SchemaAwareRetriever(
+            triples=triples, encoder=encoder, k=2, top_k=32, precompute=True,
+        )
         if dataset.name in ("webqsp", "cwq"):
-            checker = FreebaseChecker()  # permissive schema; tighten in §4.5
+            checker = FreebaseChecker()  # permissive (no schema dict)
         elif dataset.name == "icews18":
             checker = ICEWS18Checker()
         elif dataset.name == "orgaccess":
             ctx = {int(i + 1): c for i, c in enumerate(dataset.metadata.get("context_schedule", []))}
-            checker = OrgAccessChecker(active_contexts_at_t=ctx)
+            checker = OrgAccessChecker(active_contexts_at_t=ctx, strict=False)
         else:
             checker = FreebaseChecker()
-        return QuestKG(retriever=retriever, symbolic_checker=checker, p_star=0.05, h_star=0.6), True
+        # Permissive abstention at inference; calibration sweeps the thresholds in §4.6
+        return QuestKG(
+            retriever=retriever, symbolic_checker=checker,
+            p_star=0.0, h_star=999.0,
+        ), True
 
     if method_name == "vanilla_rag":
         from baselines.vanilla_rag import VanillaRAG
@@ -80,11 +85,17 @@ def main():
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out_dir", required=True)
     ap.add_argument("--limit", type=int, default=0, help="evaluate only first N queries (0 = all)")
-    ap.add_argument("--max_new_tokens", type=int, default=64)
+    ap.add_argument("--max_new_tokens", type=int, default=32)
+    ap.add_argument("--kg_subset", type=int, default=0,
+                    help="for QA datasets, use only first N triples to speed up encoding "
+                         "(0 = full KG; recommended 20000 on L4)")
     args = ap.parse_args()
 
-    import torch
-    torch.manual_seed(args.seed)
+    try:
+        import torch
+        torch.manual_seed(args.seed)
+    except ImportError:
+        pass
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -93,28 +104,52 @@ def main():
     json_path = out_dir / f"{tag}.json"
 
     # ---- Load data + encoder + LLM ----
-    from quest_kg.data.loaders import load_dataset as load_ds
     from quest_kg.data.encoders import get_encoder
     from quest_kg.data.llm import LLMInterface, llm_path_for
-    from quest_kg.eval.harness import run_method, aggregate, to_dataframe
+    from quest_kg.data.loaders import load_dataset as load_ds
+    from quest_kg.eval.harness import aggregate, run_method, to_dataframe
 
     print(f"[runner] loading dataset {args.dataset}...")
     ds = load_ds(args.dataset, args.data_root)
     print(f"[runner] {ds.summary()}")
 
+    # Subset KG to keep encoding tractable on first runs
+    if args.kg_subset > 0 and len(ds.triples) > args.kg_subset:
+        print(f"[runner] subsetting KG: {len(ds.triples)} -> {args.kg_subset} triples")
+        ds.triples = ds.triples[: args.kg_subset]
+
     print(f"[runner] loading encoder {args.encoder}...")
     encoder = get_encoder(args.encoder)
 
-    if args.method == "quest_kg":
-        # QUEST-KG (inference-time) does not need an LLM; uses neuro-symbolic scoring.
-        llm = None
-    else:
+    llm = None
+    if args.method != "quest_kg":
         print(f"[runner] loading LLM {args.llm}...")
-        llm_path = llm_path_for(args.llm, drive_root=str(Path(args.models_root).parent))
-        llm = LLMInterface(llm_path, max_new_tokens=args.max_new_tokens)
+        try:
+            llm_path = llm_path_for(args.llm, drive_root=str(Path(args.models_root).parent))
+            llm = LLMInterface(llm_path, max_new_tokens=args.max_new_tokens)
+        except Exception as e:
+            traceback.print_exc()
+            err_summary = {
+                "method": args.method, "dataset": args.dataset, "llm": args.llm,
+                "seed": args.seed, "error": f"LLM load failed: {e}",
+                "n": 0,
+            }
+            json_path.write_text(json.dumps(err_summary, indent=2))
+            print(f"[runner] LLM load failed; wrote error summary to {json_path}")
+            raise SystemExit(2)
 
-    method, is_questkg = build_method(args.method, ds, encoder, llm)
-    print(f"[runner] method instantiated: {method.__class__.__name__}")
+    print(f"[runner] building method {args.method}...")
+    try:
+        method, is_questkg = build_method(args.method, ds, encoder, llm)
+    except Exception as e:
+        traceback.print_exc()
+        err_summary = {
+            "method": args.method, "dataset": args.dataset, "llm": args.llm,
+            "seed": args.seed, "error": f"method build failed: {e}",
+            "n": 0,
+        }
+        json_path.write_text(json.dumps(err_summary, indent=2))
+        raise SystemExit(3)
 
     queries = ds.queries[: args.limit] if args.limit > 0 else ds.queries
     print(f"[runner] running on {len(queries)} queries...")
@@ -134,6 +169,8 @@ def main():
         "seed": args.seed,
         "wallclock_s": wallclock,
         "csv_path": str(csv_path),
+        "kg_subset": args.kg_subset,
+        "limit": args.limit,
     })
     json_path.write_text(json.dumps(summary, indent=2))
     print(f"[runner] wrote {csv_path}")
