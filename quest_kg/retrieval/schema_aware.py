@@ -12,12 +12,48 @@ Per-query latency on a KG of 100K triples is ~5-50ms on CPU, ~1-5ms on GPU encod
 from __future__ import annotations
 
 import math
+import re
 from collections.abc import Callable, Iterable
 from typing import Optional
 
 import numpy as np
 
 from quest_kg.core.types import Provenance, Subgraph, Triple
+
+
+# Stop words for relation-aware retrieval token overlap. Question words and
+# common syntax should not match relation names; content tokens should.
+_STOPWORDS = frozenset({
+    "a", "an", "the", "is", "are", "was", "were", "be", "been", "being",
+    "do", "does", "did", "doing", "have", "has", "had", "having",
+    "of", "in", "on", "at", "to", "for", "with", "by", "from", "into",
+    "and", "or", "but", "not", "no", "if", "then", "than", "this", "that",
+    "these", "those", "what", "which", "who", "whom", "whose", "where",
+    "when", "why", "how", "can", "could", "should", "would", "will",
+    "i", "you", "he", "she", "it", "we", "they", "them", "his", "her",
+    "us", "our", "your", "their", "my", "me",
+})
+
+
+_TOK_SPLIT_RE = re.compile(r"[^a-z0-9]+")
+
+
+def _content_tokens(s: str) -> set[str]:
+    """Lowercase, split on non-alphanumeric, drop stopwords + 1-char tokens."""
+    if not s:
+        return set()
+    raw = _TOK_SPLIT_RE.split(s.lower())
+    return {t for t in raw if t and len(t) > 1 and t not in _STOPWORDS}
+
+
+def _relation_tokens(r: str) -> set[str]:
+    """Split a relation surface form like 'location.country.languages_spoken'
+    or 'place_of_birth' into content tokens."""
+    if not r:
+        return set()
+    # Normalise: dots and underscores are token separators in Freebase + ICEWS schemas.
+    r = r.replace(".", " ").replace("_", " ").replace("~", " ")
+    return _content_tokens(r)
 
 
 def _sigmoid(x: float) -> float:
@@ -61,6 +97,8 @@ class SchemaAwareRetriever:
         eps_keep: float = 0.05,
         gammas: tuple[float, float, float] = (0.4, 0.3, 0.3),
         precompute: bool = True,
+        relation_bias: float = 0.4,
+        bidirectional: bool = True,
     ):
         self.triples = list(triples)
         self.encoder = encoder
@@ -73,13 +111,31 @@ class SchemaAwareRetriever:
             tot = sum(gammas) or 1.0
             gammas = tuple(g / tot for g in gammas)
         self.gamma_sem, self.gamma_prov, self.gamma_schema = gammas
+        # Additive boost for each edge whose relation tokens overlap with
+        # query content tokens. Default 0.4 -> a full-overlap edge gets
+        # +0.4 added to its (sem+prov+schema) score before top-k pruning.
+        self.relation_bias = float(relation_bias)
+        # Bidirectional retrieval: True for QA (Freebase has reverse-direction
+        # answers like `(Lang | main_country | Jamaica)` where the anchor is
+        # the object). False for clean directional graphs like ICEWS18 where
+        # adding incoming edges only adds noise.
+        self.bidirectional = bool(bidirectional)
+        # Precompute relation token sets per triple (only depends on KG)
+        self._rel_tokens: list[set[str]] = [_relation_tokens(t.r) for t in self.triples]
 
-        # Build entity -> outgoing-edge-index index
+        # Build entity -> outgoing AND incoming edge-index indices.
+        # Incoming-edge expansion lets us reach answers where the anchor is
+        # the object of a triple (e.g. Freebase `(Lang | main_country | Jamaica)`
+        # when the query anchors on Jamaica). Without `_in_idx`, the relevant
+        # triple is never scored and the answer is unreachable regardless of
+        # downstream path enumeration.
         self._out_idx: dict[str, list[int]] = {}
+        self._in_idx: dict[str, list[int]] = {}
         self._entities: list[str] = []
         seen: set[str] = set()
         for i, t in enumerate(self.triples):
             self._out_idx.setdefault(t.s, []).append(i)
+            self._in_idx.setdefault(t.o, []).append(i)
             for e in (t.s, t.o):
                 if e not in seen:
                     seen.add(e)
@@ -160,6 +216,7 @@ class SchemaAwareRetriever:
         """
         expected_types = expected_types or set()
         q_emb = self._l2norm(np.asarray(self.encoder(query), dtype=np.float32))
+        q_tokens = _content_tokens(query)
 
         # ---- Anchor linking ------------------------------------------------
         if explicit_anchors is not None:
@@ -192,13 +249,20 @@ class SchemaAwareRetriever:
         # ---- Bounded multi-hop expansion -----------------------------------
         frontier: set[str] = set(anchors)
         for _hop in range(self.k):
-            # Gather candidate-edge indices outgoing from current frontier
-            cand_edge_idx = []
+            # Gather candidate-edge indices touching the current frontier in
+            # EITHER direction. De-dup with a set so an edge whose subject and
+            # object are both frontier nodes isn't counted twice.
+            cand_set: set[int] = set()
             for v in frontier:
-                cand_edge_idx.extend(self._out_idx.get(v, []))
-            if not cand_edge_idx:
+                cand_set.update(self._out_idx.get(v, []))
+                if self.bidirectional:
+                    cand_set.update(self._in_idx.get(v, []))
+            if not cand_set:
                 break
-            cand_edge_idx = np.asarray(cand_edge_idx, dtype=np.int64)
+            # Sort by triple index for deterministic candidate order. Set
+            # iteration order is hash-based so without this two identical
+            # inputs can produce different rankings when path scores tie.
+            cand_edge_idx = np.array(sorted(cand_set), dtype=np.int64)
 
             # Vectorized scoring
             if self._edge_emb is not None:
@@ -220,10 +284,28 @@ class SchemaAwareRetriever:
                 dtype=np.float32,
             )
 
+            # Relation-aware boost: fraction of query content tokens that
+            # appear in the edge's relation surface form. Edges with high
+            # overlap (e.g. "where ... from" matching "place_of_birth") get
+            # an additive `relation_bias` lift, putting them above noisy
+            # but semantically-similar distractors.
+            if q_tokens and self.relation_bias > 0:
+                s_rel = np.array(
+                    [
+                        (len(q_tokens & self._rel_tokens[int(i)]) / len(q_tokens))
+                        if self._rel_tokens[int(i)] else 0.0
+                        for i in cand_edge_idx
+                    ],
+                    dtype=np.float32,
+                )
+            else:
+                s_rel = np.zeros(len(cand_edge_idx), dtype=np.float32)
+
             scores = (
                 self.gamma_sem * s_sem
                 + self.gamma_prov * s_prov
                 + self.gamma_schema * s_schema
+                + self.relation_bias * s_rel
             )
 
             # Keep top-K with score >= eps_keep
@@ -240,9 +322,13 @@ class SchemaAwareRetriever:
             next_frontier: set[str] = set()
             for ei, sc in zip(top_global, top_scores):
                 t = self.triples[int(ei)]
-                if t.o not in sg.nodes:
-                    next_frontier.add(t.o)
-                sg.nodes.add(t.o)
+                # Frontier grows on the *other* endpoint relative to anchors.
+                # Add both endpoints to nodes; whichever wasn't already in the
+                # subgraph extends the frontier for the next hop.
+                for endpoint in (t.s, t.o):
+                    if endpoint not in sg.nodes:
+                        next_frontier.add(endpoint)
+                    sg.nodes.add(endpoint)
                 sg.triples.append(t)
                 sg.edge_scores[(t.s, t.r, t.o)] = float(sc)
             frontier = next_frontier

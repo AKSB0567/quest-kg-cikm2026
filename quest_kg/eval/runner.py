@@ -163,9 +163,17 @@ def main():
     wallclock = time.perf_counter() - t0
     print(f"[runner] done in {wallclock:.1f}s")
 
+    task_type_map = {
+        "orgaccess": "access_control",
+        "icews18": "link_prediction",
+        "webqsp": "qa",
+        "cwq": "qa",
+    }
+    task_type = task_type_map.get(args.dataset, "qa")
+
     df = to_dataframe(results)
     df.to_csv(csv_path, index=False)
-    summary = aggregate(results)
+    summary = aggregate(results, task_type=task_type)
     summary.update({
         "method": args.method,
         "dataset": args.dataset,

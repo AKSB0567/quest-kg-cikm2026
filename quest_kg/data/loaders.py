@@ -175,7 +175,7 @@ def load_orgaccess(root: Path) -> Dataset:
             prov=Provenance(extraction_conf=1.0, source_trust=1.0, edit_age_days=0.0),
         ))
 
-    queries: list[dict] = [
+    raw_queries: list[dict] = [
         {
             "qid": f"oa_{q['qid']}",
             "question": q["question"],
@@ -190,12 +190,32 @@ def load_orgaccess(root: Path) -> Dataset:
         for q in test
     ]
 
+    # Deterministic class-balanced interleave so `--limit N` evaluates on roughly
+    # N/2 positives + N/2 negatives instead of the 9% positive rate the synthetic
+    # generator produces. Original ordering is preserved within each class.
+    positives = [q for q in raw_queries if str(q["answer"]) == "1"]
+    negatives = [q for q in raw_queries if str(q["answer"]) == "0"]
+    queries: list[dict] = []
+    for pos, neg in zip(positives, negatives):
+        queries.append(pos)
+        queries.append(neg)
+    if len(positives) > len(negatives):
+        queries.extend(positives[len(negatives):])
+    elif len(negatives) > len(positives):
+        queries.extend(negatives[len(positives):])
+
     return Dataset(
         name="orgaccess",
         task="access_control",
         triples=triples,
         queries=queries,
-        metadata={"context_schedule": context_schedule, "n_test": len(test)},
+        metadata={
+            "context_schedule": context_schedule,
+            "n_test": len(test),
+            "n_positives": len(positives),
+            "n_negatives": len(negatives),
+            "interleave_balanced": True,
+        },
     )
 
 

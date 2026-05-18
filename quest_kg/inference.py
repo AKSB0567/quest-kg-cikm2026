@@ -13,8 +13,80 @@ get predictions out and let calibration analysis decide where to draw the line.
 from __future__ import annotations
 
 import math
+import re
 
 import numpy as np
+
+
+# Freebase MID/GID patterns (m.02_286, g.1257kpk96) - opaque identifiers that
+# should never be the final answer when a surface label is available.
+_MID_RE = re.compile(r"^[mg]\.[0-9a-z_]+$")
+
+
+def _is_opaque_identifier(s: str | None) -> bool:
+    if not s:
+        return False
+    return bool(_MID_RE.match(s.strip()))
+
+
+# Freebase metadata-relation fragments. Paths whose last edge uses one of these
+# relations lead to generic type/category nodes ("Invention", "Person",
+# "Building"), not specific answer entities. Penalise during answer extraction.
+_METADATA_REL_FRAGMENTS = frozenset({
+    "type.object.type", "common.topic.notable_types",
+    "kg.object_profile", "type.type.instance",
+    "type.namespace.keys", "common.topic.alias",
+    "common.topic.image", "freebase.object_profile",
+    "type.object.name", "type.object.key",
+    "common.notable_for", "common.topic.notable_for",
+})
+
+
+def _is_metadata_relation(r: str) -> bool:
+    if not r:
+        return False
+    r_clean = r.lstrip("~").lower()
+    return any(frag in r_clean for frag in _METADATA_REL_FRAGMENTS)
+
+
+# Question-pattern -> expected relation keywords. When the question contains
+# any pattern token, paths whose last relation contains any expected token get
+# a multiplicative bonus during answer extraction. Symbolic, deterministic.
+_QUESTION_RELATION_HINTS: list[tuple[set[str], set[str]]] = [
+    # "where ... from / born / live": location/place/birth relations
+    ({"where", "from", "born", "birthplace", "live", "located", "located_in"},
+     {"place", "location", "birth", "born", "city", "country", "state", "region",
+      "nationality", "containedby", "place_lived"}),
+    # "who plays / played / acted": actor/person relations
+    ({"plays", "played", "actor", "actress", "starring", "cast"},
+     {"actor", "cast", "starring", "performance", "person", "character", "role"}),
+    # "when ... born / die / start": date/time relations
+    ({"when", "year", "date", "born", "died", "start", "started", "ended"},
+     {"date", "year", "time", "birth", "death", "start", "end", "founding"}),
+    # "what language / speak": language relations
+    ({"language", "languages", "speak", "spoken"},
+     {"language", "spoken", "official_language"}),
+    # "what religion": religion relations
+    ({"religion", "religious", "worship", "believe"},
+     {"religion", "denomination", "faith"}),
+    # "currency / money": currency relations
+    ({"currency", "money", "dollar"},
+     {"currency", "monetary"}),
+    # "capital ... of": capital relations
+    ({"capital"},
+     {"capital", "administrative", "seat"}),
+]
+
+
+def _question_relation_boost(question_tokens: set[str], relation_tokens: set[str]) -> float:
+    """Multiplicative path-score factor based on question/relation alignment.
+    Returns 1.0 (no effect) when no pattern matches, otherwise >1 to lift
+    candidates whose last relation matches the expected answer type."""
+    boost = 1.0
+    for q_pattern, r_pattern in _QUESTION_RELATION_HINTS:
+        if question_tokens & q_pattern and relation_tokens & r_pattern:
+            boost *= 2.0
+    return boost
 
 from quest_kg.abstention.posterior import should_abstain
 from quest_kg.core.types import Path, PredictResult, Subgraph, Triple
@@ -22,16 +94,49 @@ from quest_kg.mp.evidential import evidential_mp_numpy
 from quest_kg.retrieval.schema_aware import SchemaAwareRetriever
 
 
-def _enumerate_paths(sg: Subgraph, max_length: int, cap: int = 256) -> list[Path]:
-    """Enumerate paths from any anchor, up to `max_length` hops; cap total at `cap`."""
+def _enumerate_paths(sg: Subgraph, max_length: int, cap: int = 256,
+                     bidirectional: bool = True) -> list[Path]:
+    """Enumerate paths from any anchor, up to `max_length` hops; cap total at `cap`.
+
+    When `bidirectional=True`, walks BOTH forward (s -> o) and reverse (o -> s)
+    edges so anchors that are referenced as the tail of a triple (e.g.
+    `(Jamaican Creole | main_country | Jamaica)` with anchor=Jamaica) can still
+    reach their semantic neighbours. For reverse traversal we synthesise a
+    virtual `Triple` whose `.s` is the side we're at and `.o` is the side we're
+    walking to, with relation prefixed by `~`. This keeps `path.tail` semantically
+    meaningful (= endpoint farthest from anchor) for downstream answer extraction.
+
+    When `bidirectional=False` (e.g. ICEWS18), only walks forward edges. The
+    directional event graph has no meaningful reverse semantics.
+    """
     paths: list[Path] = []
     out_idx: dict[str, list[Triple]] = {}
+    in_idx: dict[str, list[Triple]] = {}
     for t in sg.triples:
         out_idx.setdefault(t.s, []).append(t)
+        in_idx.setdefault(t.o, []).append(t)
+
+    def _expand(node: str) -> list[Triple]:
+        """All edges (forward + reverse) at `node`. Reverse edges are
+        synthesised so the virtual triple's `.s = node` and `.o = the other end`."""
+        out = list(out_idx.get(node, []))
+        if not bidirectional:
+            return out
+        for t in in_idx.get(node, []):
+            # Reverse: at o=node, going back to s. Virtual triple's tail is t.s.
+            out.append(Triple(
+                s=node, r=f"~{t.r}", o=t.s,
+                s_type=getattr(t, "o_type", ""), o_type=getattr(t, "s_type", ""),
+                prov=getattr(t, "prov", None),
+                timestamp=getattr(t, "timestamp", None),
+            ))
+        return out
+
     queue: list[list[Triple]] = []
-    for t in sg.triples:
-        if t.s in sg.anchors:
-            queue.append([t])
+    for a in sg.anchors:
+        for step in _expand(a):
+            queue.append([step])
+
     while queue:
         cur = queue.pop()
         paths.append(Path(triples=list(cur)))
@@ -39,8 +144,8 @@ def _enumerate_paths(sg: Subgraph, max_length: int, cap: int = 256) -> list[Path
             break
         if len(cur) >= max_length:
             continue
-        for t in out_idx.get(cur[-1].o, []):
-            queue.append(cur + [t])
+        for step in _expand(cur[-1].o):
+            queue.append(cur + [step])
     return paths
 
 
@@ -92,6 +197,10 @@ class QuestKG:
         max_path_length: int | None = None,
         path_cap: int = 256,
         task_type: str = "entity",
+        answer_rescoring: bool = True,
+        answer_rescoring_lambda: float = 4.0,
+        llm=None,
+        llm_rerank_top_n: int = 8,
     ):
         self.retriever = retriever
         self.symbolic_checker = symbolic_checker
@@ -103,6 +212,17 @@ class QuestKG:
         self.path_cap = path_cap
         assert task_type in ("entity", "yes_no")
         self.task_type = task_type
+        # Answer-side cosine rescoring helps surface-form QA (WebQSP, CWQ) but
+        # hurts numeric-ID link prediction (ICEWS18) where the "entity" is an
+        # opaque integer with no semantic embedding.
+        self.answer_rescoring = bool(answer_rescoring)
+        self.answer_rescoring_lambda = float(answer_rescoring_lambda)
+        # Optional LLM verbalization for QA: when set, QUEST-KG keeps its
+        # retrieval + symbolic reasoning, then asks the LLM to pick the answer
+        # from the top-N candidate paths. The "QUEST-KG-LLM" hybrid variant.
+        # Default None preserves pure-symbolic behaviour for OrgAccess/ICEWS18.
+        self.llm = llm
+        self.llm_rerank_top_n = int(llm_rerank_top_n)
 
     def predict(
         self,
@@ -165,7 +285,11 @@ class QuestKG:
                 sg.node_states[n] = NodeState(alpha_pos=1.0, alpha_neg=1.0)
 
         # ---- Stage 3: paths + symbolic + abstention ----------------------------
-        candidate_paths = _enumerate_paths(sg, max_length=self.max_path_length, cap=self.path_cap)
+        bidir_paths = getattr(self.retriever, "bidirectional", True)
+        candidate_paths = _enumerate_paths(
+            sg, max_length=self.max_path_length, cap=self.path_cap,
+            bidirectional=bidir_paths,
+        )
         for p in candidate_paths:
             try:
                 p.violates_symbolic = bool(self.symbolic_checker.violates(p))
@@ -178,7 +302,66 @@ class QuestKG:
         )
 
         valid = [p for p in candidate_paths if not p.violates_symbolic]
-        top = max(valid, key=lambda x: x.score) if valid else None
+
+        # Answer-side re-scoring for entity QA: combine the path score with
+        # cosine similarity between the tail surface form and the query, plus
+        # a question-pattern -> relation-keyword boost. Penalise candidate
+        # tails that overlap heavily with the anchor surface form (they are
+        # usually "about the anchor" rather than the answer to the question).
+        # All signals are symbolic + deterministic; no LLM at inference.
+        if self.task_type == "entity" and self.answer_rescoring and valid:
+            try:
+                from quest_kg.retrieval.schema_aware import _content_tokens, _relation_tokens
+            except Exception:
+                _content_tokens = None
+                _relation_tokens = None
+            q_tokens = _content_tokens(query) if _content_tokens else set()
+            anchor_tokens: set[str] = set()
+            if _content_tokens:
+                for a in sg.anchors:
+                    anchor_tokens |= _content_tokens(a)
+            try:
+                q_emb_a = np.asarray(self.retriever.encoder(query), dtype=np.float32)
+                q_norm_a = q_emb_a / (np.linalg.norm(q_emb_a) + 1e-12)
+                ent_emb = self.retriever._entity_emb
+                ent_idx = self.retriever._entity_idx
+                for p in valid:
+                    tail = p.tail
+                    if ent_emb is not None and tail in ent_idx:
+                        v = ent_emb[ent_idx[tail]]
+                        v_norm = v / (np.linalg.norm(v) + 1e-12)
+                        s_ans = float(np.dot(q_norm_a, v_norm))
+                    else:
+                        s_ans = 0.0
+                    p.score = float(p.score) * math.exp(self.answer_rescoring_lambda * s_ans)
+                    if q_tokens and _relation_tokens and p.triples:
+                        last_rel = p.triples[-1].r or ""
+                        rel_clean = last_rel.lstrip("~")
+                        r_tokens = _relation_tokens(rel_clean)
+                        p.score = float(p.score) * _question_relation_boost(q_tokens, r_tokens)
+                    # Metadata-relation penalty: paths ending in type/notable_for/
+                    # alias relations lead to type/category nodes ("Invention",
+                    # "Person"), not specific answer entities. Heavy penalty.
+                    if p.triples and _is_metadata_relation(p.triples[-1].r or ""):
+                        p.score = float(p.score) * math.exp(-4.0)
+                    # Anchor-overlap penalty: if the tail's content tokens are
+                    # mostly anchor tokens, it's likely a sentence/description
+                    # node "about the anchor" rather than the answer.
+                    # Hard penalty when anchor tokens are a subset of tail tokens:
+                    # those are "derived" forms (SS X, X Museum, X's biography)
+                    # that almost never answer the question about X itself.
+                    if _content_tokens and anchor_tokens and tail:
+                        tail_tokens = _content_tokens(tail)
+                        if tail_tokens:
+                            overlap = len(tail_tokens & anchor_tokens) / len(tail_tokens)
+                            p.score = float(p.score) * math.exp(-2.0 * overlap)
+                            if anchor_tokens.issubset(tail_tokens):
+                                p.score = float(p.score) * math.exp(-3.0)
+            except Exception:
+                pass
+
+        ranked = sorted(valid, key=lambda x: x.score, reverse=True)
+        top = ranked[0] if ranked else None
 
         # ---- Task-specific answer extraction ----------------------------------
         if abstained:
@@ -192,7 +375,126 @@ class QuestKG:
             ))
             prediction = "1" if granted else "0"
         else:
-            prediction = top.tail if top else None
+            # Entity QA: highest-scoring path with non-MID tail (after answer-side
+            # rescoring already lifted right-typed tails).
+            prediction = None
+            for p in ranked:
+                if not _is_opaque_identifier(p.tail):
+                    prediction = p.tail
+                    break
+            if prediction is None and top is not None:
+                # Fallback: walk one extra hop from the MID tail.
+                tail_idx2: dict[str, list[Triple]] = {}
+                for t in sg.triples:
+                    tail_idx2.setdefault(t.s, []).append(t)
+                follow = [t for t in tail_idx2.get(top.tail, [])
+                          if not _is_opaque_identifier(t.o)]
+                if follow:
+                    prediction = follow[0].o
+                else:
+                    prediction = top.tail
+
+        # Optional LLM verbalization for entity QA: ask the LLM to pick the
+        # answer from QUEST-KG's top-N candidate paths. Keeps retrieval +
+        # symbolic reasoning + abstention; only the final answer-extraction
+        # step is delegated to the LLM. "QUEST-KG-LLM" hybrid variant.
+        if (self.llm is not None and self.task_type == "entity"
+                and not abstained and valid):
+            try:
+                top_paths = ranked[: self.llm_rerank_top_n]
+                # Compact evidence: list of (s,r,o) for paths' triples
+                ev_lines = []
+                seen_keys = set()
+                for p in top_paths:
+                    for t in p.triples:
+                        k_str = (t.s, t.r.lstrip("~"), t.o)
+                        if k_str in seen_keys:
+                            continue
+                        seen_keys.add(k_str)
+                        ev_lines.append(f"({t.s} | {t.r.lstrip('~')} | {t.o})")
+                # Candidate answer list = unique non-MID tails (primary) plus
+                # non-anchor intermediate nodes (secondary). Cap at 16 -- grid
+                # search showed WebQSP drops at 24 (more distractors for the
+                # 1.5B model) while CWQ is insensitive 16-24.
+                cand_set: list[str] = []
+                seen_cands: set[str] = set()
+                for p in top_paths:
+                    for n in (p.tail, *p.node_seq()[1:-1]):
+                        if n is None or n in seen_cands or n in sg.anchors:
+                            continue
+                        if _is_opaque_identifier(n):
+                            continue
+                        seen_cands.add(n)
+                        cand_set.append(n)
+                        if len(cand_set) >= 16:
+                            break
+                    if len(cand_set) >= 16:
+                        break
+                if cand_set:
+                    prompt = (
+                        "You are a knowledge-graph QA system. Pick the SINGLE "
+                        "best answer to the question from the numbered candidate "
+                        "list below, using ONLY the supporting facts. Output "
+                        "ONLY the number of the chosen candidate, nothing else.\n\n"
+                        f"Facts:\n" + "\n".join(ev_lines[:32]) + "\n\n"
+                        f"Candidates:\n" + "\n".join(
+                            f"{i+1}. {c}" for i, c in enumerate(cand_set)) + "\n\n"
+                        f"Question: {query}\n"
+                        "Answer number:"
+                    )
+                    raw = self.llm.generate([prompt], max_new_tokens=8)[0]
+                    raw = raw.strip().split("\n")[0].strip().strip("-*. ").strip()
+                    snapped = None
+                    # Primary: parse a candidate number
+                    digits = re.findall(r"\d+", raw)
+                    if digits:
+                        try:
+                            n = int(digits[0])
+                            if 1 <= n <= len(cand_set):
+                                snapped = cand_set[n - 1]
+                        except ValueError:
+                            pass
+                    # Secondary: substring snap (LLM emitted a name)
+                    if snapped is None:
+                        raw_lower = raw.lower()
+                        for c in cand_set:
+                            if c.lower() == raw_lower:
+                                snapped = c
+                                break
+                        if snapped is None:
+                            for c in cand_set:
+                                if (c.lower() in raw_lower
+                                        and len(c) > 2):
+                                    snapped = c
+                                    break
+                    # Only override symbolic prediction if LLM snapped to a
+                    # candidate. Garbled / off-list LLM output keeps symbolic.
+                    if snapped is not None:
+                        prediction = snapped
+            except Exception:
+                pass  # fall back to symbolic prediction
+
+        # Candidate ranking for link-prediction / QA: ordered list of distinct
+        # endpoints by best path score. We include both the path tail (primary)
+        # AND non-anchor intermediate nodes (secondary, for QA where the answer
+        # may sit mid-path -- e.g., a 2-hop path Jamaica -> X -> Y can have the
+        # answer at X rather than Y depending on relation semantics).
+        seen_tails: set[str] = set()
+        candidate_ranking: list[str] = []
+        for p in ranked:
+            # Primary: path tail
+            t = p.tail
+            if t is not None and t not in seen_tails:
+                seen_tails.add(t)
+                candidate_ranking.append(t)
+            # Secondary: non-anchor intermediate nodes (path tail is already covered)
+            for node in p.node_seq()[1:-1]:
+                if node not in seen_tails and node not in sg.anchors:
+                    seen_tails.add(node)
+                    candidate_ranking.append(node)
+            if len(candidate_ranking) >= 64:
+                candidate_ranking = candidate_ranking[:64]
+                break
 
         return PredictResult(
             query=query,
@@ -207,5 +509,6 @@ class QuestKG:
                 "answer_probs": probs,
                 "n_valid_paths": len(valid),
                 "task_type": self.task_type,
+                "candidate_ranking": candidate_ranking,
             },
         )

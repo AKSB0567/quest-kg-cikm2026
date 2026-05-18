@@ -13,7 +13,7 @@ from __future__ import annotations
 from collections.abc import Iterable
 import numpy as np
 
-from baselines.base import Baseline, BaselinePrediction
+from baselines.base import Baseline, BaselinePrediction, ranking_from_triples
 from quest_kg.core.types import Triple
 from quest_kg.retrieval.schema_aware import SchemaAwareRetriever
 
@@ -52,4 +52,5 @@ class GraphRAG:
         return BaselinePrediction(
             query=query, prediction=ans.split("\n")[0].strip(),
             confidence=conf, evidence=sg.triples,
+            extra={"candidate_ranking": ranking_from_triples(sg.triples)},
         )

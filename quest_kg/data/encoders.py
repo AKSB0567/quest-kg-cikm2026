@@ -76,20 +76,25 @@ class SentenceTransformerEncoder:
             if len(self._cache) < self._cache_max:
                 self._cache[text] = v
             return v
-        # Batch case — strip cached, encode the rest
-        rest: list[str] = [t for t in text if t not in self._cache]
-        if rest:
+        # Batch case — encode any text not already cached. We use a per-call
+        # `local` map (cache hits + freshly encoded) so the final stack lookup
+        # never depends on whether new entries fit under `_cache_max` — that
+        # bound only controls long-lived caching, not correctness.
+        unique_uncached = sorted({t for t in text if t not in self._cache})
+        local: dict[str, np.ndarray] = {}
+        if unique_uncached:
             embs = self.model.encode(
-                rest,
+                unique_uncached,
                 batch_size=self.batch_size,
                 convert_to_numpy=True,
                 normalize_embeddings=True,
                 show_progress_bar=False,
             )
-            for t, v in zip(rest, embs):
+            for t, v in zip(unique_uncached, embs):
+                local[t] = v
                 if len(self._cache) < self._cache_max:
                     self._cache[t] = v
-        return np.stack([self._cache[t] for t in text])
+        return np.stack([self._cache[t] if t in self._cache else local[t] for t in text])
 
 
 def get_encoder(name: str = "e5-large-v2", **kwargs) -> object:

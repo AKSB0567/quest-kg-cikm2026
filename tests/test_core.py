@@ -210,6 +210,38 @@ def test_end_to_end_no_crash():
     assert len(out.subgraph.nodes) > 0
 
 
+def test_is_opaque_identifier():
+    from quest_kg.inference import _is_opaque_identifier
+    assert _is_opaque_identifier("m.04dryy0")
+    assert _is_opaque_identifier("g.1257kpk96")
+    assert not _is_opaque_identifier("William Roache")
+    assert not _is_opaque_identifier("Jamaican English")
+    assert not _is_opaque_identifier("m")
+    assert not _is_opaque_identifier("m.")
+    assert not _is_opaque_identifier(None)
+    assert not _is_opaque_identifier("")
+
+
+def test_questkg_prefers_surface_tail_over_mid():
+    # KG where the top-scoring 2-hop path ends in a MID, and a secondary path
+    # ends in a real label. The MID-aware extractor must prefer the label.
+    kg = [
+        Triple("Jamaica", "location.country.languages_spoken", "m.04dryy0",
+               "Country", "LanguageMID"),
+        Triple("Jamaica", "language.has_label", "Jamaican English",
+               "Country", "Language"),
+    ]
+    r = SchemaAwareRetriever(triples=kg, encoder=dummy_encoder, k=1, top_k=8)
+    checker = FreebaseChecker()  # permissive
+    qkg = QuestKG(retriever=r, symbolic_checker=checker,
+                  p_star=0.0, h_star=999.0, task_type="entity")
+    out = qkg.predict("what does jamaican people speak",
+                      query_meta={"q_entity": ["Jamaica"]})
+    # The prediction should NOT be the MID. Either the surface label, or a
+    # one-hop walk from the MID, but never the raw "m.04dryy0".
+    assert out.prediction != "m.04dryy0", f"got {out.prediction!r}"
+
+
 if __name__ == "__main__":
     fns = [v for k, v in globals().items() if k.startswith("test_") and callable(v)]
     for fn in fns:

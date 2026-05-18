@@ -11,7 +11,7 @@ from collections.abc import Iterable
 
 import numpy as np
 
-from baselines.base import Baseline, BaselinePrediction
+from baselines.base import Baseline, BaselinePrediction, ranking_from_triples
 from quest_kg.core.types import Triple
 
 
@@ -86,4 +86,5 @@ class ChainOfKnowledge:
             prediction=ans.split("\n")[0].strip(),
             confidence=0.75,
             evidence=chain,
+            extra={"candidate_ranking": ranking_from_triples(chain)},
         )

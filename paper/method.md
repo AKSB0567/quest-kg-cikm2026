@@ -207,7 +207,49 @@ If `δ(π) = 1`, the path is excluded from scoring.
 Equivalently in log space:
   `log S(π) = Σ log α_ij + Σ log w_r + Σ log b_i`
 
-The predicted answer is the terminal entity of `π* = argmax S(π)`.
+### Answer-side rescoring (post-MP)
+
+Empirically, path attention captures structural coherence but not "is the
+endpoint actually the answer to the question". We multiply each surviving
+path's score by a **query-conditioned tail-similarity term** before picking
+the argmax:
+
+  `S'(π) = S(π) · exp( λ_ans · cos(q_emb, v_tail(π)) ) · B_qr(π) · P_anchor(π) · P_meta(π)`
+
+where:
+- `λ_ans = 4`: tunable scalar; lifts paths whose tail is semantically close
+  to the question. Disabled for ICEWS18 (numeric entity IDs have no
+  meaningful encoder embedding).
+- `B_qr(π) = 2` if the last relation's tokens align with a question-pattern
+  hint (e.g. "where … from" -> {place_of_birth, location.…}), else 1.
+- `P_anchor(π) = exp(-2 · overlap(tail_tokens, anchor_tokens))`: penalises
+  candidate tails that are mostly anchor tokens (= "about the anchor" rather
+  than the answer).
+- `P_meta(π) = exp(-4)` when the last relation is a Freebase metadata
+  relation (`type.object.type`, `common.topic.notable_types`, …); these
+  produce generic type nodes ("Person", "Invention") not specific answers.
+
+`λ_ans, B_qr, P_anchor, P_meta` are deterministic symbolic terms — no LLM
+involved. They preserve the §3.4 evidential-MP and §3.5 abstention math
+intact; they only re-rank surviving paths during answer extraction.
+
+The predicted answer is the terminal entity of `π* = argmax S'(π)`.
+
+### Optional LLM verbalization (QUEST-KG-LLM variant)
+
+For open-domain QA where the answer surface form must be verbalized in
+natural language, we offer an **optional hybrid** mode:
+
+1. QUEST-KG retrieval + evidential MP + symbolic checking are unchanged.
+2. The top-N (default N=8) surviving paths' triples are passed to an LLM
+   along with up to 16 candidate answer entities (the paths' deduplicated
+   non-MID, non-anchor endpoints).
+3. The LLM picks one candidate by index from a numbered list. If the
+   LLM output does not snap to a candidate, the symbolic prediction is kept
+   (no degradation vs pure-symbolic).
+
+The hybrid retains QUEST-KG's calibrated abstention (the LLM only fires
+when QUEST-KG has not abstained). Reported in §4 as `QUEST-KG-LLM`.
 
 ### Abstention
 

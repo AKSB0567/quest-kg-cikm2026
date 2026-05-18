@@ -1,6 +1,9 @@
 """Sanity tests for evaluation metrics."""
 import numpy as np
-from quest_kg.eval.metrics import ece, brier, nll, aurc, hits_at_k, mrr
+from quest_kg.eval.metrics import (
+    aurc, balanced_accuracy, brier, ece, hits_at_k, hits_at_k_from_ranks,
+    macro_f1_binary, mrr, mrr_from_ranks, nll, positive_class_prf,
+)
 
 
 def test_ece_perfect_calibration():
@@ -53,6 +56,47 @@ def test_aurc_ranges():
     assert 0.0 <= val <= 1.0
 
 
+def test_balanced_accuracy_majority_class_is_chance():
+    # 91 negatives, 9 positives, predictor always says "0" -> EM=0.91 but BAcc=0.5
+    preds = ["0"] * 100
+    golds = ["0"] * 91 + ["1"] * 9
+    assert balanced_accuracy(preds, golds) == 0.5
+
+
+def test_balanced_accuracy_perfect():
+    preds = ["1", "0", "1", "0"]
+    golds = ["1", "0", "1", "0"]
+    assert balanced_accuracy(preds, golds) == 1.0
+
+
+def test_positive_class_prf_zero_when_majority():
+    preds = ["0"] * 100
+    golds = ["0"] * 91 + ["1"] * 9
+    prf = positive_class_prf(preds, golds)
+    assert prf["f1"] == 0.0
+    assert prf["recall"] == 0.0
+
+
+def test_macro_f1_binary():
+    preds = ["1", "1", "0", "0"]
+    golds = ["1", "0", "0", "0"]
+    val = macro_f1_binary(preds, golds)
+    # pos: P=0.5, R=1.0, F1=2/3 ; neg: P=1.0, R=2/3, F1=0.8 -> avg ~0.733
+    assert abs(val - 0.7333333) < 1e-3
+
+
+def test_hits_at_k_from_ranks():
+    # 5 queries: ranks 1, 2, 3, 11, 0(not in candidates)
+    assert hits_at_k_from_ranks([1, 2, 3, 11, 0], 1) == 0.2
+    assert hits_at_k_from_ranks([1, 2, 3, 11, 0], 3) == 0.6
+    assert hits_at_k_from_ranks([1, 2, 3, 11, 0], 10) == 0.6
+
+
+def test_mrr_from_ranks():
+    ranks = [1, 2, 0, 4]  # 1.0 + 0.5 + 0 + 0.25 = 1.75 / 4 = 0.4375
+    assert abs(mrr_from_ranks(ranks) - 0.4375) < 1e-9
+
+
 if __name__ == "__main__":
     test_ece_perfect_calibration()
     test_ece_overconfident()
@@ -60,4 +104,10 @@ if __name__ == "__main__":
     test_hits_at_k_basic()
     test_mrr_basic()
     test_aurc_ranges()
+    test_balanced_accuracy_majority_class_is_chance()
+    test_balanced_accuracy_perfect()
+    test_positive_class_prf_zero_when_majority()
+    test_macro_f1_binary()
+    test_hits_at_k_from_ranks()
+    test_mrr_from_ranks()
     print("all metric tests OK")

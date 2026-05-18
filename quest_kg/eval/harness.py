@@ -119,18 +119,46 @@ def run_method(
 
         em = exact_match(prediction or "", all_gold) if prediction else 0
         f1 = token_f1(prediction or "", all_gold) if prediction else 0.0
+
+        # Plumb candidate ranking -> per-query rank (for Hits@k / MRR on
+        # link-prediction tasks). 1-indexed; rank=0 means gold absent.
+        rank = 0
+        ranking = (getattr(pred, "extra", None) or {}).get("candidate_ranking") if pred else None
+        if ranking and gold:
+            gold_n = _normalize(str(gold))
+            for i, cand in enumerate(ranking):
+                if _normalize(str(cand)) == gold_n:
+                    rank = i + 1
+                    break
+
         results.append(QueryResult(
             qid=str(qid), question=question, gold=str(gold), prediction=prediction,
             em=em, f1=f1, confidence=float(confidence),
             latency_ms=float(latency_ms), abstained=bool(abstained),
-            extra={"method": method_name, **({"error": err} if err else {})},
+            extra={"method": method_name, "rank": rank,
+                   **({"error": err} if err else {})},
         ))
     return results
 
 
-def aggregate(results: list[QueryResult]) -> dict:
+def aggregate(results: list[QueryResult], task_type: str | None = None) -> dict:
+    """Aggregate per-query results into a summary.
+
+    `task_type` selects task-appropriate headline metrics:
+      - "access_control" (binary yes/no): adds balanced_accuracy + positive-class P/R/F1 + macro_f1.
+      - "link_prediction" (ranked entity): adds Hits@1, Hits@10, MRR from per-query
+         `extra["rank"]` (1-indexed; 0 means gold not in candidates).
+      - "qa" (open-domain): EM + token_f1 remain primary.
+
+    EM/F1 are always reported so we can audit the impact of switching headlines.
+    """
     if not results:
         return {}
+    from quest_kg.eval.metrics import (
+        balanced_accuracy, hits_at_k_from_ranks, macro_f1_binary,
+        mrr_from_ranks, positive_class_prf,
+    )
+
     n = len(results)
     n_eval = sum(1 for r in results if not r.abstained)
     em = sum(r.em for r in results) / n
@@ -138,7 +166,7 @@ def aggregate(results: list[QueryResult]) -> dict:
     f1 = sum(r.f1 for r in results) / n
     mean_latency = float(np.mean([r.latency_ms for r in results]))
     p95_latency = float(np.percentile([r.latency_ms for r in results], 95))
-    return {
+    summary = {
         "n": n,
         "n_attempted": n_eval,
         "abstention_rate": (n - n_eval) / n,
@@ -147,7 +175,42 @@ def aggregate(results: list[QueryResult]) -> dict:
         "token_f1": f1,
         "mean_latency_ms": mean_latency,
         "p95_latency_ms": p95_latency,
+        "task_type": task_type or "qa",
     }
+
+    if task_type == "access_control":
+        preds = [_normalize(r.prediction or "") for r in results]
+        golds = [_normalize(r.gold or "") for r in results]
+        prf = positive_class_prf(preds, golds, positive="1")
+        summary["balanced_accuracy"] = balanced_accuracy(preds, golds, positive="1")
+        summary["macro_f1"] = macro_f1_binary(preds, golds, positive="1")
+        summary["pos_precision"] = prf["precision"]
+        summary["pos_recall"] = prf["recall"]
+        summary["pos_f1"] = prf["f1"]
+        summary["pos_support"] = prf["support_pos"]
+        summary["neg_support"] = prf["support_neg"]
+        summary["primary_metric"] = "balanced_accuracy"
+        summary["primary_value"] = summary["balanced_accuracy"]
+
+    elif task_type == "link_prediction":
+        ranks = [int((r.extra or {}).get("rank", 0)) for r in results]
+        summary["hits_at_1"] = hits_at_k_from_ranks(ranks, 1)
+        summary["hits_at_3"] = hits_at_k_from_ranks(ranks, 3)
+        summary["hits_at_10"] = hits_at_k_from_ranks(ranks, 10)
+        summary["mrr"] = mrr_from_ranks(ranks)
+        summary["n_in_candidates"] = int(sum(1 for r in ranks if r > 0))
+        summary["primary_metric"] = "mrr"
+        summary["primary_value"] = summary["mrr"]
+
+    else:  # qa
+        # Accuracy (Hits@1 ~= exact_match) is the headline metric for WebQSP/CWQ
+        # in the paper draft, not token_f1. token_f1 stays in the output as a
+        # secondary diagnostic but is not the primary comparison.
+        summary["primary_metric"] = "accuracy"
+        summary["primary_value"] = em
+        summary["hits_at_1"] = em
+
+    return summary
 
 
 def to_dataframe(results: list[QueryResult]):
