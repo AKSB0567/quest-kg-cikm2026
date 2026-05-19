@@ -1,0 +1,17 @@
+{
+  "n": 100,
+  "n_attempted": 0,
+  "abstention_rate": 1.0,
+  "exact_match": 0.0,
+  "exact_match_when_attempted": 0.0,
+  "token_f1": 0.0,
+  "mean_latency_ms": 25228.324635629975,
+  "p95_latency_ms": 55868.29412400181,
+  "method": "quest_kg",
+  "dataset": "icews18",
+  "llm": "mistral-7b",
+  "encoder": "e5-large-v2",
+  "seed": 0,
+  "wallclock_s": 2522.8334155669945,
+  "csv_path": "/content/drive/MyDrive/quest_kg/results/quest_kg__icews18__mistral-7b__seed0.csv"
+}

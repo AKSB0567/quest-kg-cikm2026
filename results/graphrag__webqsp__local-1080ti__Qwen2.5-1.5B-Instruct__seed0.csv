@@ -1,0 +1,51 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+WebQTest-0,what does jamaican people speak,Jamaican English,Jamaican English and Jamaican Creole English Language,0,0.923076923076923,0.4720200849696994,1304.7383001539856,False,graphrag,5
+WebQTest-1,what did james k polk do before he was president,United States Representative,", James K. Polk)",0,0.0,0.5804973943158984,3007.010200060904,False,graphrag,0
+WebQTest-3,who plays ken barlow in coronation street,William Roache,Ken Barlow is played by David Morrissey in Coronation Street.,0,0.0,0.5322263427078724,1734.6046001184732,False,graphrag,0
+WebQTest-6,where is jamarcus russell from,Mobile,Mobile,1,1.0,0.556835365947336,365.77220004983246,False,graphrag,9
+WebQTest-7,where was george washington carver from,Diamond,The United States of America,0,0.0,0.5895578358322382,906.7753001581877,False,graphrag,0
+WebQTest-8,what else did ben franklin invent,Lightning rod,"olfier brothers, invented bifocal glasses and served on a committee appointed by Louis XVI to report on \""animal magnetism",0,0.0,0.5785350669175386,2767.7154999691993,False,graphrag,5
+WebQTest-9,who was richard nixon married to,Pat Nixon,m.02h98gq,0,0.0,0.4475491992197931,2463.173900032416,False,graphrag,0
+WebQTest-12,who is governor of ohio 2011,John Kasich,m.04j5sk8,0,0.0,0.26924904342740774,2526.5592001378536,False,graphrag,0
+WebQTest-13,who was vice president after kennedy died,Lyndon B. Johnson,Gerald Ford,0,0.0,0.2961840908974409,525.7628001272678,False,graphrag,0
+WebQTest-14,where is the fukushima daiichi nuclear plant located,Japan,Japan,1,1.0,0.28732624696567655,2368.242499884218,False,graphrag,0
+WebQTest-16,what countries are part of the uk,Wales,"The UK is composed of several countries including England, Scotland, Wales, Northern Ireland, and the Isle of Man. Additionally",0,0.1904761904761905,0.38010929245501757,2352.544100023806,False,graphrag,0
+WebQTest-19,what is my timezone in louisiana,Central Time Zone,Central Time Zone,1,1.0,0.42292028944939375,2323.3193999622017,False,graphrag,1
+WebQTest-20,what did st augustine do,Writer,Michael Manley,0,0.0,0.2575465301051736,2505.614400142804,False,graphrag,0
+WebQTest-21,who is keyshia cole dad,Sal Gibson,Michael Hillegas,0,0.0,0.32732659997418523,750.4171000327915,False,graphrag,0
+WebQTest-22,what kind government does egypt have,Semi-presidential system,parliamentary system,0,0.4,0.3165182452648878,1371.93139991723,False,graphrag,0
+WebQTest-23,what town was martin luther king assassinated in,Memphis,macon county,0,0.0,0.28650113474577665,620.6427998840809,False,graphrag,0
+WebQTest-24,where did edgar allan poe died,Baltimore,"To determine where Edgar Allan Poe died, I'll follow these steps:",0,0.0,0.3428190597333014,2779.233600012958,False,graphrag,0
+WebQTest-26,what to do today in atlanta with kids,Fox Theatre,Hillcrest Heights,0,0.0,0.3087117625400424,2666.1078999750316,False,graphrag,0
+WebQTest-28,what electorate does anna bligh represent,Electoral district of South Brisbane,The information provided in the given knowledge graph is insufficient to determine which electorate Anna Bligh represents as a politician. The graph,0,0.0,0.24315127823501825,2650.066699832678,False,graphrag,0
+WebQTest-31,where did andy murray started playing tennis,2005,"Davenport, florida",0,0.0,0.2308311127126217,2617.7403000183403,False,graphrag,0
+WebQTest-32,what is the australian dollar called,AUD,"The Australian dollar is commonly referred to as the ""Aussie"" or simply ""A$"". It is also known",0,0.0,0.36837347596883774,2436.383199878037,False,graphrag,0
+WebQTest-33,what timezone is sweden,Central European Time Zone,"UTC-05:00 To determine which time zone corresponds to Sweden based on the provided information, let's analyze",0,0.17391304347826086,0.2772949922364205,2430.810699937865,False,graphrag,0
+WebQTest-34,who did cam newton sign with,Carolina Panthers,"To determine who Isaac Newton signed with, I'll look for any mentions of him signing a contract or association:",0,0.0,0.29328758968040347,2620.862599927932,False,graphrag,0
+WebQTest-35,what county is frederick md in,Frederick County,"Frederick County, Maryland",0,0.8,0.3706706492230296,2613.244599895552,False,graphrag,0
+WebQTest-36,what highschool did harper lee go to,Monroe County High School,Minneapolis High School,0,0.5714285714285715,0.2527591143734753,2538.7746999040246,False,graphrag,0
+WebQTest-37,what timezone is utah in,Mountain Time Zone,UTC−07:00,0,0.0,0.23081736802123487,983.7241999339312,False,graphrag,0
+WebQTest-38,who did george w. bush run against for the second term,John Kerry,"topic.has_sentences, He was elected, then re- elected, but life as a Governor was not challenging enough for him",0,0.0,0.3096165554597974,2692.3980000428855,False,graphrag,0
+WebQTest-39,who is niall ferguson 's wife,Ayaan Hirsi Ali,Niall Ferguson's wife is not mentioned in the provided information. The given data does not contain any details about N,0,0.0,0.27410363871604204,2628.620100207627,False,graphrag,0
+WebQTest-41,where is the galapagos islands located on a world map,Ecuador,"The Galápagos Islands are located in the Pacific Ocean, specifically within the equatorial region of South America. They",0,0.19999999999999998,0.43768566008657217,2488.2127000018954,False,graphrag,0
+WebQTest-42,what are the songs that justin bieber wrote,Somebody to Love,"The Coronation Street Theme Song and ""Love Me Again""",0,0.26666666666666666,0.25164255406707525,1522.976899985224,False,graphrag,0
+WebQTest-43,what did george clemenceau do,Physician,opposed the War of 1812.),0,0.0,0.3281343150883913,2546.723400009796,False,graphrag,0
+WebQTest-44,what is the state flower of arizona,Saguaro,"The state flower of Arizona is not explicitly mentioned in the given subgraph. However, based on general knowledge about Arizona's",0,0.0,0.24606178188696504,2420.6557001452893,False,graphrag,0
+WebQTest-45,where was rihanna born and raised,Saint Michael Parish,Jamaica,0,0.0,0.3471093503758311,2255.6660999543965,False,graphrag,0
+WebQTest-46,what year did president william henry harrison take office,1841-03-04,Polk campaign),0,0.0,0.3952280143275857,2442.5018997862935,False,graphrag,0
+WebQTest-47,where george lopez was born,Mission Hills,Philadelphia,0,0.0,0.32350584398955107,2430.9915001504123,False,graphrag,0
+WebQTest-48,where are samsung based,Suwon,"To determine where Samsung is based, let's analyze the information provided in the subgraph:",0,0.0,0.3515421152114868,2667.669399874285,False,graphrag,0
+WebQTest-49,what did the islamic people believe in,Ṭūbā,"The Islamic people believed in Allah and the Quran. They also followed Sharia law as their religious code of conduct. Additionally,",0,0.16,0.30731919733807445,2456.3265000469983,False,graphrag,0
+WebQTest-51,who will play mr gray in the film,Jamie Dornan,Oscar Watch TV: Frank Langella's Nixon fixation,0,0.0,0.2072698539122939,2526.329700136557,False,graphrag,0
+WebQTest-52,what did george orwell died of,Tuberculosis,anemia,0,0.0,0.3080176035873592,2513.0789999384433,False,graphrag,0
+WebQTest-54,what country did adolf hitler control,Nazi Germany,Germany,0,0.6666666666666666,0.26011345256119967,2602.331900037825,False,graphrag,0
+WebQTest-55,who is michael buble,Actor,"Michael Bublé is a singer and actor from Canada. He was born in Toronto, Ontario, Canada on June",0,0.10526315789473684,0.31031816778704524,2377.327499911189,False,graphrag,0
+WebQTest-56,what county is kansas city kansas,Wyandotte County,"To determine which county Kansas City, Kansas belongs to, let's analyze the information provided:",0,0.11764705882352941,0.38373536663129926,2355.371000012383,False,graphrag,0
+WebQTest-58,who did jackie robinson first play for,UCLA Bruins football,"The information provided does not mention Jackie Robinson playing for any team or organization before joining the Brooklyn Dodgers. Therefore, based on",0,0.0,0.22081419196911156,2509.3890000134706,False,graphrag,0
+WebQTest-59,when did annie open,1976-08-10,1974,0,0.0,0.1765341623686254,2289.6761000156403,False,graphrag,0
+WebQTest-60,where did eleanor roosevelt die,Manhattan,"Washington, D.C.",0,0.0,0.3679302684031427,716.988799860701,False,graphrag,0
+WebQTest-61,what are the religions practiced in indonesia,Catholicism,"Catholicism, Protestantism, Islam, Hinduism, Buddhism, and Taoism. To determine this, I looked at",0,0.14285714285714288,0.3980800798162818,2252.9339001048356,False,graphrag,0
+WebQTest-62,what was jesse james killed with,Firearm,revolver,0,0.0,0.28158046258613467,2739.552699960768,False,graphrag,0
+WebQTest-63,who was vp for lincoln,Hannibal Hamlin,"for election., base.kwebbase.kwsentence.previous_sentence, Abraham Lincoln, freebase.valuenotation.is_reviewed",0,0.0,0.40438941307365894,2740.8431998919696,False,graphrag,0
+WebQTest-64,what other books did charles dickens write,A Christmas Carol (Chrysalis Children's Classics Series),"The Autobiography of Benjamin Franklin & selections from his other writings, The Autobiography of Benjamin Franklin, Poor Richard",0,0.29629629629629634,0.43796548526734114,2671.7301001772285,False,graphrag,0
+WebQTest-65,who was the first dictator of the soviet union,Vladimir Lenin,object of promoting manufactures and encouraging commerce among the colonies.),0,0.0,0.27609672769904137,2741.2549001164734,False,graphrag,0

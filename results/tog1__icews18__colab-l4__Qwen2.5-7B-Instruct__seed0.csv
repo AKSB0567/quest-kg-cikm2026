@@ -1,0 +1,201 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+icews18_0,"(head=459, rel=1, ?, ts=6480)",471,"To find the missing value in the tuple, we need to identify the pattern or rule that applies to the given sequences.",0,0.0,0.8,5415.460203003022,False,tog1,0
+icews18_1,"(head=5205, rel=90, ?, ts=6480)",464,752,0,0.0,0.8,9280.289782000182,False,tog1,0
+icews18_2,"(head=463, rel=69, ?, ts=6480)",458,"To find the missing tail number in the given reasoning chain, we need to identify the pattern or rule that applies to the",0,0.0,0.8,9248.339941001177,False,tog1,0
+icews18_3,"(head=3093, rel=63, ?, ts=6480)",57,"To find the missing tail (`tail`) in the given reasoning chain, we need to identify the pattern or rule that applies",0,0.0,0.8,9290.714111000852,False,tog1,0
+icews18_4,"(head=17519, rel=151, ?, ts=6480)",3881,17519 - 151 = 17368,0,0.0,0.8,8174.783362999733,False,tog1,0
+icews18_5,"(head=4935, rel=0, ?, ts=6480)",7803,"To find the missing tail (`ts`) in the given reasoning chain, we need to identify the pattern or rule that connects",0,0.0,0.8,9289.607638002053,False,tog1,0
+icews18_6,"(head=2820, rel=4, ?, ts=6480)",458,"To find the missing value in the relation (head=2820, rel=4, ?, ts=6",0,0.0,0.8,9178.488155997911,False,tog1,0
+icews18_7,"(head=64, rel=1, ?, ts=6480)",458,649,0,0.0,0.8,9164.392308997776,False,tog1,0
+icews18_8,"(head=42, rel=20, ?, ts=6480)",4145,44,0,0.0,0.8,9415.362381001614,False,tog1,0
+icews18_9,"(head=42, rel=20, ?, ts=6480)",19,44,0,0.0,0.8,9416.816932000074,False,tog1,0
+icews18_10,"(head=42, rel=20, ?, ts=6480)",1449,44,0,0.0,0.8,9416.746908002096,False,tog1,0
+icews18_11,"(head=445, rel=34, ?, ts=6480)",477,10,0,0.0,0.8,8252.966391999507,False,tog1,0
+icews18_12,"(head=1323, rel=0, ?, ts=6480)",344,85,0,0.0,0.8,8625.900778999494,False,tog1,0
+icews18_13,"(head=100, rel=28, ?, ts=6480)",390,"To find the tail (third element) of the tuple, we need to observe the pattern in the given sequences.",0,0.0,0.8,9390.181498001766,False,tog1,0
+icews18_14,"(head=455, rel=0, ?, ts=6480)",765,"To find the tail (ts) for the given head and relation in the reasoning chain, we need to observe the pattern",0,0.0,0.8,9297.30028799895,False,tog1,0
+icews18_15,"(head=44, rel=20, ?, ts=6480)",4145,"To find the missing value in the tuple (head=44, rel=20, ?, ts=64",0,0.0,0.8,9189.950600000884,False,tog1,0
+icews18_16,"(head=44, rel=20, ?, ts=6480)",19,"To find the missing value in the tuple (head=44, rel=20, ?, ts=64",0,0.0,0.8,9193.404319001274,False,tog1,0
+icews18_17,"(head=44, rel=20, ?, ts=6480)",1449,"To find the missing value in the tuple (head=44, rel=20, ?, ts=64",0,0.0,0.8,9197.420512999088,False,tog1,0
+icews18_18,"(head=9731, rel=0, ?, ts=6480)",445,"To find the missing value in the tuple (head=9731, rel=0, ?, ts=6",0,0.0,0.8,7221.318251999037,False,tog1,0
+icews18_19,"(head=298, rel=6, ?, ts=6480)",397,"To find the missing tail (`ts`) value for the given triple `(head=298, rel=6,",0,0.0,0.8,9431.035962999886,False,tog1,0
+icews18_20,"(head=19, rel=20, ?, ts=6480)",161,1123,0,0.0,0.8,9239.46810399866,False,tog1,0
+icews18_21,"(head=19, rel=2, ?, ts=6480)",42,"To find the missing tail (`ts`) in the given reasoning chain, we need to identify the pattern or rule that connects",0,0.0,0.8,9165.392791001068,False,tog1,0
+icews18_22,"(head=42, rel=20, ?, ts=6480)",41,44,0,0.0,0.8,9417.338020997704,False,tog1,0
+icews18_23,"(head=19, rel=34, ?, ts=6480)",122,345,0,0.0,0.8,6968.227828001545,False,tog1,0
+icews18_24,"(head=19, rel=5, ?, ts=6480)",42,"To find the answer, we need to identify the pattern in the given sequence. Observing the provided tuples:",0,0.0,0.8,5878.061394003453,False,tog1,0
+icews18_25,"(head=19, rel=43, ?, ts=6480)",20,"To find the missing value in the tuple (head=19, rel=43, ?, ts=64",0,0.0,0.8,8970.893858000636,False,tog1,0
+icews18_26,"(head=2274, rel=1, ?, ts=6480)",44,1395,0,0.0,0.8,8525.402172999748,False,tog1,0
+icews18_27,"(head=21995, rel=31, ?, ts=6480)",9096,(tail=21995-31*6480) = (tail=219,0,0.0,0.8,7256.897854000272,False,tog1,0
+icews18_28,"(head=9096, rel=32, ?, ts=6480)",21995,9096 - 32 = 9064,0,0.0,0.8,8442.213863996585,False,tog1,0
+icews18_29,"(head=8044, rel=0, ?, ts=6480)",1125,"To find the missing tail (`ts`) in the given reasoning chain, we need to identify the pattern or rule that connects",0,0.0,0.8,8334.938677002356,False,tog1,0
+icews18_30,"(head=2618, rel=1, ?, ts=6480)",451,"To find the missing value for the relation (rel=1) in the given tuple, we need to identify a pattern",0,0.0,0.8,9444.49328400151,False,tog1,0
+icews18_31,"(head=2618, rel=15, ?, ts=6480)",451,"To find the tail (ts) for the relation (2618, 15, ?) with timestamp",0,0.0,0.8,9391.710304000298,False,tog1,0
+icews18_32,"(head=970, rel=1, ?, ts=6480)",451,"To find the tail (ts) for the given triple (head=970, rel=1, ?),",0,0.0,0.8,9395.79204200345,False,tog1,0
+icews18_33,"(head=3454, rel=5, ?, ts=6480)",11779,"To find the tail (ts) for the given triple (head=3454, rel=5, ?",0,0.0,0.8,9300.214507999044,False,tog1,0
+icews18_34,"(head=4115, rel=29, ?, ts=6480)",2211,4117,0,0.0,0.8,1448.0521359982959,False,tog1,0
+icews18_35,"(head=3454, rel=2, ?, ts=6480)",2211,3456,0,0.0,0.8,5304.726366000978,False,tog1,0
+icews18_36,"(head=50, rel=51, ?, ts=6480)",80,40,0,0.0,0.8,5997.640644000057,False,tog1,0
+icews18_37,"(head=50, rel=52, ?, ts=6480)",80,40,0,0.0,0.8,9290.788097998302,False,tog1,0
+icews18_38,"(head=4447, rel=0, ?, ts=6480)",80,"To find the missing tail number in the given reasoning chain, we need to observe the pattern in the provided examples:",0,0.0,0.8,5300.858104998042,False,tog1,0
+icews18_39,"(head=80, rel=6, ?, ts=6480)",50,"To find the missing tail (`ts`) value for the given head and relation in the reasoning chain, we need to identify",0,0.0,0.8,9396.757311998954,False,tog1,0
+icews18_40,"(head=312, rel=20, ?, ts=6480)",80,122,0,0.0,0.8,9302.508595999825,False,tog1,0
+icews18_41,"(head=5248, rel=40, ?, ts=6480)",163,"To find the missing tail number in the given reasoning chain, we need to identify the pattern or rule that connects the numbers",0,0.0,0.8,9265.354229002696,False,tog1,0
+icews18_42,"(head=19, rel=5, ?, ts=6480)",396,"To find the answer, we need to identify the pattern in the given sequence. Observing the provided tuples:",0,0.0,0.8,5879.522306000581,False,tog1,0
+icews18_43,"(head=19, rel=20, ?, ts=6480)",42,1123,0,0.0,0.8,9238.916151000012,False,tog1,3
+icews18_44,"(head=19, rel=5, ?, ts=6480)",391,"To find the answer, we need to identify the pattern in the given sequence. Observing the provided tuples:",0,0.0,0.8,5893.095281000569,False,tog1,0
+icews18_45,"(head=306, rel=32, ?, ts=6480)",21996,375,0,0.0,0.8,9427.24360399734,False,tog1,0
+icews18_46,"(head=21996, rel=31, ?, ts=6480)",306,(tail=21993) The given reasoning chain involves a pattern where the first two numbers are used to,0,0.0,0.8,7253.604155001085,False,tog1,0
+icews18_47,"(head=972, rel=62, ?, ts=6480)",306,1548,0,0.0,0.8,9400.915933998476,False,tog1,0
+icews18_48,"(head=6, rel=47, ?, ts=6480)",2361,"To find the missing tail number in the given reasoning chain, we need to identify the pattern or rule that connects the numbers",0,0.0,0.8,9366.054033002001,False,tog1,0
+icews18_49,"(head=2361, rel=47, ?, ts=6480)",6,2361,0,0.0,0.8,7092.763398999523,False,tog1,0
+icews18_50,"(head=788, rel=0, ?, ts=6480)",260,"To find the tail (ts) for the given head and relation in the reasoning chain, we need to look at how",0,0.0,0.8,9430.929201000254,False,tog1,1
+icews18_51,"(head=373, rel=20, ?, ts=6480)",50,"To find the missing tail value in the given reasoning chain, we need to identify the pattern or rule that applies to the",0,0.0,0.8,8456.743048001954,False,tog1,0
+icews18_52,"(head=465, rel=1, ?, ts=6480)",459,"To find the missing tail (`ts`) in the given reasoning chain, we need to identify the pattern or rule that connects",0,0.0,0.8,9291.367624002305,False,tog1,0
+icews18_53,"(head=112, rel=25, ?, ts=6480)",460,"To find the answer, we need to identify a pattern in the given triples and apply it to the new one. Observ",0,0.0,0.8,9298.355848997744,False,tog1,0
+icews18_54,"(head=460, rel=25, ?, ts=6480)",112,461,0,0.0,0.8,9420.779183001287,False,tog1,0
+icews18_55,"(head=251, rel=20, ?, ts=6480)",66,"To find the missing tail (`ts`) in the query `(head=251, rel=20, ?,",0,0.0,0.8,9417.527557998255,False,tog1,0
+icews18_56,"(head=66, rel=6, ?, ts=6480)",65,6480,0,0.0,0.8,9432.840310000756,False,tog1,0
+icews18_57,"(head=415, rel=59, ?, ts=6480)",906,"To find the tail (third element) for the given triple, let's follow the pattern:",0,0.0,0.8,9421.812374999718,False,tog1,0
+icews18_58,"(head=906, rel=59, ?, ts=6480)",415,"(80, 59, 6480) The given reasoning chain involves a pattern where the third",0,0.0,0.8,9426.457472000038,False,tog1,0
+icews18_59,"(head=300, rel=0, ?, ts=6480)",6,"(tail=6480) To find the missing tail value in the given reasoning chain, we need to identify",0,0.0,0.8,9144.973118000053,False,tog1,0
+icews18_60,"(head=53, rel=76, ?, ts=6480)",224,2023,0,0.0,0.8,9352.15605600024,False,tog1,0
+icews18_61,"(head=53, rel=76, ?, ts=6480)",8352,2023,0,0.0,0.8,9344.32270599791,False,tog1,0
+icews18_62,"(head=53, rel=15, ?, ts=6480)",2187,"(136, 19, 57) To determine the missing value in the tuple (head=",0,0.0,0.8,5324.953253999411,False,tog1,0
+icews18_63,"(head=53, rel=76, ?, ts=6480)",168,2023,0,0.0,0.8,9346.410702000867,False,tog1,0
+icews18_64,"(head=224, rel=76, ?, ts=6480)",53,"To find the tail (ts) for the given head and relation in the reasoning chain, we need to identify the pattern",0,0.0,0.8,8570.948221000435,False,tog1,0
+icews18_65,"(head=8352, rel=76, ?, ts=6480)",53,212,0,0.0,0.8,9415.83422000258,False,tog1,0
+icews18_66,"(head=168, rel=76, ?, ts=6480)",53,2837,0,0.0,0.8,9296.581984999648,False,tog1,0
+icews18_67,"(head=53, rel=15, ?, ts=6480)",8422,"(136, 19, 57) To determine the missing value in the tuple (head=",0,0.0,0.8,5314.193939000688,False,tog1,0
+icews18_68,"(head=8279, rel=47, ?, ts=6480)",2694,"To find the missing number in the sequence, we need to identify the pattern. Observing the given tuples:",0,0.0,0.8,9162.050979000924,False,tog1,0
+icews18_69,"(head=2694, rel=47, ?, ts=6480)",8279,2690,0,0.0,0.8,9221.774890000233,False,tog1,0
+icews18_70,"(head=511, rel=47, ?, ts=6480)",3423,"(head=511, rel=47, tail=19, ts=6480)",0,0.0,0.8,5360.79186400093,False,tog1,0
+icews18_71,"(head=3423, rel=47, ?, ts=6480)",511,"To find the missing tail (`?`) in the given reasoning chain, we need to identify the pattern or rule that connects",0,0.0,0.8,8908.693345001666,False,tog1,0
+icews18_72,"(head=3423, rel=47, ?, ts=6480)",117,"To find the missing tail (`?`) in the given reasoning chain, we need to identify the pattern or rule that connects",0,0.0,0.8,8901.262742001563,False,tog1,0
+icews18_73,"(head=117, rel=47, ?, ts=6480)",3423,63,0,0.0,0.8,9421.922383997298,False,tog1,0
+icews18_74,"(head=44, rel=6, ?, ts=6480)",377,7,0,0.0,0.8,9196.933634000743,False,tog1,0
+icews18_75,"(head=44, rel=6, ?, ts=6480)",455,7,0,0.0,0.8,9189.197347997833,False,tog1,0
+icews18_76,"(head=122, rel=34, ?, ts=6480)",45,23,0,0.0,0.8,9421.487082996464,False,tog1,0
+icews18_77,"(head=19, rel=20, ?, ts=6480)",382,1123,0,0.0,0.8,9238.772943997901,False,tog1,0
+icews18_78,"(head=19, rel=20, ?, ts=6480)",20,1123,0,0.0,0.8,9240.108925998356,False,tog1,4
+icews18_79,"(head=1069, rel=1, ?, ts=6480)",2780,2555,0,0.0,0.8,9345.934014003433,False,tog1,0
+icews18_80,"(head=1688, rel=4, ?, ts=6480)",15312,1689,0,0.0,0.8,9324.581826000212,False,tog1,0
+icews18_81,"(head=414, rel=2, ?, ts=6480)",391,4142,0,0.0,0.8,9299.852606996865,False,tog1,0
+icews18_82,"(head=414, rel=40, ?, ts=6480)",391,122,0,0.0,0.8,9313.345640999614,False,tog1,0
+icews18_83,"(head=9130, rel=0, ?, ts=6480)",94,"To find the missing value in the tuple (head=9130, rel=0, ?, ts=6",0,0.0,0.8,4639.329827998154,False,tog1,0
+icews18_84,"(head=428, rel=31, ?, ts=6480)",1000,113,0,0.0,0.8,9214.689967000595,False,tog1,0
+icews18_85,"(head=1000, rel=32, ?, ts=6480)",428,"To find the tail (ts) for the given triple (head=1000, rel=32,",0,0.0,0.8,5433.637030000682,False,tog1,0
+icews18_86,"(head=1000, rel=0, ?, ts=6480)",1690,"To find the tail (ts) for the given triple (head=1000, rel=0, ?",0,0.0,0.8,9413.800587997684,False,tog1,0
+icews18_87,"(head=2780, rel=32, ?, ts=6480)",66,2500,0,0.0,0.8,9405.026369000552,False,tog1,0
+icews18_88,"(head=66, rel=31, ?, ts=6480)",2780,"To find the missing tail number in the given reasoning chain, we need to observe the pattern in the provided sequences.",0,0.0,0.8,9292.519098999037,False,tog1,0
+icews18_89,"(head=2780, rel=0, ?, ts=6480)",80,(tail=6480) To determine the tail value for the given triple (head=2780,0,0.0,0.8,9442.056454001431,False,tog1,0
+icews18_90,"(head=97, rel=66, ?, ts=6480)",6,105,0,0.0,0.8,9294.52318300173,False,tog1,0
+icews18_91,"(head=463, rel=5, ?, ts=6480)",22,"(463, 5, 75) The given reasoning chain involves a sequence of tuples where each tuple",0,0.0,0.8,9273.693474002357,False,tog1,0
+icews18_92,"(head=463, rel=5, ?, ts=6480)",459,"(463, 5, 75) The given reasoning chain involves a sequence of tuples where each tuple",0,0.0,0.8,9288.203637999686,False,tog1,0
+icews18_93,"(head=463, rel=88, ?, ts=6480)",22,100,0,0.0,0.8,9425.227097999596,False,tog1,0
+icews18_94,"(head=13544, rel=4, ?, ts=6480)",3780,"To find the answer, we need to identify a pattern in the given sequence. Observing the provided tuples:",0,0.0,0.8,9318.938338001317,False,tog1,0
+icews18_95,"(head=13544, rel=20, ?, ts=6480)",3780,"To find the missing value in the tuple \((13544, 20, ?, 64",0,0.0,0.8,7727.907880002022,False,tog1,0
+icews18_96,"(head=13544, rel=6, ?, ts=6480)",164,13545,0,0.0,0.8,6368.955296999047,False,tog1,0
+icews18_97,"(head=11013, rel=6, ?, ts=6480)",3780,"To find the missing tail (`ts`) value in the sequence, we need to identify the pattern. Observing the given",0,0.0,0.8,9416.836864002107,False,tog1,0
+icews18_98,"(head=11013, rel=20, ?, ts=6480)",164,"To find the missing value in the tuple \((11013, 20, ?, 64",0,0.0,0.8,7807.275432001916,False,tog1,0
+icews18_99,"(head=11013, rel=1, ?, ts=6480)",8778,"(head=11013, rel=1, tail=6480, ts=64",0,0.0,0.8,9191.050654997525,False,tog1,0
+icews18_100,"(head=14, rel=20, ?, ts=6480)",1175,13,0,0.0,0.8,9243.03542800044,False,tog1,0
+icews18_101,"(head=15, rel=4, ?, ts=6480)",9787,"To find the missing tail (`ts`) in the given reasoning chain, we need to identify the pattern or rule that applies",0,0.0,0.8,9384.675027999037,False,tog1,0
+icews18_102,"(head=1437, rel=31, ?, ts=6480)",3810,1434,0,0.0,0.8,9317.80069999877,False,tog1,0
+icews18_103,"(head=3810, rel=32, ?, ts=6480)",1437,512,0,0.0,0.8,9373.684217000118,False,tog1,0
+icews18_104,"(head=10275, rel=47, ?, ts=6480)",3810,"To find the missing number in the sequence, we need to identify the pattern. Observing the given tuples:",0,0.0,0.8,9168.788968003355,False,tog1,0
+icews18_105,"(head=3810, rel=47, ?, ts=6480)",10275,13,0,0.0,0.8,9403.91415799968,False,tog1,0
+icews18_106,"(head=3810, rel=27, ?, ts=6480)",10275,3820,0,0.0,0.8,9409.890057999291,False,tog1,0
+icews18_107,"(head=3810, rel=0, ?, ts=6480)",145,512,0,0.0,0.8,9401.939213999867,False,tog1,0
+icews18_108,"(head=10149, rel=47, ?, ts=6480)",3810,10102,0,0.0,0.8,9303.049330002978,False,tog1,0
+icews18_109,"(head=3810, rel=47, ?, ts=6480)",10149,13,0,0.0,0.8,9406.338281998615,False,tog1,0
+icews18_110,"(head=5115, rel=0, ?, ts=6480)",428,5115,0,0.0,0.8,6244.0635669991025,False,tog1,0
+icews18_111,"(head=145, rel=8, ?, ts=6480)",3398,"To find the missing tail (`ts`) value for the given triple `(head=145, rel=8,",0,0.0,0.8,9190.982132997306,False,tog1,0
+icews18_112,"(head=5115, rel=0, ?, ts=6480)",145,5115,0,0.0,0.8,6239.822548999655,False,tog1,0
+icews18_113,"(head=6061, rel=1, ?, ts=6480)",5128,6061,0,0.0,0.8,7098.769016000006,False,tog1,0
+icews18_114,"(head=6061, rel=15, ?, ts=6480)",5128,316,0,0.0,0.8,9197.342346000369,False,tog1,0
+icews18_115,"(head=3818, rel=47, ?, ts=6480)",5128,13,0,0.0,0.8,9398.846318999858,False,tog1,0
+icews18_116,"(head=5128, rel=47, ?, ts=6480)",3818,53,0,0.0,0.8,9428.031029998237,False,tog1,0
+icews18_117,"(head=294, rel=0, ?, ts=6480)",729,293,0,0.0,0.8,9285.041531999013,False,tog1,0
+icews18_118,"(head=51, rel=5, ?, ts=6480)",516,"To find the missing value in the tuple, we need to identify the pattern or rule governing the relationships between the numbers.",0,0.0,0.8,9399.042247998295,False,tog1,0
+icews18_119,"(head=1, rel=163, ?, ts=6480)",66,"(1728, 0, 94) To determine the missing value in the tuple `(head=",0,0.0,0.8,9166.68409200065,False,tog1,0
+icews18_120,"(head=66, rel=163, ?, ts=6480)",1,"(head=66, rel=163, tail=6480) The given reasoning chain involves",0,0.0,0.8,9169.669457001874,False,tog1,0
+icews18_121,"(head=80, rel=15, ?, ts=6480)",0,"To find the tail (t) for the given triple (head=80, rel=15, ?, ts",0,0.0,0.8,9390.91260299756,False,tog1,0
+icews18_122,"(head=21997, rel=65, ?, ts=6480)",701,21998,0,0.0,0.8,9198.296799000673,False,tog1,0
+icews18_123,"(head=19, rel=0, ?, ts=6480)",1509,"To find the tail (ts) for the given head and relation in the reasoning chain, we need to identify a pattern",0,0.0,0.8,9169.07201199865,False,tog1,0
+icews18_124,"(head=122, rel=31, ?, ts=6480)",80,128,0,0.0,0.8,9422.779378000996,False,tog1,0
+icews18_125,"(head=80, rel=32, ?, ts=6480)",122,"To find the tail (t) for the given triple (head=80, rel=32, ?, ts",0,0.0,0.8,9395.109511002374,False,tog1,0
+icews18_126,"(head=397, rel=1, ?, ts=6480)",80,"(329, 28, 9) To determine the answer, let's analyze the given sequence and",0,0.0,0.8,9262.513343001046,False,tog1,0
+icews18_127,"(head=122, rel=31, ?, ts=6480)",66,128,0,0.0,0.8,9411.803061000683,False,tog1,0
+icews18_128,"(head=66, rel=32, ?, ts=6480)",122,803,0,0.0,0.8,9161.293717999797,False,tog1,0
+icews18_129,"(head=452, rel=43, ?, ts=6480)",42,345,0,0.0,0.8,9428.047286997753,False,tog1,0
+icews18_130,"(head=524, rel=5, ?, ts=6480)",9,"To find the missing tail (`ts`) for the given head and relation in the reasoning chain, we need to identify the",0,0.0,0.8,9438.28680200022,False,tog1,3
+icews18_131,"(head=1896, rel=0, ?, ts=6480)",329,"To find the missing value for the relation with head=1896 and ts=6480, we",0,0.0,0.8,9295.549979997304,False,tog1,0
+icews18_132,"(head=1666, rel=0, ?, ts=6480)",524,"To find the tail (ts) for the given head and relation in the reasoning chain, we need to identify a pattern",0,0.0,0.8,9432.987055999547,False,tog1,0
+icews18_133,"(head=8, rel=5, ?, ts=6480)",4527,"To find the missing value for the relation (head=8, rel=5), we need to look at the pattern",0,0.0,0.8,9283.816772000137,False,tog1,0
+icews18_134,"(head=8, rel=57, ?, ts=6480)",698,"To find the tail (ts) for the given triple (head=8, rel=57, ?), we",0,0.0,0.8,9417.822191000596,False,tog1,0
+icews18_135,"(head=1666, rel=0, ?, ts=6480)",8,"To find the tail (ts) for the given head and relation in the reasoning chain, we need to identify a pattern",0,0.0,0.8,9421.518677001586,False,tog1,0
+icews18_136,"(head=698, rel=28, ?, ts=6480)",13,"To find the tail (third element) of the given relation, we need to look at the pattern in the provided examples",0,0.0,0.8,9268.375013998593,False,tog1,0
+icews18_137,"(head=50, rel=20, ?, ts=6480)",66,"To find the tail (ts) for the relation (head=50, rel=20), we need to",0,0.0,0.8,9242.433020001044,False,tog1,4
+icews18_138,"(head=1068, rel=5, ?, ts=6480)",15,108,0,0.0,0.8,9330.986020999262,False,tog1,0
+icews18_139,"(head=66, rel=7, ?, ts=6480)",5383,"(661, 7, 6480) To determine the answer, we need to identify a",0,0.0,0.8,9355.918245000794,False,tog1,0
+icews18_140,"(head=10614, rel=8, ?, ts=6480)",5383,10614,0,0.0,0.8,9175.855453002441,False,tog1,0
+icews18_141,"(head=1887, rel=47, ?, ts=6480)",7293,1557,0,0.0,0.8,9315.64106100268,False,tog1,0
+icews18_142,"(head=7293, rel=47, ?, ts=6480)",5802,"To find the answer, we need to identify the pattern in the given tuples. The pattern seems to be that the third",0,0.0,0.8,9244.35167199772,False,tog1,0
+icews18_143,"(head=7293, rel=47, ?, ts=6480)",1887,"To find the answer, we need to identify the pattern in the given tuples. The pattern seems to be that the third",0,0.0,0.8,9232.961596000678,False,tog1,0
+icews18_144,"(head=5802, rel=47, ?, ts=6480)",7293,661,0,0.0,0.8,6358.3247150018,False,tog1,0
+icews18_145,"(head=1437, rel=47, ?, ts=6480)",3810,"To find the missing tail value in the given reasoning chain, we need to identify the pattern or rule that applies to the",0,0.0,0.8,5314.079863001098,False,tog1,0
+icews18_146,"(head=3810, rel=47, ?, ts=6480)",1437,13,0,0.0,0.8,9406.655655002396,False,tog1,0
+icews18_147,"(head=91, rel=47, ?, ts=6480)",3810,92,0,0.0,0.8,9394.80772800016,False,tog1,0
+icews18_148,"(head=3810, rel=47, ?, ts=6480)",91,13,0,0.0,0.8,9401.067260998389,False,tog1,0
+icews18_149,"(head=3810, rel=8, ?, ts=6480)",91,5122,0,0.0,0.8,9407.588019999821,False,tog1,0
+icews18_150,"(head=6, rel=12, ?, ts=6480)",263,"To find the answer, we need to identify the pattern in the given sequence. Observing the provided triples:",0,0.0,0.8,9195.876670997677,False,tog1,0
+icews18_151,"(head=3810, rel=57, ?, ts=6480)",219,382,0,0.0,0.8,9402.962643001956,False,tog1,0
+icews18_152,"(head=2618, rel=1, ?, ts=6480)",1057,"To find the missing value for the relation (rel=1) in the given tuple, we need to identify a pattern",0,0.0,0.8,9440.852745003212,False,tog1,0
+icews18_153,"(head=397, rel=15, ?, ts=6480)",452,322,0,0.0,0.8,9265.80042400019,False,tog1,0
+icews18_154,"(head=411, rel=1, ?, ts=6480)",280,"(4103, 1, 4104, ts=6480) To determine",0,0.0,0.8,1450.4778980008268,False,tog1,0
+icews18_155,"(head=411, rel=0, ?, ts=6480)",400,412,0,0.0,0.8,9287.980683999194,False,tog1,0
+icews18_156,"(head=42, rel=6, ?, ts=6480)",574,44,0,0.0,0.8,9420.535371998994,False,tog1,0
+icews18_157,"(head=19, rel=5, ?, ts=6480)",125,"To find the answer, we need to identify the pattern in the given sequence. Observing the provided tuples:",0,0.0,0.8,5881.850065001345,False,tog1,0
+icews18_158,"(head=407, rel=38, ?, ts=6480)",42,9,0,0.0,0.8,8571.954720002395,False,tog1,0
+icews18_159,"(head=391, rel=1, ?, ts=6480)",6293,"(329, 28, 7) To determine the answer, let's analyze the pattern in the",0,0.0,0.8,9263.540889001888,False,tog1,0
+icews18_160,"(head=19, rel=5, ?, ts=6480)",20,"To find the answer, we need to identify the pattern in the given sequence. Observing the provided tuples:",0,0.0,0.8,5872.997759997816,False,tog1,0
+icews18_161,"(head=189, rel=1, ?, ts=6480)",42,"To find the missing tail (`ts`) value for the given head and relation in the reasoning chain, we need to identify",0,0.0,0.8,9391.793337999843,False,tog1,0
+icews18_162,"(head=42, rel=19, ?, ts=6480)",122,"To find the tail (ts) for the given triple (head=42, rel=19, ?),",0,0.0,0.8,9158.412611999665,False,tog1,0
+icews18_163,"(head=122, rel=5, ?, ts=6480)",42,"(122, 5, 6480, ?) To find the missing value in the tuple",0,0.0,0.8,9431.036927002424,False,tog1,0
+icews18_164,"(head=1522, rel=10, ?, ts=6480)",844,1523,0,0.0,0.8,8630.556486998103,False,tog1,0
+icews18_165,"(head=1522, rel=10, ?, ts=6480)",3354,1523,0,0.0,0.8,8646.497281999473,False,tog1,0
+icews18_166,"(head=3354, rel=8, ?, ts=6480)",1522,"To find the missing tail value in the given reasoning chain, we need to observe the pattern in the provided examples:",0,0.0,0.8,9053.64817499867,False,tog1,0
+icews18_167,"(head=844, rel=6, ?, ts=6480)",3738,"To find the missing number in the given reasoning chain, we need to identify the pattern or rule that applies to the provided",0,0.0,0.8,9380.517559002328,False,tog1,0
+icews18_168,"(head=3738, rel=142, ?, ts=6480)",1522,"(3738, 142, 618) The given reasoning chain shows a pattern where",0,0.0,0.8,1450.287447001756,False,tog1,0
+icews18_169,"(head=5299, rel=0, ?, ts=6480)",8060,5299,0,0.0,0.8,9282.44254600213,False,tog1,0
+icews18_170,"(head=2562, rel=0, ?, ts=6480)",1937,"To find the tail (ts) for the given triple (head=2562, rel=0, ?",0,0.0,0.8,9320.154645000002,False,tog1,0
+icews18_171,"(head=157, rel=1, ?, ts=6480)",3584,"To find the answer, we need to identify a pattern in the given sequence. Observing the provided tuples, it seems",0,0.0,0.8,9304.58129500039,False,tog1,0
+icews18_172,"(head=240, rel=32, ?, ts=6480)",66,241,0,0.0,0.8,9436.502956003096,False,tog1,0
+icews18_173,"(head=924, rel=0, ?, ts=6480)",732,"To find the tail (third element) for the given triple, we need to look at the pattern in the provided examples",0,0.0,0.8,6164.217200999701,False,tog1,0
+icews18_174,"(head=66, rel=31, ?, ts=6480)",240,"To find the missing tail number in the given reasoning chain, we need to observe the pattern in the provided sequences.",0,0.0,0.8,9283.353482998791,False,tog1,0
+icews18_175,"(head=28, rel=31, ?, ts=6480)",636,"To find the tail (ts) for the given triple (head=28, rel=31, ?),",0,0.0,0.8,9348.32001399991,False,tog1,0
+icews18_176,"(head=636, rel=32, ?, ts=6480)",28,648,0,0.0,0.8,9179.675452000083,False,tog1,0
+icews18_177,"(head=1522, rel=1, ?, ts=6480)",53,1523,0,0.0,0.8,1467.8629759982869,False,tog1,0
+icews18_178,"(head=1522, rel=15, ?, ts=6480)",53,"To find the missing tail (`ts`) in the given reasoning chain, we need to identify the pattern or rule that connects",0,0.0,0.8,9296.156853000866,False,tog1,0
+icews18_179,"(head=117, rel=76, ?, ts=6480)",260,1089,0,0.0,0.8,9435.681774000841,False,tog1,0
+icews18_180,"(head=260, rel=76, ?, ts=6480)",117,260,0,0.0,0.8,9430.223639999895,False,tog1,0
+icews18_181,"(head=28, rel=25, ?, ts=6480)",260,344,0,0.0,0.8,9302.266841998062,False,tog1,0
+icews18_182,"(head=260, rel=25, ?, ts=6480)",28,260,0,0.0,0.8,9430.41550000271,False,tog1,0
+icews18_183,"(head=251, rel=27, ?, ts=6480)",117,"To find the tail (ts) for the given triple (head=251, rel=27, ?",0,0.0,0.8,9423.740415000793,False,tog1,0
+icews18_184,"(head=117, rel=27, ?, ts=6480)",251,"To find the tail (t) for the relation (117, 27, t, ts=6",0,0.0,0.8,9429.661135996867,False,tog1,0
+icews18_185,"(head=6771, rel=39, ?, ts=6480)",564,"To find the tail (ts) for the given triple (head=6771, rel=39,",0,0.0,0.8,9299.130832001538,False,tog1,0
+icews18_186,"(head=8388, rel=39, ?, ts=6480)",564,8389,0,0.0,0.8,6900.243314001273,False,tog1,0
+icews18_187,"(head=6771, rel=66, ?, ts=6480)",564,321,0,0.0,0.8,9352.007655001216,False,tog1,0
+icews18_188,"(head=177, rel=1, ?, ts=6480)",1558,"To find the missing tail (`ts`) in the relation `(head=177, rel=1, ?, ts",0,0.0,0.8,9358.114884002134,False,tog1,0
+icews18_189,"(head=1111, rel=32, ?, ts=6480)",66,4102,0,0.0,0.8,9306.03736500052,False,tog1,3
+icews18_190,"(head=66, rel=31, ?, ts=6480)",1111,"To find the missing tail number in the given reasoning chain, we need to observe the pattern in the provided sequences.",0,0.0,0.8,9288.810747999378,False,tog1,0
+icews18_191,"(head=1111, rel=0, ?, ts=6480)",2879,"(1111, 0, ?) Based on the given reasoning chain, there is no clear pattern or",0,0.0,0.8,9227.421576997585,False,tog1,0
+icews18_192,"(head=1111, rel=8, ?, ts=6480)",66,"To find the answer, we need to identify the pattern in the given tuples. Observing the provided data:",0,0.0,0.8,9302.781385002163,False,tog1,0
+icews18_193,"(head=4115, rel=142, ?, ts=6480)",1142,165,0,0.0,0.8,9321.194221996848,False,tog1,0
+icews18_194,"(head=4115, rel=5, ?, ts=6480)",343,165,0,0.0,0.8,5448.504241001501,False,tog1,0
+icews18_195,"(head=0, rel=47, ?, ts=6480)",2874,8,0,0.0,0.8,9181.112673002644,False,tog1,0
+icews18_196,"(head=2874, rel=47, ?, ts=6480)",0,2921,0,0.0,0.8,1446.5588759994716,False,tog1,0
+icews18_197,"(head=2694, rel=0, ?, ts=6480)",2874,3165,0,0.0,0.8,9301.63735899987,False,tog1,0
+icews18_198,"(head=13, rel=4, ?, ts=6480)",8,"To find the missing tail (`ts`) in the given reasoning chain, we need to identify the pattern or rule that applies",0,0.0,0.8,9347.896146999119,False,tog1,0
+icews18_199,"(head=13, rel=4, ?, ts=6480)",698,"To find the missing tail (`ts`) in the given reasoning chain, we need to identify the pattern or rule that applies",0,0.0,0.8,9353.810738000902,False,tog1,0

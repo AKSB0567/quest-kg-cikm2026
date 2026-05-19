@@ -1,0 +1,51 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+WebQTest-0,what does jamaican people speak,Jamaican English,Jamaican Creole English Language,1,1.0,1.0,42.46549983508885,False,quest_kg,2
+WebQTest-1,what did james k polk do before he was president,United States Representative,Polk added extensive and valuable territory to the United States and restored the independence of the Treasury.,0,0.4511278195488722,1.0,48.700499814003706,False,quest_kg,0
+WebQTest-3,who plays ken barlow in coronation street,William Roache,Barlow Family Album,0,0.0,1.0,34.835899947211146,False,quest_kg,0
+WebQTest-6,where is jamarcus russell from,Mobile,JaMarcus Russell at Falcons at Raiders 11-2-08,0,0.0,1.0,35.677299834787846,False,quest_kg,0
+WebQTest-7,where was george washington carver from,Diamond,Carver Center for Arts and Technology,0,0.0,1.0,37.15330013073981,False,quest_kg,64
+WebQTest-8,what else did ben franklin invent,Lightning rod,Invention,0,0.0,1.0,44.43129990249872,False,quest_kg,27
+WebQTest-9,who was richard nixon married to,Pat Nixon,"Nixon retired to his home in California, where he wrote several books on international affairs.",0,0.11764705882352941,1.0,34.51810008846223,False,quest_kg,0
+WebQTest-12,who is governor of ohio 2011,John Kasich,President of the United States,0,0.0,1.0,27.15210011228919,False,quest_kg,0
+WebQTest-13,who was vice president after kennedy died,Lyndon B. Johnson,Deceased Person,0,0.0,1.0,24.216399993747473,False,quest_kg,0
+WebQTest-14,where is the fukushima daiichi nuclear plant located,Japan,Mary Morrill,0,0.0,1.0,85.42410004884005,False,quest_kg,0
+WebQTest-16,what countries are part of the uk,Wales,England,1,1.0,1.0,28.95019995048642,False,quest_kg,0
+WebQTest-19,what is my timezone in louisiana,Central Time Zone,Eastern United States,0,0.0,1.0,33.61040004529059,False,quest_kg,0
+WebQTest-20,what did st augustine do,Writer,Novlene Williams-Mills,0,0.0,1.0,65.61159994453192,False,quest_kg,0
+WebQTest-21,who is keyshia cole dad,Sal Gibson,White American,0,0.0,1.0,84.13350000046194,False,quest_kg,0
+WebQTest-22,what kind government does egypt have,Semi-presidential system,Democracy,0,0.0,1.0,90.9951999783516,False,quest_kg,0
+WebQTest-23,what town was martin luther king assassinated in,Memphis,Book,0,0.0,1.0,136.72819989733398,False,quest_kg,0
+WebQTest-24,where did edgar allan poe died,Baltimore,"Contemporary Authors: A Bio-Bibliographical Guide to Current Writers in Fiction, General Nonfiction, Poetry, Journalism, Drama, Motion Pictures, Television. Vol. 249",0,0.0,1.0,39.18939991854131,False,quest_kg,0
+WebQTest-26,what to do today in atlanta with kids,Fox Theatre,Hurricane Florence (1953),0,0.0,1.0,94.543999992311,False,quest_kg,0
+WebQTest-28,what electorate does anna bligh represent,Electoral district of South Brisbane,Satirist,0,0.0,1.0,81.61309990100563,False,quest_kg,0
+WebQTest-31,where did andy murray started playing tennis,2005,"He was elected chairman (1761-62) of the Committee of Colonies and Trade and of the Royal Society for the Encouragement of the Arts, Manufactures and Commerce, which had been founded by Shipley in 1754, with the aid of Sir Joshua Reynolds and Dr. Johnson, and which was the predecessor of the Royal Academy of Arts, founded in 1768.",0,0.0,1.0,87.61879988014698,False,quest_kg,0
+WebQTest-32,what is the australian dollar called,AUD,Currency,0,0.0,1.0,85.21579997614026,False,quest_kg,0
+WebQTest-33,what timezone is sweden,Central European Time Zone,Time zone(s),0,0.5714285714285715,1.0,81.93670003674924,False,quest_kg,0
+WebQTest-34,who did cam newton sign with,Carolina Panthers,Sarah Ann Nixon,0,0.0,1.0,75.86639979854226,False,quest_kg,0
+WebQTest-35,what county is frederick md in,Frederick County,Seven Oaks,0,0.0,1.0,67.4717000219971,False,quest_kg,0
+WebQTest-36,what highschool did harper lee go to,Monroe County High School,Recovery School District,0,0.28571428571428575,1.0,84.04779992997646,False,quest_kg,0
+WebQTest-37,what timezone is utah in,Mountain Time Zone,Time zone(s),0,0.6666666666666666,1.0,85.50879987888038,False,quest_kg,0
+WebQTest-38,who did george w. bush run against for the second term,John Kerry,World War II,0,0.0,1.0,35.86800000630319,False,quest_kg,0
+WebQTest-39,who is niall ferguson 's wife,Ayaan Hirsi Ali,Person,0,0.0,1.0,99.0211998578161,False,quest_kg,0
+WebQTest-41,where is the galapagos islands located on a world map,Ecuador,9th G-15 summit,0,0.0,1.0,78.31949996761978,False,quest_kg,0
+WebQTest-42,what are the songs that justin bieber wrote,Somebody to Love,Toby Segaran,0,0.0,1.0,73.07750009931624,False,quest_kg,0
+WebQTest-43,what did george clemenceau do,Physician,Pleurisy,0,0.0,1.0,96.85690002515912,False,quest_kg,0
+WebQTest-44,what is the state flower of arizona,Saguaro,Boston,0,0.0,1.0,89.6403999067843,False,quest_kg,0
+WebQTest-45,where was rihanna born and raised,Saint Michael Parish,Damar Forbes,0,0.0,1.0,97.93869988061488,False,quest_kg,0
+WebQTest-46,what year did president william henry harrison take office,1841-03-04,Thomas Jefferson,0,0.0,1.0,69.65880002826452,False,quest_kg,0
+WebQTest-47,where george lopez was born,Mission Hills,France,0,0.0,1.0,89.40249984152615,False,quest_kg,0
+WebQTest-48,where are samsung based,Suwon,San Francisco,0,0.0,1.0,89.54450022429228,False,quest_kg,0
+WebQTest-49,what did the islamic people believe in,Ṭūbā,Pacific Ocean,0,0.0,1.0,67.38319993019104,False,quest_kg,0
+WebQTest-51,who will play mr gray in the film,Jamie Dornan,Nathan Scott,0,0.0,1.0,80.17400000244379,False,quest_kg,0
+WebQTest-52,what did george orwell died of,Tuberculosis,Dan Dailey,0,0.0,1.0,78.29990005120635,False,quest_kg,0
+WebQTest-54,what country did adolf hitler control,Nazi Germany,Franz Mesmer,0,0.0,1.0,83.0296000931412,False,quest_kg,0
+WebQTest-55,who is michael buble,Actor,African American,0,0.0,1.0,86.16279996931553,False,quest_kg,0
+WebQTest-56,what county is kansas city kansas,Wyandotte County,Polk City,0,0.0,1.0,65.15330006368458,False,quest_kg,0
+WebQTest-58,who did jackie robinson first play for,UCLA Bruins football,richard milhous nixon lost election to john fitzgerald kennedy,0,0.0,1.0,80.98930004052818,False,quest_kg,0
+WebQTest-59,when did annie open,1976-08-10,Writer,0,0.0,1.0,84.24029988236725,False,quest_kg,0
+WebQTest-60,where did eleanor roosevelt die,Manhattan,Place of death,0,0.0,1.0,28.999699978157878,False,quest_kg,0
+WebQTest-61,what are the religions practiced in indonesia,Catholicism,Ashoka,0,0.0,1.0,73.76369996927679,False,quest_kg,0
+WebQTest-62,what was jesse james killed with,Firearm,Baptist War,0,0.0,1.0,138.9689000789076,False,quest_kg,0
+WebQTest-63,who was vp for lincoln,Hannibal Hamlin,Thomas Paine,0,0.0,1.0,50.20439997315407,False,quest_kg,0
+WebQTest-64,what other books did charles dickens write,A Christmas Carol (Chrysalis Children's Classics Series),18th century,0,0.0,1.0,79.51910002157092,False,quest_kg,0
+WebQTest-65,who was the first dictator of the soviet union,Vladimir Lenin,Leaders,0,0.0,1.0,76.78729994222522,False,quest_kg,0

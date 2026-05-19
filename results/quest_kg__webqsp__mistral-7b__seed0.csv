@@ -1,0 +1,101 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method
+WebQTest-0,what does jamaican people speak,Jamaican English,,0,0.0,1.0,14975753.853021,True,quest_kg
+WebQTest-1,what did james k polk do before he was president,United States Representative,,0,0.0,1.0,78576.51070000065,True,quest_kg
+WebQTest-3,who plays ken barlow in coronation street,William Roache,,0,0.0,1.0,59375.49984799989,True,quest_kg
+WebQTest-6,where is jamarcus russell from,Mobile,,0,0.0,1.0,65936.10494499808,True,quest_kg
+WebQTest-7,where was george washington carver from,Diamond,,0,0.0,1.0,72817.49407000098,True,quest_kg
+WebQTest-8,what else did ben franklin invent,Lightning rod,,0,0.0,1.0,30076.147657000547,True,quest_kg
+WebQTest-9,who was richard nixon married to,Pat Nixon,,0,0.0,1.0,39143.070762002026,True,quest_kg
+WebQTest-12,who is governor of ohio 2011,John Kasich,,0,0.0,1.0,32152.97338399978,True,quest_kg
+WebQTest-13,who was vice president after kennedy died,Lyndon B. Johnson,,0,0.0,1.0,50090.034045999346,True,quest_kg
+WebQTest-14,where is the fukushima daiichi nuclear plant located,Japan,,0,0.0,1.0,43913.96510100094,True,quest_kg
+WebQTest-16,what countries are part of the uk,Wales,,0,0.0,1.0,76668.98032899917,True,quest_kg
+WebQTest-19,what is my timezone in louisiana,Central Time Zone,,0,0.0,1.0,56096.09604599973,True,quest_kg
+WebQTest-20,what did st augustine do,Writer,,0,0.0,1.0,29520.797758999834,True,quest_kg
+WebQTest-21,who is keyshia cole dad,Sal Gibson,,0,0.0,1.0,86159.24782900038,True,quest_kg
+WebQTest-22,what kind government does egypt have,Semi-presidential system,,0,0.0,1.0,58737.870576002024,True,quest_kg
+WebQTest-23,what town was martin luther king assassinated in,Memphis,,0,0.0,1.0,36110.69426099857,True,quest_kg
+WebQTest-24,where did edgar allan poe died,Baltimore,,0,0.0,1.0,102079.80579499781,True,quest_kg
+WebQTest-26,what to do today in atlanta with kids,Fox Theatre,,0,0.0,1.0,76274.34905399787,True,quest_kg
+WebQTest-28,what electorate does anna bligh represent,Electoral district of South Brisbane,,0,0.0,1.0,84182.70023199875,True,quest_kg
+WebQTest-31,where did andy murray started playing tennis,2005,,0,0.0,1.0,50878.77396499971,True,quest_kg
+WebQTest-32,what is the australian dollar called,AUD,,0,0.0,1.0,83106.06657600147,True,quest_kg
+WebQTest-33,what timezone is sweden,Central European Time Zone,,0,0.0,1.0,79589.22489900215,True,quest_kg
+WebQTest-34,who did cam newton sign with,Carolina Panthers,,0,0.0,1.0,92125.33627000084,True,quest_kg
+WebQTest-35,what county is frederick md in,Frederick County,,0,0.0,1.0,84556.52290600119,True,quest_kg
+WebQTest-36,what highschool did harper lee go to,Monroe County High School,,0,0.0,1.0,70934.07834200116,True,quest_kg
+WebQTest-37,what timezone is utah in,Mountain Time Zone,,0,0.0,1.0,90495.40441299905,True,quest_kg
+WebQTest-38,who did george w. bush run against for the second term,John Kerry,,0,0.0,1.0,37985.80815399691,True,quest_kg
+WebQTest-39,who is niall ferguson 's wife,Ayaan Hirsi Ali,,0,0.0,1.0,79487.27179599882,True,quest_kg
+WebQTest-41,where is the galapagos islands located on a world map,Ecuador,,0,0.0,1.0,19380.71721400047,True,quest_kg
+WebQTest-42,what are the songs that justin bieber wrote,Somebody to Love,,0,0.0,1.0,34468.05545400275,True,quest_kg
+WebQTest-43,what did george clemenceau do,Physician,,0,0.0,1.0,77744.43526300092,True,quest_kg
+WebQTest-44,what is the state flower of arizona,Saguaro,,0,0.0,1.0,25654.541224997956,True,quest_kg
+WebQTest-45,where was rihanna born and raised,Saint Michael Parish,,0,0.0,1.0,56547.69939899779,True,quest_kg
+WebQTest-46,what year did president william henry harrison take office,1841-03-04,,0,0.0,1.0,65574.99992800149,True,quest_kg
+WebQTest-47,where george lopez was born,Mission Hills,,0,0.0,1.0,77593.99834899887,True,quest_kg
+WebQTest-48,where are samsung based,Suwon,,0,0.0,1.0,17323.33756400112,True,quest_kg
+WebQTest-49,what did the islamic people believe in,Ṭūbā,,0,0.0,1.0,18599.772170000506,True,quest_kg
+WebQTest-51,who will play mr gray in the film,Jamie Dornan,,0,0.0,1.0,91063.67971099826,True,quest_kg
+WebQTest-52,what did george orwell died of,Tuberculosis,,0,0.0,1.0,86886.99714799804,True,quest_kg
+WebQTest-54,what country did adolf hitler control,Nazi Germany,,0,0.0,1.0,104446.72370600165,True,quest_kg
+WebQTest-55,who is michael buble,Actor,,0,0.0,1.0,66199.88404700052,True,quest_kg
+WebQTest-56,what county is kansas city kansas,Wyandotte County,,0,0.0,1.0,74183.47384300068,True,quest_kg
+WebQTest-58,who did jackie robinson first play for,UCLA Bruins football,,0,0.0,1.0,79648.24919999955,True,quest_kg
+WebQTest-59,when did annie open,1976-08-10,,0,0.0,1.0,71946.552297999,True,quest_kg
+WebQTest-60,where did eleanor roosevelt die,Manhattan,,0,0.0,1.0,95229.44463599924,True,quest_kg
+WebQTest-61,what are the religions practiced in indonesia,Catholicism,,0,0.0,1.0,51134.995275999245,True,quest_kg
+WebQTest-62,what was jesse james killed with,Firearm,,0,0.0,1.0,26081.614055998216,True,quest_kg
+WebQTest-63,who was vp for lincoln,Hannibal Hamlin,,0,0.0,1.0,34797.35698899822,True,quest_kg
+WebQTest-64,what other books did charles dickens write,A Christmas Carol (Chrysalis Children's Classics Series),,0,0.0,1.0,29529.046263000055,True,quest_kg
+WebQTest-65,who was the first dictator of the soviet union,Vladimir Lenin,,0,0.0,1.0,42218.429145999835,True,quest_kg
+WebQTest-66,what is the currency of puerto rico called,United States Dollar,,0,0.0,1.0,66181.90800799857,True,quest_kg
+WebQTest-67,what kind of cancer did carl wilson have,Lung cancer,,0,0.0,1.0,85135.91785899916,True,quest_kg
+WebQTest-68,who plays the voice of kitt in knight rider,William Daniels,,0,0.0,1.0,69234.33167199983,True,quest_kg
+WebQTest-69,what county is brentwood tennessee in,Williamson County,,0,0.0,1.0,132901.54336399792,True,quest_kg
+WebQTest-71,who did michael j fox marry,Tracy Pollan,,0,0.0,1.0,21585.146590001386,True,quest_kg
+WebQTest-72,what battles did stonewall jackson fight in,Manassas Station Operations,,0,0.0,1.0,30602.83599399918,True,quest_kg
+WebQTest-73,what language do the maasai tribe speak,Maasai Language,,0,0.0,1.0,22686.98565700106,True,quest_kg
+WebQTest-74,who did benjamin franklin get married to,Deborah Read,,0,0.0,1.0,43435.28585999957,True,quest_kg
+WebQTest-75,what disease did patrick swayze died from,Pancreatic cancer,,0,0.0,1.0,25116.058609000902,True,quest_kg
+WebQTest-76,what works of art did leonardo da vinci produce,g.121wt37c,,0,0.0,1.0,30903.596831998584,True,quest_kg
+WebQTest-77,what capital of austria,Vienna,,0,0.0,1.0,61725.02290600096,True,quest_kg
+WebQTest-78,what type of cancer did eva peron have,Cervical cancer,,0,0.0,1.0,87014.41635899755,True,quest_kg
+WebQTest-79,what country did buddha come from,Nepal,,0,0.0,1.0,90142.10911199916,True,quest_kg
+WebQTest-80,what county is greeley colorado in,Weld County,,0,0.0,1.0,66398.04034400004,True,quest_kg
+WebQTest-82,what did peter tchaikovsky do,Musician,,0,0.0,1.0,26185.82017299923,True,quest_kg
+WebQTest-83,which countries speak german officially,Belgium,,0,0.0,1.0,325349.01691300183,True,quest_kg
+WebQTest-84,what type of music did john lennon sing,Rock music,,0,0.0,1.0,39918.372292999265,True,quest_kg
+WebQTest-85,who are the colorado representatives,Mark Udall,,0,0.0,1.0,24618.610945999535,True,quest_kg
+WebQTest-86,which country does greenland belong to,Denmark,,0,0.0,1.0,73654.0979929996,True,quest_kg
+WebQTest-87,what the zip code for seattle washington,98185,,0,0.0,1.0,21679.704194000806,True,quest_kg
+WebQTest-88,who is willow smith mom name,Jada Pinkett Smith,,0,0.0,1.0,91148.78083900112,True,quest_kg
+WebQTest-89,what do you call the chinese writing system,Simplified Chinese character,,0,0.0,1.0,14021.373437000875,True,quest_kg
+WebQTest-90,who played on the jeffersons,Damon Evans,,0,0.0,1.0,74922.17961599817,True,quest_kg
+WebQTest-91,what is the name of the san francisco newspaper,Synapse,,0,0.0,1.0,31995.675362999464,True,quest_kg
+WebQTest-93,what continent does armenia belong to,Europe,,0,0.0,1.0,51765.12626800104,True,quest_kg
+WebQTest-94,what did randy savage died of,heart attack,,0,0.0,1.0,72328.45379100036,True,quest_kg
+WebQTest-95,what was the title of the book charles darwin wrote,On evolution,,0,0.0,1.0,42108.60936099925,True,quest_kg
+WebQTest-96,where did richard nixon die,New York City,,0,0.0,1.0,49417.786489997525,True,quest_kg
+WebQTest-97,what songs does smokey robinson sing,Just to See Her,,0,0.0,1.0,36702.724615999614,True,quest_kg
+WebQTest-98,who was vice president when jfk was president,Lyndon B. Johnson,,0,0.0,1.0,32224.0721019989,True,quest_kg
+WebQTest-99,what is serbian language called,Serbian language,,0,0.0,1.0,149592.41204499995,True,quest_kg
+WebQTest-100,what language is spoken in haiti today,Haitian Creole,,0,0.0,1.0,118771.21115399859,True,quest_kg
+WebQTest-102,who played barbara gordon batgirl,Melinda McGraw,,0,0.0,1.0,39942.78445799864,True,quest_kg
+WebQTest-103,what basketball teams has shaq played for,Miami Heat,,0,0.0,1.0,31095.476808000967,True,quest_kg
+WebQTest-104,where is jay leno from,New Rochelle,,0,0.0,1.0,80220.86101400055,True,quest_kg
+WebQTest-105,what language do people from thailand speak,Mon Language,,0,0.0,1.0,81741.738798999,True,quest_kg
+WebQTest-106,who did armie hammer play in the social network,Cameron Winklevoss,,0,0.0,1.0,67342.00357500231,True,quest_kg
+WebQTest-107,what was thomas jefferson role in the declaration of independence,Lawyer,,0,0.0,1.0,74520.36007799688,True,quest_kg
+WebQTest-108,what was the book written by charles darwin,On evolution,,0,0.0,1.0,42308.92470699837,True,quest_kg
+WebQTest-109,who did tim tebow play college football for,Florida Gators football,,0,0.0,1.0,77301.1716660003,True,quest_kg
+WebQTest-110,who does peyton manning play football for,Denver Broncos,,0,0.0,1.0,83405.79301899925,True,quest_kg
+WebQTest-111,where is the carpathian mountain range located,Europe,,0,0.0,1.0,171898.6589140004,True,quest_kg
+WebQTest-112,what was robert burns,Bard,,0,0.0,1.0,82797.62822300108,True,quest_kg
+WebQTest-114,who did the voice of darth vader in episode 3,Hayden Christensen,,0,0.0,1.0,30702.13620999857,True,quest_kg
+WebQTest-115,what super bowl did peyton manning win,Super Bowl XLI,,0,0.0,1.0,20589.1935489999,True,quest_kg
+WebQTest-116,which country was justin bieber born in,Canada,,0,0.0,1.0,75499.26147699807,True,quest_kg
+WebQTest-118,who fought in the gulf war 1991,France,,0,0.0,1.0,19598.996360000456,True,quest_kg
+WebQTest-119,who plays london tipton in suite life on deck,Brenda Song,,0,0.0,1.0,30966.57279200008,True,quest_kg
+WebQTest-121,what team did david beckham play for in 2011,LA Galaxy,,0,0.0,1.0,63281.98842200072,True,quest_kg
+WebQTest-122,where did francisco coronado come from,Salamanca,,0,0.0,1.0,57393.93378300156,True,quest_kg

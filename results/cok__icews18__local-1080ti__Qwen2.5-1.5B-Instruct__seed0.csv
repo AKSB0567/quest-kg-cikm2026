@@ -1,0 +1,51 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+icews18_0,"(head=459, rel=1, ?, ts=6480)",471,1031,0,0.0,0.75,13864.877099869773,False,cok,0
+icews18_1,"(head=5205, rel=90, ?, ts=6480)",464,10,0,0.0,0.75,14231.136499904096,False,cok,0
+icews18_2,"(head=463, rel=69, ?, ts=6480)",458,1031,0,0.0,0.75,14234.5129000023,False,cok,0
+icews18_3,"(head=3093, rel=63, ?, ts=6480)",57,3014,0,0.0,0.75,14286.941299913451,False,cok,0
+icews18_4,"(head=17519, rel=151, ?, ts=6480)",3881,1030,0,0.0,0.75,14231.111700180918,False,cok,0
+icews18_5,"(head=4935, rel=0, ?, ts=6480)",7803,1798,0,0.0,0.75,13659.928100183606,False,cok,0
+icews18_6,"(head=2820, rel=4, ?, ts=6480)",458,1030,0,0.0,0.75,14323.885900201276,False,cok,0
+icews18_7,"(head=64, rel=1, ?, ts=6480)",458,1099,0,0.0,0.75,13590.836100047454,False,cok,0
+icews18_8,"(head=42, rel=20, ?, ts=6480)",4145,9,0,0.0,0.75,14569.3934999872,False,cok,0
+icews18_9,"(head=42, rel=20, ?, ts=6480)",19,9,0,0.0,0.75,14332.040200009942,False,cok,0
+icews18_10,"(head=42, rel=20, ?, ts=6480)",1449,9,0,0.0,0.75,13814.685999881476,False,cok,0
+icews18_11,"(head=445, rel=34, ?, ts=6480)",477,1031,0,0.0,0.75,14360.359999816865,False,cok,0
+icews18_12,"(head=1323, rel=0, ?, ts=6480)",344,1030,0,0.0,0.75,14139.565900200978,False,cok,0
+icews18_13,"(head=100, rel=28, ?, ts=6480)",390,"The value of ? is 50. To determine the missing value in the given sequence, we need to identify a",0,0.0,0.75,14277.477500028908,False,cok,0
+icews18_14,"(head=455, rel=0, ?, ts=6480)",765,1997,0,0.0,0.75,14129.797799978405,False,cok,0
+icews18_15,"(head=44, rel=20, ?, ts=6480)",4145,"(head=3025, rel=50, tail=3026, ts=45",0,0.0,0.75,13654.564500087872,False,cok,0
+icews18_16,"(head=44, rel=20, ?, ts=6480)",19,"(head=3025, rel=50, tail=3026, ts=45",0,0.0,0.75,14362.636200152338,False,cok,0
+icews18_17,"(head=44, rel=20, ?, ts=6480)",1449,"(head=3025, rel=50, tail=3026, ts=45",0,0.0,0.75,13319.3675999064,False,cok,0
+icews18_18,"(head=9731, rel=0, ?, ts=6480)",445,19,0,0.0,0.75,14405.82329989411,False,cok,0
+icews18_19,"(head=298, rel=6, ?, ts=6480)",397,1099,0,0.0,0.75,13681.704699993134,False,cok,0
+icews18_20,"(head=19, rel=20, ?, ts=6480)",161,"(head=1036, rel=1, ts=1037) To solve this problem,",0,0.0,0.75,13976.277600042522,False,cok,0
+icews18_21,"(head=19, rel=2, ?, ts=6480)",42,"(head=1030, rel=5, tail=791, ts=6480",0,0.0,0.75,14423.11040009372,False,cok,0
+icews18_22,"(head=42, rel=20, ?, ts=6480)",41,9,0,0.0,0.75,14202.924200100824,False,cok,0
+icews18_23,"(head=19, rel=34, ?, ts=6480)",122,"(head=19, rel=34, tail=238, ts=536) To",0,0.0,0.75,14278.656999813393,False,cok,0
+icews18_24,"(head=19, rel=5, ?, ts=6480)",42,1030,0,0.0,0.75,13634.272699942812,False,cok,0
+icews18_25,"(head=19, rel=43, ?, ts=6480)",20,"The value of ? is 80. To determine the missing value in the given reasoning chain, we need to identify",0,0.0,0.75,14165.155899943784,False,cok,0
+icews18_26,"(head=2274, rel=1, ?, ts=6480)",44,1030,0,0.0,0.75,14273.614600067958,False,cok,0
+icews18_27,"(head=21995, rel=31, ?, ts=6480)",9096,1030,0,0.0,0.75,14285.093600163236,False,cok,0
+icews18_28,"(head=9096, rel=32, ?, ts=6480)",21995,1030,0,0.0,0.75,14236.284999875352,False,cok,0
+icews18_29,"(head=8044, rel=0, ?, ts=6480)",1125,702,0,0.0,0.75,13540.849100099877,False,cok,0
+icews18_30,"(head=2618, rel=1, ?, ts=6480)",451,1030,0,0.0,0.75,14294.118699850515,False,cok,0
+icews18_31,"(head=2618, rel=15, ?, ts=6480)",451,1036,0,0.0,0.75,14101.956600090489,False,cok,0
+icews18_32,"(head=970, rel=1, ?, ts=6480)",451,1030,0,0.0,0.75,13998.706500045955,False,cok,0
+icews18_33,"(head=3454, rel=5, ?, ts=6480)",11779,1881,0,0.0,0.75,13528.591300128028,False,cok,0
+icews18_34,"(head=4115, rel=29, ?, ts=6480)",2211,1354,0,0.0,0.75,13926.894099917263,False,cok,0
+icews18_35,"(head=3454, rel=2, ?, ts=6480)",2211,1036,0,0.0,0.75,14080.772700021043,False,cok,0
+icews18_36,"(head=50, rel=51, ?, ts=6480)",80,The value of ? is 50. To determine the missing value in the given sequence and find the final answer for,0,0.0,0.75,13793.171200202778,False,cok,0
+icews18_37,"(head=50, rel=52, ?, ts=6480)",80,"(head=4224, rel=4225, tail=0, ts=301",0,0.0,0.75,14307.608400005847,False,cok,7
+icews18_38,"(head=4447, rel=0, ?, ts=6480)",80,1642,0,0.0,0.75,14301.54350004159,False,cok,2
+icews18_39,"(head=80, rel=6, ?, ts=6480)",50,"(ts=4224, head=4225, rel=0) To solve this problem,",0,0.0,0.75,14400.626600021496,False,cok,0
+icews18_40,"(head=312, rel=20, ?, ts=6480)",80,1036,0,0.0,0.75,13799.87829993479,False,cok,0
+icews18_41,"(head=5248, rel=40, ?, ts=6480)",163,1036,0,0.0,0.75,13796.684599947184,False,cok,0
+icews18_42,"(head=19, rel=5, ?, ts=6480)",396,1030,0,0.0,0.75,13940.945700043812,False,cok,0
+icews18_43,"(head=19, rel=20, ?, ts=6480)",42,"(head=1036, rel=1, ts=1037) To solve this problem,",0,0.0,0.75,14179.957299958915,False,cok,0
+icews18_44,"(head=19, rel=5, ?, ts=6480)",391,1030,0,0.0,0.75,14066.260199993849,False,cok,0
+icews18_45,"(head=306, rel=32, ?, ts=6480)",21996,1030,0,0.0,0.75,14051.196500193328,False,cok,0
+icews18_46,"(head=21996, rel=31, ?, ts=6480)",306,103,0,0.0,0.75,13548.88360016048,False,cok,0
+icews18_47,"(head=972, rel=62, ?, ts=6480)",306,3026,0,0.0,0.75,14195.278299972415,False,cok,0
+icews18_48,"(head=6, rel=47, ?, ts=6480)",2361,1036,0,0.0,0.75,13980.94019992277,False,cok,0
+icews18_49,"(head=2361, rel=47, ?, ts=6480)",6,9,0,0.0,0.75,14101.004600059241,False,cok,6

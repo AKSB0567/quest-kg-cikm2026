@@ -1,0 +1,51 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+WebQTest-0,what does jamaican people speak,Jamaican English,Jamaicans primarily speak English. The culture and customs of Jamaica are described in a book that is written about Caribbean topics and,0,0.08333333333333334,0.8,15648.127200081944,False,tog1,0
+WebQTest-1,what did james k polk do before he was president,United States Representative,"Before becoming President, James K. Polk served as a Representative from Tennessee in the United States House of Representatives. Specifically",0,0.44680851063829785,0.8,15186.121699865907,False,tog1,0
+WebQTest-3,who plays ken barlow in coronation street,William Roache,Tony Warren,0,0.0,0.8,9409.033700125292,False,tog1,0
+WebQTest-6,where is jamarcus russell from,Mobile,louisiana state university,0,0.0,0.8,14609.72009995021,False,tog1,0
+WebQTest-7,where was george washington carver from,Diamond,The information provided does not specify George Washington Carver's birthplace or place of origin. It only mentions that he is,0,0.0,0.8,15418.25670003891,False,tog1,0
+WebQTest-8,what else did ben franklin invent,Lightning rod,"Based on the provided information, Ben Franklin is known for flying a kite during a thunderstorm in 1752",0,0.09999999999999999,0.8,14045.517500024289,False,tog1,0
+WebQTest-9,who was richard nixon married to,Pat Nixon,spiro agnew,0,0.0,0.8,15004.814600106329,False,tog1,0
+WebQTest-12,who is governor of ohio 2011,John Kasich,The information provided does not contain any data about the governor of Ohio in 2011. It only provides details,0,0.0,0.8,14579.714699881151,False,tog1,0
+WebQTest-13,who was vice president after kennedy died,Lyndon B. Johnson,Johnson,0,0.5,0.8,15227.038600016385,False,tog1,0
+WebQTest-14,where is the fukushima daiichi nuclear plant located,Japan,"The Fukushima Daiichi Nuclear Power Plant is located in Japan. To arrive at this conclusion, we can follow these steps:",0,0.09523809523809523,0.8,14195.71530004032,False,tog1,0
+WebQTest-16,what countries are part of the uk,Wales,United Kingdom,0,0.0,0.8,15181.502600200474,False,tog1,0
+WebQTest-19,what is my timezone in louisiana,Central Time Zone,"The time zone for Louisiana is UTC-5. To find out your specific timezone, you can use online tools or services",0,0.16666666666666666,0.8,13603.066300041974,False,tog1,0
+WebQTest-20,what did st augustine do,Writer,St. Augustine was a bishop of the Catholic Church in Africa.,0,0.0,0.8,2421.9748000614345,False,tog1,0
+WebQTest-21,who is keyshia cole dad,Sal Gibson,Kemar Bailey-Cole,0,0.4,0.8,14673.841800075024,False,tog1,0
+WebQTest-22,what kind government does egypt have,Semi-presidential system,The information provided in the chain is not sufficient to determine the type of government that Egypt has. The chain only provides details,0,0.08,0.8,9066.448000026867,False,tog1,0
+WebQTest-23,what town was martin luther king assassinated in,Memphis,The given information does not provide any details about Martin Luther King's assassination location. It only mentions his profession as a physician,0,0.0,0.8,15343.98080012761,False,tog1,0
+WebQTest-24,where did edgar allan poe died,Baltimore,"The information provided does not specify where Edgar Allan Poe died. To determine his death location, we would need additional details about",0,0.0,0.8,14598.484499845654,False,tog1,0
+WebQTest-26,what to do today in atlanta with kids,Fox Theatre,Atlanta is a great place for families with children! There are many fun activities and attractions that you can enjoy together. Some,0,0.08333333333333334,0.8,14681.58970004879,False,tog1,0
+WebQTest-28,what electorate does anna bligh represent,Electoral district of South Brisbane,"The information provided in the chain is not relevant to answering the question ""What electorate does Ann Bligh represent?"" The chain",0,0.0,0.8,14657.056000083685,False,tog1,0
+WebQTest-31,where did andy murray started playing tennis,2005,Andy Murray started playing tennis in Scotland.,0,0.0,0.8,14434.025099966675,False,tog1,0
+WebQTest-32,what is the australian dollar called,AUD,"The Australian Dollar is also known as the Aussie. To determine the name of the Australian Dollar, we can follow this reasoning",0,0.0,0.8,14786.294199991971,False,tog1,0
+WebQTest-33,what timezone is sweden,Central European Time Zone,"Sweden is a time zone. To provide more specific information about the time zones in Sweden, you would need to look up",0,0.21428571428571427,0.8,14468.398599885404,False,tog1,0
+WebQTest-34,who did cam newton sign with,Carolina Panthers,The information provided does not contain any details about Cam Newton signing with a team. It only provides geographical and administrative information about,0,0.0,0.8,14569.40419995226,False,tog1,0
+WebQTest-35,what county is frederick md in,Frederick County,Frederick MD is not mentioned in the given information. The provided data only includes details about Annapolis and its relationship to,0,0.08695652173913042,0.8,15025.200000032783,False,tog1,0
+WebQTest-36,what highschool did harper lee go to,Monroe County High School,The information provided does not contain any details about Harper Lee's high school. To find out which high school Harper Lee attended,0,0.25806451612903225,0.8,8782.366500003263,False,tog1,0
+WebQTest-37,what timezone is utah in,Mountain Time Zone,The time zone for Utah is Mountain Standard Time (MST) or Mountain Daylight Time (MDT). To determine,0,0.5217391304347826,0.8,14330.034099984914,False,tog1,0
+WebQTest-38,who did george w. bush run against for the second term,John Kerry,George W. Bush ran against John Kerry for the 2004 presidential election. The information provided does not mention,0,0.19999999999999998,0.8,15131.062399828807,False,tog1,0
+WebQTest-39,who is niall ferguson 's wife,Ayaan Hirsi Ali,Niall Ferguson's wife is not mentioned in the given information. The provided data does not contain any details about a,0,0.0,0.8,15161.755200009793,False,tog1,0
+WebQTest-41,where is the galapagos islands located on a world map,Ecuador,"The Galápagos Islands are located in the Pacific Ocean off the coast of Ecuador. To arrive at this conclusion,",0,0.1904761904761905,0.8,14897.913999855518,False,tog1,0
+WebQTest-42,what are the songs that justin bieber wrote,Somebody to Love,"Justin Bieber has written several songs, including ""Baby,"" ""Sorry,"" and ""Love Yourself."" However, it is not",0,0.11764705882352941,0.8,14983.245400013402,False,tog1,0
+WebQTest-43,what did george clemenceau do,Physician,George Clemenceau was a French politician and statesman who served as Prime Minister of France from 1906,0,0.1111111111111111,0.8,15614.083900116384,False,tog1,0
+WebQTest-44,what is the state flower of arizona,Saguaro,The state flower of Arizona is the saguaro cactus blossom.,0,0.18181818181818182,0.8,2333.5247999057174,False,tog1,0
+WebQTest-45,where was rihanna born and raised,Saint Michael Parish,"Rihanna was born in Barbados and grew up there. To answer this question, we can follow the reasoning chain provided:",0,0.0,0.8,14378.587699960917,False,tog1,0
+WebQTest-46,what year did president william henry harrison take office,1841-03-04,1840,0,0.0,0.8,14892.690300010145,False,tog1,0
+WebQTest-47,where george lopez was born,Mission Hills,The given information does not provide any details about George Lopez's birthplace. It only mentions Antonio López de Santa Anna as,0,0.0,0.8,14576.135999988765,False,tog1,0
+WebQTest-48,where are samsung based,Suwon,South Korea,0,0.0,0.8,14449.044999899343,False,tog1,0
+WebQTest-49,what did the islamic people believe in,Ṭūbā,Muhammad in Islam,0,0.6666666666666666,0.8,15103.323599789292,False,tog1,0
+WebQTest-51,who will play mr gray in the film,Jamie Dornan,"The information provided does not contain any details about a movie or its cast. Therefore, it is impossible to determine who will",0,0.0,0.8,14337.192799896002,False,tog1,0
+WebQTest-52,what did george orwell died of,Tuberculosis,George Orwell died of natural causes.,0,0.0,0.8,14844.047300051898,False,tog1,0
+WebQTest-54,what country did adolf hitler control,Nazi Germany,The country that Adolf Hitler controlled was Germany.,0,0.2,0.8,8968.199900118634,False,tog1,0
+WebQTest-55,who is michael buble,Actor,"Michael Bublé is a singer and actor. He was born in Philadelphia, Pennsylvania, United States, and he has",0,0.10526315789473684,0.8,14987.315299920738,False,tog1,0
+WebQTest-56,what county is kansas city kansas,Wyandotte County,The information provided does not specify which county Kansas City belongs to. It only mentions that it is located in the state of,0,0.08,0.8,14573.78780003637,False,tog1,0
+WebQTest-58,who did jackie robinson first play for,UCLA Bruins football,"The given information does not provide any details about Jackie Robinson playing for a team or his initial professional baseball team. Therefore,",0,0.0,0.8,14485.55999994278,False,tog1,0
+WebQTest-59,when did annie open,1976-08-10,"Annie opened in 1972. The movie was released on March 30, 1972",0,0.0,0.8,2158.6351001169533,False,tog1,0
+WebQTest-60,where did eleanor roosevelt die,Manhattan,New York City,0,0.0,0.8,15179.680699948221,False,tog1,0
+WebQTest-61,what are the religions practiced in indonesia,Catholicism,"The religions practiced in Indonesia include Islam, Christianity (including Protestant and Catholic), Hinduism, Buddhism, Taoism, Conf",0,0.11764705882352941,0.8,14040.157499955967,False,tog1,0
+WebQTest-62,what was jesse james killed with,Firearm,A baseball bat,0,0.0,0.8,14733.786300057545,False,tog1,0
+WebQTest-63,who was vp for lincoln,Hannibal Hamlin,"The information provided does not contain any details about Abraham Lincoln's Vice President. Therefore, it is impossible to determine who his",0,0.0,0.8,14412.179599981755,False,tog1,0
+WebQTest-64,what other books did charles dickens write,A Christmas Carol (Chrysalis Children's Classics Series),"Charles Dickens wrote many famous novels and short stories. Some of his most well-known works include ""A Tale of Two Cities",0,0.5625000000000001,0.8,14364.914800040424,False,tog1,0
+WebQTest-65,who was the first dictator of the soviet union,Vladimir Lenin,Nikita Khrushchev,0,0.0,0.8,2702.0292000379413,False,tog1,0

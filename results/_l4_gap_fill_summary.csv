@@ -1,0 +1,9 @@
+method,dataset,primary_metric,primary_value,EM,balanced_accuracy,MRR,n,wallclock_s
+quest_kg_llm,webqsp,accuracy,0.397,0.397,,,1000,768.6
+cok,webqsp,accuracy,0.055,0.055,,,1000,8837.3
+quest_kg_llm,cwq,accuracy,0.236,0.236,,,500,376.4
+vanilla_rag,cwq,accuracy,0.149,0.149,,,1000,1600.2
+graphrag,cwq,accuracy,0.145,0.145,,,1000,1638.5
+tog1,cwq,accuracy,0.072,0.072,,,500,4679.7
+tog2,cwq,accuracy,0.07,0.07,,,500,4738.8
+cok,cwq,accuracy,0.094,0.094,,,500,4500.3

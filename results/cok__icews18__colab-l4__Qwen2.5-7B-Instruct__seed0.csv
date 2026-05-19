@@ -1,0 +1,201 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+icews18_0,"(head=459, rel=1, ?, ts=6480)",471,4595,0,0.0,0.75,9182.145681999828,False,cok,0
+icews18_1,"(head=5205, rel=90, ?, ts=6480)",464,5206,0,0.0,0.75,9186.592716996529,False,cok,0
+icews18_2,"(head=463, rel=69, ?, ts=6480)",458,302,0,0.0,0.75,9006.451987999753,False,cok,0
+icews18_3,"(head=3093, rel=63, ?, ts=6480)",57,5,0,0.0,0.75,9179.441064999992,False,cok,0
+icews18_4,"(head=17519, rel=151, ?, ts=6480)",3881,2036,0,0.0,0.75,8115.816968998843,False,cok,0
+icews18_5,"(head=4935, rel=0, ?, ts=6480)",7803,1541,0,0.0,0.75,9192.560350998974,False,cok,0
+icews18_6,"(head=2820, rel=4, ?, ts=6480)",458,2012,0,0.0,0.75,9187.453213999106,False,cok,0
+icews18_7,"(head=64, rel=1, ?, ts=6480)",458,80,0,0.0,0.75,9189.93216599847,False,cok,0
+icews18_8,"(head=42, rel=20, ?, ts=6480)",4145,38,0,0.0,0.75,9183.168750001641,False,cok,0
+icews18_9,"(head=42, rel=20, ?, ts=6480)",19,38,0,0.0,0.75,9173.872720002691,False,cok,0
+icews18_10,"(head=42, rel=20, ?, ts=6480)",1449,38,0,0.0,0.75,9173.119947001396,False,cok,0
+icews18_11,"(head=445, rel=34, ?, ts=6480)",477,444,0,0.0,0.75,9184.986631000356,False,cok,0
+icews18_12,"(head=1323, rel=0, ?, ts=6480)",344,"To find the missing tail (`tail`) in the statement `(head=1323, rel=0, ?,",0,0.0,0.75,9185.307656000077,False,cok,0
+icews18_13,"(head=100, rel=28, ?, ts=6480)",390,?,0,0.0,0.75,9179.91621100009,False,cok,0
+icews18_14,"(head=455, rel=0, ?, ts=6480)",765,744,0,0.0,0.75,9178.810708999663,False,cok,0
+icews18_15,"(head=44, rel=20, ?, ts=6480)",4145,"To find the final answer for the original question \((\text{head}=44, \text{rel}=",0,0.0,0.75,9183.603953999409,False,cok,0
+icews18_16,"(head=44, rel=20, ?, ts=6480)",19,"To find the final answer for the original question \((\text{head}=44, \text{rel}=",0,0.0,0.75,9182.57794300007,False,cok,0
+icews18_17,"(head=44, rel=20, ?, ts=6480)",1449,"To find the final answer for the original question \((\text{head}=44, \text{rel}=",0,0.0,0.75,9180.114148999564,False,cok,0
+icews18_18,"(head=9731, rel=0, ?, ts=6480)",445,"(head=9731, rel=0, tail=6480, ts=648",0,0.0,0.75,9176.05775300035,False,cok,0
+icews18_19,"(head=298, rel=6, ?, ts=6480)",397,"To find the final answer for the original question \((\text{head}=298, \text{rel",0,0.0,0.75,9175.495497001975,False,cok,0
+icews18_20,"(head=19, rel=20, ?, ts=6480)",161,0,0,0.0,0.75,9180.459573002736,False,cok,0
+icews18_21,"(head=19, rel=2, ?, ts=6480)",42,3854,0,0.0,0.75,9177.92941299922,False,cok,0
+icews18_22,"(head=42, rel=20, ?, ts=6480)",41,38,0,0.0,0.75,9172.963984001399,False,cok,0
+icews18_23,"(head=19, rel=34, ?, ts=6480)",122,"(1125) To solve the problem using the given reasoning chain, we need to understand the pattern or rule",0,0.0,0.75,7029.4814110020525,False,cok,0
+icews18_24,"(head=19, rel=5, ?, ts=6480)",42,4010,0,0.0,0.75,9185.383076997823,False,cok,0
+icews18_25,"(head=19, rel=43, ?, ts=6480)",20,"To find the final answer for the original question \((\text{head}=19, \text{rel}=",0,0.0,0.75,9177.7046970019,False,cok,0
+icews18_26,"(head=2274, rel=1, ?, ts=6480)",44,2004,0,0.0,0.75,9180.440629999794,False,cok,0
+icews18_27,"(head=21995, rel=31, ?, ts=6480)",9096,"To find the final answer for the given question \((\text{head}=21995, \text",0,0.0,0.75,9194.60900100239,False,cok,0
+icews18_28,"(head=9096, rel=32, ?, ts=6480)",21995,"To find the missing value in the tuple \((9096, 32, ?, 648",0,0.0,0.75,9185.423677998187,False,cok,0
+icews18_29,"(head=8044, rel=0, ?, ts=6480)",1125,"? To solve this problem, we need to identify the pattern or rule that governs the transformation of the given triples.",0,0.0,0.75,9180.33530899993,False,cok,0
+icews18_30,"(head=2618, rel=1, ?, ts=6480)",451,1234,0,0.0,0.75,9184.445361999678,False,cok,0
+icews18_31,"(head=2618, rel=15, ?, ts=6480)",451,15,0,0.0,0.75,9187.221805001172,False,cok,0
+icews18_32,"(head=970, rel=1, ?, ts=6480)",451,"(970, 1, 6480) The given reasoning chain provides a series of triples in",0,0.0,0.75,9182.360957001947,False,cok,0
+icews18_33,"(head=3454, rel=5, ?, ts=6480)",11779,"(1813, 0, 81) The given reasoning chain involves a sequence of tuples where each",0,0.0,0.75,9181.159936997574,False,cok,0
+icews18_34,"(head=4115, rel=29, ?, ts=6480)",2211,4116,0,0.0,0.75,9191.127999001765,False,cok,0
+icews18_35,"(head=3454, rel=2, ?, ts=6480)",2211,1376,0,0.0,0.75,9184.330399999453,False,cok,0
+icews18_36,"(head=50, rel=51, ?, ts=6480)",80,"To find the missing value in the tuple `(head=50, rel=51, ?, ts=64",0,0.0,0.75,9174.704286000633,False,cok,0
+icews18_37,"(head=50, rel=52, ?, ts=6480)",80,60,0,0.0,0.75,9173.516071998165,False,cok,0
+icews18_38,"(head=4447, rel=0, ?, ts=6480)",80,445,0,0.0,0.75,6549.497003998113,False,cok,2
+icews18_39,"(head=80, rel=6, ?, ts=6480)",50,6,0,0.0,0.75,9183.413176000613,False,cok,0
+icews18_40,"(head=312, rel=20, ?, ts=6480)",80,2500,0,0.0,0.75,9184.932276999461,False,cok,0
+icews18_41,"(head=5248, rel=40, ?, ts=6480)",163,42,0,0.0,0.75,9184.593992998998,False,cok,0
+icews18_42,"(head=19, rel=5, ?, ts=6480)",396,4010,0,0.0,0.75,9183.69069000255,False,cok,0
+icews18_43,"(head=19, rel=20, ?, ts=6480)",42,0,0,0.0,0.75,9177.17519800135,False,cok,0
+icews18_44,"(head=19, rel=5, ?, ts=6480)",391,4010,0,0.0,0.75,9176.933196999016,False,cok,0
+icews18_45,"(head=306, rel=32, ?, ts=6480)",21996,302,0,0.0,0.75,9177.330258000438,False,cok,0
+icews18_46,"(head=21996, rel=31, ?, ts=6480)",306,? = 2112,0,0.0,0.75,9189.8970129987,False,cok,0
+icews18_47,"(head=972, rel=62, ?, ts=6480)",306,972,0,0.0,0.75,9180.517501001304,False,cok,0
+icews18_48,"(head=6, rel=47, ?, ts=6480)",2361,"(1808, 8, 999) The reasoning chain provided does not directly relate to the",0,0.0,0.75,9180.298983999819,False,cok,0
+icews18_49,"(head=2361, rel=47, ?, ts=6480)",6,6479,0,0.0,0.75,9184.265173997119,False,cok,0
+icews18_50,"(head=788, rel=0, ?, ts=6480)",260,6480,0,0.0,0.75,9186.007947999315,False,cok,1
+icews18_51,"(head=373, rel=20, ?, ts=6480)",50,373,0,0.0,0.75,9180.869485000585,False,cok,0
+icews18_52,"(head=465, rel=1, ?, ts=6480)",459,28,0,0.0,0.75,9173.661090000678,False,cok,0
+icews18_53,"(head=112, rel=25, ?, ts=6480)",460,112256480,0,0.0,0.75,9184.986715001287,False,cok,0
+icews18_54,"(head=460, rel=25, ?, ts=6480)",112,948,0,0.0,0.75,9186.371889001748,False,cok,0
+icews18_55,"(head=251, rel=20, ?, ts=6480)",66,80,0,0.0,0.75,9179.635642001813,False,cok,0
+icews18_56,"(head=66, rel=6, ?, ts=6480)",65,"1621 To determine the final answer for the original question \((\text{head}=66,",0,0.0,0.75,9190.492662000906,False,cok,0
+icews18_57,"(head=415, rel=59, ?, ts=6480)",906,"(2118, 22, 183) The given reasoning chain does not directly correspond to",0,0.0,0.75,9192.819681997207,False,cok,0
+icews18_58,"(head=906, rel=59, ?, ts=6480)",415,"(906, 0, 729) The reasoning chain provided does not directly correspond to the original",0,0.0,0.75,9186.777368002367,False,cok,0
+icews18_59,"(head=300, rel=0, ?, ts=6480)",6,729,0,0.0,0.75,9182.181583000784,False,cok,0
+icews18_60,"(head=53, rel=76, ?, ts=6480)",224,28,0,0.0,0.75,9185.237331999815,False,cok,0
+icews18_61,"(head=53, rel=76, ?, ts=6480)",8352,28,0,0.0,0.75,9177.874887001963,False,cok,0
+icews18_62,"(head=53, rel=15, ?, ts=6480)",2187,2182,0,0.0,0.75,9181.370136000623,False,cok,0
+icews18_63,"(head=53, rel=76, ?, ts=6480)",168,28,0,0.0,0.75,9176.044166000793,False,cok,0
+icews18_64,"(head=224, rel=76, ?, ts=6480)",53,6480,0,0.0,0.75,8886.39889299884,False,cok,0
+icews18_65,"(head=8352, rel=76, ?, ts=6480)",53,8353,0,0.0,0.75,9178.85333799859,False,cok,0
+icews18_66,"(head=168, rel=76, ?, ts=6480)",53,2000,0,0.0,0.75,9183.848575998127,False,cok,0
+icews18_67,"(head=53, rel=15, ?, ts=6480)",8422,2182,0,0.0,0.75,9176.4251099994,False,cok,0
+icews18_68,"(head=8279, rel=47, ?, ts=6480)",2694,6481,0,0.0,0.75,9187.872889000573,False,cok,0
+icews18_69,"(head=2694, rel=47, ?, ts=6480)",8279,2118,0,0.0,0.75,9186.988018998818,False,cok,0
+icews18_70,"(head=511, rel=47, ?, ts=6480)",3423,511,0,0.0,0.75,9183.426532999874,False,cok,0
+icews18_71,"(head=3423, rel=47, ?, ts=6480)",511,1031,0,0.0,0.75,9182.764886001678,False,cok,0
+icews18_72,"(head=3423, rel=47, ?, ts=6480)",117,1031,0,0.0,0.75,9183.205855002598,False,cok,0
+icews18_73,"(head=117, rel=47, ?, ts=6480)",3423,1375,0,0.0,0.75,9178.143628996622,False,cok,0
+icews18_74,"(head=44, rel=6, ?, ts=6480)",377,80,0,0.0,0.75,9177.036488999875,False,cok,0
+icews18_75,"(head=44, rel=6, ?, ts=6480)",455,80,0,0.0,0.75,9175.094818998332,False,cok,0
+icews18_76,"(head=122, rel=34, ?, ts=6480)",45,65,0,0.0,0.75,9185.443307000241,False,cok,0
+icews18_77,"(head=19, rel=20, ?, ts=6480)",382,0,0,0.0,0.75,9183.42326200218,False,cok,0
+icews18_78,"(head=19, rel=20, ?, ts=6480)",20,0,0,0.0,0.75,9176.401001001068,False,cok,0
+icews18_79,"(head=1069, rel=1, ?, ts=6480)",2780,6480,0,0.0,0.75,9185.766217000491,False,cok,0
+icews18_80,"(head=1688, rel=4, ?, ts=6480)",15312,"To find the missing value in the tuple \((1688, 4, ?, 6480",0,0.0,0.75,9193.113870998786,False,cok,0
+icews18_81,"(head=414, rel=2, ?, ts=6480)",391,1375,0,0.0,0.75,9186.691079998127,False,cok,0
+icews18_82,"(head=414, rel=40, ?, ts=6480)",391,42,0,0.0,0.75,9187.925291000283,False,cok,0
+icews18_83,"(head=9130, rel=0, ?, ts=6480)",94,137,0,0.0,0.75,9176.48640599873,False,cok,0
+icews18_84,"(head=428, rel=31, ?, ts=6480)",1000,50,0,0.0,0.75,9189.170446999924,False,cok,0
+icews18_85,"(head=1000, rel=32, ?, ts=6480)",428,0,0,0.0,0.75,9183.042540000315,False,cok,0
+icews18_86,"(head=1000, rel=0, ?, ts=6480)",1690,775,0,0.0,0.75,9173.502494999411,False,cok,0
+icews18_87,"(head=2780, rel=32, ?, ts=6480)",66,2408,0,0.0,0.75,9181.8656989999,False,cok,0
+icews18_88,"(head=66, rel=31, ?, ts=6480)",2780,"(66, 31, 66, ts=6480) The given reasoning chain does",0,0.0,0.75,9175.807793999411,False,cok,0
+icews18_89,"(head=2780, rel=0, ?, ts=6480)",80,2781,0,0.0,0.75,9178.19484699794,False,cok,0
+icews18_90,"(head=97, rel=66, ?, ts=6480)",6,"(97, 0, 65) To solve the original question \((\text{head}=9",0,0.0,0.75,9177.565031000995,False,cok,0
+icews18_91,"(head=463, rel=5, ?, ts=6480)",22,465,0,0.0,0.75,9183.32289799946,False,cok,0
+icews18_92,"(head=463, rel=5, ?, ts=6480)",459,465,0,0.0,0.75,9184.975109001243,False,cok,0
+icews18_93,"(head=463, rel=88, ?, ts=6480)",22,3624,0,0.0,0.75,9183.653297997807,False,cok,0
+icews18_94,"(head=13544, rel=4, ?, ts=6480)",3780,13548,0,0.0,0.75,8519.440731997747,False,cok,0
+icews18_95,"(head=13544, rel=20, ?, ts=6480)",3780,"To find the missing value in the tuple \((13544, 20, ?, 64",0,0.0,0.75,9182.169026000338,False,cok,0
+icews18_96,"(head=13544, rel=6, ?, ts=6480)",164,"(13544, 6, 63, 6480) The reasoning chain provided",0,0.0,0.75,9168.212792999839,False,cok,0
+icews18_97,"(head=11013, rel=6, ?, ts=6480)",3780,6,0,0.0,0.75,9047.190412999043,False,cok,0
+icews18_98,"(head=11013, rel=20, ?, ts=6480)",164,11002,0,0.0,0.75,9185.661162999168,False,cok,0
+icews18_99,"(head=11013, rel=1, ?, ts=6480)",8778,1096,0,0.0,0.75,9191.887267999846,False,cok,0
+icews18_100,"(head=14, rel=20, ?, ts=6480)",1175,"(1888, 15, 365) The original question provided is in the format (",0,0.0,0.75,9193.966904997069,False,cok,0
+icews18_101,"(head=15, rel=4, ?, ts=6480)",9787,15,0,0.0,0.75,9181.036476998997,False,cok,0
+icews18_102,"(head=1437, rel=31, ?, ts=6480)",3810,2118,0,0.0,0.75,9181.157650000387,False,cok,0
+icews18_103,"(head=3810, rel=32, ?, ts=6480)",1437,2,0,0.0,0.75,9177.560175998224,False,cok,0
+icews18_104,"(head=10275, rel=47, ?, ts=6480)",3810,25,0,0.0,0.75,9191.68122100018,False,cok,0
+icews18_105,"(head=3810, rel=47, ?, ts=6480)",10275,6481,0,0.0,0.75,9184.830444999534,False,cok,0
+icews18_106,"(head=3810, rel=27, ?, ts=6480)",10275,2022,0,0.0,0.75,9185.646548998193,False,cok,0
+icews18_107,"(head=3810, rel=0, ?, ts=6480)",145,3814,0,0.0,0.75,9180.985329003306,False,cok,0
+icews18_108,"(head=10149, rel=47, ?, ts=6480)",3810,10149,0,0.0,0.75,6860.336263001955,False,cok,0
+icews18_109,"(head=3810, rel=47, ?, ts=6480)",10149,6481,0,0.0,0.75,9183.01326800065,False,cok,0
+icews18_110,"(head=5115, rel=0, ?, ts=6480)",428,?,0,0.0,0.75,9184.875847000512,False,cok,0
+icews18_111,"(head=145, rel=8, ?, ts=6480)",3398,"(183, 28, 302) The reasoning chain provided seems to follow a pattern of",0,0.0,0.75,9188.522870997986,False,cok,0
+icews18_112,"(head=5115, rel=0, ?, ts=6480)",145,?,0,0.0,0.75,9177.386412000487,False,cok,0
+icews18_113,"(head=6061, rel=1, ?, ts=6480)",5128,"(6061, 0, 6479) The provided reasoning chain does not directly correspond to",0,0.0,0.75,9181.051683997794,False,cok,0
+icews18_114,"(head=6061, rel=15, ?, ts=6480)",5128,6063,0,0.0,0.75,9183.130017998337,False,cok,0
+icews18_115,"(head=3818, rel=47, ?, ts=6480)",5128,3815,0,0.0,0.75,9195.959791999485,False,cok,0
+icews18_116,"(head=5128, rel=47, ?, ts=6480)",3818,1800,0,0.0,0.75,7267.403675999958,False,cok,0
+icews18_117,"(head=294, rel=0, ?, ts=6480)",729,"To find the missing value in the tuple \((294, 0, ?)\) given that the timestamp",0,0.0,0.75,9180.448171002354,False,cok,0
+icews18_118,"(head=51, rel=5, ?, ts=6480)",516,6480,0,0.0,0.75,9182.140992001223,False,cok,0
+icews18_119,"(head=1, rel=163, ?, ts=6480)",66,67,0,0.0,0.75,8401.39697199993,False,cok,0
+icews18_120,"(head=66, rel=163, ?, ts=6480)",1,?,0,0.0,0.75,9166.330781998113,False,cok,0
+icews18_121,"(head=80, rel=15, ?, ts=6480)",0,1099,0,0.0,0.75,9180.851064000308,False,cok,1
+icews18_122,"(head=21997, rel=65, ?, ts=6480)",701,21998,0,0.0,0.75,9201.244174000749,False,cok,0
+icews18_123,"(head=19, rel=0, ?, ts=6480)",1509,4010,0,0.0,0.75,9179.357663997507,False,cok,0
+icews18_124,"(head=122, rel=31, ?, ts=6480)",80,2112,0,0.0,0.75,9181.44290300188,False,cok,0
+icews18_125,"(head=80, rel=32, ?, ts=6480)",122,1811,0,0.0,0.75,9185.215787998459,False,cok,0
+icews18_126,"(head=397, rel=1, ?, ts=6480)",80,73,0,0.0,0.75,6553.669674001867,False,cok,2
+icews18_127,"(head=122, rel=31, ?, ts=6480)",66,2112,0,0.0,0.75,9177.536813000188,False,cok,0
+icews18_128,"(head=66, rel=32, ?, ts=6480)",122,(tail=6480) The task involves a pattern recognition and substitution problem based on the given reasoning chain.,0,0.0,0.75,9181.122829002561,False,cok,0
+icews18_129,"(head=452, rel=43, ?, ts=6480)",42,791,0,0.0,0.75,9194.474471998547,False,cok,0
+icews18_130,"(head=524, rel=5, ?, ts=6480)",9,?,0,0.0,0.75,9184.591777000605,False,cok,0
+icews18_131,"(head=1896, rel=0, ?, ts=6480)",329,"To find the missing value in the tuple \((1896, 0, ?)\) given the pattern",0,0.0,0.75,9172.21706300188,False,cok,0
+icews18_132,"(head=1666, rel=0, ?, ts=6480)",524,133,0,0.0,0.75,9175.517268999101,False,cok,0
+icews18_133,"(head=8, rel=5, ?, ts=6480)",4527,"To find the final answer for the relation in the context of the given reasoning chain, we need to identify the pattern or",0,0.0,0.75,9174.373392001144,False,cok,0
+icews18_134,"(head=8, rel=57, ?, ts=6480)",698,?,0,0.0,0.75,9181.964180999785,False,cok,0
+icews18_135,"(head=1666, rel=0, ?, ts=6480)",8,133,0,0.0,0.75,9174.289979997411,False,cok,0
+icews18_136,"(head=698, rel=28, ?, ts=6480)",13,1125,0,0.0,0.75,9184.598807001748,False,cok,0
+icews18_137,"(head=50, rel=20, ?, ts=6480)",66,"(1802, 47, 1801) The given reasoning chain does not directly provide",0,0.0,0.75,9183.9226459997,False,cok,0
+icews18_138,"(head=1068, rel=5, ?, ts=6480)",15,1067,0,0.0,0.75,9185.056452002755,False,cok,0
+icews18_139,"(head=66, rel=7, ?, ts=6480)",5383,999,0,0.0,0.75,9178.42413299877,False,cok,0
+icews18_140,"(head=10614, rel=8, ?, ts=6480)",5383,5120,0,0.0,0.75,8588.33352000147,False,cok,0
+icews18_141,"(head=1887, rel=47, ?, ts=6480)",7293,1886,0,0.0,0.75,7753.09917100094,False,cok,0
+icews18_142,"(head=7293, rel=47, ?, ts=6480)",5802,"(7293, 47, 7292, ts=6480) The",0,0.0,0.75,9185.591870998906,False,cok,0
+icews18_143,"(head=7293, rel=47, ?, ts=6480)",1887,"(7293, 47, 7292, ts=6480) The",0,0.0,0.75,9176.359122000576,False,cok,0
+icews18_144,"(head=5802, rel=47, ?, ts=6480)",7293,"(5802, 47, 539, ts=6480) The reasoning",0,0.0,0.75,9185.600785000133,False,cok,0
+icews18_145,"(head=1437, rel=47, ?, ts=6480)",3810,50,0,0.0,0.75,8651.609515000018,False,cok,0
+icews18_146,"(head=3810, rel=47, ?, ts=6480)",1437,6481,0,0.0,0.75,9190.14477699966,False,cok,0
+icews18_147,"(head=91, rel=47, ?, ts=6480)",3810,1801,0,0.0,0.75,9178.454567001609,False,cok,0
+icews18_148,"(head=3810, rel=47, ?, ts=6480)",91,6481,0,0.0,0.75,9180.530351000925,False,cok,0
+icews18_149,"(head=3810, rel=8, ?, ts=6480)",91,1376,0,0.0,0.75,9170.957725000335,False,cok,0
+icews18_150,"(head=6, rel=12, ?, ts=6480)",263,636,0,0.0,0.75,9174.63609799961,False,cok,0
+icews18_151,"(head=3810, rel=57, ?, ts=6480)",219,3811,0,0.0,0.75,9180.790896996768,False,cok,0
+icews18_152,"(head=2618, rel=1, ?, ts=6480)",1057,1234,0,0.0,0.75,9183.677830998931,False,cok,0
+icews18_153,"(head=397, rel=15, ?, ts=6480)",452,"(14, 1, 15) The final answer to the original question is (14,",0,0.0,0.75,9179.992821998894,False,cok,0
+icews18_154,"(head=411, rel=1, ?, ts=6480)",280,412,0,0.0,0.75,9188.308631000837,False,cok,0
+icews18_155,"(head=411, rel=0, ?, ts=6480)",400,412,0,0.0,0.75,9188.028510001459,False,cok,0
+icews18_156,"(head=42, rel=6, ?, ts=6480)",574,6480,0,0.0,0.75,9002.205774999311,False,cok,0
+icews18_157,"(head=19, rel=5, ?, ts=6480)",125,4010,0,0.0,0.75,9180.59160499979,False,cok,0
+icews18_158,"(head=407, rel=38, ?, ts=6480)",42,40,0,0.0,0.75,9179.954832001386,False,cok,0
+icews18_159,"(head=391, rel=1, ?, ts=6480)",6293,"(3858, 0, 1541) The reasoning chain provided does not directly correspond to",0,0.0,0.75,9187.285658001201,False,cok,0
+icews18_160,"(head=19, rel=5, ?, ts=6480)",20,4010,0,0.0,0.75,9181.717341998592,False,cok,0
+icews18_161,"(head=189, rel=1, ?, ts=6480)",42,"(1382, 47, 2072) The given reasoning chain appears to be a",0,0.0,0.75,9179.087986998638,False,cok,0
+icews18_162,"(head=42, rel=19, ?, ts=6480)",122,"To find the final answer for the relation where `head = 42`, `rel = 19`, and",0,0.0,0.75,9192.914637002104,False,cok,0
+icews18_163,"(head=122, rel=5, ?, ts=6480)",42,"To find the missing value in the tuple \((122, 5, ?, 6480)\",0,0.0,0.75,9194.740399001603,False,cok,0
+icews18_164,"(head=1522, rel=10, ?, ts=6480)",844,?,0,0.0,0.75,9189.406302000862,False,cok,0
+icews18_165,"(head=1522, rel=10, ?, ts=6480)",3354,?,0,0.0,0.75,9184.451026998431,False,cok,0
+icews18_166,"(head=3354, rel=8, ?, ts=6480)",1522,3355,0,0.0,0.75,9187.154171999282,False,cok,0
+icews18_167,"(head=844, rel=6, ?, ts=6480)",3738,645,0,0.0,0.75,9188.237220998417,False,cok,0
+icews18_168,"(head=3738, rel=142, ?, ts=6480)",1522,183,0,0.0,0.75,9186.0637710015,False,cok,0
+icews18_169,"(head=5299, rel=0, ?, ts=6480)",8060,"(5299, 0, 6480) The reasoning chain provided does not directly correlate with",0,0.0,0.75,9184.995936000632,False,cok,0
+icews18_170,"(head=2562, rel=0, ?, ts=6480)",1937,2563,0,0.0,0.75,9191.178817000036,False,cok,0
+icews18_171,"(head=157, rel=1, ?, ts=6480)",3584,0,0,0.0,0.75,9197.352865998255,False,cok,0
+icews18_172,"(head=240, rel=32, ?, ts=6480)",66,33,0,0.0,0.75,9187.255029999505,False,cok,0
+icews18_173,"(head=924, rel=0, ?, ts=6480)",732,240,0,0.0,0.75,9176.749078000284,False,cok,0
+icews18_174,"(head=66, rel=31, ?, ts=6480)",240,"(66, 31, 66, ts=6480) The given reasoning chain does",0,0.0,0.75,9173.76963499919,False,cok,0
+icews18_175,"(head=28, rel=31, ?, ts=6480)",636,"To find the final answer for the original question \((\text{head}=28, \text{rel}=",0,0.0,0.75,9187.30606600002,False,cok,0
+icews18_176,"(head=636, rel=32, ?, ts=6480)",28,240,0,0.0,0.75,9185.278891000053,False,cok,0
+icews18_177,"(head=1522, rel=1, ?, ts=6480)",53,2112,0,0.0,0.75,9180.083986000682,False,cok,0
+icews18_178,"(head=1522, rel=15, ?, ts=6480)",53,1541,0,0.0,0.75,9177.324265001516,False,cok,0
+icews18_179,"(head=117, rel=76, ?, ts=6480)",260,?,0,0.0,0.75,9173.283100000845,False,cok,0
+icews18_180,"(head=260, rel=76, ?, ts=6480)",117,66,0,0.0,0.75,6602.58547400008,False,cok,0
+icews18_181,"(head=28, rel=25, ?, ts=6480)",260,"To find the final answer for the original question \((\text{head}=28, \text{rel}=",0,0.0,0.75,9173.72695999802,False,cok,0
+icews18_182,"(head=260, rel=25, ?, ts=6480)",28,190,0,0.0,0.75,9174.605074000283,False,cok,0
+icews18_183,"(head=251, rel=27, ?, ts=6480)",117,"(251, 0, 80) The given reasoning chain does not directly correspond to the original question",0,0.0,0.75,9177.186323002388,False,cok,0
+icews18_184,"(head=117, rel=27, ?, ts=6480)",251,"(183, 28, 302) The final answer to the original question is (1",0,0.0,0.75,9174.209691002034,False,cok,0
+icews18_185,"(head=6771, rel=39, ?, ts=6480)",564,1379,0,0.0,0.75,9186.034235000989,False,cok,0
+icews18_186,"(head=8388, rel=39, ?, ts=6480)",564,"To find the missing value in the tuple \((8388, 39, ?, 648",0,0.0,0.75,9186.432678998244,False,cok,0
+icews18_187,"(head=6771, rel=66, ?, ts=6480)",564,2561,0,0.0,0.75,9181.774722001137,False,cok,0
+icews18_188,"(head=177, rel=1, ?, ts=6480)",1558,"(tail=63) The original question provided is in the format (head, rel, ?, ts), where """,0,0.0,0.75,9186.907031002193,False,cok,0
+icews18_189,"(head=1111, rel=32, ?, ts=6480)",66,1111326480,0,0.0,0.75,9182.834563001961,False,cok,0
+icews18_190,"(head=66, rel=31, ?, ts=6480)",1111,"(66, 31, 66, ts=6480) The given reasoning chain does",0,0.0,0.75,9177.204200997949,False,cok,0
+icews18_191,"(head=1111, rel=0, ?, ts=6480)",2879,?,0,0.0,0.75,9180.400834000466,False,cok,0
+icews18_192,"(head=1111, rel=8, ?, ts=6480)",66,1112,0,0.0,0.75,9179.105791998154,False,cok,0
+icews18_193,"(head=4115, rel=142, ?, ts=6480)",1142,4116,0,0.0,0.75,9201.42145600039,False,cok,0
+icews18_194,"(head=4115, rel=5, ?, ts=6480)",343,4116,0,0.0,0.75,9190.062105000834,False,cok,0
+icews18_195,"(head=0, rel=47, ?, ts=6480)",2874,(tail=47) The given reasoning chain involves a series of tuples representing some form of transformation or mapping. Each,0,0.0,0.75,8754.682979997597,False,cok,0
+icews18_196,"(head=2874, rel=47, ?, ts=6480)",0,1422,0,0.0,0.75,9175.285684003029,False,cok,0
+icews18_197,"(head=2694, rel=0, ?, ts=6480)",2874,2695,0,0.0,0.75,9188.399590999325,False,cok,0
+icews18_198,"(head=13, rel=4, ?, ts=6480)",8,?,0,0.0,0.75,9170.948588998726,False,cok,0
+icews18_199,"(head=13, rel=4, ?, ts=6480)",698,?,0,0.0,0.75,9168.474600999616,False,cok,0

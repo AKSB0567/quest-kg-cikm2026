@@ -1,0 +1,51 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+WebQTest-0,what does jamaican people speak,Jamaican English,Jamaican English and Jamaican Creole English Language,0,0.923076923076923,0.6712367534637451,37542.24590002559,False,vanilla_rag,0
+WebQTest-1,what did james k polk do before he was president,United States Representative,politician,0,0.0,0.6844277381896973,283.29039993695915,False,vanilla_rag,0
+WebQTest-3,who plays ken barlow in coronation street,William Roache,Ken Barlow is played by m.0wkd82f in Coronation Street. The information provided does not,0,0.0,0.6088457703590393,2604.2692000046372,False,vanilla_rag,0
+WebQTest-6,where is jamarcus russell from,Mobile,United States of America,0,0.0,0.7490198612213135,577.6424000505358,False,vanilla_rag,0
+WebQTest-7,where was george washington carver from,Diamond,United States of America,0,0.0,0.7586836218833923,490.65629998221993,False,vanilla_rag,0
+WebQTest-8,what else did ben franklin invent,Lightning rod,lightning rod,1,1.0,0.6674997806549072,331.8580000195652,False,vanilla_rag,5
+WebQTest-9,who was richard nixon married to,Pat Nixon,m.02h98gq,0,0.0,0.637608528137207,2309.9396999459714,False,vanilla_rag,0
+WebQTest-12,who is governor of ohio 2011,John Kasich,The information provided does not specify who is currently serving as the governor of Ohio in 2011. It only,0,0.0,0.35151877999305725,2362.128500128165,False,vanilla_rag,0
+WebQTest-13,who was vice president after kennedy died,Lyndon B. Johnson,Gerald Ford,0,0.0,0.45600625872612,367.47050005942583,False,vanilla_rag,0
+WebQTest-14,where is the fukushima daiichi nuclear plant located,Japan,Japan,1,1.0,0.3566955029964447,2372.226699953899,False,vanilla_rag,0
+WebQTest-16,what countries are part of the uk,Wales,United Kingdom,0,0.0,0.4975924491882324,2289.323000004515,False,vanilla_rag,0
+WebQTest-19,what is my timezone in louisiana,Central Time Zone,Central Time Zone,1,1.0,0.6060437560081482,2328.7384000141174,False,vanilla_rag,1
+WebQTest-20,what did st augustine do,Writer,None,0,0.0,0.33755049109458923,2225.825099973008,False,vanilla_rag,0
+WebQTest-21,who is keyshia cole dad,Sal Gibson,Josiah Franklin,0,0.0,0.45104312896728516,2164.424599846825,False,vanilla_rag,0
+WebQTest-22,what kind government does egypt have,Semi-presidential system,parliamentary system,0,0.4,0.3850943148136139,2487.461200216785,False,vanilla_rag,0
+WebQTest-23,what town was martin luther king assassinated in,Memphis,Memphis,1,1.0,0.404517263174057,202.11820001713932,False,vanilla_rag,0
+WebQTest-24,where did edgar allan poe died,Baltimore,United States of America,0,0.0,0.5607478022575378,2677.317599998787,False,vanilla_rag,0
+WebQTest-26,what to do today in atlanta with kids,Fox Theatre,"None of the locations listed (Youngs, Dallas, Cedartown, Friendship, Akes, Caseyville) are",0,0.14285714285714285,0.41295531392097473,2396.764799952507,False,vanilla_rag,0
+WebQTest-28,what electorate does anna bligh represent,Electoral district of South Brisbane,None,0,0.0,0.3232799768447876,2403.1578998547047,False,vanilla_rag,0
+WebQTest-31,where did andy murray started playing tennis,2005,UK,0,0.0,0.26677635312080383,2412.4489000532776,False,vanilla_rag,0
+WebQTest-32,what is the australian dollar called,AUD,Not applicable,0,0.0,0.46184709668159485,2385.6219998560846,False,vanilla_rag,0
+WebQTest-33,what timezone is sweden,Central European Time Zone,None of the locations listed have information about Sweden's time zone. The provided facts only include time zones for Onalaska,0,0.22222222222222224,0.5075913071632385,2375.6784999277443,False,vanilla_rag,0
+WebQTest-34,who did cam newton sign with,Carolina Panthers,David Hume,0,0.0,0.35407528281211853,2313.989399932325,False,vanilla_rag,0
+WebQTest-35,what county is frederick md in,Frederick County,Anne Arundel County,0,0.4,0.4400046765804291,573.6316998954862,False,vanilla_rag,0
+WebQTest-36,what highschool did harper lee go to,Monroe County High School,"The information provided does not specify which high school Harper Lee attended. Therefore, I cannot definitively state that she went to",0,0.16,0.3698232173919678,2256.788699887693,False,vanilla_rag,0
+WebQTest-37,what timezone is utah in,Mountain Time Zone,UTC−07:00,0,0.0,0.4769693613052368,850.7964999880642,False,vanilla_rag,0
+WebQTest-38,who did george w. bush run against for the second term,John Kerry,Ronald Reagan,0,0.0,0.3868483304977417,2471.849199850112,False,vanilla_rag,0
+WebQTest-39,who is niall ferguson 's wife,Ayaan Hirsi Ali,"To determine Niall Ferguson's wife, I'll analyze the given information:",0,0.0,0.36311960220336914,2523.184699937701,False,vanilla_rag,0
+WebQTest-41,where is the galapagos islands located on a world map,Ecuador,None of the locations mentioned in the facts directly correspond to the Galápagos Islands. The Galápagos Islands,0,0.19047619047619047,0.48335710167884827,2530.054699862376,False,vanilla_rag,0
+WebQTest-42,what are the songs that justin bieber wrote,Somebody to Love,"To determine the songs Justin Bieber has written, I'll follow this reasoning:",0,0.125,0.28106725215911865,2422.5539001636207,False,vanilla_rag,0
+WebQTest-43,what did george clemenceau do,Physician,president of france,0,0.0,0.3869120180606842,460.05250001326203,False,vanilla_rag,0
+WebQTest-44,what is the state flower of arizona,Saguaro,None The given facts do not provide information about the state flower of Arizona. They only mention locations and architectural styles without relating,0,0.0,0.30822280049324036,2335.6552000623196,False,vanilla_rag,0
+WebQTest-45,where was rihanna born and raised,Saint Michael Parish,"Saint Mary Parish, Jamaica",0,0.5714285714285715,0.4699946343898773,2325.831899885088,False,vanilla_rag,0
+WebQTest-46,what year did president william henry harrison take office,1841-03-04,1841,0,0.5,0.44851651787757874,2419.018799904734,False,vanilla_rag,0
+WebQTest-47,where george lopez was born,Mission Hills,United States of America,0,0.0,0.4127069413661957,2224.9471999239177,False,vanilla_rag,0
+WebQTest-48,where are samsung based,Suwon,United States of America,0,0.0,0.3903937339782715,2247.6849001832306,False,vanilla_rag,0
+WebQTest-49,what did the islamic people believe in,Ṭūbā,Muhammad in Islam,0,0.6666666666666666,0.47715887427330017,2297.95980011113,False,vanilla_rag,0
+WebQTest-51,who will play mr gray in the film,Jamie Dornan,m.0g5dncq,0,0.0,0.3967323303222656,2174.3207999970764,False,vanilla_rag,0
+WebQTest-52,what did george orwell died of,Tuberculosis,Not applicable,0,0.0,0.38634899258613586,2417.0923000201583,False,vanilla_rag,0
+WebQTest-54,what country did adolf hitler control,Nazi Germany,Germany,0,0.6666666666666666,0.3067888915538788,2524.2584000807256,False,vanilla_rag,0
+WebQTest-55,who is michael buble,Actor,Michael Bublé is not mentioned in the given facts as being associated with any notable types such as deceased person or writer,0,0.0,0.46025216579437256,2382.5189999770373,False,vanilla_rag,0
+WebQTest-56,what county is kansas city kansas,Wyandotte County,Polk County,0,0.5,0.4506358206272125,468.4949000366032,False,vanilla_rag,0
+WebQTest-58,who did jackie robinson first play for,UCLA Bruins football,"The given information does not provide details about Jackie Robinson's initial team. Therefore, I cannot determine who Jackie Robinson first played",0,0.0,0.3235670030117035,2464.9428999982774,False,vanilla_rag,0
+WebQTest-59,when did annie open,1976-08-10,"Start date, type.property.schema, Event",0,0.0,0.24128861725330353,2388.1053999066353,False,vanilla_rag,0
+WebQTest-60,where did eleanor roosevelt die,Manhattan,"Theodore Roosevelt's cause of death was cardiovascular disease. Therefore, Eleanor Roosevelt died in New York City, as she lived there",0,0.0,0.5716403126716614,2347.1679999493062,False,vanilla_rag,0
+WebQTest-61,what are the religions practiced in indonesia,Catholicism,"None of the provided facts directly address the religions practiced in Indonesia. However, based on general knowledge, some major religions practiced",0,0.0,0.4697536528110504,2376.69840012677,False,vanilla_rag,0
+WebQTest-62,what was jesse james killed with,Firearm,gunshots,0,0.0,0.31688442826271057,2310.6547999195755,False,vanilla_rag,0
+WebQTest-63,who was vp for lincoln,Hannibal Hamlin,"The information provided does not mention any Vice President for Abraham Lincoln specifically. Therefore, there is no direct answer based on the",0,0.0,0.46437859535217285,2256.787999998778,False,vanilla_rag,0
+WebQTest-64,what other books did charles dickens write,A Christmas Carol (Chrysalis Children's Classics Series),Poor Richard's Almanac of 1735,0,0.30769230769230765,0.4716058671474457,2188.1534999702126,False,vanilla_rag,0
+WebQTest-65,who was the first dictator of the soviet union,Vladimir Lenin,None of the provided facts directly address who was the first dictator of the Soviet Union. The information given pertains to Richard,0,0.0,0.3903162479400635,2426.7267999239266,False,vanilla_rag,0

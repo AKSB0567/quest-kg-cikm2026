@@ -1,0 +1,51 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+oa_331,"At time 58 in context ctx_02, can u_0041 access res_0016?",1,No. To determine whether `u_0041` can access `res_0016` at,0,0.0,0.75,15099.538000067696,False,cok,0
+oa_0,"At time 83 in context ctx_03, can u_0045 access res_0134?",0,No. To determine whether `u_0045` can access `res_0134` at,1,1.0,0.75,15490.755399921909,False,cok,0
+oa_365,"At time 55 in context ctx_07, can u_0481 access res_0048?",1,Yes. To determine if `u_0481` can access `res_0048` at,1,1.0,0.75,15283.055700128898,False,cok,0
+oa_1,"At time 142 in context ctx_06, can u_0029 access res_0098?",0,No. To determine whether `u_0029` can access `res_0098` at,1,1.0,0.75,16258.66649998352,False,cok,0
+oa_589,"At time 55 in context ctx_07, can u_0247 access res_0048?",1,No. To determine whether `u_0247` can access `res_0048` at,0,0.0,0.75,16573.600699892268,False,cok,0
+oa_2,"At time 93 in context ctx_05, can u_0276 access res_0026?",0,No. To determine whether `u_0276` can access `res_0026` at,1,1.0,0.75,15127.119700191543,False,cok,0
+oa_604,"At time 58 in context ctx_02, can u_0127 access res_0125?",1,Yes. To determine if `u_0127` can access `res_0125` at,1,1.0,0.75,15352.32700011693,False,cok,0
+oa_9,"At time 124 in context ctx_04, can u_0442 access res_0154?",0,No,1,1.0,0.75,15116.767500061542,False,cok,0
+oa_685,"At time 51 in context ctx_03, can u_0138 access res_0156?",1,No. To determine whether `u_0138` can access `res_0156` at,0,0.0,0.75,14836.352899903432,False,cok,0
+oa_12,"At time 134 in context ctx_06, can u_0132 access res_0152?",0,No. To determine whether `u_0132` can access `res_0152` at,1,1.0,0.75,15125.414199894294,False,cok,0
+oa_708,"At time 60 in context ctx_04, can u_0452 access res_0130?",1,No. To determine whether `u_0452` can access `res_0130` at,0,0.0,0.75,14371.558399870992,False,cok,0
+oa_15,"At time 90 in context ctx_02, can u_0316 access res_0060?",0,No,1,1.0,0.75,15157.748299883679,False,cok,0
+oa_803,"At time 50 in context ctx_02, can u_0243 access res_0016?",1,Yes,1,1.0,0.75,14626.0309999343,False,cok,0
+oa_19,"At time 128 in context ctx_00, can u_0170 access res_0134?",0,No. To determine whether `u_0170` can access `res_0134` at,1,1.0,0.75,17037.283400073647,False,cok,0
+oa_826,"At time 61 in context ctx_05, can u_0225 access res_0139?",1,No. To determine whether `u_0225` can access `res_0139` at,0,0.0,0.75,18468.634500168264,False,cok,0
+oa_26,"At time 196 in context ctx_04, can u_0236 access res_0066?",0,No. To determine whether `u_0236` can access `res_0066` at,1,1.0,0.75,14725.536999991164,False,cok,0
+oa_862,"At time 50 in context ctx_02, can u_0311 access res_0066?",1,No,0,0.0,0.75,16101.195499999449,False,cok,0
+oa_27,"At time 97 in context ctx_01, can u_0206 access res_0080?",0,No. To determine whether `u_0206` can access `res_0080` at,1,1.0,0.75,16174.671200104058,False,cok,0
+oa_889,"At time 58 in context ctx_02, can u_0096 access res_0180?",1,No,0,0.0,0.75,16408.403399866074,False,cok,0
+oa_58,"At time 66 in context ctx_02, can u_0019 access res_0022?",0,Yes. To determine if `u_0019` can access `res_0022` at,0,0.0,0.75,17645.362799987197,False,cok,0
+oa_948,"At time 58 in context ctx_02, can u_0471 access res_0077?",1,No. To determine whether `u_0471` can access `res_0077` at,0,0.0,0.75,14387.018299894407,False,cok,0
+oa_63,"At time 136 in context ctx_00, can u_0252 access res_0175?",0,No. To determine whether `u_0252` can access `res_0175` at,1,1.0,0.75,15356.858500046656,False,cok,0
+oa_1019,"At time 59 in context ctx_03, can u_0465 access res_0056?",1,Yes. To determine if `u_0465` can access `res_0056` at,1,1.0,0.75,14761.047899955884,False,cok,0
+oa_64,"At time 190 in context ctx_06, can u_0133 access res_0162?",0,No. To determine whether `u_0133` can access `res_0162` at,1,1.0,0.75,14983.62429998815,False,cok,0
+oa_1083,"At time 52 in context ctx_04, can u_0300 access res_0055?",1,No,0,0.0,0.75,14687.231099931523,False,cok,0
+oa_69,"At time 157 in context ctx_05, can u_0162 access res_0029?",0,No. To determine whether `u_0162` can access `res_0029` at,1,1.0,0.75,14836.660999804735,False,cok,0
+oa_1084,"At time 56 in context ctx_00, can u_0225 access res_0074?",1,No. To determine whether `u_0225` can access `res_0074` at,0,0.0,0.75,14292.303399881348,False,cok,0
+oa_72,"At time 118 in context ctx_06, can u_0369 access res_0089?",0,No. To determine whether `u_0369` can access `res_0089` at,1,1.0,0.75,14739.276199834421,False,cok,0
+oa_1101,"At time 58 in context ctx_02, can u_0127 access res_0077?",1,No. To determine whether `u_0127` can access `res_0077` at,0,0.0,0.75,14873.575700214133,False,cok,0
+oa_79,"At time 108 in context ctx_04, can u_0206 access res_0157?",0,No. To determine whether `u_0206` can access `res_0157` at,1,1.0,0.75,14315.773100126535,False,cok,0
+oa_1277,"At time 58 in context ctx_02, can u_0243 access res_0077?",1,Yes. To determine if `u_0243` can access `res_0077` at,1,1.0,0.75,15000.353900017217,False,cok,0
+oa_81,"At time 64 in context ctx_00, can u_0378 access res_0078?",0,No. To determine whether `u_0378` can access `res_0078` at,1,1.0,0.75,13885.780199896544,False,cok,0
+oa_1342,"At time 55 in context ctx_07, can u_0176 access res_0061?",1,No. To determine whether `u_0176` can access `res_0061` at,0,0.0,0.75,15257.03789992258,False,cok,0
+oa_82,"At time 86 in context ctx_06, can u_0011 access res_0149?",0,Yes. To determine if `u_0011` can access `res_0149` at,0,0.0,0.75,15208.293200004846,False,cok,0
+oa_1531,"At time 53 in context ctx_05, can u_0440 access res_0125?",1,No,0,0.0,0.75,15018.286800011992,False,cok,0
+oa_101,"At time 176 in context ctx_00, can u_0397 access res_0044?",0,No. To determine whether u_0397 can access res_0044 at time 17,1,1.0,0.75,15106.625100132078,False,cok,0
+oa_1551,"At time 51 in context ctx_03, can u_0190 access res_0156?",1,No. To determine whether `u_0190` can access `res_0156` at,0,0.0,0.75,14681.903100106865,False,cok,0
+oa_108,"At time 183 in context ctx_07, can u_0276 access res_0120?",0,No,1,1.0,0.75,15265.139100141823,False,cok,0
+oa_1668,"At time 53 in context ctx_05, can u_0020 access res_0035?",1,No. To determine whether `u_0020` can access `res_0035` at,0,0.0,0.75,14799.678799929097,False,cok,0
+oa_115,"At time 94 in context ctx_06, can u_0007 access res_0152?",0,Yes. To determine if U_0007 can access RES_0152 at time 94,0,0.0,0.75,14708.207899937406,False,cok,0
+oa_1677,"At time 50 in context ctx_02, can u_0046 access res_0140?",1,Yes,1,1.0,0.75,13425.910399993882,False,cok,0
+oa_117,"At time 144 in context ctx_00, can u_0307 access res_0102?",0,No. To determine whether `u_0307` can access `res_0102` at,1,1.0,0.75,14622.268299805,False,cok,0
+oa_1762,"At time 54 in context ctx_06, can u_0225 access res_0061?",1,No. To determine whether `u_0225` can access `res_0061` at,0,0.0,0.75,15149.597299983725,False,cok,0
+oa_120,"At time 171 in context ctx_03, can u_0063 access res_0130?",0,No. To determine whether `u_0063` can access `res_0130` at,1,1.0,0.75,15127.86790006794,False,cok,0
+oa_1983,"At time 61 in context ctx_05, can u_0277 access res_0125?",1,No. To determine whether `u_0277` can access `res_0125` at,0,0.0,0.75,15394.62639996782,False,cok,0
+oa_125,"At time 69 in context ctx_05, can u_0465 access res_0015?",0,No. To determine whether `u_0465` can access `res_0015` at,1,1.0,0.75,15197.762900032103,False,cok,0
+oa_1998,"At time 58 in context ctx_02, can u_0199 access res_0130?",1,No. To determine whether `u_0199` can access `res_0130` at,0,0.0,0.75,15140.763100003824,False,cok,0
+oa_132,"At time 184 in context ctx_00, can u_0312 access res_0154?",0,No. To determine whether `u_0312` can access `res_0154` at,1,1.0,0.75,15043.971300125122,False,cok,0
+oa_2040,"At time 56 in context ctx_00, can u_0440 access res_0074?",1,No. To determine whether `u_0440` can access `res_0074` at,0,0.0,0.75,14370.467999950051,False,cok,0
+oa_152,"At time 96 in context ctx_00, can u_0156 access res_0128?",0,No. To determine whether `u_0156` can access `res_0128` at,1,1.0,0.75,15427.417400060222,False,cok,0

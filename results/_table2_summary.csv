@@ -1,0 +1,5 @@
+method,dataset,EM,EM (attempted),F1,abstention,latency_ms,n
+quest_kg,cwq,0.0,0.0,0.0,1.0,196970.21544427998,100
+quest_kg,icews18,0.0,0.0,0.0,1.0,25228.324635629975,100
+quest_kg,orgaccess,0.0,0.0,0.0,1.0,288.49220059979416,100
+quest_kg,webqsp,0.0,0.0,0.0,1.0,212091.5339623498,100

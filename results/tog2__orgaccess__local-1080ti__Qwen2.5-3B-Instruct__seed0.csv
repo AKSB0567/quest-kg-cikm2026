@@ -1,0 +1,751 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+oa_331,"At time 58 in context ctx_02, can u_0041 access res_0016?",1,"No, because res_0016 is governed by pol_009, and pol_009",0,0.0,0.8,16803.103600163013,False,tog2,0
+oa_0,"At time 83 in context ctx_03, can u_0045 access res_0134?",0,No,1,1.0,0.8,18547.455199994147,False,tog2,0
+oa_365,"At time 55 in context ctx_07, can u_0481 access res_0048?",1,No,0,0.0,0.8,18304.247899912298,False,tog2,0
+oa_1,"At time 142 in context ctx_06, can u_0029 access res_0098?",0,"No, because there is no direct or indirect link between res_0098 and u_0029",1,1.0,0.8,18309.795000124723,False,tog2,0
+oa_589,"At time 55 in context ctx_07, can u_0247 access res_0048?",1,"No, u_0247 cannot access res_0048 at time 55 in context ctx",0,0.0,0.8,17535.94239987433,False,tog2,0
+oa_2,"At time 93 in context ctx_05, can u_0276 access res_0026?",0,"No, because res_0026 is governed by pol_021 which is valid in context ctx_",1,1.0,0.8,18237.72650002502,False,tog2,0
+oa_604,"At time 58 in context ctx_02, can u_0127 access res_0125?",1,"No, because res_0127 is only governed by pol_009 and pol_006",0,0.0,0.8,18326.91750000231,False,tog2,0
+oa_9,"At time 124 in context ctx_04, can u_0442 access res_0154?",0,No,1,1.0,0.8,19198.525599902496,False,tog2,0
+oa_685,"At time 51 in context ctx_03, can u_0138 access res_0156?",1,No,0,0.0,0.8,18813.74299991876,False,tog2,0
+oa_12,"At time 134 in context ctx_06, can u_0132 access res_0152?",0,"To determine if u_0132 can access res_0152 at time 134,",0,0.0,0.8,2865.5253001488745,False,tog2,0
+oa_708,"At time 60 in context ctx_04, can u_0452 access res_0130?",1,"No, u_0452 cannot access res_0130 at time 60 in context ctx",0,0.0,0.8,18261.734300060198,False,tog2,0
+oa_15,"At time 90 in context ctx_02, can u_0316 access res_0060?",0,No,1,1.0,0.8,18546.6340999119,False,tog2,0
+oa_803,"At time 50 in context ctx_02, can u_0243 access res_0016?",1,No,0,0.0,0.8,19645.972499856725,False,tog2,0
+oa_19,"At time 128 in context ctx_00, can u_0170 access res_0134?",0,"No, because res_0134 is not governed by any of the political entities (pol_044",1,1.0,0.8,18178.454900160432,False,tog2,0
+oa_826,"At time 61 in context ctx_05, can u_0225 access res_0139?",1,"No, because based on the given reasoning chain, res_0139 is not governed by any political entity (",0,0.0,0.8,18610.605500172824,False,tog2,0
+oa_26,"At time 196 in context ctx_04, can u_0236 access res_0066?",0,"No, because the reasoning provided does not indicate any governance or validity of res_0066 within context ctx_",1,1.0,0.8,19380.99279999733,False,tog2,0
+oa_862,"At time 50 in context ctx_02, can u_0311 access res_0066?",1,No,0,0.0,0.8,18304.633700056,False,tog2,0
+oa_27,"At time 97 in context ctx_01, can u_0206 access res_0080?",0,No,1,1.0,0.8,18228.769900044426,False,tog2,0
+oa_889,"At time 58 in context ctx_02, can u_0096 access res_0180?",1,"Based on the given reasoning chain, res_0180 is governed by both pol_009 and pol",0,0.0,0.8,19201.674700016156,False,tog2,0
+oa_58,"At time 66 in context ctx_02, can u_0019 access res_0022?",0,"No, because res_0022 is not governed by any of the political entities (pol_016",1,1.0,0.8,19055.878499988467,False,tog2,0
+oa_948,"At time 58 in context ctx_02, can u_0471 access res_0077?",1,"No, because the reasoning provided does not establish any direct connection between res_0077 and the contexts or political",0,0.0,0.8,18249.73509996198,False,tog2,0
+oa_63,"At time 136 in context ctx_00, can u_0252 access res_0175?",0,"No, because res_0175 is governed by pol_025, which is valid in context ctx",1,1.0,0.8,18851.83100006543,False,tog2,0
+oa_1019,"At time 59 in context ctx_03, can u_0465 access res_0056?",1,"No, because based on the given reasoning chain, res_0160 is governed by pol_038",0,0.0,0.8,18394.96610010974,False,tog2,0
+oa_64,"At time 190 in context ctx_06, can u_0133 access res_0162?",0,"No, because res_0162 is not governed by any political entity valid in context ctx_06.",1,1.0,0.8,17701.42720011063,False,tog2,0
+oa_1083,"At time 52 in context ctx_04, can u_0300 access res_0055?",1,"No, u_0300 cannot access res_0055 at time 52 in context ctx",0,0.0,0.8,19226.883299881592,False,tog2,0
+oa_69,"At time 157 in context ctx_05, can u_0162 access res_0029?",0,"No, because res_0029 is not governed by any of the political entities (pol_016",1,1.0,0.8,19274.39419995062,False,tog2,0
+oa_1084,"At time 56 in context ctx_00, can u_0225 access res_0074?",1,No,0,0.0,0.8,18578.35129997693,False,tog2,0
+oa_72,"At time 118 in context ctx_06, can u_0369 access res_0089?",0,"No, because based on the given reasoning chain, res_0089 is not governed by any of the political",1,1.0,0.8,18772.44500000961,False,tog2,0
+oa_1101,"At time 58 in context ctx_02, can u_0127 access res_0077?",1,"No, because res_0127 is only governed by pol_009 and pol_006",0,0.0,0.8,18642.7855999209,False,tog2,0
+oa_79,"At time 108 in context ctx_04, can u_0206 access res_0157?",0,"No, because res_0157 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,14596.54950001277,False,tog2,0
+oa_1277,"At time 58 in context ctx_02, can u_0243 access res_0077?",1,"No, because res_0077 is not governed by any of the political entities (pol_019",0,0.0,0.8,18524.154599988833,False,tog2,0
+oa_81,"At time 64 in context ctx_00, can u_0378 access res_0078?",0,"No, because res_0078 is not governed by any political entity valid in context ctx_00.",1,1.0,0.8,19036.75109986216,False,tog2,0
+oa_1342,"At time 55 in context ctx_07, can u_0176 access res_0061?",1,"No, because the reasoning provided does not indicate any direct connection between res_0061 and the contexts or political",0,0.0,0.8,16840.389400022104,False,tog2,0
+oa_82,"At time 86 in context ctx_06, can u_0011 access res_0149?",0,"No, because res_0149 is not governed by pol_001, which is not valid in",1,1.0,0.8,18302.002700045705,False,tog2,0
+oa_1531,"At time 53 in context ctx_05, can u_0440 access res_0125?",1,No,0,0.0,0.8,18922.267500078306,False,tog2,0
+oa_101,"At time 176 in context ctx_00, can u_0397 access res_0044?",0,"No, because res_0044 is not governed by any political entity valid in context ctx_00.",1,1.0,0.8,18670.46880000271,False,tog2,0
+oa_1551,"At time 51 in context ctx_03, can u_0190 access res_0156?",1,No,0,0.0,0.8,17920.82910006866,False,tog2,0
+oa_108,"At time 183 in context ctx_07, can u_0276 access res_0120?",0,No,1,1.0,0.8,19030.20259994082,False,tog2,0
+oa_1668,"At time 53 in context ctx_05, can u_0020 access res_0035?",1,No,0,0.0,0.8,18638.59949982725,False,tog2,0
+oa_115,"At time 94 in context ctx_06, can u_0007 access res_0152?",0,"No, because there is no direct or indirect link between res_0152 and any of the political entities (",1,1.0,0.8,17850.49539990723,False,tog2,0
+oa_1677,"At time 50 in context ctx_02, can u_0046 access res_0140?",1,"Based on the given reasoning chain, res_0140 is governed by pol_020, which is",0,0.0,0.8,18240.644600009546,False,tog2,0
+oa_117,"At time 144 in context ctx_00, can u_0307 access res_0102?",0,"No, because res_0102 is not governed by any political entity valid in context ctx_00.",1,1.0,0.8,18871.149099897593,False,tog2,0
+oa_1762,"At time 54 in context ctx_06, can u_0225 access res_0061?",1,No,0,0.0,0.8,18656.369800213724,False,tog2,0
+oa_120,"At time 171 in context ctx_03, can u_0063 access res_0130?",0,No,1,1.0,0.8,18895.694399951026,False,tog2,0
+oa_1983,"At time 61 in context ctx_05, can u_0277 access res_0125?",1,"No, because res_0125 is not governed by any political entity (pol) that is valid in context",0,0.0,0.8,18177.166000008583,False,tog2,0
+oa_125,"At time 69 in context ctx_05, can u_0465 access res_0015?",0,"No, because based on the given reasoning chain, res_0015 is not governed by any political entity (",1,1.0,0.8,18956.62990002893,False,tog2,0
+oa_1998,"At time 58 in context ctx_02, can u_0199 access res_0130?",1,No,0,0.0,0.8,18255.86810009554,False,tog2,0
+oa_132,"At time 184 in context ctx_00, can u_0312 access res_0154?",0,"No, because based on the given reasoning chain, res_0154 is not governed by any political entity (",1,1.0,0.8,18714.621500112116,False,tog2,0
+oa_2040,"At time 56 in context ctx_00, can u_0440 access res_0074?",1,No,0,0.0,0.8,19174.963100114837,False,tog2,0
+oa_152,"At time 96 in context ctx_00, can u_0156 access res_0128?",0,"No, because based on the given reasoning chain, res_0124 is governed by pol_025",1,1.0,0.8,18823.5718999058,False,tog2,0
+oa_2101,"At time 62 in context ctx_06, can u_0139 access res_0061?",1,No,0,0.0,0.8,18518.80620000884,False,tog2,0
+oa_165,"At time 103 in context ctx_07, can u_0315 access res_0188?",0,No.,1,1.0,0.8,18561.96330022067,False,tog2,0
+oa_2127,"At time 50 in context ctx_02, can u_0020 access res_0130?",1,No,0,0.0,0.8,18780.219599837437,False,tog2,0
+oa_167,"At time 68 in context ctx_04, can u_0073 access res_0039?",0,"No, because based on the given reasoning chain, res_0039 is not governed by pol_00",1,1.0,0.8,18744.69710001722,False,tog2,0
+oa_2131,"At time 57 in context ctx_01, can u_0481 access res_0145?",1,"No, because res_0145 is not governed by pol_019, which is valid in ctx",0,0.0,0.8,18274.672100087628,False,tog2,0
+oa_168,"At time 78 in context ctx_06, can u_0051 access res_0112?",0,"No, because res_0112 is not governed by pol_044, and pol_04",1,1.0,0.8,18820.311799878255,False,tog2,0
+oa_2133,"At time 56 in context ctx_00, can u_0225 access res_0139?",1,No,0,0.0,0.8,18771.027199923992,False,tog2,0
+oa_177,"At time 180 in context ctx_04, can u_0240 access res_0124?",0,"Based on the given reasoning chain, there is no information provided about the validity of any policies or resources at time 1",0,0.0,0.8,18674.870299873874,False,tog2,0
+oa_2250,"At time 55 in context ctx_07, can u_0321 access res_0141?",1,"No, because there is no direct or indirect connection between res_0141 and u_0321",0,0.0,0.8,18379.01130015962,False,tog2,0
+oa_178,"At time 65 in context ctx_01, can u_0104 access res_0071?",0,"No, because based on the given reasoning chain, res_0071 is not governed by pol_00",1,1.0,0.8,18250.775300199166,False,tog2,0
+oa_2280,"At time 61 in context ctx_05, can u_0247 access res_0016?",1,"No, u_0247 cannot access res_0016 at time 61 in context ctx",0,0.0,0.8,18325.278700096533,False,tog2,0
+oa_186,"At time 157 in context ctx_05, can u_0441 access res_0085?",0,"No, because the reasoning chain provided does not indicate any connection between res_0085 and the other variables (",1,1.0,0.8,18387.521700002253,False,tog2,0
+oa_2374,"At time 56 in context ctx_00, can u_0020 access res_0124?",1,"No, because res_0124 is only governed by pol_025, which is valid in context",0,0.0,0.8,18697.97939993441,False,tog2,0
+oa_201,"At time 116 in context ctx_04, can u_0457 access res_0045?",0,"No, because there is no direct or indirect link between res_0045 and the contexts or political entities that",1,1.0,0.8,18291.213599964976,False,tog2,0
+oa_2411,"At time 53 in context ctx_05, can u_0471 access res_0125?",1,"No, because the reasoning provided does not indicate any direct connection between res_0125 and the contexts or governing",0,0.0,0.8,18769.492499995977,False,tog2,0
+oa_209,"At time 110 in context ctx_06, can u_0171 access res_0122?",0,"No, because res_0012 is governed by pol_043, which is valid in context ctx",1,1.0,0.8,18534.931699978188,False,tog2,0
+oa_2522,"At time 59 in context ctx_03, can u_0096 access res_0056?",1,"No, because based on the given reasoning chain, res_0056 is not governed by pol_03",0,0.0,0.8,18301.85279995203,False,tog2,0
+oa_218,"At time 153 in context ctx_01, can u_0386 access res_0023?",0,"No, because the reasoning chain shows that res_0023 is not governed by pol_038,",1,1.0,0.8,18606.357699958608,False,tog2,0
+oa_2551,"At time 52 in context ctx_04, can u_0286 access res_0152?",1,"No, because the reasoning provided does not indicate any governance or access permissions for res_0152 within context ctx",0,0.0,0.8,17081.48659998551,False,tog2,0
+oa_226,"At time 65 in context ctx_01, can u_0171 access res_0040?",0,"No, because based on the given reasoning chain, res_0040 is not governed by any political entity (",1,1.0,0.8,18363.23029990308,False,tog2,0
+oa_2641,"At time 56 in context ctx_00, can u_0247 access res_0074?",1,"To determine if u_0247 can access res_0074 at time 56, we",0,0.0,0.8,3092.465199995786,False,tog2,0
+oa_228,"At time 145 in context ctx_01, can u_0110 access res_0128?",0,"No, because res_0128 is not governed by pol_027, and thus does not fall",1,1.0,0.8,18508.32450017333,False,tog2,0
+oa_2770,"At time 54 in context ctx_06, can u_0247 access res_0061?",1,"No, because the reasoning provided does not indicate any direct connection between res_0061 and the contexts or political",0,0.0,0.8,19017.92010013014,False,tog2,0
+oa_240,"At time 104 in context ctx_00, can u_0457 access res_0157?",0,"No, because res_0157 is not governed by pol_001, and thus cannot be valid",1,1.0,0.8,18092.229899950325,False,tog2,0
+oa_2900,"At time 57 in context ctx_01, can u_0139 access res_0145?",1,No,0,0.0,0.8,18359.93619984947,False,tog2,0
+oa_246,"At time 112 in context ctx_00, can u_0123 access res_0127?",0,"No, because res_0127 is not governed by pol_025, and pol_02",1,1.0,0.8,18735.195899847895,False,tog2,0
+oa_2904,"At time 51 in context ctx_03, can u_0020 access res_0055?",1,No,0,0.0,0.8,18404.930399963632,False,tog2,0
+oa_251,"At time 71 in context ctx_07, can u_0470 access res_0008?",0,"No, because the reasoning provided does not indicate any connection between res_0008 and the contexts or political entities",1,1.0,0.8,18513.37720011361,False,tog2,0
+oa_2927,"At time 58 in context ctx_02, can u_0127 access res_0141?",1,"No, because res_0141 is not governed by any political entity valid in context ctx_02.",0,0.0,0.8,18906.09119995497,False,tog2,0
+oa_258,"At time 135 in context ctx_07, can u_0401 access res_0042?",0,"No, because the reasoning provided does not indicate any connection between res_0042 and the contexts or political entities",1,1.0,0.8,18246.901399921626,False,tog2,0
+oa_3155,"At time 56 in context ctx_00, can u_0041 access res_0130?",1,No.,0,0.0,0.8,18612.921099876985,False,tog2,0
+oa_265,"At time 187 in context ctx_03, can u_0245 access res_0030?",0,No,1,1.0,0.8,19414.843499893323,False,tog2,0
+oa_3204,"At time 56 in context ctx_00, can u_0277 access res_0139?",1,"No, because based on the given reasoning chain, res_0139 is not governed by any of the political",0,0.0,0.8,18352.217599982396,False,tog2,0
+oa_270,"At time 108 in context ctx_04, can u_0475 access res_0106?",0,"No, because res_0106 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18273.14729988575,False,tog2,0
+oa_3245,"At time 55 in context ctx_07, can u_0199 access res_0141?",1,No,0,0.0,0.8,18797.11589985527,False,tog2,0
+oa_275,"At time 128 in context ctx_00, can u_0248 access res_0129?",0,No.,1,1.0,0.8,18427.541200071573,False,tog2,0
+oa_3317,"At time 57 in context ctx_01, can u_0225 access res_0145?",1,No,0,0.0,0.8,18421.605200041085,False,tog2,0
+oa_288,"At time 64 in context ctx_00, can u_0092 access res_0194?",0,"No, because res_0194 is not governed by any political entity valid in context ctx_00.",1,1.0,0.8,18314.77789999917,False,tog2,0
+oa_3400,"At time 58 in context ctx_02, can u_0471 access res_0180?",1,"Based on the given reasoning chain, res_0180 is governed by both pol_009 and pol",0,0.0,0.8,19147.702199872583,False,tog2,0
+oa_290,"At time 195 in context ctx_03, can u_0162 access res_0132?",0,"No, because the only contexts where res_0016 is governed by pol_016 are ctx_",1,1.0,0.8,19230.329199926928,False,tog2,0
+oa_3420,"At time 62 in context ctx_06, can u_0481 access res_0048?",1,"No, because the reasoning provided does not indicate any direct connection between res_0048 and the contexts or political",0,0.0,0.8,18405.274500139058,False,tog2,0
+oa_292,"At time 179 in context ctx_03, can u_0141 access res_0192?",0,"No, because none of the political entities (pol_001, pol_025, pol_0",1,1.0,0.8,18480.114800157025,False,tog2,0
+oa_3442,"At time 59 in context ctx_03, can u_0452 access res_0056?",1,"No, because based on the given reasoning chain, res_0056 is not governed by pol_03",0,0.0,0.8,18918.702400056645,False,tog2,0
+oa_294,"At time 122 in context ctx_02, can u_0305 access res_0022?",0,"No, because the reasoning chain shows that res_0022 is not governed by any of the political entities (",1,1.0,0.8,18939.005499938503,False,tog2,0
+oa_3572,"At time 60 in context ctx_04, can u_0481 access res_0145?",1,"No, because based on the given reasoning chain, res_0145 is not governed by any political entity (",0,0.0,0.8,18188.72440000996,False,tog2,0
+oa_298,"At time 197 in context ctx_05, can u_0469 access res_0169?",0,"Based on the given reasoning chain, we know that res_0016 is governed by pol_016",0,0.0,0.8,18608.369100140408,False,tog2,0
+oa_3678,"At time 56 in context ctx_00, can u_0471 access res_0027?",1,"No, because res_0027 is only governed by pol_006, which is valid in context",0,0.0,0.8,18884.866500040516,False,tog2,0
+oa_309,"At time 198 in context ctx_06, can u_0377 access res_0147?",0,"No, because the reasoning provided does not indicate any connection between pol_037 (which governs u_0",1,1.0,0.8,18549.615299794823,False,tog2,0
+oa_3784,"At time 53 in context ctx_05, can u_0321 access res_0016?",1,"Based on the given reasoning chain, res_0016 is governed by pol_016, and pol",0,0.0,0.8,18345.557400025427,False,tog2,0
+oa_312,"At time 172 in context ctx_04, can u_0162 access res_0195?",0,"To determine if u_0162 can access res_0195 at time 172,",0,0.0,0.8,3067.1049000229686,False,tog2,0
+oa_3853,"At time 50 in context ctx_02, can u_0221 access res_0133?",1,"No, because res_0133 is not governed by any political entity valid in context ctx_02.",0,0.0,0.8,19140.538499923423,False,tog2,0
+oa_316,"At time 93 in context ctx_05, can u_0352 access res_0088?",0,"To determine if u_0352 can access res_0088 at time 93, we",0,0.0,0.8,2792.291000019759,False,tog2,0
+oa_3947,"At time 53 in context ctx_05, can u_0247 access res_0141?",1,"No, because based on the given reasoning chain, res_0141 is not governed by any of the political",0,0.0,0.8,18711.783400038257,False,tog2,0
+oa_318,"At time 88 in context ctx_00, can u_0052 access res_0131?",0,No,1,1.0,0.8,18937.643500044942,False,tog2,0
+oa_4008,"At time 62 in context ctx_06, can u_0096 access res_0048?",1,"No, because the only political system (pol_016) that validates context (ctx_06) is",0,0.0,0.8,18736.646600067616,False,tog2,0
+oa_322,"At time 133 in context ctx_05, can u_0475 access res_0026?",0,"No, because the reasoning does not provide any information about u_0475's access to res_00",1,1.0,0.8,18341.047799913213,False,tog2,0
+oa_4258,"At time 61 in context ctx_05, can u_0321 access res_0125?",1,"No, because res_0125 is not governed by any political entity (pol) that is valid in context",0,0.0,0.8,19172.166700009257,False,tog2,0
+oa_327,"At time 173 in context ctx_05, can u_0109 access res_0006?",0,"No, because based on the given reasoning chain, res_0016 is the only resource that is governed by",1,1.0,0.8,19000.362899852917,False,tog2,0
+oa_4270,"At time 54 in context ctx_06, can u_0243 access res_0140?",1,No,0,0.0,0.8,18937.91179987602,False,tog2,0
+oa_332,"At time 96 in context ctx_00, can u_0002 access res_0164?",0,No,1,1.0,0.8,18613.66909998469,False,tog2,0
+oa_4458,"At time 61 in context ctx_05, can u_0247 access res_0077?",1,"No, because based on the given reasoning chain, res_0077 is not governed by any political entity (",0,0.0,0.8,19144.18619987555,False,tog2,0
+oa_333,"At time 119 in context ctx_07, can u_0388 access res_0158?",0,No,1,1.0,0.8,18446.94729987532,False,tog2,0
+oa_4580,"At time 60 in context ctx_04, can u_0452 access res_0145?",1,No,0,0.0,0.8,18162.46289992705,False,tog2,0
+oa_337,"At time 68 in context ctx_04, can u_0331 access res_0092?",0,"No, because none of the political entities (pol_018, pol_023, pol_0",1,1.0,0.8,19382.132400060073,False,tog2,0
+oa_4588,"At time 58 in context ctx_02, can u_0041 access res_0180?",1,"Based on the given reasoning chain, we know that res_0180 is governed by both pol_00",0,0.0,0.8,19527.827400015667,False,tog2,0
+oa_344,"At time 127 in context ctx_07, can u_0495 access res_0113?",0,No,1,1.0,0.8,18390.337999910116,False,tog2,0
+oa_4590,"At time 61 in context ctx_05, can u_0199 access res_0081?",1,"No, because based on the given reasoning chain, res_0081 is not governed by any political entity (",0,0.0,0.8,18537.65429998748,False,tog2,0
+oa_346,"At time 158 in context ctx_06, can u_0301 access res_0141?",0,"No, because there is no direct or indirect link between res_0141 and any of the contexts (ctx",1,1.0,0.8,18722.49949979596,False,tog2,0
+oa_4592,"At time 59 in context ctx_03, can u_0452 access res_0056?",1,"No, because based on the given reasoning chain, res_0056 is not governed by pol_03",0,0.0,0.8,18662.731899879873,False,tog2,0
+oa_370,"At time 95 in context ctx_07, can u_0041 access res_0145?",0,"No, u_0041 cannot access res_0145 at time 95 in context ctx",1,1.0,0.8,18394.187399884686,False,tog2,0
+oa_4603,"At time 59 in context ctx_03, can u_0465 access res_0056?",1,"No, because based on the given reasoning chain, res_0160 is governed by pol_038",0,0.0,0.8,18740.672699874267,False,tog2,0
+oa_374,"At time 142 in context ctx_06, can u_0417 access res_0008?",0,"No, because there is no direct or indirect connection between res_0008 and any of the political entities (",1,1.0,0.8,18015.892599942163,False,tog2,0
+oa_4667,"At time 62 in context ctx_06, can u_0167 access res_0077?",1,"No, because res_0077 is not governed by any political entity that is valid in context ctx_0",0,0.0,0.8,18835.548999952152,False,tog2,0
+oa_378,"At time 72 in context ctx_00, can u_0103 access res_0130?",0,"No, because res_0130 is not governed by any of the political entities (pol_001",1,1.0,0.8,18440.963100176305,False,tog2,0
+oa_4740,"At time 53 in context ctx_05, can u_0471 access res_0077?",1,"No, because res_0077 is not governed by pol_047 and pol_047",0,0.0,0.8,19143.127700081095,False,tog2,0
+oa_383,"At time 159 in context ctx_07, can u_0163 access res_0090?",0,No.,1,1.0,0.8,19044.695099815726,False,tog2,0
+oa_4742,"At time 53 in context ctx_05, can u_0440 access res_0077?",1,"No, because the reasoning provided does not indicate any direct connection between res_0077 and the contexts or political",0,0.0,0.8,18658.387100091204,False,tog2,0
+oa_385,"At time 110 in context ctx_06, can u_0385 access res_0004?",0,"No, because the reasoning chain shows that res_0004 is not governed by any of the political entities (",1,1.0,0.8,18813.280999893323,False,tog2,0
+oa_4777,"At time 50 in context ctx_02, can u_0465 access res_0130?",1,"No, because the reasoning provided does not indicate any governance or validity of res_0130 within context ctx_",0,0.0,0.8,18010.19910001196,False,tog2,0
+oa_395,"At time 85 in context ctx_05, can u_0321 access res_0119?",0,"No, because res_0119 is not governed by any of the political entities (pol_001",1,1.0,0.8,19009.386399993673,False,tog2,0
+oa_4790,"At time 57 in context ctx_01, can u_0225 access res_0056?",1,"No, because res_0056 is not governed by any of the political entities (pol_019",0,0.0,0.8,18913.29749999568,False,tog2,0
+oa_408,"At time 110 in context ctx_06, can u_0196 access res_0043?",0,"No, because the reasoning provided does not indicate any direct connection between res_0043 and the contexts or political",1,1.0,0.8,18639.848500024527,False,tog2,0
+oa_4837,"At time 53 in context ctx_05, can u_0176 access res_0020?",1,"No, because there is no direct or indirect governance link between res_0020 and u_017",0,0.0,0.8,18582.389800110832,False,tog2,0
+oa_429,"At time 82 in context ctx_02, can u_0197 access res_0093?",0,"No, because res_0093 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18831.98029990308,False,tog2,0
+oa_4950,"At time 62 in context ctx_06, can u_0277 access res_0036?",1,"No, because there is no direct or indirect connection between res_0036 and any of the political entities (",0,0.0,0.8,19069.673100020736,False,tog2,0
+oa_454,"At time 100 in context ctx_04, can u_0153 access res_0154?",0,"No, because res_0154 is not governed by any political entity valid in context ctx_04.",1,1.0,0.8,17874.83759992756,False,tog2,0
+oa_4971,"At time 57 in context ctx_01, can u_0199 access res_0056?",1,"No, because res_0056 is not governed by any of the political entities (pol_001",0,0.0,0.8,18640.531700104475,False,tog2,0
+oa_473,"At time 135 in context ctx_07, can u_0080 access res_0062?",0,"No, because the reasoning provided does not indicate any connection between res_0062 and the contexts or governing policies",1,1.0,0.8,18377.63120001182,False,tog2,0
+oa_475,"At time 180 in context ctx_04, can u_0256 access res_0030?",0,"No, because none of the political entities (pol_001, pol_009, pol_0",1,1.0,0.8,18712.206199998036,False,tog2,0
+oa_492,"At time 194 in context ctx_02, can u_0422 access res_0128?",0,"No, because the reasoning provided does not indicate any governance or access permissions for res_0128 under context ctx",1,1.0,0.8,18478.09170000255,False,tog2,0
+oa_493,"At time 92 in context ctx_04, can u_0427 access res_0032?",0,"No, because res_0032 is only valid in contexts where pol_014 is valid, and",1,1.0,0.8,18942.2003000509,False,tog2,0
+oa_500,"At time 87 in context ctx_07, can u_0186 access res_0142?",0,"No, because the reasoning provided does not indicate any direct connection between u_0186 and res_01",1,1.0,0.8,18588.554700138047,False,tog2,0
+oa_509,"At time 91 in context ctx_03, can u_0014 access res_0083?",0,No,1,1.0,0.8,18390.725699951872,False,tog2,0
+oa_510,"At time 69 in context ctx_05, can u_0314 access res_0147?",0,"No, because the reasoning does not provide any information about u_0314's access to res_01",1,1.0,0.8,18807.11909988895,False,tog2,0
+oa_515,"At time 152 in context ctx_00, can u_0062 access res_0129?",0,"No, because there is no direct or indirect link between res_0129 and any of the contexts (ctx",1,1.0,0.8,18462.632300099358,False,tog2,0
+oa_523,"At time 95 in context ctx_07, can u_0034 access res_0027?",0,"No, because the reasoning provided does not indicate any governance or access rules for res_0027 under context ctx",1,1.0,0.8,18042.852899990976,False,tog2,0
+oa_537,"At time 71 in context ctx_07, can u_0070 access res_0072?",0,"No, because the reasoning provided does not indicate any connection between res_0072 and the contexts or political entities",1,1.0,0.8,19310.502500040457,False,tog2,0
+oa_539,"At time 124 in context ctx_04, can u_0333 access res_0080?",0,"No, because there is no direct or indirect connection between res_0080 and any of the contexts (ctx",1,1.0,0.8,18922.312800073996,False,tog2,0
+oa_543,"At time 178 in context ctx_02, can u_0360 access res_0136?",0,"No, because res_0136 is governed by pol_016 which is valid in context ctx_",1,1.0,0.8,18778.572199866176,False,tog2,0
+oa_544,"At time 135 in context ctx_07, can u_0246 access res_0149?",0,"No, because the only political entities (pol_000 and pol_024) that are valid in",1,1.0,0.8,18272.27049996145,False,tog2,0
+oa_557,"At time 160 in context ctx_00, can u_0150 access res_0118?",0,No.,1,1.0,0.8,18829.987999983132,False,tog2,0
+oa_565,"At time 82 in context ctx_02, can u_0158 access res_0131?",0,"No, because res_0131 is not governed by any of the political entities (polices) that are",1,1.0,0.8,18574.69699997455,False,tog2,0
+oa_573,"At time 152 in context ctx_00, can u_0004 access res_0110?",0,"No, because there is no direct or indirect relationship provided that would allow u_0004 to access res_",1,1.0,0.8,18479.618299985304,False,tog2,0
+oa_576,"At time 196 in context ctx_04, can u_0281 access res_0189?",0,"No, because the reasoning provided does not indicate any governance or validity of res_0189 within context ctx_",1,1.0,0.8,18645.19129996188,False,tog2,0
+oa_577,"At time 143 in context ctx_07, can u_0020 access res_0107?",0,No,1,1.0,0.8,18769.2235999275,False,tog2,0
+oa_580,"At time 195 in context ctx_03, can u_0127 access res_0137?",0,"No, because the reasoning provided does not indicate any direct or indirect governance of res_0137 by pol_",1,1.0,0.8,18405.171799939126,False,tog2,0
+oa_599,"At time 178 in context ctx_02, can u_0402 access res_0050?",0,No,1,1.0,0.8,18178.160100011155,False,tog2,0
+oa_606,"At time 110 in context ctx_06, can u_0112 access res_0187?",0,"No, because there is no direct or indirect link between res_0187 and any of the contexts (ctx",1,1.0,0.8,18756.80540013127,False,tog2,0
+oa_617,"At time 70 in context ctx_06, can u_0123 access res_0073?",0,"No, because res_0073 is not governed by pol_044 and pol_044",1,1.0,0.8,18310.429999837652,False,tog2,0
+oa_625,"At time 67 in context ctx_03, can u_0418 access res_0008?",0,"No, because there is no direct or indirect connection between res_0008 and any of the contexts (ctx",1,1.0,0.8,18435.525699984282,False,tog2,0
+oa_638,"At time 78 in context ctx_06, can u_0062 access res_0031?",0,"No, because res_0031 is not governed by pol_044, which is valid in context",1,1.0,0.8,18777.10540010594,False,tog2,0
+oa_643,"At time 73 in context ctx_01, can u_0023 access res_0096?",0,"No, because there is no information provided about u_0023's governance or access to res_00",1,1.0,0.8,18671.77730007097,False,tog2,0
+oa_647,"At time 156 in context ctx_04, can u_0429 access res_0189?",0,"No, because there is no direct or indirect link between res_0189 and u_0429",1,1.0,0.8,18306.01239996031,False,tog2,0
+oa_657,"At time 148 in context ctx_04, can u_0096 access res_0022?",0,"No, u_0096 cannot access res_0185, as it is not valid in ctx",1,1.0,0.8,18598.180500091985,False,tog2,0
+oa_659,"At time 97 in context ctx_01, can u_0475 access res_0086?",0,"No, because there is no information provided about u_0475's governance or access to res_00",1,1.0,0.8,17964.463599957526,False,tog2,0
+oa_661,"At time 66 in context ctx_02, can u_0237 access res_0083?",0,"No, because the reasoning provided does not indicate any connection between res_0083 and the contexts or political entities",1,1.0,0.8,18324.200100032613,False,tog2,0
+oa_666,"At time 167 in context ctx_07, can u_0047 access res_0109?",0,No,1,1.0,0.8,19042.454099981114,False,tog2,0
+oa_668,"At time 164 in context ctx_04, can u_0268 access res_0130?",0,No,1,1.0,0.8,18521.22120000422,False,tog2,0
+oa_674,"At time 157 in context ctx_05, can u_0235 access res_0018?",0,"No, because res_0018 is not governed by any of the political entities (pol_024",1,1.0,0.8,18238.238299963996,False,tog2,0
+oa_683,"At time 163 in context ctx_03, can u_0169 access res_0020?",0,No,1,1.0,0.8,18963.742200052366,False,tog2,0
+oa_688,"At time 175 in context ctx_07, can u_0474 access res_0198?",0,No,1,1.0,0.8,18635.60969987884,False,tog2,0
+oa_692,"At time 148 in context ctx_04, can u_0236 access res_0173?",0,"To determine if u_0236 can access res_0173 at time 148,",0,0.0,0.8,2951.080200029537,False,tog2,0
+oa_693,"At time 112 in context ctx_00, can u_0304 access res_0014?",0,No,1,1.0,0.8,18545.561000006273,False,tog2,0
+oa_698,"At time 82 in context ctx_02, can u_0062 access res_0169?",0,"No, because res_0169 is not governed by any political entity valid in context ctx_02.",1,1.0,0.8,18342.9170998279,False,tog2,0
+oa_712,"At time 149 in context ctx_05, can u_0108 access res_0104?",0,"No, because there is no direct or indirect link between res_0104 and the governing political entity (pol",1,1.0,0.8,18812.390399863943,False,tog2,0
+oa_735,"At time 95 in context ctx_07, can u_0371 access res_0183?",0,"No, because the reasoning provided does not indicate any connection between res_0183, u_037",1,1.0,0.8,18849.780699936673,False,tog2,0
+oa_742,"At time 97 in context ctx_01, can u_0307 access res_0034?",0,"No, because based on the given reasoning chain, res_0034 is only governed by pol_00",1,1.0,0.8,18557.119299890473,False,tog2,0
+oa_745,"At time 67 in context ctx_03, can u_0010 access res_0183?",0,"No, because there is no direct or indirect link between res_0183 and any of the contexts (ctx",1,1.0,0.8,18423.28489990905,False,tog2,0
+oa_747,"At time 111 in context ctx_07, can u_0332 access res_0133?",0,"No, because res_0133 is not governed by any political entity valid in context ctx_07.",1,1.0,0.8,19139.281899901107,False,tog2,0
+oa_749,"At time 163 in context ctx_03, can u_0133 access res_0173?",0,"No, because the reasoning chain provided does not establish any connection between res_0173 and the other variables (",1,1.0,0.8,19069.59139998071,False,tog2,0
+oa_750,"At time 119 in context ctx_07, can u_0395 access res_0081?",0,"No, because none of the political systems (pol_021, pol_044, pol_0",1,1.0,0.8,18640.440699877217,False,tog2,0
+oa_758,"At time 95 in context ctx_07, can u_0434 access res_0133?",0,No,1,1.0,0.8,19410.207000095397,False,tog2,0
+oa_764,"At time 142 in context ctx_06, can u_0149 access res_0115?",0,"No, u_0149 cannot access res_0115 at time 142 in context",1,1.0,0.8,18821.43360003829,False,tog2,0
+oa_765,"At time 173 in context ctx_05, can u_0470 access res_0151?",0,"No, because res_0151 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,21198.753400007263,False,tog2,0
+oa_767,"At time 103 in context ctx_07, can u_0003 access res_0144?",0,No,1,1.0,0.8,19217.46680000797,False,tog2,0
+oa_776,"At time 155 in context ctx_03, can u_0476 access res_0146?",0,No,1,1.0,0.8,18600.802700035274,False,tog2,0
+oa_801,"At time 122 in context ctx_02, can u_0282 access res_0176?",0,"No, because the reasoning does not provide any information about the validity of res_0176 in ctx_0",1,1.0,0.8,19352.09419997409,False,tog2,0
+oa_809,"At time 161 in context ctx_01, can u_0310 access res_0170?",0,"No, because res_0170 is only governed by pol_000, which is valid in context",1,1.0,0.8,19264.295500004664,False,tog2,0
+oa_812,"At time 120 in context ctx_00, can u_0427 access res_0166?",0,"No, because the reasoning shows that res_0166 is not governed by pol_025, and",1,1.0,0.8,19153.628499945626,False,tog2,0
+oa_814,"At time 98 in context ctx_02, can u_0116 access res_0151?",0,"No, because the reasoning provided does not indicate any direct connection between res_0151 and either res_0",1,1.0,0.8,18443.606999935582,False,tog2,0
+oa_820,"At time 75 in context ctx_03, can u_0069 access res_0153?",0,No,1,1.0,0.8,18044.890700140968,False,tog2,0
+oa_824,"At time 168 in context ctx_00, can u_0038 access res_0014?",0,"No, because there is no direct or indirect link between res_0014 and the given reasoning chain involving pol",1,1.0,0.8,18698.94520007074,False,tog2,0
+oa_831,"At time 161 in context ctx_01, can u_0172 access res_0133?",0,"No, because the only valid political jurisdiction for u_0172 at time 161 is ctx_",1,1.0,0.8,18612.40019998513,False,tog2,0
+oa_835,"At time 98 in context ctx_02, can u_0051 access res_0089?",0,"No, because based on the given reasoning chain, res_0089 is only governed by pol_00",1,1.0,0.8,18558.055500034243,False,tog2,0
+oa_840,"At time 166 in context ctx_06, can u_0149 access res_0120?",0,"No, because based on the given reasoning chain, res_0120 is not governed by pol_02",1,1.0,0.8,18346.80450009182,False,tog2,0
+oa_857,"At time 104 in context ctx_00, can u_0485 access res_0168?",0,"No, because the reasoning does not provide any information about u_0485's governance or access to resources within",1,1.0,0.8,18953.26180011034,False,tog2,0
+oa_858,"At time 164 in context ctx_04, can u_0114 access res_0109?",0,No,1,1.0,0.8,18187.131699873134,False,tog2,0
+oa_890,"At time 140 in context ctx_04, can u_0228 access res_0140?",0,No,1,1.0,0.8,18362.7051000949,False,tog2,0
+oa_893,"At time 88 in context ctx_00, can u_0434 access res_0126?",0,No,1,1.0,0.8,18937.22580000758,False,tog2,0
+oa_909,"At time 127 in context ctx_07, can u_0432 access res_0103?",0,"No, because the only contexts where res_0132 is governed by pol_025 are ctx_",1,1.0,0.8,18607.274599839002,False,tog2,0
+oa_918,"At time 79 in context ctx_07, can u_0463 access res_0175?",0,"No, because res_0175 is not governed by any political entity valid in context ctx_07.",1,1.0,0.8,18318.578799953684,False,tog2,0
+oa_920,"At time 124 in context ctx_04, can u_0404 access res_0056?",0,"No, because there is no direct or indirect connection between res_0056 and any of the contexts (ctx",1,1.0,0.8,18781.127699883655,False,tog2,0
+oa_929,"At time 150 in context ctx_06, can u_0417 access res_0039?",0,"No, because the only valid policy for res_0039 is pol_000, which is only",1,1.0,0.8,18578.86130013503,False,tog2,0
+oa_937,"At time 65 in context ctx_01, can u_0158 access res_0045?",0,"No, because based on the given reasoning chain, res_0045 is not governed by any of the political",1,1.0,0.8,18160.5944999028,False,tog2,0
+oa_941,"At time 142 in context ctx_06, can u_0328 access res_0157?",0,"No, because there is no direct or indirect connection between res_0157 and any of the political entities (",1,1.0,0.8,19065.099499886855,False,tog2,0
+oa_942,"At time 171 in context ctx_03, can u_0378 access res_0048?",0,No,1,1.0,0.8,18049.56219997257,False,tog2,0
+oa_944,"At time 183 in context ctx_07, can u_0418 access res_0196?",0,"No, because res_0196 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18498.61570005305,False,tog2,0
+oa_950,"At time 186 in context ctx_02, can u_0223 access res_0116?",0,"No, because res_0116 is governed by a political entity (pol_016) that is",1,1.0,0.8,18982.420099899173,False,tog2,0
+oa_959,"At time 73 in context ctx_01, can u_0435 access res_0027?",0,"No, because based on the given reasoning chain, res_0027 is only governed by pol_00",1,1.0,0.8,18764.747499953955,False,tog2,0
+oa_960,"At time 104 in context ctx_00, can u_0289 access res_0013?",0,"No, u_0289 cannot access res_0013 at time 104 in context",1,1.0,0.8,18317.10290000774,False,tog2,0
+oa_968,"At time 200 in context ctx_00, can u_0050 access res_0166?",0,No,1,1.0,0.8,18408.421700121835,False,tog2,0
+oa_974,"At time 95 in context ctx_07, can u_0373 access res_0021?",0,"No, u_0373 cannot access res_0021 at time 95 in context ctx",1,1.0,0.8,19410.629499936476,False,tog2,0
+oa_980,"At time 164 in context ctx_04, can u_0449 access res_0138?",0,"No, because res_0138 is not governed by any authority in context ctx_04. Based on",1,1.0,0.8,19030.319099780172,False,tog2,0
+oa_987,"At time 152 in context ctx_00, can u_0393 access res_0197?",0,"To determine if u_0393 can access res_0197 at time 152,",0,0.0,0.8,2973.3774999622256,False,tog2,0
+oa_989,"At time 189 in context ctx_05, can u_0255 access res_0067?",0,"No, because based on the given reasoning chain, res_0067 is not governed by any of the political",1,1.0,0.8,18143.72149994597,False,tog2,0
+oa_994,"At time 192 in context ctx_00, can u_0297 access res_0042?",0,No,1,1.0,0.8,18757.061199983582,False,tog2,0
+oa_995,"At time 127 in context ctx_07, can u_0200 access res_0008?",0,No,1,1.0,0.8,18737.75009997189,False,tog2,0
+oa_1009,"At time 96 in context ctx_00, can u_0147 access res_0181?",0,"No, because based on the given reasoning chain, res_0181 is not governed by any of the political",1,1.0,0.8,18321.698599960655,False,tog2,0
+oa_1010,"At time 184 in context ctx_00, can u_0336 access res_0005?",0,"No, because there is no direct or indirect connection between res_0005 and any of the political entities (",1,1.0,0.8,18530.45119997114,False,tog2,0
+oa_1014,"At time 81 in context ctx_01, can u_0264 access res_0176?",0,"No, because res_0176 is not governed by pol_038, and pol_03",1,1.0,0.8,18694.171600043774,False,tog2,0
+oa_1018,"At time 82 in context ctx_02, can u_0176 access res_0024?",0,"No, because res_0024 is not governed by any of the political entities (pol_001",1,1.0,0.8,17868.12449991703,False,tog2,0
+oa_1022,"At time 103 in context ctx_07, can u_0301 access res_0043?",0,No,1,1.0,0.8,18652.502099983394,False,tog2,0
+oa_1025,"At time 127 in context ctx_07, can u_0402 access res_0036?",0,No,1,1.0,0.8,18512.525600148365,False,tog2,0
+oa_1041,"At time 89 in context ctx_01, can u_0115 access res_0052?",0,"No, because the reasoning provided does not establish any direct connection between res_0052 and the contexts or governing",1,1.0,0.8,18846.602600067854,False,tog2,0
+oa_1043,"At time 128 in context ctx_00, can u_0406 access res_0036?",0,"No, because there is no direct or indirect connection between res_0036 and u_0406",1,1.0,0.8,18307.423299876973,False,tog2,0
+oa_1062,"At time 125 in context ctx_05, can u_0355 access res_0067?",0,"No, because the reasoning chain provided does not indicate any connection between res_0067 and the other variables (",1,1.0,0.8,18441.069699823856,False,tog2,0
+oa_1066,"At time 92 in context ctx_04, can u_0489 access res_0106?",0,"No, because there is no direct or indirect connection between res_0106 and any of the contexts (ctx",1,1.0,0.8,18166.09749989584,False,tog2,0
+oa_1069,"At time 190 in context ctx_06, can u_0404 access res_0005?",0,"No, because there is no direct or indirect connection between res_0005 and any of the political entities (",1,1.0,0.8,18511.880700010806,False,tog2,0
+oa_1081,"At time 95 in context ctx_07, can u_0129 access res_0094?",0,No,1,1.0,0.8,19038.430799962953,False,tog2,0
+oa_1087,"At time 74 in context ctx_02, can u_0224 access res_0181?",0,"No, because the reasoning provided does not indicate any direct connection between res_0181 and u_02",1,1.0,0.8,18340.31179989688,False,tog2,0
+oa_1092,"At time 88 in context ctx_00, can u_0243 access res_0049?",0,"No, because the reasoning chain shows that res_0049 is not governed by any of the political entities (",1,1.0,0.8,18930.916599929333,False,tog2,0
+oa_1104,"At time 67 in context ctx_03, can u_0403 access res_0083?",0,"No, because there is no direct or indirect connection between res_0083 and any of the contexts (ctx",1,1.0,0.8,19036.102700047195,False,tog2,0
+oa_1128,"At time 76 in context ctx_04, can u_0139 access res_0006?",0,"No, because res_0006 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18621.151000028476,False,tog2,0
+oa_1134,"At time 79 in context ctx_07, can u_0303 access res_0153?",0,"No, because the reasoning provided does not indicate any governance or access permissions for res_0153 within context ctx",1,1.0,0.8,18445.26299997233,False,tog2,0
+oa_1140,"At time 76 in context ctx_04, can u_0285 access res_0050?",0,"No, because none of the political entities (pol_001, pol_009, pol_0",1,1.0,0.8,18910.903100157157,False,tog2,0
+oa_1143,"At time 156 in context ctx_04, can u_0165 access res_0045?",0,"No, because the reasoning provided does not indicate any connection between res_0045 and the contexts or policies mentioned",1,1.0,0.8,18969.470900017768,False,tog2,0
+oa_1144,"At time 85 in context ctx_05, can u_0437 access res_0095?",0,"No, because res_0095 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18376.562300138175,False,tog2,0
+oa_1154,"At time 143 in context ctx_07, can u_0384 access res_0129?",0,"No, because the reasoning provided does not indicate any direct connection between res_0129 and the contexts or governing",1,1.0,0.8,18718.695499934256,False,tog2,0
+oa_1162,"At time 170 in context ctx_02, can u_0434 access res_0125?",0,"No, because based on the given reasoning chain, res_0124 is the only resource that is governed by",1,1.0,0.8,18542.23300004378,False,tog2,0
+oa_1165,"At time 73 in context ctx_01, can u_0485 access res_0095?",0,"No, because res_0095 is not governed by pol_001, and thus cannot be valid",1,1.0,0.8,18680.981000186875,False,tog2,0
+oa_1167,"At time 100 in context ctx_04, can u_0258 access res_0091?",0,No,1,1.0,0.8,18627.925399923697,False,tog2,0
+oa_1169,"At time 65 in context ctx_01, can u_0405 access res_0158?",0,"To determine if u_0405 can access res_0158 at time 65, we",0,0.0,0.8,3060.537099838257,False,tog2,0
+oa_1173,"At time 165 in context ctx_05, can u_0290 access res_0061?",0,"No, because based on the given reasoning chain, res_0061 is not governed by any of the political",1,1.0,0.8,18400.130099849775,False,tog2,0
+oa_1193,"At time 199 in context ctx_07, can u_0300 access res_0073?",0,No,1,1.0,0.8,18702.812399948016,False,tog2,0
+oa_1198,"At time 160 in context ctx_00, can u_0266 access res_0075?",0,"No, because res_0075 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,17524.115500040352,False,tog2,0
+oa_1203,"At time 191 in context ctx_07, can u_0412 access res_0033?",0,"No, because res_0033 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,19099.42470001988,False,tog2,0
+oa_1215,"At time 160 in context ctx_00, can u_0134 access res_0151?",0,No,1,1.0,0.8,18872.346099931747,False,tog2,0
+oa_1219,"At time 99 in context ctx_03, can u_0083 access res_0095?",0,"No, because res_0095 is not governed by pol_030, and thus does not fall",1,1.0,0.8,18601.517800008878,False,tog2,0
+oa_1224,"At time 163 in context ctx_03, can u_0161 access res_0034?",0,No,1,1.0,0.8,18513.556899968535,False,tog2,0
+oa_1225,"At time 168 in context ctx_00, can u_0463 access res_0077?",0,"No, because the reasoning shows that res_0077 is not governed by any of the political entities (pol",1,1.0,0.8,18570.21090015769,False,tog2,0
+oa_1237,"At time 86 in context ctx_06, can u_0226 access res_0020?",0,"No, because the reasoning chain shows that res_0020 is governed by pol_001, and",1,1.0,0.8,18803.173100110143,False,tog2,0
+oa_1239,"At time 117 in context ctx_05, can u_0468 access res_0056?",0,"No, because res_0056 is not governed by pol_016, which is valid in context",1,1.0,0.8,18462.43549999781,False,tog2,0
+oa_1240,"At time 168 in context ctx_00, can u_0298 access res_0052?",0,"No, because res_0052 is not governed by pol_040, and pol_04",1,1.0,0.8,18577.169299824163,False,tog2,0
+oa_1256,"At time 138 in context ctx_02, can u_0314 access res_0081?",0,"No, because res_0081 is not governed by pol_027, and pol_02",1,1.0,0.8,18560.300700133666,False,tog2,0
+oa_1260,"At time 90 in context ctx_02, can u_0009 access res_0101?",0,No,1,1.0,0.8,18141.20170008391,False,tog2,0
+oa_1265,"At time 80 in context ctx_00, can u_0413 access res_0132?",0,"No, because res_0132 is only valid in contexts ctx_00, ctx_02,",1,1.0,0.8,18701.978799887,False,tog2,0
+oa_1275,"At time 195 in context ctx_03, can u_0003 access res_0114?",0,No,1,1.0,0.8,18323.82100005634,False,tog2,0
+oa_1279,"At time 126 in context ctx_06, can u_0426 access res_0052?",0,"No, because there is no direct or indirect connection between res_0052 and any of the contexts (ctx",1,1.0,0.8,17857.13759995997,False,tog2,0
+oa_1281,"At time 64 in context ctx_00, can u_0238 access res_0173?",0,No,1,1.0,0.8,18933.11159987934,False,tog2,0
+oa_1286,"At time 109 in context ctx_05, can u_0361 access res_0122?",0,"No, because res_0122 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18517.69470004365,False,tog2,0
+oa_1291,"At time 186 in context ctx_02, can u_0149 access res_0167?",0,"No, because res_0167 is governed by pol_016 which is valid in context ctx_",1,1.0,0.8,18509.755000006407,False,tog2,0
+oa_1296,"At time 178 in context ctx_02, can u_0043 access res_0107?",0,No,1,1.0,0.8,18449.934900039807,False,tog2,0
+oa_1311,"At time 175 in context ctx_07, can u_0000 access res_0114?",0,"No, u_0000 cannot access res_0114 at time 175 in context",1,1.0,0.8,18729.636900126934,False,tog2,0
+oa_1316,"At time 167 in context ctx_07, can u_0495 access res_0064?",0,"No, because the reasoning provided does not indicate any connection between res_0064 and the other resources or policies",1,1.0,0.8,18583.051099907607,False,tog2,0
+oa_1326,"At time 132 in context ctx_04, can u_0163 access res_0174?",0,"No, because res_0174 is only governed by pol_044, which is valid in context",1,1.0,0.8,18219.01939995587,False,tog2,0
+oa_1339,"At time 140 in context ctx_04, can u_0145 access res_0043?",0,No,1,1.0,0.8,18933.493999997154,False,tog2,0
+oa_1341,"At time 64 in context ctx_00, can u_0313 access res_0168?",0,"No, because res_0168 is not governed by any political entity valid at time 64 in context",1,1.0,0.8,18227.02350001782,False,tog2,0
+oa_1357,"At time 170 in context ctx_02, can u_0483 access res_0129?",0,No,1,1.0,0.8,18416.032399982214,False,tog2,0
+oa_1364,"At time 164 in context ctx_04, can u_0135 access res_0042?",0,No,1,1.0,0.8,18839.485300006345,False,tog2,0
+oa_1387,"At time 105 in context ctx_01, can u_0116 access res_0085?",0,"No, because res_0085 is governed by pol_001, and pol_001",1,1.0,0.8,18714.456300018355,False,tog2,0
+oa_1396,"At time 200 in context ctx_00, can u_0410 access res_0058?",0,No,1,1.0,0.8,18123.149199876934,False,tog2,0
+oa_1431,"At time 140 in context ctx_04, can u_0475 access res_0138?",0,"Based on the given reasoning chain, res_0138 is governed by pol_014, which is",0,0.0,0.8,19344.33430014178,False,tog2,0
+oa_1432,"At time 130 in context ctx_02, can u_0174 access res_0183?",0,To determine if u_0174 can access res_0183 at time 130 in,0,0.0,0.8,2818.0950998794287,False,tog2,0
+oa_1457,"At time 183 in context ctx_07, can u_0440 access res_0009?",0,No.,1,1.0,0.8,18697.998400079086,False,tog2,0
+oa_1460,"At time 119 in context ctx_07, can u_0199 access res_0155?",0,"No, u_0199 cannot access res_0155 at time 119 in context",1,1.0,0.8,18827.505700057372,False,tog2,0
+oa_1471,"At time 171 in context ctx_03, can u_0267 access res_0139?",0,No,1,1.0,0.8,18332.892199978232,False,tog2,0
+oa_1477,"At time 113 in context ctx_01, can u_0454 access res_0088?",0,"To determine if u_0454 can access res_0088 at time 113,",0,0.0,0.8,3194.3352001253515,False,tog2,0
+oa_1490,"At time 85 in context ctx_05, can u_0441 access res_0128?",0,"No, because the only political entity (pol_016) that is valid in context ctx_05 is",1,1.0,0.8,19237.801000010222,False,tog2,0
+oa_1492,"At time 141 in context ctx_05, can u_0078 access res_0036?",0,"No, because there is no direct or indirect connection between res_0036 and u_0078",1,1.0,0.8,18821.502999868244,False,tog2,0
+oa_1506,"At time 114 in context ctx_02, can u_0087 access res_0121?",0,No,1,1.0,0.8,18995.06810004823,False,tog2,0
+oa_1507,"At time 103 in context ctx_07, can u_0257 access res_0134?",0,No,1,1.0,0.8,19182.082700077444,False,tog2,0
+oa_1515,"At time 107 in context ctx_03, can u_0292 access res_0186?",0,"No, u_0292 cannot access res_0186 at time 107 in context",1,1.0,0.8,18337.54750015214,False,tog2,0
+oa_1518,"At time 172 in context ctx_04, can u_0184 access res_0172?",0,"To determine if u_0184 can access res_0172 at time 172,",0,0.0,0.8,2948.237500153482,False,tog2,0
+oa_1519,"At time 132 in context ctx_04, can u_0017 access res_0021?",0,"No, because res_0021 is not governed by pol_044 and it cannot be accessed based",1,1.0,0.8,18465.69009986706,False,tog2,0
+oa_1529,"At time 178 in context ctx_02, can u_0364 access res_0168?",0,"No, because res_0168 is governed by pol_016 which is valid in context ctx_",1,1.0,0.8,18303.1371999532,False,tog2,0
+oa_1540,"At time 83 in context ctx_03, can u_0481 access res_0105?",0,"No, because res_0105 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,19025.082600070164,False,tog2,0
+oa_1544,"At time 82 in context ctx_02, can u_0435 access res_0142?",0,"No, because res_0142 is governed by pol_009 which is valid in context ctx_",1,1.0,0.8,18898.632099851966,False,tog2,0
+oa_1549,"At time 124 in context ctx_04, can u_0105 access res_0103?",0,"No, because res_0103 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18256.342199863866,False,tog2,0
+oa_1559,"At time 173 in context ctx_05, can u_0163 access res_0156?",0,"No, because res_0156 is not governed by pol_016, which is valid in context",1,1.0,0.8,18794.08650007099,False,tog2,0
+oa_1560,"At time 89 in context ctx_01, can u_0059 access res_0142?",0,"No, because res_0142 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18923.684500157833,False,tog2,0
+oa_1565,"At time 130 in context ctx_02, can u_0293 access res_0180?",0,"Yes, at time 130 in context ctx_02, u_0293 can access res",0,0.0,0.8,18706.716899992898,False,tog2,0
+oa_1572,"At time 140 in context ctx_04, can u_0269 access res_0125?",0,"No, because the reasoning provided does not indicate that ctx_04 is one of the contexts where pol_02",1,1.0,0.8,18509.40390001051,False,tog2,0
+oa_1575,"At time 70 in context ctx_06, can u_0320 access res_0129?",0,"No, because res_0129 is not governed by pol_044, which is valid in ctx",1,1.0,0.8,18759.33700008318,False,tog2,0
+oa_1594,"At time 169 in context ctx_01, can u_0374 access res_0024?",0,"No, because based on the given reasoning chain, res_0124 is governed by pol_025",1,1.0,0.8,18790.674099931493,False,tog2,0
+oa_1597,"At time 200 in context ctx_00, can u_0498 access res_0163?",0,No,1,1.0,0.8,18081.943300087005,False,tog2,0
+oa_1605,"At time 93 in context ctx_05, can u_0002 access res_0030?",0,"No, because based on the given reasoning chain, res_0030 is not governed by any political entity (",1,1.0,0.8,18263.6561000254,False,tog2,0
+oa_1621,"At time 200 in context ctx_00, can u_0436 access res_0012?",0,"No, because res_0012 is only valid in contexts ctx_05 and ctx_06 where",1,1.0,0.8,18963.88030005619,False,tog2,0
+oa_1622,"At time 95 in context ctx_07, can u_0024 access res_0158?",0,"No, u_0024 cannot access res_0158 at time 95 in context ctx",1,1.0,0.8,18560.665199998766,False,tog2,0
+oa_1626,"At time 116 in context ctx_04, can u_0115 access res_0077?",0,"No, because the reasoning provided does not indicate any direct connection between res_0077 and the contexts or governing",1,1.0,0.8,18173.875899985433,False,tog2,0
+oa_1633,"At time 129 in context ctx_01, can u_0165 access res_0176?",0,"No, because res_0176 is not governed by any of the political entities (pol_009",1,1.0,0.8,18705.64310019836,False,tog2,0
+oa_1652,"At time 143 in context ctx_07, can u_0059 access res_0197?",0,"No, because the reasoning does not provide any information about u_0059's access to res_01",1,1.0,0.8,18742.780900094658,False,tog2,0
+oa_1654,"At time 159 in context ctx_07, can u_0362 access res_0198?",0,No,1,1.0,0.8,18327.340400079265,False,tog2,0
+oa_1664,"At time 145 in context ctx_01, can u_0323 access res_0091?",0,"No, because res_0091 is not governed by pol_044, and pol_04",1,1.0,0.8,18296.06179986149,False,tog2,0
+oa_1666,"At time 149 in context ctx_05, can u_0108 access res_0098?",0,"To determine if u_0108 can access res_0098 at time 149,",0,0.0,0.8,2791.019600117579,False,tog2,0
+oa_1671,"At time 98 in context ctx_02, can u_0327 access res_0059?",0,"No, because res_0059 is not governed by pol_009, and pol_00",1,1.0,0.8,18530.36760003306,False,tog2,0
+oa_1675,"At time 181 in context ctx_05, can u_0132 access res_0143?",0,No,1,1.0,0.8,18103.265299927443,False,tog2,0
+oa_1685,"At time 96 in context ctx_00, can u_0407 access res_0126?",0,"No, because the only political system (pol_025) that is valid in context ctx_00 is",1,1.0,0.8,18794.39239995554,False,tog2,0
+oa_1688,"At time 104 in context ctx_00, can u_0180 access res_0156?",0,"No, because the reasoning provided does not indicate that res_0180 is valid in any context at time",1,1.0,0.8,18617.186299990863,False,tog2,0
+oa_1697,"At time 94 in context ctx_06, can u_0278 access res_0103?",0,"No, because based on the given reasoning chain, res_0103 is not governed by any political entity (",1,1.0,0.8,17758.21640016511,False,tog2,0
+oa_1702,"At time 103 in context ctx_07, can u_0324 access res_0007?",0,"No, because the reasoning provided does not indicate any connection between res_0007 and the other variables, and",1,1.0,0.8,18837.029800051823,False,tog2,0
+oa_1703,"At time 156 in context ctx_04, can u_0129 access res_0026?",0,"No, because based on the given reasoning chain, res_0124 is governed by pol_025",1,1.0,0.8,18718.46290002577,False,tog2,0
+oa_1704,"At time 63 in context ctx_07, can u_0403 access res_0181?",0,"No, because res_0181 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18370.974000077695,False,tog2,0
+oa_1722,"At time 119 in context ctx_07, can u_0105 access res_0095?",0,"No, u_0105 cannot access res_0095 at time 119 in context",1,1.0,0.8,18213.259200099856,False,tog2,0
+oa_1725,"At time 126 in context ctx_06, can u_0277 access res_0156?",0,"No, because based on the given reasoning chain, res_0156 is not governed by any political entity (",1,1.0,0.8,19065.605000127107,False,tog2,0
+oa_1749,"At time 126 in context ctx_06, can u_0004 access res_0046?",0,No.,1,1.0,0.8,18633.971099974588,False,tog2,0
+oa_1767,"At time 98 in context ctx_02, can u_0286 access res_0170?",0,No,1,1.0,0.8,18480.345599818975,False,tog2,0
+oa_1768,"At time 103 in context ctx_07, can u_0352 access res_0048?",0,"No, because the reasoning provided does not indicate any connection between res_0048 and u_035",1,1.0,0.8,18806.414699880406,False,tog2,0
+oa_1769,"At time 75 in context ctx_03, can u_0055 access res_0046?",0,"No, u_0055 cannot access res_0046 at time 75 in context ctx",1,1.0,0.8,18108.299700077623,False,tog2,0
+oa_1779,"At time 176 in context ctx_00, can u_0488 access res_0023?",0,"No, because none of the political entities (pol_001, pol_018, pol_0",1,1.0,0.8,18277.234999928623,False,tog2,0
+oa_1785,"At time 164 in context ctx_04, can u_0256 access res_0186?",0,"No, u_0256 cannot access res_0186 at time 164 in context",1,1.0,0.8,18772.8925999254,False,tog2,0
+oa_1789,"At time 180 in context ctx_04, can u_0414 access res_0139?",0,No,1,1.0,0.8,19318.175700027496,False,tog2,0
+oa_1791,"At time 194 in context ctx_02, can u_0129 access res_0110?",0,No,1,1.0,0.8,18905.420700088143,False,tog2,0
+oa_1792,"At time 171 in context ctx_03, can u_0004 access res_0025?",0,No,1,1.0,0.8,18849.782600067556,False,tog2,0
+oa_1803,"At time 129 in context ctx_01, can u_0375 access res_0160?",0,"Based on the given reasoning chain, res_0160 is governed by pol_038, and pol",0,0.0,0.8,18745.44580001384,False,tog2,0
+oa_1806,"At time 65 in context ctx_01, can u_0052 access res_0159?",0,"No, because based on the given reasoning chain, res_0159 is not governed by any political entity (",1,1.0,0.8,18059.502700110897,False,tog2,0
+oa_1809,"At time 74 in context ctx_02, can u_0378 access res_0179?",0,"No, because based on the given reasoning chain, res_0179 is not governed by any political entity (",1,1.0,0.8,18669.54560019076,False,tog2,0
+oa_1810,"At time 84 in context ctx_04, can u_0111 access res_0018?",0,"No, because res_0018 is governed by pol_047, which is only valid in contexts",1,1.0,0.8,18208.61880015582,False,tog2,0
+oa_1816,"At time 152 in context ctx_00, can u_0356 access res_0128?",0,"No, because there is no direct connection between u_0356, res_0128, and",1,1.0,0.8,18764.6189997904,False,tog2,0
+oa_1825,"At time 64 in context ctx_00, can u_0192 access res_0146?",0,"No, because based on the given reasoning chain, res_0146 is not governed by any of the political",1,1.0,0.8,19151.2108000461,False,tog2,0
+oa_1827,"At time 157 in context ctx_05, can u_0333 access res_0111?",0,"No, because the reasoning chain provided does not indicate any direct connection between res_0111 and u_0",1,1.0,0.8,18540.87769985199,False,tog2,0
+oa_1843,"At time 110 in context ctx_06, can u_0130 access res_0146?",0,"No, because res_0146 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18341.54239995405,False,tog2,0
+oa_1881,"At time 66 in context ctx_02, can u_0203 access res_0185?",0,"No, u_0203 cannot access res_0185 at time 66 in context ctx",1,1.0,0.8,19200.144599890336,False,tog2,0
+oa_1888,"At time 117 in context ctx_05, can u_0326 access res_0179?",0,"No, because res_0179 is not governed by any political entity valid in context ctx_05.",1,1.0,0.8,18791.079399874434,False,tog2,0
+oa_1903,"At time 127 in context ctx_07, can u_0325 access res_0130?",0,No.,1,1.0,0.8,18005.107500124723,False,tog2,0
+oa_1907,"At time 115 in context ctx_03, can u_0081 access res_0043?",0,No.,1,1.0,0.8,18616.307799937204,False,tog2,0
+oa_1913,"At time 197 in context ctx_05, can u_0166 access res_0066?",0,"No, because res_0066 is not governed by pol_016, which is valid in context",1,1.0,0.8,18558.203699998558,False,tog2,0
+oa_1929,"At time 94 in context ctx_06, can u_0059 access res_0012?",0,"No, u_0059 cannot access res_0012 at time 94 in context ctx",1,1.0,0.8,18414.033900015056,False,tog2,0
+oa_1938,"At time 117 in context ctx_05, can u_0431 access res_0083?",0,"No, because the reasoning does not provide any information about u_0431's access to res_00",1,1.0,0.8,18792.441199999303,False,tog2,0
+oa_1954,"At time 133 in context ctx_05, can u_0026 access res_0019?",0,"No, because based on the given reasoning chain, res_0019 is not governed by any political entity (",1,1.0,0.8,18952.429399825633,False,tog2,0
+oa_1957,"At time 187 in context ctx_03, can u_0462 access res_0004?",0,"No, because there is no direct or indirect connection between res_0004 and u_0462",1,1.0,0.8,18553.223399911076,False,tog2,0
+oa_1961,"At time 87 in context ctx_07, can u_0230 access res_0006?",0,"No, u_0230 cannot access res_0006 at time 87 in context ctx",1,1.0,0.8,18329.13580001332,False,tog2,0
+oa_1963,"At time 143 in context ctx_07, can u_0395 access res_0046?",0,"No, because the reasoning provided does not indicate any connection between res_0046 and the other elements (res",1,1.0,0.8,18907.26099978201,False,tog2,0
+oa_1967,"At time 84 in context ctx_04, can u_0197 access res_0131?",0,No,1,1.0,0.8,18319.745199987665,False,tog2,0
+oa_1989,"At time 172 in context ctx_04, can u_0355 access res_0189?",0,"To determine if u_0355 can access res_0189 at time 172,",0,0.0,0.8,3121.7886998783797,False,tog2,0
+oa_1990,"At time 187 in context ctx_03, can u_0376 access res_0083?",0,No,1,1.0,0.8,18284.585000015795,False,tog2,0
+oa_2031,"At time 163 in context ctx_03, can u_0377 access res_0185?",0,"No, u_0377 cannot access res_0185 at time 163 in context",1,1.0,0.8,19348.849899834022,False,tog2,0
+oa_2032,"At time 182 in context ctx_06, can u_0217 access res_0165?",0,"No, because res_0165 is governed by pol_001 which is valid in context ctx_",1,1.0,0.8,19783.443500055,False,tog2,0
+oa_2052,"At time 83 in context ctx_03, can u_0231 access res_0050?",0,"No, because res_0050 is not governed by pol_038, which is valid in ctx",1,1.0,0.8,18690.921099856496,False,tog2,0
+oa_2053,"At time 106 in context ctx_02, can u_0260 access res_0015?",0,"No, because res_0015 is not governed by any of the political entities (polices) that are",1,1.0,0.8,18368.998599937186,False,tog2,0
+oa_2055,"At time 153 in context ctx_01, can u_0106 access res_0022?",0,"No, because there is no direct or indirect relationship provided that would allow u_0106 to access res_",1,1.0,0.8,18686.289300210774,False,tog2,0
+oa_2069,"At time 162 in context ctx_02, can u_0188 access res_0003?",0,"No, u_0188 cannot access res_0003 at time 162 in context",1,1.0,0.8,18767.235399922356,False,tog2,0
+oa_2084,"At time 102 in context ctx_06, can u_0036 access res_0104?",0,"No, because based on the given reasoning chain, res_0012 and res_0016 are",1,1.0,0.8,17811.436800053343,False,tog2,0
+oa_2092,"At time 153 in context ctx_01, can u_0149 access res_0059?",0,"No, because there is no direct connection between u_0149 and res_0059 through the",1,1.0,0.8,18645.05870011635,False,tog2,0
+oa_2104,"At time 144 in context ctx_00, can u_0371 access res_0081?",0,"No, because the reasoning provided does not establish any direct connection between res_0081 and u_03",1,1.0,0.8,18420.882900012657,False,tog2,0
+oa_2115,"At time 88 in context ctx_00, can u_0312 access res_0085?",0,No,1,1.0,0.8,18558.532200055197,False,tog2,0
+oa_2121,"At time 72 in context ctx_00, can u_0298 access res_0110?",0,No,1,1.0,0.8,18889.71109990962,False,tog2,0
+oa_2123,"At time 174 in context ctx_06, can u_0368 access res_0154?",0,"No, because based on the given reasoning chain, res_0154 is not governed by any political entity (",1,1.0,0.8,18608.441600110382,False,tog2,0
+oa_2129,"At time 82 in context ctx_02, can u_0338 access res_0185?",0,"No, because res_0185 is only valid in context ctx_06 where pol_001",1,1.0,0.8,18368.422100087628,False,tog2,0
+oa_2130,"At time 190 in context ctx_06, can u_0426 access res_0117?",0,"No, because res_0117 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18487.62939986773,False,tog2,0
+oa_2137,"At time 117 in context ctx_05, can u_0020 access res_0018?",0,"No, because the reasoning chain shows that res_0012 is governed by pol_043, and",1,1.0,0.8,19330.596199957654,False,tog2,0
+oa_2146,"At time 200 in context ctx_00, can u_0044 access res_0119?",0,No,1,1.0,0.8,18733.492699917406,False,tog2,0
+oa_2150,"At time 85 in context ctx_05, can u_0483 access res_0150?",0,"No, because res_0150 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18241.61779996939,False,tog2,0
+oa_2208,"At time 96 in context ctx_00, can u_0101 access res_0099?",0,No.,1,1.0,0.8,18704.28069983609,False,tog2,0
+oa_2212,"At time 169 in context ctx_01, can u_0399 access res_0191?",0,No,1,1.0,0.8,18551.595899974927,False,tog2,0
+oa_2220,"At time 197 in context ctx_05, can u_0208 access res_0190?",0,No,1,1.0,0.8,18101.98160004802,False,tog2,0
+oa_2223,"At time 100 in context ctx_04, can u_0183 access res_0072?",0,"No, because the reasoning chain provided does not establish any connection between res_0072, u_01",1,1.0,0.8,18832.934000063688,False,tog2,0
+oa_2254,"At time 167 in context ctx_07, can u_0308 access res_0095?",0,No,1,1.0,0.8,18460.14570002444,False,tog2,0
+oa_2257,"At time 129 in context ctx_01, can u_0394 access res_0155?",0,"No, because the reasoning provided does not indicate any connection between res_0155 and the governing policies (pol",1,1.0,0.8,18437.496399972588,False,tog2,0
+oa_2268,"At time 174 in context ctx_06, can u_0490 access res_0054?",0,"No, because there is no direct or indirect connection between res_0054 and any of the contexts (ctx",1,1.0,0.8,18884.99170006253,False,tog2,0
+oa_2282,"At time 177 in context ctx_01, can u_0003 access res_0107?",0,No,1,1.0,0.8,19411.316700046882,False,tog2,0
+oa_2293,"At time 122 in context ctx_02, can u_0362 access res_0184?",0,"No, because the reasoning provided does not indicate any direct connection between res_0184 and the governing policies (",1,1.0,0.8,18093.70160009712,False,tog2,0
+oa_2294,"At time 173 in context ctx_05, can u_0470 access res_0103?",0,"No, because the reasoning does not provide any information about the validity of res_0103 in context ctx_",1,1.0,0.8,18559.57349995151,False,tog2,0
+oa_2300,"At time 157 in context ctx_05, can u_0403 access res_0086?",0,"No, because based on the given reasoning chain, res_0086 is not governed by any of the political",1,1.0,0.8,18555.431100074202,False,tog2,0
+oa_2308,"At time 80 in context ctx_00, can u_0317 access res_0176?",0,"No, because res_0176 is not governed by any political entity valid in ctx_00. Based",1,1.0,0.8,18126.868499908596,False,tog2,0
+oa_2316,"At time 183 in context ctx_07, can u_0107 access res_0032?",0,No,1,1.0,0.8,18564.72000014037,False,tog2,0
+oa_2321,"At time 96 in context ctx_00, can u_0408 access res_0178?",0,"No, because there is no direct or indirect connection between res_0178 and any of the political entities (",1,1.0,0.8,18685.538900084794,False,tog2,0
+oa_2351,"At time 143 in context ctx_07, can u_0459 access res_0196?",0,"No, because the reasoning does not provide any information about u_0459's access to res_01",1,1.0,0.8,18465.549500193447,False,tog2,0
+oa_2356,"At time 130 in context ctx_02, can u_0245 access res_0089?",0,"No, because there is no information provided about the relationship between res_0089 and the other entities or their",1,1.0,0.8,18468.88680011034,False,tog2,0
+oa_2358,"At time 86 in context ctx_06, can u_0409 access res_0116?",0,"No, because res_0116 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,19302.772799972445,False,tog2,0
+oa_2371,"At time 138 in context ctx_02, can u_0235 access res_0038?",0,No,1,1.0,0.8,18814.020399935544,False,tog2,0
+oa_2372,"At time 161 in context ctx_01, can u_0344 access res_0178?",0,No,1,1.0,0.8,18542.78069990687,False,tog2,0
+oa_2373,"At time 184 in context ctx_00, can u_0405 access res_0146?",0,"No, because there is no direct or indirect connection between res_0146 and any of the governing political entities",1,1.0,0.8,19142.291999887675,False,tog2,0
+oa_2378,"At time 111 in context ctx_07, can u_0289 access res_0177?",0,"No, u_0289 cannot access res_0177 at time 111 in context",1,1.0,0.8,18802.885900018737,False,tog2,0
+oa_2384,"At time 107 in context ctx_03, can u_0275 access res_0163?",0,"No, because res_0163 is not governed by any political entity valid in context ctx_03.",1,1.0,0.8,19963.30299996771,False,tog2,0
+oa_2394,"At time 106 in context ctx_02, can u_0117 access res_0164?",0,"No, because res_0164 is governed by pol_016 which is valid in context ctx_",1,1.0,0.8,19639.234599890187,False,tog2,0
+oa_2397,"At time 178 in context ctx_02, can u_0358 access res_0163?",0,"To determine if u_0358 can access res_0163 at time 178,",0,0.0,0.8,3132.8497999347746,False,tog2,0
+oa_2402,"At time 104 in context ctx_00, can u_0149 access res_0090?",0,No.,1,1.0,0.8,18933.880500029773,False,tog2,0
+oa_2403,"At time 170 in context ctx_02, can u_0165 access res_0184?",0,"No, because res_0184 is not governed by any of the political entities (pol_001",1,1.0,0.8,18656.8832998164,False,tog2,0
+oa_2406,"At time 121 in context ctx_01, can u_0102 access res_0030?",0,No,1,1.0,0.8,21530.094999819994,False,tog2,0
+oa_2414,"At time 72 in context ctx_00, can u_0011 access res_0195?",0,"No, because the reasoning does not provide any information about u_0011's access to res_01",1,1.0,0.8,18596.784899942577,False,tog2,0
+oa_2427,"At time 125 in context ctx_05, can u_0199 access res_0069?",0,"No, because the reasoning chain provided does not indicate any connection between res_0069 and the other variables (",1,1.0,0.8,18554.874300025403,False,tog2,0
+oa_2441,"At time 157 in context ctx_05, can u_0343 access res_0040?",0,"No, u_0343 cannot access res_0040 at time 157 in context",1,1.0,0.8,18826.1135998182,False,tog2,0
+oa_2445,"At time 137 in context ctx_01, can u_0125 access res_0041?",0,"No, because the reasoning provided does not indicate any direct connection between res_0041 and the other variables (",1,1.0,0.8,18051.625000080094,False,tog2,0
+oa_2449,"At time 117 in context ctx_05, can u_0263 access res_0042?",0,"No, because the reasoning provided does not indicate any connection between res_0042 and the contexts or political entities",1,1.0,0.8,18828.712499933317,False,tog2,0
+oa_2451,"At time 92 in context ctx_04, can u_0328 access res_0118?",0,"No, because based on the given reasoning chain, res_0185 is governed by pol_001",1,1.0,0.8,18741.180300014094,False,tog2,0
+oa_2452,"At time 96 in context ctx_00, can u_0223 access res_0159?",0,"No, because there is no information provided about u_0223's governance or access to resources in the given",1,1.0,0.8,17825.006699888036,False,tog2,0
+oa_2459,"At time 184 in context ctx_00, can u_0176 access res_0156?",0,"No, because based on the given reasoning chain, res_0156 is not governed by any of the political",1,1.0,0.8,19111.779700033367,False,tog2,0
+oa_2461,"At time 147 in context ctx_03, can u_0134 access res_0054?",0,No,1,1.0,0.8,18675.040800124407,False,tog2,0
+oa_2466,"At time 196 in context ctx_04, can u_0190 access res_0030?",0,"No, because the reasoning provided does not indicate any connection between res_0030 and the governing policies (pol",1,1.0,0.8,18349.730900023133,False,tog2,0
+oa_2467,"At time 103 in context ctx_07, can u_0401 access res_0126?",0,"No, u_0401 cannot access res_0126 at time 103 in context",1,1.0,0.8,18324.701599776745,False,tog2,0
+oa_2469,"At time 200 in context ctx_00, can u_0063 access res_0084?",0,No,1,1.0,0.8,18411.993900081143,False,tog2,0
+oa_2473,"At time 123 in context ctx_03, can u_0345 access res_0063?",0,"No, because there is no direct or indirect connection between res_0063 and u_0345",1,1.0,0.8,17981.3821001444,False,tog2,0
+oa_2477,"At time 164 in context ctx_04, can u_0240 access res_0045?",0,"No, because all the political entities (pol_019, pol_020, pol_00",1,1.0,0.8,18619.468700140715,False,tog2,0
+oa_2479,"At time 164 in context ctx_04, can u_0465 access res_0146?",0,"No, because res_0146 is not governed by any political entity valid in context ctx_04.",1,1.0,0.8,18483.82559977472,False,tog2,0
+oa_2480,"At time 64 in context ctx_00, can u_0374 access res_0188?",0,"No, because based on the given reasoning chain, res_0186 is the only resource that is governed by",1,1.0,0.8,18099.41369993612,False,tog2,0
+oa_2484,"At time 76 in context ctx_04, can u_0415 access res_0104?",0,"No, because the reasoning chain shows that pol_016, which is required for accessing res_010",1,1.0,0.8,18825.273500056937,False,tog2,0
+oa_2501,"At time 120 in context ctx_00, can u_0370 access res_0102?",0,"No, because the reasoning chain shows that res_0102 is not governed by pol_043,",1,1.0,0.8,18253.886599792168,False,tog2,0
+oa_2503,"At time 197 in context ctx_05, can u_0018 access res_0112?",0,"No, because res_0112 is governed by pol_043, which is valid in context ctx",1,1.0,0.8,18368.52669995278,False,tog2,0
+oa_2521,"At time 88 in context ctx_00, can u_0260 access res_0150?",0,No,1,1.0,0.8,18382.983499905095,False,tog2,0
+oa_2540,"At time 162 in context ctx_02, can u_0359 access res_0158?",0,"No, because the reasoning provided does not establish any connection between res_0158, u_035",1,1.0,0.8,18849.92089984007,False,tog2,0
+oa_2541,"At time 76 in context ctx_04, can u_0402 access res_0154?",0,"To determine if u_0402 can access res_0154 at time 76, we",0,0.0,0.8,2967.0979001093656,False,tog2,0
+oa_2556,"At time 147 in context ctx_03, can u_0151 access res_0061?",0,"No, because there is no direct or indirect connection between res_0061 and any of the contexts (ctx",1,1.0,0.8,18414.733599871397,False,tog2,0
+oa_2578,"At time 173 in context ctx_05, can u_0395 access res_0187?",0,"No, because the reasoning does not provide any information about u_0395's access to res_01",1,1.0,0.8,18881.003299960867,False,tog2,0
+oa_2587,"At time 152 in context ctx_00, can u_0056 access res_0123?",0,"No, because res_0123 is not governed by pol_023, and pol_02",1,1.0,0.8,18754.85029979609,False,tog2,0
+oa_2590,"At time 64 in context ctx_00, can u_0042 access res_0019?",0,No,1,1.0,0.8,18418.174100108445,False,tog2,0
+oa_2597,"At time 164 in context ctx_04, can u_0107 access res_0044?",0,"No, because the reasoning provided does not indicate any connection between res_0044 and the contexts or governing powers",1,1.0,0.8,18339.047099929303,False,tog2,0
+oa_2607,"At time 136 in context ctx_00, can u_0196 access res_0013?",0,No,1,1.0,0.8,18906.442899955437,False,tog2,0
+oa_2621,"At time 109 in context ctx_05, can u_0256 access res_0046?",0,"No, because the reasoning chain provided does not indicate any connection between res_0046 and the other variables (",1,1.0,0.8,19097.362000029534,False,tog2,0
+oa_2626,"At time 181 in context ctx_05, can u_0136 access res_0115?",0,"No, because res_0115 is only valid in context ctx_00 and not in ctx_0",1,1.0,0.8,18548.064999980852,False,tog2,0
+oa_2636,"At time 152 in context ctx_00, can u_0077 access res_0059?",0,To determine if u_0077 can access res_0059 at time 152 in,0,0.0,0.8,3150.5718000698835,False,tog2,0
+oa_2653,"At time 89 in context ctx_01, can u_0332 access res_0093?",0,"No, because res_0093 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18039.479800034314,False,tog2,0
+oa_2656,"At time 99 in context ctx_03, can u_0322 access res_0004?",0,"No, because there is no direct or indirect connection between res_0004 and any of the contexts (ctx",1,1.0,0.8,18799.8210999649,False,tog2,0
+oa_2658,"At time 86 in context ctx_06, can u_0226 access res_0129?",0,"No, because res_0129 is not governed by any political entity valid in context ctx_06.",1,1.0,0.8,18688.532299827784,False,tog2,0
+oa_2664,"At time 116 in context ctx_04, can u_0143 access res_0138?",0,"No, because none of the political contexts (pol_014, pol_009, pol_0",1,1.0,0.8,18319.12810006179,False,tog2,0
+oa_2670,"At time 99 in context ctx_03, can u_0022 access res_0006?",0,No,1,1.0,0.8,19345.624800072983,False,tog2,0
+oa_2678,"At time 137 in context ctx_01, can u_0089 access res_0072?",0,"To determine if u_0089 can access res_0072 at time 137,",0,0.0,0.8,2799.115300178528,False,tog2,0
+oa_2691,"At time 191 in context ctx_07, can u_0429 access res_0114?",0,No,1,1.0,0.8,19214.82629980892,False,tog2,0
+oa_2704,"At time 154 in context ctx_02, can u_0498 access res_0046?",0,"No, because res_0046 is not governed by the political entity (pol_009) which",1,1.0,0.8,20686.305299866945,False,tog2,0
+oa_2708,"At time 107 in context ctx_03, can u_0149 access res_0182?",0,"No, because the reasoning provided does not indicate any direct governance or access permissions from res_0182 to u",1,1.0,0.8,21399.75109999068,False,tog2,0
+oa_2724,"At time 139 in context ctx_03, can u_0421 access res_0157?",0,No,1,1.0,0.8,22794.711400056258,False,tog2,0
+oa_2725,"At time 169 in context ctx_01, can u_0122 access res_0090?",0,"No, because the reasoning provided does not indicate any governance or access permissions for u_0122 to resources within",1,1.0,0.8,23355.60410004109,False,tog2,0
+oa_2729,"At time 175 in context ctx_07, can u_0139 access res_0090?",0,No,1,1.0,0.8,21149.153699865565,False,tog2,0
+oa_2731,"At time 188 in context ctx_04, can u_0030 access res_0086?",0,"No, u_0030 cannot access res_0086 at time 188 in context",1,1.0,0.8,22295.993899926543,False,tog2,0
+oa_2736,"At time 77 in context ctx_05, can u_0336 access res_0007?",0,"No, u_0336 cannot access res_0007 at time 77 in context ctx",1,1.0,0.8,19750.12609991245,False,tog2,0
+oa_2739,"At time 160 in context ctx_00, can u_0119 access res_0073?",0,"No, because there is no direct connection between u_0119, res_0073, and",1,1.0,0.8,19618.278899928555,False,tog2,0
+oa_2744,"At time 93 in context ctx_05, can u_0488 access res_0095?",0,"No, because res_0095 is governed by pol_021, which is valid in context ctx",1,1.0,0.8,19537.389000179246,False,tog2,0
+oa_2746,"At time 135 in context ctx_07, can u_0393 access res_0017?",0,"No, u_0393 cannot access res_0017 at time 135 in context",1,1.0,0.8,18685.707499971613,False,tog2,0
+oa_2751,"At time 195 in context ctx_03, can u_0314 access res_0077?",0,"No, because there is no direct or indirect connection between res_0077 and any of the political entities (",1,1.0,0.8,19736.756399972364,False,tog2,0
+oa_2761,"At time 176 in context ctx_00, can u_0460 access res_0169?",0,"No, because based on the given reasoning chain, res_0160 is governed by pol_038",1,1.0,0.8,19463.798000011593,False,tog2,0
+oa_2764,"At time 82 in context ctx_02, can u_0430 access res_0008?",0,"No, because res_0008 is governed by pol_009 which is valid in context ctx_",1,1.0,0.8,19008.89669987373,False,tog2,0
+oa_2767,"At time 129 in context ctx_01, can u_0001 access res_0059?",0,"No, because there is no direct or indirect relationship provided that would allow u_0001 to access res_",1,1.0,0.8,18725.310399895534,False,tog2,0
+oa_2784,"At time 76 in context ctx_04, can u_0438 access res_0065?",0,"To determine if u_0438 can access res_0065 at time 76, we",0,0.0,0.8,2896.800800226629,False,tog2,0
+oa_2787,"At time 65 in context ctx_01, can u_0221 access res_0115?",0,"No, because based on the given reasoning chain, res_0115 is not governed by any of the political",1,1.0,0.8,18957.118300022557,False,tog2,0
+oa_2788,"At time 114 in context ctx_02, can u_0183 access res_0041?",0,No,1,1.0,0.8,19167.21270000562,False,tog2,0
+oa_2804,"At time 127 in context ctx_07, can u_0446 access res_0156?",0,No,1,1.0,0.8,18857.998699881136,False,tog2,0
+oa_2815,"At time 109 in context ctx_05, can u_0423 access res_0143?",0,"No, because none of the given political contexts (ctx_00, ctx_01, ctx_02",1,1.0,0.8,20781.08499990776,False,tog2,0
+oa_2821,"At time 142 in context ctx_06, can u_0132 access res_0107?",0,"No, because pol_025 is not valid in ctx_06. Since res_0107",1,1.0,0.8,19249.355599982664,False,tog2,0
+oa_2829,"At time 152 in context ctx_00, can u_0031 access res_0091?",0,"No, because there is no direct connection between u_0031 and res_0091 through the",1,1.0,0.8,19233.072699978948,False,tog2,0
+oa_2839,"At time 116 in context ctx_04, can u_0169 access res_0035?",0,"No, because res_0035 is not governed by pol_016 and thus cannot be accessed in",1,1.0,0.8,19391.36469992809,False,tog2,0
+oa_2843,"At time 94 in context ctx_06, can u_0360 access res_0028?",0,"No, because there is no direct or indirect connection between res_0028 and u_0360",1,1.0,0.8,18630.798800149933,False,tog2,0
+oa_2849,"At time 108 in context ctx_04, can u_0242 access res_0199?",0,No,1,1.0,0.8,18008.620399981737,False,tog2,0
+oa_2869,"At time 197 in context ctx_05, can u_0147 access res_0062?",0,"No, because res_0062 is not governed by pol_016, which is valid in context",1,1.0,0.8,19264.739400008693,False,tog2,0
+oa_2885,"At time 190 in context ctx_06, can u_0419 access res_0050?",0,No,1,1.0,0.8,18847.833899781108,False,tog2,0
+oa_2887,"At time 108 in context ctx_04, can u_0421 access res_0151?",0,No,1,1.0,0.8,18290.148500120267,False,tog2,0
+oa_2889,"At time 129 in context ctx_01, can u_0090 access res_0105?",0,"No, because res_0105 is not governed by pol_012, and thus not valid in",1,1.0,0.8,18775.37179994397,False,tog2,0
+oa_2898,"At time 155 in context ctx_03, can u_0262 access res_0151?",0,No,1,1.0,0.8,18299.925700062886,False,tog2,0
+oa_2911,"At time 109 in context ctx_05, can u_0270 access res_0032?",0,"No, because there is no direct or indirect connection between res_0032 and u_0270",1,1.0,0.8,18164.6096999757,False,tog2,0
+oa_2920,"At time 180 in context ctx_04, can u_0148 access res_0003?",0,"No, because there is no information provided about the relationship between res_0003 and the other entities in the",1,1.0,0.8,18667.011399986222,False,tog2,0
+oa_2925,"At time 102 in context ctx_06, can u_0358 access res_0127?",0,"No, because res_0012 is governed by pol_043 which is valid in ctx_0",1,1.0,0.8,19430.795900058,False,tog2,0
+oa_2933,"At time 146 in context ctx_02, can u_0023 access res_0011?",0,No,1,1.0,0.8,18360.83409981802,False,tog2,0
+oa_2936,"At time 83 in context ctx_03, can u_0001 access res_0052?",0,"No, because res_0052 is not governed by pol_038, which is valid in context",1,1.0,0.8,18578.474199865013,False,tog2,0
+oa_2937,"At time 91 in context ctx_03, can u_0233 access res_0010?",0,No,1,1.0,0.8,19012.41540000774,False,tog2,0
+oa_2942,"At time 152 in context ctx_00, can u_0419 access res_0065?",0,"No, because the reasoning chain shows that for u_0419 to have access to res_006",1,1.0,0.8,18470.026600174606,False,tog2,0
+oa_2943,"At time 129 in context ctx_01, can u_0335 access res_0172?",0,"No, because res_0172 is only governed by pol_000, which is valid in context",1,1.0,0.8,18513.827600050718,False,tog2,0
+oa_2956,"At time 157 in context ctx_05, can u_0143 access res_0149?",0,"No, because res_0149 is not governed by any political entity valid in context ctx_05.",1,1.0,0.8,18622.6778998971,False,tog2,0
+oa_2962,"At time 121 in context ctx_01, can u_0214 access res_0026?",0,No,1,1.0,0.8,18540.418700082228,False,tog2,0
+oa_2967,"At time 158 in context ctx_06, can u_0291 access res_0168?",0,"No, because res_0168 is not governed by any of the political entities (pol_016",1,1.0,0.8,18551.19979986921,False,tog2,0
+oa_2996,"At time 125 in context ctx_05, can u_0423 access res_0047?",0,To determine if u_0423 can access res_0047 at time 125 in,0,0.0,0.8,2752.104600192979,False,tog2,0
+oa_3005,"At time 157 in context ctx_05, can u_0164 access res_0137?",0,"To determine if u_0164 can access res_0137 at time 157,",0,0.0,0.8,3091.2654001731426,False,tog2,0
+oa_3008,"At time 114 in context ctx_02, can u_0393 access res_0160?",0,No,1,1.0,0.8,18685.68140012212,False,tog2,0
+oa_3017,"At time 169 in context ctx_01, can u_0239 access res_0024?",0,"No, because res_0124 is governed by pol_025, which is not valid in context",1,1.0,0.8,19079.566499916837,False,tog2,0
+oa_3023,"At time 63 in context ctx_07, can u_0117 access res_0006?",0,"No, because res_0006 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18271.19869994931,False,tog2,0
+oa_3024,"At time 89 in context ctx_01, can u_0167 access res_0070?",0,No.,1,1.0,0.8,18577.469300013036,False,tog2,0
+oa_3032,"At time 199 in context ctx_07, can u_0375 access res_0148?",0,"No, because the only contexts where res_0148 is valid are ctx_00, ctx_0",1,1.0,0.8,19255.749400006607,False,tog2,0
+oa_3041,"At time 72 in context ctx_00, can u_0117 access res_0034?",0,"No, because the reasoning provided does not indicate any direct connection between res_0034 and the contexts or political",1,1.0,0.8,18920.37139995955,False,tog2,0
+oa_3043,"At time 153 in context ctx_01, can u_0367 access res_0058?",0,"To determine if u_0367 can access res_0058 at time 153,",0,0.0,0.8,2879.228599835187,False,tog2,0
+oa_3044,"At time 176 in context ctx_00, can u_0192 access res_0070?",0,No,1,1.0,0.8,18409.91139994003,False,tog2,0
+oa_3045,"At time 69 in context ctx_05, can u_0456 access res_0195?",0,"No, because res_0195 is not governed by pol_016, which is valid in context",1,1.0,0.8,18269.579800078645,False,tog2,0
+oa_3047,"At time 173 in context ctx_05, can u_0267 access res_0092?",0,"No, because the reasoning does not provide any information about u_0267's access to res_00",1,1.0,0.8,19142.647699918598,False,tog2,0
+oa_3051,"At time 107 in context ctx_03, can u_0297 access res_0065?",0,"No, because there is no direct or indirect connection between res_0065 and any of the contexts (ctx",1,1.0,0.8,19040.25539988652,False,tog2,0
+oa_3076,"At time 115 in context ctx_03, can u_0411 access res_0181?",0,No,1,1.0,0.8,19680.566699942574,False,tog2,0
+oa_3083,"At time 144 in context ctx_00, can u_0179 access res_0129?",0,"No, because based on the given reasoning chain, res_0129 is not governed by any political entity (",1,1.0,0.8,18685.769699979573,False,tog2,0
+oa_3085,"At time 196 in context ctx_04, can u_0156 access res_0044?",0,No,1,1.0,0.8,20263.46889999695,False,tog2,0
+oa_3096,"At time 132 in context ctx_04, can u_0140 access res_0014?",0,No,1,1.0,0.8,18610.289700096473,False,tog2,0
+oa_3101,"At time 126 in context ctx_06, can u_0013 access res_0150?",0,No,1,1.0,0.8,18837.22069999203,False,tog2,0
+oa_3104,"At time 191 in context ctx_07, can u_0163 access res_0149?",0,"No, because res_0149 is not governed by pol_016, which is valid in context",1,1.0,0.8,19181.63949996233,False,tog2,0
+oa_3124,"At time 141 in context ctx_05, can u_0345 access res_0188?",0,"No, because the reasoning chain provided does not indicate any direct or indirect access of res_0188 by u",1,1.0,0.8,18967.679099878296,False,tog2,0
+oa_3131,"At time 178 in context ctx_02, can u_0430 access res_0129?",0,"No, because the only contexts where pol_038 is valid are ctx_01, ctx_02",1,1.0,0.8,18798.24579996057,False,tog2,0
+oa_3140,"At time 98 in context ctx_02, can u_0258 access res_0075?",0,"No, because res_0075 is governed by pol_009 which is valid in context ctx_",1,1.0,0.8,18540.224199881777,False,tog2,0
+oa_3143,"At time 129 in context ctx_01, can u_0280 access res_0052?",0,No,1,1.0,0.8,19133.507800055668,False,tog2,0
+oa_3147,"At time 112 in context ctx_00, can u_0107 access res_0196?",0,"No, because res_0196 is not governed by any political entity valid in context ctx_00.",1,1.0,0.8,18871.97949993424,False,tog2,0
+oa_3152,"At time 184 in context ctx_00, can u_0497 access res_0051?",0,"No, because there is no direct or indirect connection between res_0051 and any of the contexts (ctx",1,1.0,0.8,18192.67429993488,False,tog2,0
+oa_3153,"At time 66 in context ctx_02, can u_0044 access res_0095?",0,No,1,1.0,0.8,18471.81580006145,False,tog2,0
+oa_3167,"At time 182 in context ctx_06, can u_0094 access res_0071?",0,"No, because the only political entity (pol_016) that is valid in context ctx_06 is",1,1.0,0.8,19166.04240005836,False,tog2,0
+oa_3175,"At time 193 in context ctx_01, can u_0184 access res_0151?",0,"No, because the reasoning provided does not indicate any governance or access rules for u_0184 to resources within",1,1.0,0.8,18417.296200059354,False,tog2,0
+oa_3178,"At time 77 in context ctx_05, can u_0463 access res_0160?",0,"No, because res_0160 is not governed by any political entity valid in context ctx_05.",1,1.0,0.8,18565.125699853525,False,tog2,0
+oa_3183,"At time 160 in context ctx_00, can u_0281 access res_0056?",0,No,1,1.0,0.8,19125.557099934667,False,tog2,0
+oa_3202,"At time 193 in context ctx_01, can u_0046 access res_0151?",0,"No, because the reasoning provided does not indicate any connection between res_0151 and the contexts or governing policies",1,1.0,0.8,18736.492699943483,False,tog2,0
+oa_3205,"At time 68 in context ctx_04, can u_0190 access res_0169?",0,"No, because based on the given reasoning chain, res_0169 is only governed by pol_03",1,1.0,0.8,18428.770300000906,False,tog2,0
+oa_3211,"At time 85 in context ctx_05, can u_0226 access res_0137?",0,"No, because the reasoning chain provided does not indicate any direct connection between res_0137 and the governing authority",1,1.0,0.8,19233.64460002631,False,tog2,0
+oa_3226,"At time 172 in context ctx_04, can u_0166 access res_0154?",0,"To determine if u_0166 can access res_0154 at time 172,",0,0.0,0.8,2827.501399908215,False,tog2,0
+oa_3234,"At time 86 in context ctx_06, can u_0376 access res_0142?",0,"No, because res_0142 is not governed by any political entity valid in context ctx_06.",1,1.0,0.8,19172.311499947682,False,tog2,0
+oa_3236,"At time 152 in context ctx_00, can u_0007 access res_0026?",0,"No, because the reasoning does not provide any information about u_0007's access to res_00",1,1.0,0.8,18194.43520018831,False,tog2,0
+oa_3249,"At time 91 in context ctx_03, can u_0405 access res_0097?",0,No,1,1.0,0.8,18703.25049990788,False,tog2,0
+oa_3260,"At time 161 in context ctx_01, can u_0413 access res_0184?",0,"No, because res_0184 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18661.991300061345,False,tog2,0
+oa_3263,"At time 77 in context ctx_05, can u_0217 access res_0160?",0,"No, because res_0160 is not governed by any political entity valid in context ctx_05.",1,1.0,0.8,18614.6035999991,False,tog2,0
+oa_3266,"At time 158 in context ctx_06, can u_0251 access res_0118?",0,"No, because res_0118 is not governed by any political entity valid in context ctx_06.",1,1.0,0.8,18616.27500015311,False,tog2,0
+oa_3267,"At time 141 in context ctx_05, can u_0110 access res_0118?",0,"No, because there is no information provided about u_0110's governance or access to res_01",1,1.0,0.8,18810.872399946675,False,tog2,0
+oa_3286,"At time 71 in context ctx_07, can u_0484 access res_0070?",0,"No, because the reasoning provided does not indicate any connection between res_0070 and the contexts or political entities",1,1.0,0.8,18576.97069994174,False,tog2,0
+oa_3291,"At time 134 in context ctx_06, can u_0048 access res_0128?",0,"No, because the reasoning provided does not indicate any governance or validity for res_0128 in context ctx_",1,1.0,0.8,18264.6711000707,False,tog2,0
+oa_3295,"At time 143 in context ctx_07, can u_0350 access res_0087?",0,"No, because the reasoning provided does not indicate any direct connection between res_0087 and u_03",1,1.0,0.8,18803.170300088823,False,tog2,0
+oa_3302,"At time 154 in context ctx_02, can u_0392 access res_0009?",0,"No, because res_0016 is governed by pol_016 which is valid in context ctx_",1,1.0,0.8,18524.550599977374,False,tog2,0
+oa_3304,"At time 70 in context ctx_06, can u_0332 access res_0032?",0,"No, because res_0032 is only valid in context ctx_07 and not in ctx_0",1,1.0,0.8,18743.594999890774,False,tog2,0
+oa_3320,"At time 156 in context ctx_04, can u_0494 access res_0017?",0,"No, u_0494 cannot access res_0017 at time 156 in context",1,1.0,0.8,19733.061200007796,False,tog2,0
+oa_3325,"At time 140 in context ctx_04, can u_0258 access res_0095?",0,"No, because res_0095 is not governed by pol_000, and pol_00",1,1.0,0.8,18718.416000017896,False,tog2,0
+oa_3342,"At time 160 in context ctx_00, can u_0162 access res_0164?",0,"No, because there is no information provided about u_0162's governance or access to res_01",1,1.0,0.8,18005.718200001866,False,tog2,0
+oa_3347,"At time 173 in context ctx_05, can u_0454 access res_0092?",0,"No, because there is no information provided about u_0454's governance or access to resources in any of",1,1.0,0.8,18527.86110015586,False,tog2,0
+oa_3357,"At time 79 in context ctx_07, can u_0103 access res_0025?",0,No,1,1.0,0.8,18597.491200082004,False,tog2,0
+oa_3365,"At time 131 in context ctx_03, can u_0372 access res_0195?",0,No,1,1.0,0.8,18284.211000194773,False,tog2,0
+oa_3368,"At time 144 in context ctx_00, can u_0187 access res_0016?",0,"No, u_0187 cannot access res_0016 at time 144 in context",1,1.0,0.8,18890.575400087982,False,tog2,0
+oa_3394,"At time 79 in context ctx_07, can u_0273 access res_0172?",0,"No, because the reasoning shows that res_0172 is only governed by pol_038 within context",1,1.0,0.8,18460.501600056887,False,tog2,0
+oa_3397,"At time 140 in context ctx_04, can u_0233 access res_0083?",0,"No, because the reasoning provided does not indicate any connection between res_0083 and the governing authority (pol",1,1.0,0.8,18078.641599975526,False,tog2,0
+oa_3398,"At time 185 in context ctx_01, can u_0499 access res_0010?",0,No,1,1.0,0.8,18858.191599836573,False,tog2,0
+oa_3401,"At time 124 in context ctx_04, can u_0072 access res_0037?",0,"No, because based on the given reasoning chain, res_0037 is only governed by pol_00",1,1.0,0.8,18640.34969988279,False,tog2,0
+oa_3404,"At time 65 in context ctx_01, can u_0096 access res_0087?",0,"To determine if u_0096 can access res_0087 at time 65, we",0,0.0,0.8,3054.0457000024617,False,tog2,0
+oa_3414,"At time 113 in context ctx_01, can u_0461 access res_0073?",0,"No, because based on the given reasoning chain, res_0073 is not governed by pol_04",1,1.0,0.8,17925.11640000157,False,tog2,0
+oa_3416,"At time 166 in context ctx_06, can u_0280 access res_0086?",0,"No, because res_0086 is governed by pol_018 and pol_023,",1,1.0,0.8,18888.653400121257,False,tog2,0
+oa_3417,"At time 172 in context ctx_04, can u_0105 access res_0006?",0,"To determine if u_0105 can access res_0006 at time 172,",0,0.0,0.8,2863.651700085029,False,tog2,0
+oa_3422,"At time 79 in context ctx_07, can u_0309 access res_0077?",0,"No, because the reasoning provided does not indicate any connection between res_0077 and the contexts or political entities",1,1.0,0.8,19245.740999933332,False,tog2,0
+oa_3423,"At time 101 in context ctx_05, can u_0043 access res_0144?",0,"No, because based on the given reasoning chain, res_0144 is only governed by pol_00",1,1.0,0.8,17972.073399927467,False,tog2,0
+oa_3426,"At time 112 in context ctx_00, can u_0183 access res_0004?",0,"No, because res_0004 is not governed by any political entity valid in context ctx_00 at",1,1.0,0.8,18815.23340009153,False,tog2,0
+oa_3435,"At time 174 in context ctx_06, can u_0218 access res_0030?",0,"No, because res_0030 is not governed by pol_001, which is not valid in",1,1.0,0.8,18706.35459991172,False,tog2,0
+oa_3438,"At time 185 in context ctx_01, can u_0329 access res_0125?",0,"No, because res_0125 is not governed by pol_025, and pol_02",1,1.0,0.8,18345.343299908563,False,tog2,0
+oa_3441,"At time 173 in context ctx_05, can u_0159 access res_0149?",0,"No, because the reasoning chain provided does not indicate any connection between res_0149 and the other variables (",1,1.0,0.8,18669.411200098693,False,tog2,0
+oa_3445,"At time 140 in context ctx_04, can u_0419 access res_0038?",0,"No, because res_0138 is governed by pol_014 which is only valid in context ctx",1,1.0,0.8,18892.408600077033,False,tog2,0
+oa_3454,"At time 97 in context ctx_01, can u_0125 access res_0196?",0,"No, because res_0196 is not governed by pol_025, and pol_02",1,1.0,0.8,18358.38139988482,False,tog2,0
+oa_3457,"At time 148 in context ctx_04, can u_0494 access res_0164?",0,"No, because there is no information provided about the relationship between res_0164 and u_049",1,1.0,0.8,18731.66109994054,False,tog2,0
+oa_3458,"At time 161 in context ctx_01, can u_0121 access res_0180?",0,"No, because based on the given reasoning chain, res_0121 is only governed by pol_03",1,1.0,0.8,18995.87699980475,False,tog2,0
+oa_3465,"At time 157 in context ctx_05, can u_0296 access res_0132?",0,No,1,1.0,0.8,17937.254399992526,False,tog2,0
+oa_3467,"At time 137 in context ctx_01, can u_0133 access res_0185?",0,"No, because based on the given reasoning chain, res_0185 is not governed by any political entity (",1,1.0,0.8,18759.686599951237,False,tog2,0
+oa_3475,"At time 96 in context ctx_00, can u_0453 access res_0104?",0,"No, because there is no direct or indirect connection between res_0104 and u_0453",1,1.0,0.8,18820.892699994147,False,tog2,0
+oa_3486,"At time 64 in context ctx_00, can u_0005 access res_0065?",0,"No, because res_0065 is not governed by pol_041, and pol_04",1,1.0,0.8,18505.603099940345,False,tog2,0
+oa_3489,"At time 110 in context ctx_06, can u_0146 access res_0199?",0,"No, because res_0199 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18193.46289988607,False,tog2,0
+oa_3490,"At time 171 in context ctx_03, can u_0318 access res_0179?",0,No,1,1.0,0.8,18788.198300171643,False,tog2,0
+oa_3492,"At time 86 in context ctx_06, can u_0035 access res_0076?",0,"No, because the reasoning chain shows that res_0076 is not governed by any of the political entities (",1,1.0,0.8,18490.554200019687,False,tog2,0
+oa_3494,"At time 176 in context ctx_00, can u_0448 access res_0176?",0,"No, because res_0176 is not governed by any of the political entities (pol_016",1,1.0,0.8,17999.125600093976,False,tog2,0
+oa_3531,"At time 78 in context ctx_06, can u_0075 access res_0034?",0,"No, because res_0034 is not governed by pol_044, which is valid in context",1,1.0,0.8,18976.485300110653,False,tog2,0
+oa_3532,"At time 98 in context ctx_02, can u_0220 access res_0055?",0,"No, because res_0055 is not governed by any political entity valid in context ctx_02.",1,1.0,0.8,18598.081999924034,False,tog2,0
+oa_3536,"At time 187 in context ctx_03, can u_0263 access res_0036?",0,"No, because there is no direct or indirect connection between res_0036 and any of the political entities (",1,1.0,0.8,18495.741300052032,False,tog2,0
+oa_3556,"At time 90 in context ctx_02, can u_0392 access res_0155?",0,"No, because none of the political entities (pol_001, pol_043, pol_0",1,1.0,0.8,18725.40090000257,False,tog2,0
+oa_3567,"At time 158 in context ctx_06, can u_0332 access res_0082?",0,"To determine if u_0332 can access res_0082 at time 158,",0,0.0,0.8,2734.937199857086,False,tog2,0
+oa_3615,"At time 98 in context ctx_02, can u_0314 access res_0191?",0,"No, because res_0191 is governed by pol_009 which is only valid in context ctx",1,1.0,0.8,18698.78190010786,False,tog2,0
+oa_3623,"At time 143 in context ctx_07, can u_0366 access res_0090?",0,No,1,1.0,0.8,17717.21169981174,False,tog2,0
+oa_3626,"At time 80 in context ctx_00, can u_0090 access res_0066?",0,"No, because the reasoning provided does not establish any direct connection between u_0090 and res_00",1,1.0,0.8,18520.23179992102,False,tog2,0
+oa_3637,"At time 146 in context ctx_02, can u_0013 access res_0148?",0,"No, because there is no direct or indirect link between res_0148 and the contexts or governing policies provided",1,1.0,0.8,18681.759799830616,False,tog2,0
+oa_3641,"At time 98 in context ctx_02, can u_0405 access res_0053?",0,"No, because res_0053 is not governed by any of the political entities (pol_001",1,1.0,0.8,17991.64139991626,False,tog2,0
+oa_3642,"At time 136 in context ctx_00, can u_0046 access res_0026?",0,"No, because the reasoning provided does not indicate any direct connection between res_0024, res_01",1,1.0,0.8,18749.776399927214,False,tog2,0
+oa_3643,"At time 95 in context ctx_07, can u_0236 access res_0045?",0,"No, because res_0045 is not governed by any of the political entities (pol_019",1,1.0,0.8,18471.54329996556,False,tog2,0
+oa_3645,"At time 184 in context ctx_00, can u_0282 access res_0181?",0,No,1,1.0,0.8,18407.214499777183,False,tog2,0
+oa_3648,"At time 189 in context ctx_05, can u_0028 access res_0190?",0,"No, because res_0190 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18443.570400122553,False,tog2,0
+oa_3654,"At time 196 in context ctx_04, can u_0475 access res_0054?",0,"No, because the reasoning provided does not indicate any connection between res_0054 and the contexts or governing policies",1,1.0,0.8,19086.38589992188,False,tog2,0
+oa_3656,"At time 153 in context ctx_01, can u_0094 access res_0092?",0,"To determine if u_0094 can access res_0092 at time 153,",0,0.0,0.8,2914.0554999466985,False,tog2,0
+oa_3659,"At time 120 in context ctx_00, can u_0326 access res_0072?",0,"No, because based on the given reasoning chain, res_0072 is not governed by any of the political",1,1.0,0.8,18054.767000023276,False,tog2,0
+oa_3669,"At time 72 in context ctx_00, can u_0371 access res_0144?",0,"No, because res_0144 is not governed by any political entity valid in context ctx_00.",1,1.0,0.8,18539.710599929094,False,tog2,0
+oa_3671,"At time 139 in context ctx_03, can u_0150 access res_0041?",0,"No, because res_0041 is not governed by pol_025, which is valid in context",1,1.0,0.8,19280.5293998681,False,tog2,0
+oa_3674,"At time 89 in context ctx_01, can u_0446 access res_0031?",0,"No, because res_0031 is not governed by pol_018, which is valid in ctx",1,1.0,0.8,19199.107100022957,False,tog2,0
+oa_3691,"At time 162 in context ctx_02, can u_0071 access res_0121?",0,"No, because res_0121 is governed by a political entity (pol_033) that is",1,1.0,0.8,18066.830199910328,False,tog2,0
+oa_3699,"At time 168 in context ctx_00, can u_0407 access res_0067?",0,"No, because the reasoning shows that res_0067 is not governed by any of the political entities (pol",1,1.0,0.8,18801.87979992479,False,tog2,0
+oa_3710,"At time 64 in context ctx_00, can u_0485 access res_0064?",0,"No, u_0485 cannot access res_0064 at time 64 in context ctx",1,1.0,0.8,18766.929799923673,False,tog2,0
+oa_3714,"At time 159 in context ctx_07, can u_0142 access res_0119?",0,No,1,1.0,0.8,18839.82879994437,False,tog2,0
+oa_3719,"At time 139 in context ctx_03, can u_0204 access res_0026?",0,"No, because the reasoning provided does not indicate any governance or validity of res_0124, res_0",1,1.0,0.8,18341.680699959397,False,tog2,0
+oa_3731,"At time 94 in context ctx_06, can u_0418 access res_0018?",0,"No, because there is no direct or indirect link between res_0018 and u_0418",1,1.0,0.8,18873.793500009924,False,tog2,0
+oa_3751,"At time 89 in context ctx_01, can u_0269 access res_0048?",0,"No, because res_0048 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,19028.7876999937,False,tog2,0
+oa_3755,"At time 89 in context ctx_01, can u_0402 access res_0075?",0,"No, because the reasoning does not provide any information about u_0402's governance or access to resources within",1,1.0,0.8,18208.941699936986,False,tog2,0
+oa_3757,"At time 95 in context ctx_07, can u_0038 access res_0097?",0,No,1,1.0,0.8,18859.44620007649,False,tog2,0
+oa_3759,"At time 123 in context ctx_03, can u_0322 access res_0169?",0,"No, because the reasoning chain shows that res_0169 is not governed by any political entity (pol)",1,1.0,0.8,18491.167000029236,False,tog2,0
+oa_3774,"At time 159 in context ctx_07, can u_0228 access res_0114?",0,No,1,1.0,0.8,18077.20830012113,False,tog2,0
+oa_3788,"At time 95 in context ctx_07, can u_0304 access res_0116?",0,"No, because res_0116 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18899.222900159657,False,tog2,0
+oa_3819,"At time 96 in context ctx_00, can u_0174 access res_0068?",0,"No, because the reasoning shows that res_0068 is not governed by any of the political entities (pol",1,1.0,0.8,18689.794400008395,False,tog2,0
+oa_3824,"At time 169 in context ctx_01, can u_0413 access res_0157?",0,No,1,1.0,0.8,18645.83109994419,False,tog2,0
+oa_3826,"At time 126 in context ctx_06, can u_0180 access res_0040?",0,"No, because res_0180 is only governed by pol_001 within context ctx_06",1,1.0,0.8,18734.477100195363,False,tog2,0
+oa_3827,"At time 106 in context ctx_02, can u_0185 access res_0137?",0,No,1,1.0,0.8,19329.608000116423,False,tog2,0
+oa_3833,"At time 168 in context ctx_00, can u_0126 access res_0043?",0,"No, because res_0043 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,19303.79179981537,False,tog2,0
+oa_3852,"At time 75 in context ctx_03, can u_0177 access res_0054?",0,"No, because the reasoning provided does not indicate any direct connection between res_0054 and the contexts or political",1,1.0,0.8,18421.98759992607,False,tog2,0
+oa_3857,"At time 143 in context ctx_07, can u_0254 access res_0183?",0,"No, because the reasoning does not provide any information about u_0254's access to res_01",1,1.0,0.8,18841.386099811643,False,tog2,0
+oa_3861,"At time 163 in context ctx_03, can u_0145 access res_0115?",0,No,1,1.0,0.8,18894.16870009154,False,tog2,0
+oa_3862,"At time 139 in context ctx_03, can u_0045 access res_0170?",0,No,1,1.0,0.8,18090.95609979704,False,tog2,0
+oa_3863,"At time 196 in context ctx_04, can u_0393 access res_0171?",0,"No, because res_0171 is only governed by pol_000, which is valid in context",1,1.0,0.8,20633.899699896574,False,tog2,0
+oa_3867,"At time 198 in context ctx_06, can u_0413 access res_0027?",0,"No, because res_0127 is governed by pol_006 and pol_009,",1,1.0,0.8,19750.37100003101,False,tog2,0
+oa_3872,"At time 184 in context ctx_00, can u_0422 access res_0030?",0,"No, because the reasoning chain shows that res_0030 is not governed by any of the political entities (",1,1.0,0.8,19202.557200100273,False,tog2,0
+oa_3877,"At time 75 in context ctx_03, can u_0369 access res_0116?",0,No,1,1.0,0.8,19295.442200032994,False,tog2,0
+oa_3883,"At time 181 in context ctx_05, can u_0160 access res_0121?",0,"No, because res_0160 is governed by pol_038 and pol_038 is",1,1.0,0.8,20105.71279982105,False,tog2,0
+oa_3896,"At time 76 in context ctx_04, can u_0030 access res_0049?",0,No.,1,1.0,0.8,17629.960800055414,False,tog2,0
+oa_3903,"At time 77 in context ctx_05, can u_0026 access res_0096?",0,"No, because the reasoning does not provide any information about u_0026's access to res_00",1,1.0,0.8,18459.180200006813,False,tog2,0
+oa_3904,"At time 149 in context ctx_05, can u_0340 access res_0059?",0,"To determine if u_0340 can access res_0059 at time 149,",0,0.0,0.8,2877.5444999337196,False,tog2,0
+oa_3905,"At time 175 in context ctx_07, can u_0470 access res_0158?",0,No,1,1.0,0.8,18687.505800044164,False,tog2,0
+oa_3907,"At time 170 in context ctx_02, can u_0372 access res_0044?",0,"No, because there is no direct or indirect connection between res_0044 and any of the resources (res",1,1.0,0.8,18865.6089999713,False,tog2,0
+oa_3916,"At time 182 in context ctx_06, can u_0432 access res_0028?",0,"No, u_0432 cannot access res_0028 at time 182 in context",1,1.0,0.8,19025.52399993874,False,tog2,0
+oa_3924,"At time 79 in context ctx_07, can u_0069 access res_0077?",0,"No, because none of the political contexts (pol_018, pol_023, pol_0",1,1.0,0.8,18712.54330012016,False,tog2,0
+oa_3925,"At time 68 in context ctx_04, can u_0248 access res_0124?",0,"No, because res_0124 is governed by pol_025, which is only valid in contexts",1,1.0,0.8,18314.78859996423,False,tog2,0
+oa_3941,"At time 178 in context ctx_02, can u_0069 access res_0073?",0,No,1,1.0,0.8,18519.790299935266,False,tog2,0
+oa_3943,"At time 186 in context ctx_02, can u_0140 access res_0013?",0,No,1,1.0,0.8,18473.6234000884,False,tog2,0
+oa_3950,"At time 108 in context ctx_04, can u_0350 access res_0021?",0,No,1,1.0,0.8,18802.40839999169,False,tog2,0
+oa_3959,"At time 114 in context ctx_02, can u_0226 access res_0132?",0,"No, because res_0132 is not governed by pol_009 and thus cannot be valid in",1,1.0,0.8,18746.396800037473,False,tog2,0
+oa_3980,"At time 70 in context ctx_06, can u_0042 access res_0089?",0,"No, because based on the given reasoning chain, res_0085 is the only resource that is governed by",1,1.0,0.8,18254.69209998846,False,tog2,0
+oa_3982,"At time 83 in context ctx_03, can u_0031 access res_0051?",0,"No, because none of the political entities (pol_001, pol_009, pol_0",1,1.0,0.8,18490.800500148907,False,tog2,0
+oa_3984,"At time 171 in context ctx_03, can u_0106 access res_0070?",0,No,1,1.0,0.8,18997.30519996956,False,tog2,0
+oa_3991,"At time 79 in context ctx_07, can u_0030 access res_0150?",0,"No, because none of the political entities (pol_018, pol_023, pol_0",1,1.0,0.8,18145.19640011713,False,tog2,0
+oa_3996,"At time 196 in context ctx_04, can u_0224 access res_0067?",0,"No, because the reasoning provided does not indicate any governance or validity of res_0067 within context ctx_",1,1.0,0.8,19022.095100022852,False,tog2,0
+oa_4002,"At time 106 in context ctx_02, can u_0242 access res_0105?",0,No,1,1.0,0.8,18322.52599997446,False,tog2,0
+oa_4004,"At time 146 in context ctx_02, can u_0103 access res_0004?",0,No,1,1.0,0.8,18287.832900183275,False,tog2,0
+oa_4016,"At time 82 in context ctx_02, can u_0176 access res_0078?",0,"No, because res_0078 is not governed by any political entity valid in context ctx_02.",1,1.0,0.8,18819.17760008946,False,tog2,0
+oa_4029,"At time 116 in context ctx_04, can u_0450 access res_0121?",0,"Based on the given reasoning chain, res_0121 is governed by pol_033, and pol",0,0.0,0.8,18624.969199998304,False,tog2,0
+oa_4035,"At time 143 in context ctx_07, can u_0014 access res_0059?",0,"To determine if u_0014 can access res_0059 at time 143,",0,0.0,0.8,2981.7013000138104,False,tog2,0
+oa_4036,"At time 156 in context ctx_04, can u_0473 access res_0180?",0,"No, u_0473 cannot access res_0180 at time 156 in context",1,1.0,0.8,18944.819200085476,False,tog2,0
+oa_4042,"At time 109 in context ctx_05, can u_0430 access res_0141?",0,"Based on the given reasoning chain, res_0141 is governed by pol_016, and pol",0,0.0,0.8,18696.60359993577,False,tog2,0
+oa_4043,"At time 171 in context ctx_03, can u_0246 access res_0142?",0,No,1,1.0,0.8,18628.68700013496,False,tog2,0
+oa_4050,"At time 153 in context ctx_01, can u_0452 access res_0077?",0,"To determine if u_0452 can access res_0077 at time 153,",0,0.0,0.8,2858.5858999285847,False,tog2,0
+oa_4051,"At time 186 in context ctx_02, can u_0074 access res_0041?",0,No.,1,1.0,0.8,18718.365899985656,False,tog2,0
+oa_4058,"At time 162 in context ctx_02, can u_0397 access res_0066?",0,"No, because based on the given reasoning chain, res_0066 is not governed by any of the political",1,1.0,0.8,18522.255399962887,False,tog2,0
+oa_4059,"At time 125 in context ctx_05, can u_0319 access res_0111?",0,"No, because res_0115 is not governed by pol_023 which is valid in ctx_",1,1.0,0.8,18188.950500218198,False,tog2,0
+oa_4068,"At time 68 in context ctx_04, can u_0031 access res_0017?",0,"Based on the given reasoning chain, res_0017 is governed by pol_044, which is",0,0.0,0.8,18735.27349997312,False,tog2,0
+oa_4072,"At time 107 in context ctx_03, can u_0118 access res_0119?",0,No,1,1.0,0.8,18424.511699937284,False,tog2,0
+oa_4076,"At time 131 in context ctx_03, can u_0115 access res_0098?",0,No,1,1.0,0.8,18212.257700040936,False,tog2,0
+oa_4077,"At time 101 in context ctx_05, can u_0406 access res_0009?",0,"No, because res_0009 is not governed by pol_021 or pol_024",1,1.0,0.8,18556.58830003813,False,tog2,0
+oa_4083,"At time 128 in context ctx_00, can u_0499 access res_0013?",0,No,1,1.0,0.8,18246.27250013873,False,tog2,0
+oa_4084,"At time 160 in context ctx_00, can u_0059 access res_0142?",0,"No. Given the reasoning chain, for u_0059 to access res_0142, it",1,1.0,0.8,18556.133799953386,False,tog2,0
+oa_4108,"At time 194 in context ctx_02, can u_0346 access res_0069?",0,"No, because res_0069 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18719.761099899188,False,tog2,0
+oa_4115,"At time 162 in context ctx_02, can u_0284 access res_0095?",0,"No, because res_0095 is not governed by any of the political entities (pol_018",1,1.0,0.8,18907.59800001979,False,tog2,0
+oa_4125,"At time 103 in context ctx_07, can u_0483 access res_0079?",0,"No, because the reasoning provided does not indicate any connection between res_0079 and the contexts or political entities",1,1.0,0.8,18333.670600084588,False,tog2,0
+oa_4134,"At time 154 in context ctx_02, can u_0119 access res_0064?",0,No,1,1.0,0.8,19279.42719985731,False,tog2,0
+oa_4136,"At time 106 in context ctx_02, can u_0436 access res_0155?",0,"No, because res_0155 is not governed by pol_043 and thus cannot be valid in",1,1.0,0.8,19026.85480006039,False,tog2,0
+oa_4152,"At time 118 in context ctx_06, can u_0393 access res_0102?",0,"No, because there is no direct or indirect link between res_0102 and any of the contexts (ctx",1,1.0,0.8,17975.24299984798,False,tog2,0
+oa_4154,"At time 154 in context ctx_02, can u_0482 access res_0136?",0,"No, because res_0136 is not governed by any political entity valid in context ctx_02.",1,1.0,0.8,18761.73110003583,False,tog2,0
+oa_4161,"At time 143 in context ctx_07, can u_0051 access res_0024?",0,"No. Based on the given reasoning chain, res_0024 is only governed by pol_025",1,1.0,0.8,18302.04869993031,False,tog2,0
+oa_4164,"At time 71 in context ctx_07, can u_0359 access res_0100?",0,"No, because the reasoning provided does not indicate any connection between res_0100 and the contexts or governing political",1,1.0,0.8,18511.391900014132,False,tog2,0
+oa_4166,"At time 197 in context ctx_05, can u_0129 access res_0038?",0,No,1,1.0,0.8,18751.2648999691,False,tog2,0
+oa_4188,"At time 177 in context ctx_01, can u_0057 access res_0143?",0,"No, because the reasoning provided does not indicate any connection between res_0143 and the contexts or governing policies",1,1.0,0.8,18301.057300064713,False,tog2,0
+oa_4231,"At time 142 in context ctx_06, can u_0159 access res_0021?",0,"No, because based on the given reasoning chain, res_0160 is governed by pol_038",1,1.0,0.8,18447.02860014513,False,tog2,0
+oa_4243,"At time 67 in context ctx_03, can u_0468 access res_0075?",0,"No, because the reasoning provided does not indicate any direct connection between u_0468, res_00",1,1.0,0.8,18767.20070000738,False,tog2,0
+oa_4251,"At time 137 in context ctx_01, can u_0320 access res_0070?",0,"To determine if u_0320 can access res_0070 at time 137,",0,0.0,0.8,2741.8190999887884,False,tog2,0
+oa_4260,"At time 76 in context ctx_04, can u_0369 access res_0059?",0,"No, because there is no direct or indirect link between res_0059 and any of the contexts (ctx",1,1.0,0.8,18486.252299975604,False,tog2,0
+oa_4266,"At time 135 in context ctx_07, can u_0096 access res_0090?",0,"No, because the reasoning does not provide any information about u_0096's access to res_00",1,1.0,0.8,18188.65679996088,False,tog2,0
+oa_4269,"At time 198 in context ctx_06, can u_0214 access res_0180?",0,"No, because res_0180 is only governed by pol_009 and pol_022",1,1.0,0.8,18402.44169998914,False,tog2,0
+oa_4274,"At time 163 in context ctx_03, can u_0264 access res_0194?",0,No,1,1.0,0.8,18775.253100087866,False,tog2,0
+oa_4284,"At time 64 in context ctx_00, can u_0391 access res_0010?",0,"No, because there is no direct or indirect connection between res_0010 and any of the political entities (",1,1.0,0.8,18655.78419994563,False,tog2,0
+oa_4287,"At time 152 in context ctx_00, can u_0478 access res_0076?",0,"To determine if u_0478 can access res_0076 at time 152,",0,0.0,0.8,2890.4994998592883,False,tog2,0
+oa_4290,"At time 108 in context ctx_04, can u_0029 access res_0017?",0,"Based on the given reasoning chain, res_0017 is governed by both pol_044 and pol",0,0.0,0.8,18291.098200017586,False,tog2,0
+oa_4297,"At time 185 in context ctx_01, can u_0202 access res_0096?",0,No,1,1.0,0.8,18579.371799947694,False,tog2,0
+oa_4301,"At time 142 in context ctx_06, can u_0269 access res_0105?",0,"No, because there is no direct or indirect connection between res_0105 and any of the political entities (",1,1.0,0.8,19711.98120014742,False,tog2,0
+oa_4307,"At time 147 in context ctx_03, can u_0196 access res_0190?",0,"No, because the reasoning provided does not indicate any direct connection between res_0190 and the contexts or political",1,1.0,0.8,18821.949200006202,False,tog2,0
+oa_4309,"At time 179 in context ctx_03, can u_0108 access res_0043?",0,No.,1,1.0,0.8,18733.027499867603,False,tog2,0
+oa_4321,"At time 143 in context ctx_07, can u_0006 access res_0046?",0,"No, because there is no direct or indirect connection between res_0046 and any of the contexts (ctx",1,1.0,0.8,18791.83780006133,False,tog2,0
+oa_4328,"At time 95 in context ctx_07, can u_0383 access res_0115?",0,"No, u_0383 cannot access res_0115 at time 95 in context ctx",1,1.0,0.8,18645.138800144196,False,tog2,0
+oa_4335,"At time 160 in context ctx_00, can u_0126 access res_0008?",0,No.,1,1.0,0.8,18847.483900142834,False,tog2,0
+oa_4337,"At time 158 in context ctx_06, can u_0479 access res_0045?",0,"No, because res_0045 is not governed by any of the political entities (pol_016",1,1.0,0.8,18430.960700148717,False,tog2,0
+oa_4340,"At time 134 in context ctx_06, can u_0091 access res_0168?",0,"No, because res_0168 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18835.46150010079,False,tog2,0
+oa_4343,"At time 192 in context ctx_00, can u_0413 access res_0068?",0,"No, because there is no direct or indirect connection between res_0068 and u_0413",1,1.0,0.8,18262.188200140372,False,tog2,0
+oa_4362,"At time 125 in context ctx_05, can u_0052 access res_0114?",0,No,1,1.0,0.8,18911.270200042054,False,tog2,0
+oa_4368,"At time 166 in context ctx_06, can u_0432 access res_0177?",0,"No, because res_0177 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18411.77359991707,False,tog2,0
+oa_4376,"At time 143 in context ctx_07, can u_0345 access res_0092?",0,"No, because the reasoning provided does not indicate any connection between res_0092 and the contexts or political entities",1,1.0,0.8,18796.307499986142,False,tog2,0
+oa_4386,"At time 196 in context ctx_04, can u_0268 access res_0012?",0,No,1,1.0,0.8,18348.721500020474,False,tog2,0
+oa_4406,"At time 134 in context ctx_06, can u_0296 access res_0192?",0,"No, because res_0192 is not governed by any political entity valid in context ctx_06.",1,1.0,0.8,18712.163399904966,False,tog2,0
+oa_4420,"At time 123 in context ctx_03, can u_0379 access res_0015?",0,No,1,1.0,0.8,18545.09439994581,False,tog2,0
+oa_4426,"At time 175 in context ctx_07, can u_0084 access res_0055?",0,"No, because the reasoning provided does not indicate any direct connection between res_0055 and the contexts or political",1,1.0,0.8,18458.389800041914,False,tog2,0
+oa_4428,"At time 123 in context ctx_03, can u_0037 access res_0026?",0,"No, because the reasoning provided does not indicate that ctx_03 is one of the contexts where pol_02",1,1.0,0.8,18638.50610004738,False,tog2,0
+oa_4435,"At time 73 in context ctx_01, can u_0078 access res_0098?",0,"No, because res_0098 is not governed by pol_001, and thus cannot be valid",1,1.0,0.8,18517.454100074247,False,tog2,0
+oa_4446,"At time 78 in context ctx_06, can u_0101 access res_0134?",0,"No, because res_0134 is not governed by any of the political entities (pol_001",1,1.0,0.8,19198.98320012726,False,tog2,0
+oa_4448,"At time 171 in context ctx_03, can u_0072 access res_0058?",0,No,1,1.0,0.8,18367.1522999648,False,tog2,0
+oa_4456,"At time 80 in context ctx_00, can u_0228 access res_0039?",0,No,1,1.0,0.8,18312.930499901995,False,tog2,0
+oa_4459,"At time 119 in context ctx_07, can u_0045 access res_0019?",0,"No, u_0045 cannot access res_0019 at time 119 in context",1,1.0,0.8,18898.440500022843,False,tog2,0
+oa_4476,"At time 113 in context ctx_01, can u_0183 access res_0132?",0,"No, u_0183 cannot access res_0132 at time 113 in context",1,1.0,0.8,18468.316999962553,False,tog2,0
+oa_4482,"At time 196 in context ctx_04, can u_0290 access res_0009?",0,"No, because res_0016 is the only entity that is governed by pol_016 and valid",1,1.0,0.8,18229.867999907583,False,tog2,0
+oa_4484,"At time 136 in context ctx_00, can u_0259 access res_0058?",0,"To determine if u_0259 can access res_0058 at time 136,",0,0.0,0.8,3086.7769001051784,False,tog2,0
+oa_4493,"At time 180 in context ctx_04, can u_0126 access res_0110?",0,No,1,1.0,0.8,18632.036600029096,False,tog2,0
+oa_4494,"At time 74 in context ctx_02, can u_0392 access res_0038?",0,"No, because the reasoning provided does not establish any direct connection between res_0038 and the contexts or political",1,1.0,0.8,18776.764000067487,False,tog2,0
+oa_4495,"At time 154 in context ctx_02, can u_0153 access res_0078?",0,"No, because res_0078 is not governed by any political entity valid in context ctx_02.",1,1.0,0.8,18237.949199974537,False,tog2,0
+oa_4498,"At time 103 in context ctx_07, can u_0379 access res_0147?",0,"No, because the reasoning provided does not indicate any connection between res_0147 and the contexts or governing political",1,1.0,0.8,18607.4828999117,False,tog2,0
+oa_4506,"At time 194 in context ctx_02, can u_0431 access res_0060?",0,"No, because res_0060 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18608.056999975815,False,tog2,0
+oa_4512,"At time 74 in context ctx_02, can u_0421 access res_0186?",0,"No, because res_0186 is only governed by pol_038, which is not valid in",1,1.0,0.8,18687.16900004074,False,tog2,0
+oa_4515,"At time 172 in context ctx_04, can u_0449 access res_0045?",0,"To determine if u_0449 can access res_0045 at time 172,",0,0.0,0.8,3019.421000033617,False,tog2,0
+oa_4521,"At time 74 in context ctx_02, can u_0078 access res_0042?",0,"Based on the given reasoning chain, there is no information about the validity of policies (pol_031, pol",0,0.0,0.8,18153.957300120965,False,tog2,0
+oa_4526,"At time 82 in context ctx_02, can u_0025 access res_0168?",0,"No, because res_0168 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18951.910899952054,False,tog2,0
+oa_4558,"At time 168 in context ctx_00, can u_0499 access res_0032?",0,"Based on the given reasoning chain, we know that pol_014 governs res_0032 and",0,0.0,0.8,19640.269399853423,False,tog2,0
+oa_4561,"At time 180 in context ctx_04, can u_0287 access res_0003?",0,"No, because there is no direct or indirect link between res_0003 and any of the political entities (",1,1.0,0.8,18460.090399952605,False,tog2,0
+oa_4573,"At time 191 in context ctx_07, can u_0276 access res_0008?",0,"No, because based on the given reasoning chain, res_0016 is governed by pol_016",1,1.0,0.8,18366.671100025997,False,tog2,0
+oa_4574,"At time 142 in context ctx_06, can u_0312 access res_0068?",0,"No, because there is no direct or indirect link between res_0068 and the contexts or political entities that",1,1.0,0.8,18897.210999857634,False,tog2,0
+oa_4585,"At time 148 in context ctx_04, can u_0345 access res_0190?",0,"No, u_0345 cannot access res_0190 at time 148 in context",1,1.0,0.8,18778.029799927026,False,tog2,0
+oa_4594,"At time 74 in context ctx_02, can u_0215 access res_0014?",0,"No, because based on the given reasoning chain, res_0014 is not governed by any of the political",1,1.0,0.8,18795.145699987188,False,tog2,0
+oa_4599,"At time 181 in context ctx_05, can u_0204 access res_0124?",0,No.,1,1.0,0.8,18342.63450000435,False,tog2,0
+oa_4605,"At time 190 in context ctx_06, can u_0074 access res_0121?",0,No.,1,1.0,0.8,18805.357899982482,False,tog2,0
+oa_4617,"At time 71 in context ctx_07, can u_0464 access res_0010?",0,"No, because the reasoning provided does not indicate any direct connection between res_0010 and u_04",1,1.0,0.8,18498.285500099882,False,tog2,0
+oa_4624,"At time 160 in context ctx_00, can u_0463 access res_0077?",0,"No, because there is no direct or indirect governance link between res_0077 and any of the polices",1,1.0,0.8,18789.020899916068,False,tog2,0
+oa_4638,"At time 158 in context ctx_06, can u_0461 access res_0093?",0,"No, because res_0093 is not governed by any of the political entities (pol_016",1,1.0,0.8,19167.665499961004,False,tog2,0
+oa_4640,"At time 124 in context ctx_04, can u_0344 access res_0028?",0,No,1,1.0,0.8,18800.34690001048,False,tog2,0
+oa_4642,"At time 187 in context ctx_03, can u_0201 access res_0181?",0,No,1,1.0,0.8,18462.07519993186,False,tog2,0
+oa_4648,"At time 173 in context ctx_05, can u_0295 access res_0012?",0,"No, because res_0012 is governed by pol_043, which is valid in context ctx",1,1.0,0.8,18849.563299911097,False,tog2,0
+oa_4649,"At time 188 in context ctx_04, can u_0227 access res_0087?",0,"No, because the reasoning provided does not indicate any connection between res_0087 and the contexts or political entities",1,1.0,0.8,18494.93799987249,False,tog2,0
+oa_4654,"At time 165 in context ctx_05, can u_0162 access res_0137?",0,"No, because res_0137 is not governed by pol_016, which is valid in context",1,1.0,0.8,18428.270400036126,False,tog2,0
+oa_4656,"At time 153 in context ctx_01, can u_0417 access res_0072?",0,"No, because based on the given reasoning chain, res_0072 is not governed by pol_04",1,1.0,0.8,18976.619699969888,False,tog2,0
+oa_4662,"At time 165 in context ctx_05, can u_0346 access res_0035?",0,"No, because res_0035 is not governed by any of the political entities (pol_016",1,1.0,0.8,19235.237299930304,False,tog2,0
+oa_4663,"At time 77 in context ctx_05, can u_0289 access res_0000?",0,"No, u_0289 cannot access res_0017 at time 77 in context ctx",1,1.0,0.8,18916.124500101432,False,tog2,0
+oa_4677,"At time 191 in context ctx_07, can u_0180 access res_0045?",0,No,1,1.0,0.8,18520.84070001729,False,tog2,0
+oa_4701,"At time 94 in context ctx_06, can u_0185 access res_0164?",0,"No, because res_0164 is not governed by pol_001, which is valid in ctx",1,1.0,0.8,21229.532799916342,False,tog2,0
+oa_4704,"At time 197 in context ctx_05, can u_0163 access res_0181?",0,"No, because res_0181 is not governed by pol_016, which is valid in context",1,1.0,0.8,18882.717299973592,False,tog2,0
+oa_4705,"At time 178 in context ctx_02, can u_0474 access res_0177?",0,"No, because the reasoning shows that res_0017 is governed by pol_044, which is",1,1.0,0.8,18577.261900063604,False,tog2,0
+oa_4709,"At time 187 in context ctx_03, can u_0364 access res_0109?",0,No,1,1.0,0.8,18541.364600183442,False,tog2,0
+oa_4713,"At time 191 in context ctx_07, can u_0241 access res_0011?",0,"No, because the only political authority (pol_016) that validates context (ctx_07) also",1,1.0,0.8,19027.047999901697,False,tog2,0
+oa_4715,"At time 188 in context ctx_04, can u_0107 access res_0094?",0,"No, because there is no direct or indirect connection between res_0094 and u_0107",1,1.0,0.8,18822.581900050864,False,tog2,0
+oa_4718,"At time 187 in context ctx_03, can u_0128 access res_0185?",0,"No, because all political entities (pol_012, pol_034, pol_001",1,1.0,0.8,18416.57099989243,False,tog2,0
+oa_4725,"At time 89 in context ctx_01, can u_0250 access res_0064?",0,"No, because res_0064 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18350.030000088736,False,tog2,0
+oa_4729,"At time 117 in context ctx_05, can u_0340 access res_0025?",0,No,1,1.0,0.8,18705.953000113368,False,tog2,0
+oa_4734,"At time 186 in context ctx_02, can u_0333 access res_0116?",0,"No, because res_0116 is governed by pol_016, and pol_016",1,1.0,0.8,18718.704799888656,False,tog2,0
+oa_4743,"At time 130 in context ctx_02, can u_0323 access res_0035?",0,"No, because res_0035 is not governed by pol_025, which is valid in context",1,1.0,0.8,18493.184400023893,False,tog2,0
+oa_4748,"At time 124 in context ctx_04, can u_0140 access res_0096?",0,"No, because there is no information provided about the relationship between res_0096 and the other entities (pol",1,1.0,0.8,18970.53699987009,False,tog2,0
+oa_4754,"At time 185 in context ctx_01, can u_0317 access res_0173?",0,No,1,1.0,0.8,18827.151900157332,False,tog2,0
+oa_4756,"At time 196 in context ctx_04, can u_0147 access res_0111?",0,"No, because the reasoning provided does not indicate any governance or access rules for res_0111 by u_",1,1.0,0.8,18336.223700083792,False,tog2,0
+oa_4758,"At time 171 in context ctx_03, can u_0412 access res_0075?",0,No,1,1.0,0.8,18956.316699972376,False,tog2,0
+oa_4772,"At time 162 in context ctx_02, can u_0425 access res_0117?",0,No,1,1.0,0.8,18110.793499974534,False,tog2,0
+oa_4779,"At time 155 in context ctx_03, can u_0320 access res_0178?",0,"No, because res_0178 is not governed by any political entity that is valid in context ctx_0",1,1.0,0.8,18581.67070010677,False,tog2,0
+oa_4781,"At time 80 in context ctx_00, can u_0211 access res_0026?",0,No,1,1.0,0.8,18793.94070012495,False,tog2,0
+oa_4791,"At time 139 in context ctx_03, can u_0043 access res_0063?",0,"No, because res_0063 is not governed by pol_026, which is valid in context",1,1.0,0.8,18864.444400183856,False,tog2,0
+oa_4809,"At time 154 in context ctx_02, can u_0107 access res_0198?",0,"No, because res_0198 is not governed by any political entity valid in context ctx_02.",1,1.0,0.8,19055.379200028256,False,tog2,0
+oa_4811,"At time 97 in context ctx_01, can u_0217 access res_0163?",0,"No, because res_0163 is not governed by pol_049 (which is valid in ctx",1,1.0,0.8,18497.15970014222,False,tog2,0
+oa_4813,"At time 118 in context ctx_06, can u_0459 access res_0041?",0,"To determine if u_0459 can access res_0041 at time 118,",0,0.0,0.8,3111.9212999474257,False,tog2,0
+oa_4820,"At time 157 in context ctx_05, can u_0054 access res_0107?",0,No,1,1.0,0.8,18470.762100070715,False,tog2,0
+oa_4831,"At time 138 in context ctx_02, can u_0151 access res_0047?",0,"No, because the reasoning provided does not establish any connection between res_0047, u_015",1,1.0,0.8,19177.298199851066,False,tog2,0
+oa_4840,"At time 196 in context ctx_04, can u_0456 access res_0107?",0,"No, because there is no direct or indirect connection between res_0107 and u_0456",1,1.0,0.8,19651.421300135553,False,tog2,0
+oa_4849,"At time 156 in context ctx_04, can u_0466 access res_0146?",0,"No, because there is no direct or indirect connection between res_0146 and u_0466",1,1.0,0.8,17881.486099911854,False,tog2,0
+oa_4853,"At time 100 in context ctx_04, can u_0290 access res_0052?",0,No,1,1.0,0.8,19034.489099867642,False,tog2,0
+oa_4859,"At time 186 in context ctx_02, can u_0145 access res_0166?",0,No,1,1.0,0.8,18356.543600093573,False,tog2,0
+oa_4861,"At time 133 in context ctx_05, can u_0093 access res_0132?",0,"No, because based on the given reasoning chain, res_0132 is not governed by pol_04",1,1.0,0.8,18813.96079994738,False,tog2,0
+oa_4869,"At time 85 in context ctx_05, can u_0452 access res_0051?",0,"No, because res_0051 is governed by pol_020, which is only valid in context",1,1.0,0.8,18665.5472998973,False,tog2,0
+oa_4874,"At time 101 in context ctx_05, can u_0122 access res_0032?",0,"No, because based on the given reasoning chain, res_0032 is not governed by any of the political",1,1.0,0.8,18518.297500209883,False,tog2,0
+oa_4875,"At time 109 in context ctx_05, can u_0123 access res_0051?",0,No,1,1.0,0.8,18489.53099991195,False,tog2,0
+oa_4884,"At time 141 in context ctx_05, can u_0471 access res_0033?",0,"No, because the reasoning provided does not indicate any direct connection between res_0033 and the contexts or political",1,1.0,0.8,18549.91629999131,False,tog2,0
+oa_4906,"At time 119 in context ctx_07, can u_0075 access res_0193?",0,No,1,1.0,0.8,19094.539400190115,False,tog2,0
+oa_4907,"At time 76 in context ctx_04, can u_0097 access res_0155?",0,"No, because based on the given reasoning chain, res_0155 is only governed by pol_01",1,1.0,0.8,18619.56400005147,False,tog2,0
+oa_4911,"At time 198 in context ctx_06, can u_0260 access res_0131?",0,"No, because based on the given reasoning chain, res_0160 is governed by pol_038",1,1.0,0.8,18532.597000012174,False,tog2,0
+oa_4919,"At time 147 in context ctx_03, can u_0419 access res_0009?",0,"No, because res_0009 is not governed by any political entity (pol) that is valid in context",1,1.0,0.8,18971.037599956617,False,tog2,0
+oa_4930,"At time 93 in context ctx_05, can u_0161 access res_0159?",0,"No, because res_0159 is not governed by pol_016, which is valid in context",1,1.0,0.8,18802.268899977207,False,tog2,0
+oa_4933,"At time 176 in context ctx_00, can u_0062 access res_0033?",0,"No, because there is no direct or indirect connection between res_0033 and any of the political entities (",1,1.0,0.8,18683.03980003111,False,tog2,0
+oa_4936,"At time 86 in context ctx_06, can u_0442 access res_0163?",0,"No, because res_0163 is not governed by any political entity valid in context ctx_06.",1,1.0,0.8,18320.15909999609,False,tog2,0
+oa_4946,"At time 106 in context ctx_02, can u_0490 access res_0124?",0,"No, u_0490 cannot access res_0124 at time 106 in context",1,1.0,0.8,19016.405900008976,False,tog2,0
+oa_4947,"At time 193 in context ctx_01, can u_0389 access res_0108?",0,"No, because res_0108 is not governed by any of the political entities (pol_001",1,1.0,0.8,18719.71690002829,False,tog2,0
+oa_4952,"At time 112 in context ctx_00, can u_0084 access res_0117?",0,No.,1,1.0,0.8,18291.72069998458,False,tog2,0
+oa_4962,"At time 133 in context ctx_05, can u_0379 access res_0066?",0,"No, because there is no direct or indirect connection between res_0066 and any of the contexts (ctx",1,1.0,0.8,18687.935500172898,False,tog2,0
+oa_4969,"At time 142 in context ctx_06, can u_0130 access res_0132?",0,"No, u_0130 cannot access res_0132 at time 142 in context",1,1.0,0.8,18786.96159995161,False,tog2,0
+oa_4972,"At time 135 in context ctx_07, can u_0449 access res_0049?",0,"No, because the reasoning chain provided does not indicate any connection between ctx_07 and the other contexts or entities.",1,1.0,0.8,18726.67109989561,False,tog2,0
+oa_4979,"At time 157 in context ctx_05, can u_0350 access res_0148?",0,"No, because there is no information provided about u_0350's governance or access to resources at time",1,1.0,0.8,18857.02220001258,False,tog2,0

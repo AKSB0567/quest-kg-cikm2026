@@ -1,0 +1,501 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+WebQTest-0,what does jamaican people speak,Jamaican English,Usain Bolt,0,0.0,0.25,138.3759998716414,False,quest_kg,0
+WebQTest-1,what did james k polk do before he was president,United States Representative,United States of America,0,0.6,0.6253891559085508,47.41279990412295,False,quest_kg,0
+WebQTest-3,who plays ken barlow in coronation street,William Roache,Coronation Street - Season 26,0,0.0,0.25,50.578700145706534,False,quest_kg,0
+WebQTest-6,where is jamarcus russell from,Mobile,American football player,0,0.0,0.25,45.72860011830926,False,quest_kg,0
+WebQTest-7,where was george washington carver from,Diamond,African American,0,0.0,0.25,59.30309998802841,False,quest_kg,0
+WebQTest-8,what else did ben franklin invent,Lightning rod,Inventor,0,0.0,0.25,48.10129990801215,False,quest_kg,0
+WebQTest-9,who was richard nixon married to,Pat Nixon,The Real Nixon: An Intimate Biography,0,0.25,0.6243638764593631,50.964900059625506,False,quest_kg,0
+WebQTest-12,who is governor of ohio 2011,John Kasich,"United States presidential election in Ohio, 2012",0,0.0,0.5,57.43720009922981,False,quest_kg,0
+WebQTest-13,who was vice president after kennedy died,Lyndon B. Johnson,Lyndon B. Johnson,1,1.0,0.8284269303399727,55.61919999308884,False,quest_kg,1
+WebQTest-14,where is the fukushima daiichi nuclear plant located,Japan,Fukushima I – 6,0,0.0,0.25,47.79700003564358,False,quest_kg,0
+WebQTest-16,what countries are part of the uk,Wales,Europe,0,0.0,0.831969865403606,66.15069997496903,False,quest_kg,0
+WebQTest-19,what is my timezone in louisiana,Central Time Zone,Central Time Zone,1,1.0,0.4154113997124827,54.56760013476014,False,quest_kg,1
+WebQTest-20,what did st augustine do,Writer,Introduction to the philosophy of Saint Augustine,0,0.0,0.25,52.472899900749326,False,quest_kg,0
+WebQTest-21,who is keyshia cole dad,Sal Gibson,Leon Cole,1,1.0,0.25,51.37650016695261,False,quest_kg,0
+WebQTest-22,what kind government does egypt have,Semi-presidential system,Government of Egypt,0,0.4,0.624478722626704,56.10570008866489,False,quest_kg,2
+WebQTest-23,what town was martin luther king assassinated in,Memphis,Assassination,0,0.0,0.25,49.243199871852994,False,quest_kg,0
+WebQTest-24,where did edgar allan poe died,Baltimore,Baltimore,1,1.0,0.31253888688029496,47.770699951797724,False,quest_kg,1
+WebQTest-26,what to do today in atlanta with kids,Fox Theatre,Ansley Park,0,0.4,0.3120395763497386,45.46849988400936,False,quest_kg,0
+WebQTest-28,what electorate does anna bligh represent,Electoral district of South Brisbane,"Queensland state election, 2009",0,0.0,0.25,51.42650008201599,False,quest_kg,0
+WebQTest-31,where did andy murray started playing tennis,2005,Andy Murray,0,0.0,0.5,44.448599917814136,False,quest_kg,0
+WebQTest-32,what is the australian dollar called,AUD,Australia,0,0.0,0.5,54.44470001384616,False,quest_kg,0
+WebQTest-33,what timezone is sweden,Central European Time Zone,Central European Time Zone,1,1.0,0.312148745573359,53.820200031623244,False,quest_kg,1
+WebQTest-34,who did cam newton sign with,Carolina Panthers,"Cecil Newton, Sr.",0,0.0,0.25,42.551999911665916,False,quest_kg,0
+WebQTest-35,what county is frederick md in,Frederick County,Frederick County,1,1.0,0.7337691309204561,43.1570999789983,False,quest_kg,1
+WebQTest-36,what highschool did harper lee go to,Monroe County High School,m.0lwxmyl,0,0.0,0.25,43.42780006118119,False,quest_kg,0
+WebQTest-37,what timezone is utah in,Mountain Time Zone,Mountain Time Zone,1,1.0,0.4156384307572233,49.22779998742044,False,quest_kg,1
+WebQTest-38,who did george w. bush run against for the second term,John Kerry,"United States presidential election, 2000",0,0.0,0.25,45.58910010382533,False,quest_kg,0
+WebQTest-39,who is niall ferguson 's wife,Ayaan Hirsi Ali,Niall Ferguson,0,0.0,0.5,44.987899949774146,False,quest_kg,0
+WebQTest-41,where is the galapagos islands located on a world map,Ecuador,g.12377byy,0,0.0,0.25,41.142999893054366,False,quest_kg,0
+WebQTest-42,what are the songs that justin bieber wrote,Somebody to Love,All Around The World,1,1.0,0.25,49.60839985869825,False,quest_kg,0
+WebQTest-43,what did george clemenceau do,Physician,Benjamin Clemenceau,0,0.0,0.5,40.30249989591539,False,quest_kg,0
+WebQTest-44,what is the state flower of arizona,Saguaro,Phoenix,0,0.0,0.8295073787999584,57.42980004288256,False,quest_kg,0
+WebQTest-45,where was rihanna born and raised,Saint Michael Parish,Saint Michael Parish,1,1.0,0.6675850867972828,54.4616999104619,False,quest_kg,1
+WebQTest-46,what year did president william henry harrison take office,1841-03-04,John Tyler,0,0.0,0.8343963896242181,53.695600014179945,False,quest_kg,0
+WebQTest-47,where george lopez was born,Mission Hills,United States of America,0,0.0,0.3126036849083575,52.44640004821122,False,quest_kg,4
+WebQTest-48,where are samsung based,Suwon,Lee Byung-chul,0,0.0,0.41424226524415364,39.882499957457185,False,quest_kg,0
+WebQTest-49,what did the islamic people believe in,Ṭūbā,Zainab al-Sughra ibn Ali,0,0.0,0.25,48.480299999937415,False,quest_kg,0
+WebQTest-51,who will play mr gray in the film,Jamie Dornan,Fifty Shades of Grey,0,0.0,0.6235954875884056,47.68799990415573,False,quest_kg,0
+WebQTest-52,what did george orwell died of,Tuberculosis,London,0,0.0,0.25,53.880399791523814,False,quest_kg,2
+WebQTest-54,what country did adolf hitler control,Nazi Germany,"Hitler left the army in 1920, and became party propagandist, editing the party newspaper the 'Volkischer Beobachter' ('People's Observer'), arranging frequent meetings, changing the name of the party to the National-sozialistische Deutsche Arbeiterpartei (the National Socialist German Workers' Party, NSDAP or Nazi Party), imposing himself as its Chairman by July 1921, and giving the new Party its symbol - the swastika - and its greeting, 'Heil!'.",0,0.029411764705882356,0.621172529788618,39.13459996692836,False,quest_kg,0
+WebQTest-55,who is michael buble,Actor,Canada,0,0.0,0.25,49.75549993105233,False,quest_kg,0
+WebQTest-56,what county is kansas city kansas,Wyandotte County,Wyandotte County,1,1.0,0.7241292932504985,43.2674998883158,False,quest_kg,1
+WebQTest-58,who did jackie robinson first play for,UCLA Bruins football,Baseball player,0,0.0,0.5,57.61860008351505,False,quest_kg,0
+WebQTest-59,when did annie open,1976-08-10,Annie: A New Musical,0,0.0,0.6366733465718238,64.39219997264445,False,quest_kg,0
+WebQTest-60,where did eleanor roosevelt die,Manhattan,Manhattan,1,1.0,0.25,63.77730006352067,False,quest_kg,1
+WebQTest-61,what are the religions practiced in indonesia,Catholicism,m.064szjw,0,0.0,0.25,61.61629990674555,False,quest_kg,0
+WebQTest-62,what was jesse james killed with,Firearm,Assassination,0,0.0,0.5,42.104699881747365,False,quest_kg,2
+WebQTest-63,who was vp for lincoln,Hannibal Hamlin,Andrew Johnson,1,1.0,0.8297907369406455,49.05379982665181,False,quest_kg,0
+WebQTest-64,what other books did charles dickens write,A Christmas Carol (Chrysalis Children's Classics Series),henry james reviewed work of charles dickens,0,0.4137931034482759,0.25,51.507600117474794,False,quest_kg,0
+WebQTest-65,who was the first dictator of the soviet union,Vladimir Lenin,Soviet democracy,0,0.0,0.8288456014384215,51.92340002395213,False,quest_kg,0
+WebQTest-66,what is the currency of puerto rico called,United States Dollar,United States Dollar,1,1.0,0.5,50.34339986741543,False,quest_kg,1
+WebQTest-67,what kind of cancer did carl wilson have,Lung cancer,Lung cancer,1,1.0,0.25,56.32889992557466,False,quest_kg,1
+WebQTest-68,who plays the voice of kitt in knight rider,William Daniels,KITT,0,0.0,0.6240397927304454,46.12189996987581,False,quest_kg,0
+WebQTest-69,what county is brentwood tennessee in,Williamson County,Tennessee,0,0.0,0.43361050630696263,42.221999960020185,False,quest_kg,2
+WebQTest-71,who did michael j fox marry,Tracy Pollan,Tracy Pollan and her husband Michael J. Fox,0,0.4,0.5,51.58520000986755,False,quest_kg,0
+WebQTest-72,what battles did stonewall jackson fight in,Manassas Station Operations,Battle of Antietam,0,0.6666666666666666,0.6248841664895733,46.871700091287494,False,quest_kg,0
+WebQTest-73,what language do the maasai tribe speak,Maasai Language,Maasai Language,1,1.0,0.25,42.88770002312958,False,quest_kg,1
+WebQTest-74,who did benjamin franklin get married to,Deborah Read,"In London, Franklin and his son William lodged for 15 years with Margaret Stevenson, whose daughter Mary married the anatomist and physiologist Hewson.",0,0.0,0.8281677494744911,50.72840000502765,False,quest_kg,0
+WebQTest-75,what disease did patrick swayze died from,Pancreatic cancer,Pancreatic cancer,1,1.0,0.5,38.48330001346767,False,quest_kg,1
+WebQTest-76,what works of art did leonardo da vinci produce,g.121wt37c,"Leonardo, paintings and drawings",0,0.28571428571428575,0.25,44.82119996100664,False,quest_kg,0
+WebQTest-77,what capital of austria,Vienna,Vienna,1,1.0,0.45660596756342786,58.159299893304706,False,quest_kg,1
+WebQTest-78,what type of cancer did eva peron have,Cervical cancer,Cancer,0,0.6666666666666666,0.4174601977468477,42.76060010306537,False,quest_kg,2
+WebQTest-79,what country did buddha come from,Nepal,Nepal,1,1.0,0.4155581751628865,47.46530018746853,False,quest_kg,1
+WebQTest-80,what county is greeley colorado in,Weld County,Weld County,1,1.0,0.7281240234567317,41.78570001386106,False,quest_kg,1
+WebQTest-82,what did peter tchaikovsky do,Musician,peter ilich tchaikovsky a fan was ivan sergeyevich turgenev,0,0.0,0.25,45.60380009934306,False,quest_kg,0
+WebQTest-83,which countries speak german officially,Belgium,East Germany,1,1.0,0.25,43.961199931800365,False,quest_kg,0
+WebQTest-84,what type of music did john lennon sing,Rock music,Beatles Classic Hits,0,0.0,0.25,50.80849980004132,False,quest_kg,0
+WebQTest-85,who are the colorado representatives,Mark Udall,m.09qpcz7,0,0.0,0.25,47.6929999422282,False,quest_kg,0
+WebQTest-86,which country does greenland belong to,Denmark,Denmark,1,1.0,0.6253037725147611,54.40350016579032,False,quest_kg,1
+WebQTest-87,what the zip code for seattle washington,98185,Area code 206,0,0.0,0.5,46.77170002833009,False,quest_kg,0
+WebQTest-88,who is willow smith mom name,Jada Pinkett Smith,Jada Pinkett Smith,1,1.0,0.5,50.687599927186966,False,quest_kg,1
+WebQTest-89,what do you call the chinese writing system,Simplified Chinese character,Traditional Chinese characters,1,1.0,0.5,47.94029984623194,False,quest_kg,0
+WebQTest-90,who played on the jeffersons,Damon Evans,m.03lkkdt,0,0.0,0.25,57.244200026616454,False,quest_kg,0
+WebQTest-91,what is the name of the san francisco newspaper,Synapse,San Francisco News-Call Bulletin Newspaper,1,1.0,0.25,57.692799950018525,False,quest_kg,0
+WebQTest-93,what continent does armenia belong to,Europe,Asia,0,0.0,0.5923104301596864,58.71760006994009,False,quest_kg,2
+WebQTest-94,what did randy savage died of,heart attack,heart attack,1,1.0,0.25,38.54430001229048,False,quest_kg,1
+WebQTest-95,what was the title of the book charles darwin wrote,On evolution,Autobiography,0,0.33333333333333337,0.4430318438317493,43.48209989257157,False,quest_kg,0
+WebQTest-96,where did richard nixon die,New York City,Cerebral edema,0,0.0,0.25,44.3877000361681,False,quest_kg,2
+WebQTest-97,what songs does smokey robinson sing,Just to See Her,Where There's Smoke,0,0.28571428571428575,0.25,42.195700109004974,False,quest_kg,0
+WebQTest-98,who was vice president when jfk was president,Lyndon B. Johnson,Lyndon B. Johnson,1,1.0,0.8291823270088912,47.506799921393394,False,quest_kg,1
+WebQTest-99,what is serbian language called,Serbian language,Serbian language,1,1.0,0.8279863915658845,53.42209991067648,False,quest_kg,1
+WebQTest-100,what language is spoken in haiti today,Haitian Creole,French,1,1.0,0.8292262862096251,53.7878000177443,False,quest_kg,2
+WebQTest-102,who played barbara gordon batgirl,Melinda McGraw,Barbara Gordon,0,0.0,0.6248580651551896,45.77020020224154,False,quest_kg,0
+WebQTest-103,what basketball teams has shaq played for,Miami Heat,Center,0,0.0,0.25,44.101100182160735,False,quest_kg,0
+WebQTest-104,where is jay leno from,New Rochelle,Scottish American,0,0.0,0.25,44.10140006802976,False,quest_kg,0
+WebQTest-105,what language do people from thailand speak,Mon Language,Thai Language,1,1.0,0.9365171398187889,55.39859994314611,False,quest_kg,0
+WebQTest-106,who did armie hammer play in the social network,Cameron Winklevoss,m.0d8kch7,0,0.0,0.25,56.476299883797765,False,quest_kg,0
+WebQTest-107,what was thomas jefferson role in the declaration of independence,Lawyer,Declaration of Independence,0,0.0,0.8309903004902865,59.62419998832047,False,quest_kg,0
+WebQTest-108,what was the book written by charles darwin,On evolution,Darwin's big book,0,0.5714285714285715,0.25,58.312200009822845,False,quest_kg,0
+WebQTest-109,who did tim tebow play college football for,Florida Gators football,American football player,0,0.3333333333333333,0.25,48.59360004775226,False,quest_kg,0
+WebQTest-110,who does peyton manning play football for,Denver Broncos,Quarterback,0,0.0,0.25,45.924299862235785,False,quest_kg,0
+WebQTest-111,where is the carpathian mountain range located,Europe,Čertovica,0,0.0,0.25,41.1720999982208,False,quest_kg,0
+WebQTest-112,what was robert burns,Bard,Poet,1,1.0,0.25,40.50629981793463,False,quest_kg,0
+WebQTest-114,who did the voice of darth vader in episode 3,Hayden Christensen,Darth Vader,0,0.0,0.25,40.408500004559755,False,quest_kg,0
+WebQTest-115,what super bowl did peyton manning win,Super Bowl XLI,Peyton Manning,0,0.0,0.25,50.4485999699682,False,quest_kg,0
+WebQTest-116,which country was justin bieber born in,Canada,Canada,1,1.0,0.25,69.54059982672334,False,quest_kg,1
+WebQTest-118,who fought in the gulf war 1991,France,1991 uprisings in Iraq,0,0.4,0.6252805183903057,62.49659997411072,False,quest_kg,0
+WebQTest-119,who plays london tipton in suite life on deck,Brenda Song,The Suite Life on Deck - Season 3,0,0.0,0.25,54.521000012755394,False,quest_kg,0
+WebQTest-121,what team did david beckham play for in 2011,LA Galaxy,m.07m4bqp,0,0.0,0.6235426361401415,48.99189993739128,False,quest_kg,0
+WebQTest-122,where did francisco coronado come from,Salamanca,Coronado Historic Site,0,0.0,0.5,41.05070000514388,False,quest_kg,0
+WebQTest-123,what all does google now do,Google Glass,Google Questions and Answers,0,0.4444444444444445,0.25,48.86999982409179,False,quest_kg,0
+WebQTest-124,what language does egyptian people speak,Modern Standard Arabic,Egyptian language,0,0.0,0.5,57.55440006032586,False,quest_kg,3
+WebQTest-125,what are abraham sons names,Midian,Abrahamic religions,0,0.0,0.5,51.68050015345216,False,quest_kg,0
+WebQTest-126,who wrote the jana gana mana,Ram Singh Thakur,Janã-Ganã Manã,0,0.0,0.25,42.11740009486675,False,quest_kg,2
+WebQTest-127,what type of cancer did gilda radner die of,Ovarian cancer,Ovarian cancer,1,1.0,0.25,54.95240003801882,False,quest_kg,1
+WebQTest-128,who plays juni cortez,Daryl Sabara,Juni Cortez,0,0.0,0.25,47.44799993932247,False,quest_kg,0
+WebQTest-129,what was lucille ball,Actor,Actor,1,1.0,0.25,45.65520002506673,False,quest_kg,1
+WebQTest-131,who inspired obama,Nipsey Russell,Saul Alinsky,1,1.0,0.5,52.62769991531968,False,quest_kg,0
+WebQTest-132,who is michael j fox wife,Tracy Pollan,Tracy Pollan and her husband Michael J. Fox,0,0.4,0.5,38.27470005489886,False,quest_kg,0
+WebQTest-133,where did dolly parton grow up,Sevierville,Musician,0,0.0,0.3127218327548066,47.010699985548854,False,quest_kg,0
+WebQTest-134,what type of books did agatha christie wrote,Writer,The Complete Christie: An Agatha Christie Encyclopedia,0,0.0,0.8336352553002313,43.86899992823601,False,quest_kg,0
+WebQTest-138,what are the four main languages spoken in spain,Catalan language,Spanish Language,1,1.0,0.25,55.895600002259016,False,quest_kg,4
+WebQTest-139,where is the nra headquarters located,Fairfax,Civil and political rights,0,0.0,0.25,38.26179984025657,False,quest_kg,0
+WebQTest-141,who is gimli 's father in the hobbit,Gloin,The Lord of the Rings,0,0.0,0.6241221019554655,46.18469998240471,False,quest_kg,0
+WebQTest-142,who developed the tcp ip reference model,Vint Cerf,Berkeley Open Infrastructure for Network Computing,0,0.0,0.5,38.02129998803139,False,quest_kg,0
+WebQTest-145,what college did albert einstein go to,ETH Zurich,Humboldt University of Berlin Department of Physics,0,0.5217391304347826,0.415432993818805,49.41289988346398,False,quest_kg,0
+WebQTest-146,what team does jordan own,Jordan national football team,Al-Wehdat SC,1,1.0,0.5,51.9705000333488,False,quest_kg,2
+WebQTest-147,who is the state governor of tennessee,William Haslam,Nashville,0,0.0,0.6197983663650912,50.24410015903413,False,quest_kg,0
+WebQTest-149,what do portuguese people speak,Portuguese Language,Joao Carlos Almeida,0,0.0,0.25,63.65630007348955,False,quest_kg,0
+WebQTest-150,what language does cuba speak,Haitian Creole,Spanish Language,1,1.0,0.8308522519608827,60.16679992899299,False,quest_kg,2
+WebQTest-153,what are the sights to see in madrid,Madrid Arena,Royal Palace of Madrid,1,1.0,0.3123476182386746,58.74840007163584,False,quest_kg,0
+WebQTest-154,what instruments did louis armstrong play,Cornet,Trumpet,1,1.0,0.4169745506901332,52.04669991508126,False,quest_kg,2
+WebQTest-155,what year was george w bush elected,2000-11-07,"United States presidential election, 2000",0,0.25,0.5,53.770000115036964,False,quest_kg,0
+WebQTest-156,what time zone am i in california,Pacific Time Zone,Pacific Time Zone,1,1.0,0.615990833929753,58.577399933710694,False,quest_kg,1
+WebQTest-157,where is mission san buenaventura located,Ventura County,Ventura County,1,1.0,0.5,37.32439992018044,False,quest_kg,1
+WebQTest-159,what time in hilo hawaii,Hawaii-Aleutian Time Zone,Hawaii-Aleutian Time Zone,1,1.0,0.6233783623975235,41.11150000244379,False,quest_kg,1
+WebQTest-160,where did rudolf virchow conduct his research,Humboldt University of Berlin,Virchow als biologie,0,0.0,0.31270203447072137,39.406499825417995,False,quest_kg,0
+WebQTest-161,what university did gordon brown attend,University of Edinburgh,United Kingdom,0,0.0,0.6240827965630482,40.94349988736212,False,quest_kg,0
+WebQTest-162,what countries does greece share borders with,Albania,Europe,0,0.0,0.8308141874023525,56.38399999588728,False,quest_kg,0
+WebQTest-163,what year did the seahawks win the superbowl,Super Bowl XLVIII,Super Bowl XLVIII,1,1.0,0.4154031767524656,43.45969995483756,False,quest_kg,1
+WebQTest-164,what did stephen hawking become famous for,Cosmologist,Cosmologist,1,1.0,0.25,44.74580008536577,False,quest_kg,1
+WebQTest-165,who plays donna noble,Catherine Tate,Donna Noble,0,0.0,0.25,38.36200013756752,False,quest_kg,0
+WebQTest-166,what was dr seuss education,"Lincoln College, Oxford",Theodore Lesieg,0,0.0,0.8187618060963522,44.94559997692704,False,quest_kg,0
+WebQTest-167,where did queensland get its name from,Queen Victoria,Brisbane,0,0.0,0.25,46.18449998088181,False,quest_kg,3
+WebQTest-168,what document did james madison write,"The Papers of James Madison, Secretary of State Series, Vol. 2",The complete Madison,1,1.0,0.6250000622588446,52.61959997005761,False,quest_kg,0
+WebQTest-169,what are the three official languages of belgium,Dutch Language,Dutch Language,1,1.0,0.334083912850557,59.15740015916526,False,quest_kg,1
+WebQTest-170,who played bilbo in lord of the rings,Norman Bird,Lord of the Rings,0,0.0,0.25,42.4171001650393,False,quest_kg,0
+WebQTest-171,what airport do you fly into to get to destin fl,Destin–Fort Walton Beach Airport,Destin–Fort Walton Beach Airport,1,1.0,0.5,46.492400113493204,False,quest_kg,1
+WebQTest-172,what do you call members of the senate,Senator,Assistant Majority Leader of the United States Senate,0,0.5454545454545454,0.31246619672284015,41.259500198066235,False,quest_kg,0
+WebQTest-173,what countries are part of the baltic,Latvia,Latvia,1,1.0,0.3128292210691891,37.37340006045997,False,quest_kg,1
+WebQTest-174,what team does colin kaepernick play for,San Francisco 49ers,American football player,0,0.0,0.41782720917819643,38.943400140851736,False,quest_kg,0
+WebQTest-175,where did joe flacco attend college,University of Delaware,American football player,0,0.0,0.25,46.502399956807494,False,quest_kg,0
+WebQTest-176,who is emma stone father,Jeff Stone,Krista Stone,0,0.5,0.25,38.100200006738305,False,quest_kg,3
+WebQTest-177,where was theodore roosevelt buried,Youngs Memorial Cemetery,Youngs Memorial Cemetery,1,1.0,0.5,45.38959986530244,False,quest_kg,1
+WebQTest-178,who was the leader of the us during wwii,Franklin D. Roosevelt,George S. Patton,0,0.3333333333333333,0.25,45.430300058797,False,quest_kg,0
+WebQTest-179,what artistic movement did henri matisse belong to,Neo-impressionism,Visual Artist,0,0.0,0.4173739116614953,47.009099973365664,False,quest_kg,3
+WebQTest-180,where the missouri river ends,Mississippi River,Mississippi River,1,1.0,0.31280057600244715,52.35840007662773,False,quest_kg,1
+WebQTest-181,what type of currency do they use in thailand,Thai baht,Thai baht,1,1.0,0.5,74.46289993822575,False,quest_kg,1
+WebQTest-182,who is khloe kardashian 's husband,Lamar Odom,Robert Kardashian,0,0.0,0.25,61.00340001285076,False,quest_kg,0
+WebQTest-184,what state does romney live in,Massachusetts,United States of America,0,0.0,0.25,51.083700032904744,False,quest_kg,0
+WebQTest-185,what type of government does france use,Semi-presidential system,"French Economic, Social and Environmental Council",0,0.0,0.5,65.94010000117123,False,quest_kg,0
+WebQTest-186,who rules denmark right now,Helle Thorning-Schmidt,Politics of Denmark,0,0.5714285714285715,0.25,59.913899982348084,False,quest_kg,0
+WebQTest-187,what did stephen hawking study,Physics,Dennis W. Sciama,0,0.0,0.25,44.439699966460466,False,quest_kg,0
+WebQTest-188,where did bristol palin go to school,West Anchorage High School,United States of America,0,0.0,0.25,42.17500006780028,False,quest_kg,0
+WebQTest-189,what region of the world is egypt associated with,Middle East,g.1hhc3d9l7,0,0.0,0.25,51.21929990127683,False,quest_kg,0
+WebQTest-190,what did dr. seuss do,Visual Artist,"Dr. Seuss, from then to now",0,0.0,0.33341530455973856,44.79889990761876,False,quest_kg,0
+WebQTest-191,where did drew brees go to college wikianswers,Stanford Graduate School of Business,Athlete,0,0.0,0.5,40.110799949616194,False,quest_kg,0
+WebQTest-193,what school did ben roethlisberger go to,Miami University,Kenneth Todd Roethlisberger,0,0.0,0.5,39.16939999908209,False,quest_kg,0
+WebQTest-194,where did the iroquois indians come from,Québec,Seneca people,0,0.0,0.41694018775496405,43.354300083592534,False,quest_kg,0
+WebQTest-195,what kind of guitar did george harrison use,Rickenbacker 360/12,Guitarist,0,0.0,0.6246577272702478,49.108299892395735,False,quest_kg,3
+WebQTest-196,what language do navajo people speak,Navajo Language,Navajo Language,1,1.0,0.25,43.99940022267401,False,quest_kg,1
+WebQTest-197,what places make up new england,New Hampshire,Massachusetts,1,1.0,0.25,45.91610003262758,False,quest_kg,2
+WebQTest-199,what type of government does iraq have now,Parliamentary system,Republic,1,1.0,0.6135531882532285,52.26469994522631,False,quest_kg,4
+WebQTest-200,where was the vietnam war location,Vietnam,North Vietnam,1,1.0,0.25,43.547399807721376,False,quest_kg,4
+WebQTest-201,who did gerald ford select as his vice president when he became president,Nelson Rockefeller,Richard Nixon,0,0.0,0.5,43.81270008161664,False,quest_kg,2
+WebQTest-202,what is the currency used in italy,Euro,Italian lira,0,0.0,0.5,68.13169992528856,False,quest_kg,2
+WebQTest-204,what is the capital of modern egypt,Cairo,Cairo,1,1.0,0.4540415190625967,77.64790020883083,False,quest_kg,1
+WebQTest-205,what school did sir ernest rutherford go to,University of Cambridge,"School of Physics and Astronomy, University of Manchester",0,0.4800000000000001,0.25,50.709899980574846,False,quest_kg,0
+WebQTest-206,what position does brandon roy play,Small forward,Basketball player,0,0.0,0.25,35.603800090029836,False,quest_kg,4
+WebQTest-207,where is harvard university,United States of America,Harvard University Department of Government,0,0.22222222222222224,0.25,39.728800067678094,False,quest_kg,0
+WebQTest-209,where is laos in world map,Southeast Asia,Southeast Asia,1,1.0,0.5,60.89870003052056,False,quest_kg,1
+WebQTest-210,where is tyrese gibson from,Watts,Singer,0,0.0,0.25,63.50450008176267,False,quest_kg,0
+WebQTest-211,what countries are near italy,Slovenia,Europe,0,0.0,0.8323533692602441,75.89310011826456,False,quest_kg,0
+WebQTest-212,which states does the colorado river run through,Arizona,Gulf of California,0,0.5,0.25,51.560299936681986,False,quest_kg,0
+WebQTest-213,who did scarlett johansson date,Patrick Wilson,m.065ppwb,0,0.0,0.25,44.205799931660295,False,quest_kg,0
+WebQTest-214,which continents were part of the roman empire,Europe,Africa Proconsularis,0,0.5,0.25,42.536000022664666,False,quest_kg,0
+WebQTest-215,where was elvis costello born,Paddington,United Kingdom,0,0.0,0.25,48.249500105157495,False,quest_kg,0
+WebQTest-216,where are the gobi desert located on a map,Mongolia,Mongolia,1,1.0,0.25,37.75710007175803,False,quest_kg,1
+WebQTest-217,what type of government does the us follow,Presidential system,Presidential system,1,1.0,0.25,83.0284000840038,False,quest_kg,1
+WebQTest-218,in which continent is germany,Europe,Europe,1,1.0,0.4630116562588662,69.71710012294352,False,quest_kg,1
+WebQTest-220,what language turkey people speak,Ladino Language,Turkish Language,1,1.0,0.9362057369070823,58.387700002640486,False,quest_kg,0
+WebQTest-221,who does jeremy lin play for,Los Angeles Lakers,Basketball player,0,0.0,0.25,39.138799998909235,False,quest_kg,0
+WebQTest-222,where is the seychelles on world map,Africa,Africa,1,1.0,0.25,48.85350004769862,False,quest_kg,1
+WebQTest-224,where did william morris go to college,"Exeter College, Oxford",Morris & Co.,0,0.0,0.44567698413738793,46.19759996421635,False,quest_kg,0
+WebQTest-225,what state is mount st. helens in,Washington,Washington,1,1.0,0.25,41.02500015869737,False,quest_kg,1
+WebQTest-226,who is jimmy savile,Disc jockey,Male,0,0.0,0.4185383450523436,39.396800100803375,False,quest_kg,0
+WebQTest-227,where were the seneca indians located,New York,Seneca,0,0.0,0.25,41.62809997797012,False,quest_kg,0
+WebQTest-231,when did florida marlins join mlb,1994 Major League Baseball Season,Florida Marlins,0,0.0,0.5,38.28039998188615,False,quest_kg,0
+WebQTest-232,what countries have spanish as the national language,Equatorial Guinea,Spain,1,1.0,0.25,42.876599822193384,False,quest_kg,0
+WebQTest-233,what to see in phoenix arizona,Pueblo Grande Ruin,Arizona Science Center,1,1.0,0.5,42.730600107461214,False,quest_kg,0
+WebQTest-234,what countries does the panama canal go through,Panama,Atlantic Ocean,0,0.0,0.25,39.40030001103878,False,quest_kg,0
+WebQTest-235,what is charlie chaplin famous for,Actor,His Favourite Pastime,0,0.0,0.25,54.241400212049484,False,quest_kg,0
+WebQTest-237,what did fred durst do,Actor,Dallas Durst,0,0.0,0.25,53.48040000535548,False,quest_kg,0
+WebQTest-239,where do american bulldogs originate from,United States of America,Dog,0,0.0,0.25,49.28310005925596,False,quest_kg,2
+WebQTest-240,what colleges did albert einstein teach at,ETH Zurich,"He spent only a year teaching there, however, before he was appointed, in 1909, as junior professor of  physics at the University of Zurich.",0,0.2857142857142857,0.3118253308380766,48.69159986265004,False,quest_kg,0
+WebQTest-241,who plays the voice of brian on family guy,Seth MacFarlane,m.02ntr29,0,0.0,0.25,48.529200023040175,False,quest_kg,0
+WebQTest-243,where did george w bush live as a child,New Haven,Barbara Bush,0,0.0,0.5,69.11000004038215,False,quest_kg,0
+WebQTest-245,what year was the first miss america pageant held,1921-09,Miss America 1937,0,0.0,0.25,53.10179991647601,False,quest_kg,0
+WebQTest-246,what was nikola tesla inventions,Wireless telegraphy,Tesla coil,1,1.0,0.25,57.2949000634253,False,quest_kg,3
+WebQTest-247,where did flemish people come from,France,Belgium,1,1.0,0.25,47.24700003862381,False,quest_kg,3
+WebQTest-248,what state new york city belong to,New York,New York,1,1.0,0.25,50.198799930512905,False,quest_kg,1
+WebQTest-249,what was the cause of death for bruce lee,Cerebral edema,The Game of Death,0,0.0,0.5,43.67419984191656,False,quest_kg,2
+WebQTest-250,what type of government does usa follow,Presidential system,Presidential system,1,1.0,0.8233663420088585,68.18840000778437,False,quest_kg,1
+WebQTest-251,what type of currency do they use in england,Pound sterling,Pound sterling,1,1.0,0.5,59.76380011998117,False,quest_kg,1
+WebQTest-252,where was benjamin franklin educated,Boston Latin School,"He was elected chairman (1761-62) of the Committee of Colonies and Trade and of the Royal Society for the Encouragement of the Arts, Manufactures and Commerce, which had been founded by Shipley in 1754, with the aid of Sir Joshua Reynolds and Dr. Johnson, and which was the predecessor of the Royal Academy of Arts, founded in 1768.",0,0.0,0.5,61.91909988410771,False,quest_kg,0
+WebQTest-253,what countries included in the uk,Wales,Europe,0,0.0,0.8311758648539331,55.62770017422736,False,quest_kg,0
+WebQTest-254,what countries in the world speak chinese,Vietnam,China,1,1.0,0.25,45.23160005919635,False,quest_kg,3
+WebQTest-255,where obama went to school,Occidental College,Barack Obama,0,0.0,0.25,45.24460015818477,False,quest_kg,0
+WebQTest-256,what is the primary language of china,Standard Chinese,Standard Chinese,1,1.0,0.822961954606335,57.467499980702996,False,quest_kg,1
+WebQTest-257,who was the soviet leader during world war ii,Leonid Brezhnev,Taganrog during World War II,0,0.0,0.5,46.28680017776787,False,quest_kg,0
+WebQTest-258,which of the following does australia export the most,Energy industry,g.1hhc3l25l,0,0.0,0.25,57.2758000344038,False,quest_kg,0
+WebQTest-260,where was the city of david,Jerusalem,Jerusalem,1,1.0,0.5,40.463099954649806,False,quest_kg,1
+WebQTest-261,what is cindy sherman known for,Visual Artist,Female,0,0.0,0.25,40.06409994326532,False,quest_kg,0
+WebQTest-262,what tv shows did shawnee smith play in,All is Forgiven,Shawnee Smith,0,0.0,0.25,39.34199991635978,False,quest_kg,0
+WebQTest-264,what does australia use for currency,Australian dollar,Australian dollar,1,1.0,0.5,57.48880002647638,False,quest_kg,1
+WebQTest-265,which airport to fly into rome,Ciampino–G. B. Pastine International Airport,Italian Met Office Airport,0,0.25,0.25,50.53839995525777,False,quest_kg,3
+WebQTest-266,what is there to do for fun in kansas city,Negro Leagues Baseball Museum,Worlds of Fun,1,1.0,0.6245165396904868,49.321800004690886,False,quest_kg,0
+WebQTest-267,where was martin luther king jr raised,Atlanta,United States of America,0,0.0,0.624288905451507,40.947499917820096,False,quest_kg,0
+WebQTest-268,what year was lebron james rookie season,2003–04 NBA season,LeBron James,0,0.0,0.25,38.25430013239384,False,quest_kg,0
+WebQTest-269,where does delaware river start,West Branch Delaware River,Delaware Bay,0,0.3333333333333333,0.25,40.19930004142225,False,quest_kg,4
+WebQTest-270,what kind of monarchy does japan have,Parliamentary system,Constitutional monarchy,1,1.0,0.6156894156644117,54.09070011228323,False,quest_kg,2
+WebQTest-271,where did mitt romney 's parents come from,Detroit,George W. Romney,0,0.0,0.6222438117350214,38.916599936783314,False,quest_kg,0
+WebQTest-273,when did michael jordan return to the nba,1984,Basketball player,0,0.0,0.25,40.97789991647005,False,quest_kg,0
+WebQTest-276,where was mission san rafael located,94901,Marin County,1,1.0,0.5,36.90249985083938,False,quest_kg,2
+WebQTest-277,who was esther 's husband,Ahasuerus,The Bible,0,0.0,0.41676445464633993,39.007899817079306,False,quest_kg,0
+WebQTest-278,who 's dating claire danes,Hugh Dancy,Claire Danes,0,0.0,0.5,51.84219987131655,False,quest_kg,0
+WebQTest-279,what county is st paul va in,Wise County,Virginia,0,0.0,0.25,58.60370001755655,False,quest_kg,3
+WebQTest-281,what type of sports do japanese play,Japan women's national handball team,Japan national football team,1,1.0,0.3114648597648982,76.66480005718768,False,quest_kg,0
+WebQTest-282,which countries share a border with russia,Latvia,Europe,0,0.0,0.8284835728781621,80.23960003629327,False,quest_kg,0
+WebQTest-284,where did the latin language originate from,Indo-European languages,Indo-European languages,1,1.0,0.31243668753807796,42.766000144183636,False,quest_kg,1
+WebQTest-286,what school did karl benz go to,Karlsruhe Institute of Technology,Johann George Benz,0,0.0,0.25,36.53339995071292,False,quest_kg,0
+WebQTest-287,what movies has carmen electra been in,We Are Family,m.0tl8vtt,0,0.25,0.6253404172679217,42.51840012148023,False,quest_kg,0
+WebQTest-289,when do world war ii end,1945-09-02,"Treaty of Peace with Italy, 1947",0,0.0,0.5,43.43630000948906,False,quest_kg,0
+WebQTest-291,where did morgan freeman graduate,Pasadena Playhouse,United States of America,0,0.0,0.6248379081885083,41.68009990826249,False,quest_kg,0
+WebQTest-294,who was carolus linnaeus,Scientist,francois boissier de sauvages work related to carolus linnaeus,0,0.0,0.41698534228027345,39.78580003604293,False,quest_kg,0
+WebQTest-295,what type of government does germany have now,Representative democracy,Federal republic,1,1.0,0.8256659085061684,58.940700022503734,False,quest_kg,0
+WebQTest-296,what kind of government does libya have today,Parliamentary republic,Parliamentary republic,1,1.0,0.416338178108222,52.256800001487136,False,quest_kg,3
+WebQTest-297,what time zone is anaheim california,Pacific Time Zone,Pacific Time Zone,1,1.0,0.6206707412833808,44.19029993005097,False,quest_kg,1
+WebQTest-298,what year did the orioles go to the world series,1970 World Series,1970 World Series,1,1.0,0.5,40.61820008791983,False,quest_kg,1
+WebQTest-300,who is sir francis bacon,Author,Statesman,1,1.0,0.25,51.31189990788698,False,quest_kg,0
+WebQTest-301,what were amelia earhart 's achievements,Pilot,Writer,1,1.0,0.25,50.76869996264577,False,quest_kg,0
+WebQTest-302,what are the official colors of the dallas cowboys,White,Navy Blue,1,1.0,0.25,43.5266001150012,False,quest_kg,3
+WebQTest-303,where did margaret hoover go to college,Bryn Mawr College,Female,0,0.0,0.25,39.691099897027016,False,quest_kg,0
+WebQTest-304,what is jamie oliver children names,Poppy Honey Rosie Oliver,Petal Blossom Rainbow Oliver,1,1.0,0.31258445889150865,52.53469990566373,False,quest_kg,3
+WebQTest-305,where does bradley walsh live,Los Angeles,United Kingdom,0,0.0,0.25,51.28279980272055,False,quest_kg,0
+WebQTest-306,who is the head coach of inter milan,Walter Mazzarri,Inter Milan,0,0.0,0.25,41.33639996871352,False,quest_kg,0
+WebQTest-308,who did reese witherspoon get married to,Jim Toth,Reese Witherspoon,0,0.0,0.8326881655643958,43.59709983691573,False,quest_kg,0
+WebQTest-310,what kind of money should i take to costa rica,Costa Rican colón,Costa Rican colón,1,1.0,0.5,51.44160008057952,False,quest_kg,1
+WebQTest-311,where is the ufc headquarters,Las Vegas,Rorion Gracie,0,0.0,0.25,38.78870001062751,False,quest_kg,0
+WebQTest-312,who plays captain kirk in star trek,William Shatner,m.02h8g09,0,0.0,0.25,43.75039995647967,False,quest_kg,0
+WebQTest-313,who does albert pujols play for 2012,Scottsdale Scorpions,Baseball player,0,0.0,0.41751347144039763,52.43710009381175,False,quest_kg,0
+WebQTest-314,what kind of government is sweden,Parliamentary system,Parliamentary system,1,1.0,0.6239837149562476,72.79759994708002,False,quest_kg,2
+WebQTest-315,where was country singer george jones born,Saratoga,Singer,0,0.0,0.25,57.15229990892112,False,quest_kg,0
+WebQTest-316,what did shakespeare become famous for,Author,m.0fps7tp,0,0.0,0.25,65.1752999983728,False,quest_kg,0
+WebQTest-317,where does russia import from,Uzbekistan,Do not buy Russian goods!,0,0.0,0.6429513609637336,60.94510015100241,False,quest_kg,0
+WebQTest-318,what is the money of switzerland called,Swiss franc,Swiss franc,1,1.0,0.5,56.05700006708503,False,quest_kg,1
+WebQTest-321,what do people in australia speak,Esperanto Language,Alana Boyd,0,0.0,0.25,56.694400031119585,False,quest_kg,0
+WebQTest-322,what has ian somerhalder acted in,Pulse,Ian Somerhalder,0,0.0,0.25,41.95620003156364,False,quest_kg,0
+WebQTest-323,what movies did ron howard director,The Da Vinci Code,Presidential Reunion,1,1.0,0.25,49.047499895095825,False,quest_kg,0
+WebQTest-326,what did gerald r ford die from,Cardiovascular disease,"Leslie Lynch King, Sr.",0,0.0,0.25,40.98280007019639,False,quest_kg,2
+WebQTest-327,what two continents is turkey on,Europe,Anatolia,0,0.0,0.5,57.91609990410507,False,quest_kg,0
+WebQTest-328,where did kevin love go to college,"University of California, Los Angeles",Basketball player,0,0.0,0.25,39.608199847862124,False,quest_kg,0
+WebQTest-329,what type of government was formed when italy unified,Unitary state,Constitutional republic,1,1.0,0.25,61.12840003333986,False,quest_kg,3
+WebQTest-331,where was the temple of karnak built,Luxor Governorate,Egypt,1,1.0,0.5,37.72129979915917,False,quest_kg,2
+WebQTest-333,what movies did morgan freeman star in,High Crimes,Morgan Freeman,0,0.0,0.25,39.52450002543628,False,quest_kg,0
+WebQTest-334,who did john kennedy have affairs with,Marilyn Monroe,An American Affair,0,0.0,0.832076333396237,51.10909999348223,False,quest_kg,0
+WebQTest-335,what type of money to take to cuba,Cuban peso,Cuban municipality,0,0.5,0.5,54.77789998985827,False,quest_kg,0
+WebQTest-336,what currency should you take to morocco,Moroccan dirham,Moroccan franc,0,0.5,0.5,54.57690008915961,False,quest_kg,2
+WebQTest-337,who is mary mcleod bethune for kids,Educator,Female,0,0.0,0.25,43.74879994429648,False,quest_kg,0
+WebQTest-338,what do they call money in japan,Japanese yen,Japanese yen,1,1.0,0.5,55.700100027024746,False,quest_kg,1
+WebQTest-339,what nationality is mother teresa,Ottoman Empire,Nun,0,0.0,0.25,44.82289985753596,False,quest_kg,4
+WebQTest-340,who is richard pryor son,Steven Pryor,Steven Pryor,1,1.0,0.25,47.766400035470724,False,quest_kg,1
+WebQTest-341,what countries share borders with spain,France,Europe,0,0.0,0.8316101273549195,58.32500010728836,False,quest_kg,0
+WebQTest-342,what countries have english as their official language,Sudan,United Kingdom,1,1.0,0.25,68.9885001629591,False,quest_kg,0
+WebQTest-343,what international organizations is china part of,G-20 major economies,Shanghai Cooperation Organisation,1,1.0,0.25,73.68799997493625,False,quest_kg,0
+WebQTest-344,what county is west st paul in,Dakota County,Dakota County,1,1.0,0.550909711319418,59.43289981223643,False,quest_kg,1
+WebQTest-346,who does donnie wahlberg play in the sixth sense,Vincent Grey,PG-13 (USA),0,0.0,0.6378520438608336,51.29480012692511,False,quest_kg,0
+WebQTest-347,what did baron de montesquie influence,William Blackstone,"Paul Féval, père",1,1.0,0.3122695377507753,46.62030003964901,False,quest_kg,0
+WebQTest-349,who did carlos boozer play for,Cleveland Cavaliers,Carmani Boozer,0,0.0,0.25,38.34660002030432,False,quest_kg,0
+WebQTest-351,who owns the portland press herald,"Blethen Maine Newspapers, Inc.",Portland,0,0.0,0.25,37.715000100433826,False,quest_kg,0
+WebQTest-352,what did albert speer design,Deutsches Stadion,Architect,0,0.0,0.5498217859383764,38.66020007990301,False,quest_kg,0
+WebQTest-354,what art movement did leonardo da vinci belong to,High Renaissance,Pastel Art,1,1.0,0.5,42.41759981960058,False,quest_kg,2
+WebQTest-356,what airport is near arlington tx,Arlington Municipal Airport,Arlington Municipal Airport,1,1.0,0.830933784404509,39.88000005483627,False,quest_kg,1
+WebQTest-359,what team does heskey play for,Aston Villa F.C.,m.07m4btt,0,0.0,0.622873543771015,38.573999889194965,False,quest_kg,0
+WebQTest-360,where did emperor hirohito live,"Aoyama, Minato, Tokyo",Japan,0,0.0,0.6669016393523848,44.80450018309057,False,quest_kg,0
+WebQTest-361,what to do and see in vienna austria,Liechtenstein Museum,Austria,0,0.0,0.5,40.15740007162094,False,quest_kg,0
+WebQTest-362,when did conflict start in ireland,Irish Confederate Wars,Irish War of Independence,1,1.0,0.25,44.42079993896186,False,quest_kg,0
+WebQTest-365,what is there to do in peoria illinois,John C. Flanagan House Museum,Illinois,0,0.4,0.25,42.10030008107424,False,quest_kg,0
+WebQTest-366,what language do british speak,Esperanto Language,English Language,1,1.0,0.822808849415564,58.03130008280277,False,quest_kg,0
+WebQTest-367,what makes elvis presley famous,Musician,Musician,1,1.0,0.4170439652690818,50.85769994184375,False,quest_kg,1
+WebQTest-370,what language do people speak in the netherlands,Dutch Language,Dutch Language,1,1.0,0.9362623433463645,58.80250013433397,False,quest_kg,1
+WebQTest-371,what are the major languages spoken in greece,Greek Language,Greek Language,1,1.0,0.5,60.326899867504835,False,quest_kg,1
+WebQTest-374,what type of artist is henri matisse,Painting,Collage,1,1.0,0.6288625069531165,43.36899984627962,False,quest_kg,0
+WebQTest-375,what was the first book charles dickens wrote,Oliver Twist,Drood: A Novel,0,0.0,0.9370285050262963,49.43550005555153,False,quest_kg,0
+WebQTest-376,what books did agatha christie wrote,Death On The Nile (Hercule Poirot Mysteries (Paperback)),The Complete Christie: An Agatha Christie Encyclopedia,0,0.5853658536585366,0.8336578270928283,47.14499996043742,False,quest_kg,0
+WebQTest-377,what school did michael jordan attend,University of North Carolina at Chapel Hill,Basketball player,0,0.0,0.25,39.653899846598506,False,quest_kg,0
+WebQTest-379,what year does hitler die,1945-04-30,"On 29 April, having finally accepted the inevitability of defeat, Hitler married his long-term mistress Eva Braun and dictated his final political testament, appointed Admiral Donitz as head of state and Goebbels as chancellor, and concluded, \""Above all, I charge the leaders of the nation and those under them to scrupulous observance of the laws of race and to merciless opposition to the universal poisoner of all peoples, international Jewry.\"" The following day, Hitler committed suicide with his wife and, in accordance with his instructions, their bodies were carried into the garden of the Reich Chancellery by aides, covered with petrol and burned (as documented by, for example, Trevor-Roper's^:  'The Last Days of Hitler', 1947).",0,0.0,0.8304055478637938,40.7901001162827,False,quest_kg,0
+WebQTest-380,where is mount st helens volcano,North America,Crater Glacier,0,0.0,0.25,38.525700103491545,False,quest_kg,2
+WebQTest-381,what shows are shot in new york,Trial Heat,Flight of the Conchords,1,1.0,0.25,48.320400062948465,False,quest_kg,3
+WebQTest-382,what book did tupac write,The Rose That Grew from Concrete,The rose that grew from concrete,1,1.0,0.5,83.14579981379211,False,quest_kg,1
+WebQTest-383,what language do chinese people write in,Simplified Chinese character,Traditional Chinese characters,1,1.0,0.5,74.87810007296503,False,quest_kg,0
+WebQTest-384,what was robert burns famous for,Bard,Poet,1,1.0,0.25,62.937800073996186,False,quest_kg,0
+WebQTest-385,when did william mckinley died,1901-09-14,Assassination,0,0.0,0.25,43.63159998320043,False,quest_kg,0
+WebQTest-386,how deep is lake merritt oakland,3.048,Oakland,0,0.0,0.25,44.2480999045074,False,quest_kg,0
+WebQTest-388,what are the important holidays of islam,Mawlid,Islamic New Year,1,1.0,0.25,38.90520008280873,False,quest_kg,4
+WebQTest-389,what type of music did claude debussy play,Incidental music,20th-century classical music,1,1.0,0.25,43.802700005471706,False,quest_kg,3
+WebQTest-390,when was the last time the toronto maple leafs were in the stanley cup finals,1967 Stanley Cup Finals,2009 Stanley Cup Finals,0,0.75,0.6240821398301871,39.27120007574558,False,quest_kg,0
+WebQTest-392,what team is hank baskett on 2010,Indianapolis Colts,Hank Baskett,0,0.0,0.25,35.54670000448823,False,quest_kg,0
+WebQTest-393,what are the two official languages of paraguay,Spanish Language,Paraguayan Guaraní,1,1.0,0.3341492136313071,58.00159997306764,False,quest_kg,2
+WebQTest-395,what state is the steelers from,Pittsburgh,American football,0,0.0,0.25,43.71230001561344,False,quest_kg,2
+WebQTest-396,what college did sir isaac newton go to,"Trinity College, Cambridge",William Whiston,0,0.0,0.5,47.42830013856292,False,quest_kg,0
+WebQTest-397,what are the school colors for harvard university,Crimson,Crimson,1,1.0,0.41556246625361415,42.42799989879131,False,quest_kg,1
+WebQTest-398,where is the university of the rockies located,Colorado,Colorado,1,1.0,0.25,46.215000096708536,False,quest_kg,1
+WebQTest-399,what disease does robin roberts have,Breast cancer,Breast cancer,1,1.0,0.5,44.070899952203035,False,quest_kg,1
+WebQTest-400,what was the capital city of the east roman empire,Constantinople,Constantinople,1,1.0,0.5,41.19929997250438,False,quest_kg,1
+WebQTest-401,who plays edward scissorhands,Johnny Depp,Matthew Bourne,0,0.0,0.5,45.92430009506643,False,quest_kg,0
+WebQTest-402,what does joey jordison play in slipknot,Drums,Vermilion,0,0.0,0.7779942837031599,53.89660014770925,False,quest_kg,0
+WebQTest-403,what kind of language does turkey speak,Ladino Language,Turkish Language,1,1.0,0.9362581790505886,57.6886001508683,False,quest_kg,0
+WebQTest-404,what was lebron james first team,Cleveland Cavaliers,LeBron James,0,0.0,0.25,55.01400004141033,False,quest_kg,0
+WebQTest-405,who fought the battle of gettysburg,Confederate States of America,10th Louisiana Infantry,0,0.0,0.25,53.846299881115556,False,quest_kg,0
+WebQTest-406,who is the coach of the sf giants,Bill Hayes,m.0527d0b,0,0.0,0.25,44.09840004518628,False,quest_kg,0
+WebQTest-408,who was the first president of the afl,Bud Adams,Bud Adams,1,1.0,0.5,47.116100089624524,False,quest_kg,1
+WebQTest-409,where did giuliana rancic grow up,Naples,Italy,0,0.0,0.25,51.5692001208663,False,quest_kg,0
+WebQTest-410,what are the major cities in ukraine,Kiev,Eastern Europe,0,0.0,0.6244415878952199,63.36209992878139,False,quest_kg,0
+WebQTest-414,who does brian dawkins play for 2011,Denver Broncos,American football player,0,0.0,0.25,40.53990007378161,False,quest_kg,0
+WebQTest-415,what movies did tupac star in,Juice,Tupac: Hip Hop Genius,0,0.0,0.5,62.896500108763576,False,quest_kg,0
+WebQTest-416,what form of currency does china have,Renminbi,Gold yuan,0,0.0,0.5,69.79670003056526,False,quest_kg,3
+WebQTest-417,who plays kenneth,Jack McBrayer,Unemployed,0,0.0,0.6236949827435814,55.47840008512139,False,quest_kg,0
+WebQTest-418,what league are the indianapolis colts in,AFC South,m.0crt4sl,0,0.0,0.5,44.484500074759126,False,quest_kg,0
+WebQTest-419,what country did magellan represent,Kingdom of Portugal,Kingdom of Portugal,1,1.0,0.31275632549182236,54.86809997819364,False,quest_kg,1
+WebQTest-420,where is perpignan located,France,Campo Santo,0,0.0,0.25,48.13860007561743,False,quest_kg,2
+WebQTest-421,who did kim richards marry,G. Monty Brinson,Kim Richards,0,0.0,0.8343573205541807,46.65430006571114,False,quest_kg,0
+WebQTest-422,what happened in bosnia in the 90s,Foča massacres,Bosnian War,1,1.0,0.25,53.331000031903386,False,quest_kg,0
+WebQTest-423,when 's the last time the steelers won the superbowl,Super Bowl XLIII,m.0zbrh13,0,0.0,0.25,56.20249989442527,False,quest_kg,0
+WebQTest-425,where english is spoken,Nigeria,England,1,1.0,0.5,52.15430003590882,False,quest_kg,0
+WebQTest-426,where is giza pyramids located,Egypt,Egypt,1,1.0,0.6244561287350698,43.90439996495843,False,quest_kg,1
+WebQTest-427,what is the zip code for midland tx,79701,Area code 432,0,0.0,0.3352873256694319,42.097700061276555,False,quest_kg,0
+WebQTest-428,what states make up the midwest us,Ohio,Indiana,1,1.0,0.25,44.99279987066984,False,quest_kg,0
+WebQTest-430,what instruments does justin bieber use,Vocals,Boyfriend,0,0.0,0.25,49.45489997044206,False,quest_kg,0
+WebQTest-431,what language does australians speak,Esperanto Language,Esperanto Language,1,1.0,0.5,58.52139997296035,False,quest_kg,1
+WebQTest-432,who did annie oakley married,Frank E. Butler,Biographical film,0,0.0,0.5,38.997899973765016,False,quest_kg,0
+WebQTest-433,who has played lex luthor,Kevin Spacey,Alexander Luthor,0,0.0,0.25,38.903099950402975,False,quest_kg,0
+WebQTest-434,where does the zambezi river start,Mwinilunga,"Kariba, Zimbabwe",0,0.0,0.25,41.95340001024306,False,quest_kg,0
+WebQTest-436,what is the nigeria time,West Africa Time Zone,West Africa Time Zone,1,1.0,0.4152842053410003,52.17189993709326,False,quest_kg,1
+WebQTest-437,where did they find jenni rivera 's body,Iturbide,Mexican American,0,0.0,0.25,43.89559989795089,False,quest_kg,0
+WebQTest-438,what university did romney graduated from,Brigham Young University,Mitt Romney,0,0.0,0.25,46.45940009504557,False,quest_kg,0
+WebQTest-439,where is the time zone line in south dakota,Mountain Time Zone,Mountain Time Zone,1,1.0,0.414908683272662,56.332800071686506,False,quest_kg,1
+WebQTest-440,where is jason mraz from,Mechanicsville,Czech American,0,0.0,0.25,56.854400085285306,False,quest_kg,0
+WebQTest-441,what killed john bonham,Inhalation of vomit,Inhalation of vomit,1,1.0,0.25,48.72420011088252,False,quest_kg,1
+WebQTest-442,what industry does walmart operate in,Retail,Retail,1,1.0,0.5,54.009800078347325,False,quest_kg,1
+WebQTest-443,what county is texarkana arkansas in,Miller County,Miller County,1,1.0,0.7202745343886937,57.427800027653575,False,quest_kg,1
+WebQTest-446,what music period did beethoven live in,Opera,Classical music,1,1.0,0.6225613005803242,60.32110005617142,False,quest_kg,0
+WebQTest-447,what did laura ingalls wilder wrote,Going West (My First Little Houe Books),Laura's Early Years Collection,1,1.0,0.25,53.813999984413385,False,quest_kg,0
+WebQTest-448,what type of government system does italy have,Unitary state,Parliamentary republic,1,1.0,0.8258697431375753,66.47150008939207,False,quest_kg,3
+WebQTest-449,what did john irving wrote,A Prayer for Owen Meany,Novelist,0,0.0,0.25,52.63820011168718,False,quest_kg,0
+WebQTest-450,what is the national flower of hawaii,Hawaiian hibiscus,Hawaiian Islands,0,0.5,0.615549209379676,55.568400071933866,False,quest_kg,0
+WebQTest-451,what did alice paul accomplish,Organization founder,m.02wnj54,0,0.0,0.25,54.09589991904795,False,quest_kg,0
+WebQTest-453,what languages do they speak in costa rica,Bribri Language,Spanish Language,1,1.0,0.25,60.20690011791885,False,quest_kg,4
+WebQTest-454,where did hank marvin come from,Newcastle upon Tyne,Musician,0,0.0,0.25,53.25470003299415,False,quest_kg,0
+WebQTest-455,when did chipper jones get drafted,1990 Major League Baseball Draft,Outfielder,0,0.0,0.5,56.707900017499924,False,quest_kg,0
+WebQTest-456,what part did winona ryder play in star trek,Amanda Grayson,m.0gxt81c,0,0.0,0.25,64.1538999043405,False,quest_kg,0
+WebQTest-459,where did jovan belcher kill himself,Kansas City,Suicide,0,0.0,0.25,33.581600058823824,False,quest_kg,0
+WebQTest-461,where did clay matthews go to school,University of Southern California,"Clay Matthews, Jr.",0,0.0,0.5,34.51249981299043,False,quest_kg,0
+WebQTest-462,what time is it in texas houston right now,Central Time Zone,Central Time Zone,1,1.0,0.6211151396034333,40.607200004160404,False,quest_kg,1
+WebQTest-463,who is princess leia in star wars,Carrie Fisher,Leia Organa,0,0.0,0.25,37.442800123244524,False,quest_kg,0
+WebQTest-464,what is the political structure of china,Single-party state,Single-party state,1,1.0,0.6088169948012139,55.835000006482005,False,quest_kg,1
+WebQTest-465,what is new york city airport,Newark Liberty International Airport,Newark Liberty International Airport,1,1.0,0.25,49.24429999664426,False,quest_kg,1
+WebQTest-466,what language brazil speak,Brazilian Portuguese,Portuguese Language,1,1.0,0.8259858790191336,56.296999799087644,False,quest_kg,2
+WebQTest-467,who played obi wan in episode 2,Ewan McGregor,Obi-Wan Kenobi,0,0.0,0.8297687008923665,41.325199883431196,False,quest_kg,0
+WebQTest-468,where did venus williams come from,Lynwood,African American,0,0.0,0.25,40.614800062030554,False,quest_kg,0
+WebQTest-469,what currency is used in panama,Panamanian balboa,United States Dollar,1,1.0,0.5,51.64139997214079,False,quest_kg,2
+WebQTest-470,where does the zambezi river originate,Mwinilunga,"Kariba, Zimbabwe",0,0.0,0.25,41.75320011563599,False,quest_kg,2
+WebQTest-472,what team did ronaldo play for in 2003,Real Madrid C.F.,Ronaldo,0,0.0,0.25,43.78619999624789,False,quest_kg,0
+WebQTest-473,where does robin williams live 2011,San Francisco,United States of America,0,0.0,0.25,61.004299903288484,False,quest_kg,0
+WebQTest-474,who played jacob black in twilight,Taylor Lautner,Jacob Black,0,0.0,0.5345932884398356,58.85179992765188,False,quest_kg,0
+WebQTest-477,which airport to fly into in buenos aires,Aeroparque Jorge Newbery,Aeroparque Jorge Newbery,1,1.0,0.8325400622927309,60.497500002384186,False,quest_kg,1
+WebQTest-479,what team did adrian peterson play for in college,University of Oklahoma,American football player,0,0.0,0.5,39.83770008198917,False,quest_kg,0
+WebQTest-480,where does name pennsylvania come from,William Penn,William Penn,1,1.0,0.3123593102969171,64.01919992640615,False,quest_kg,1
+WebQTest-481,what kind of money do they use in germany,Euro,Euro,1,1.0,0.823654972165335,66.47749990224838,False,quest_kg,1
+WebQTest-482,who plays blaine in batman,Tom Hardy,m.02wk6dq,0,0.0,0.25,44.00689993053675,False,quest_kg,0
+WebQTest-484,what language does australia use,Esperanto Language,Esperanto Language,1,1.0,0.5,57.109600165858865,False,quest_kg,1
+WebQTest-487,who did veronica lake mary,Joseph A. McCarthy,Female,0,0.0,0.25,56.89690005965531,False,quest_kg,0
+WebQTest-488,who did sir francis drake marry,Elizabeth Sydenham,Francis Drake,0,0.0,0.5,46.26119998283684,False,quest_kg,0
+WebQTest-489,who plays stephanie plum in one for the money,Katherine Heigl,Stephanie Plum,0,0.0,0.5,52.584399934858084,False,quest_kg,0
+WebQTest-490,what did the ancient romans speak,Latin Language,Latin Language,1,1.0,0.5,47.54190007224679,False,quest_kg,1
+WebQTest-491,what does ringo sing,Love Me Do,No No Song,1,1.0,0.25,54.47400012053549,False,quest_kg,0
+WebQTest-492,where was st. lucy born,Syracuse,Female,0,0.0,0.6249743628896652,47.19630000181496,False,quest_kg,2
+WebQTest-493,what type of government does australia have,Parliamentary system,Parliamentary system,1,1.0,0.8235078404477597,63.44499997794628,False,quest_kg,1
+WebQTest-497,who was the father of king george vi,George V,United Kingdom,0,0.0,0.5998947295801949,38.09159994125366,False,quest_kg,2
+WebQTest-500,what is the zip code for trenton,08607,Area code 609,0,0.0,0.25,40.35969986580312,False,quest_kg,0
+WebQTest-501,what has ashley greene been in,King of California,Michele Greene,0,0.0,0.3129700829334609,39.82549998909235,False,quest_kg,0
+WebQTest-502,where did al qaeda attack,September 11 attacks,Al-Qaeda,0,0.0,0.5,38.24499994516373,False,quest_kg,0
+WebQTest-503,what language is spoken in switzerland,French,German Language,1,1.0,0.25,58.18020016886294,False,quest_kg,3
+WebQTest-504,who was philip in acts chapter 8,Apostle Philip,Male,0,0.0,0.5375297502421129,40.775799890980124,False,quest_kg,0
+WebQTest-506,what the time zone in england,Greenwich Mean Time Zone,Greenwich Mean Time Zone,1,1.0,0.6106044335105965,54.98509993776679,False,quest_kg,1
+WebQTest-508,what is the best currency to take to turkey,Turkish lira,Revaluation of the Turkish Lira,0,0.5714285714285715,0.5999087869641024,59.30900014936924,False,quest_kg,2
+WebQTest-509,what system of government is practiced in nigeria,Presidential system,Presidential system,1,1.0,0.5,59.34859998524189,False,quest_kg,1
+WebQTest-512,who were mary shelley,Author,Novelist,1,1.0,0.25,56.98479991406202,False,quest_kg,2
+WebQTest-513,what language do most australians speak,Esperanto Language,Esperanto Language,1,1.0,0.5,63.009400153532624,False,quest_kg,1
+WebQTest-514,where is denmark situated,Scandinavia,Northern Europe,0,0.0,0.5,52.66820010729134,False,quest_kg,0
+WebQTest-515,where was teddy roosevelt 's house,"Washington, D.C.",Roosevelt Room,0,0.0,0.25,62.11259984411299,False,quest_kg,0
+WebQTest-516,what is the government system of malaysia,Parliamentary system,Parliamentary system,1,1.0,0.5,51.2968001421541,False,quest_kg,1
+WebQTest-517,what do people speak in canada,Lojban,Pierre Trudeau,0,0.0,0.25,61.04280008003116,False,quest_kg,0
+WebQTest-518,what type of money do they use in costa rica,Costa Rican colón,m.0nf5kbt,0,0.0,0.25,56.27070018090308,False,quest_kg,0
+WebQTest-519,what timezone is nashville tn,Central Time Zone,Central Time Zone,1,1.0,0.31234106313718074,52.98090004362166,False,quest_kg,1
+WebQTest-521,who was anakin skywalker,Ted Bracewell,Tatooine,0,0.0,0.5,47.03909996896982,False,quest_kg,0
+WebQTest-522,where did adolf hitler die,Berlin,"On 29 April, having finally accepted the inevitability of defeat, Hitler married his long-term mistress Eva Braun and dictated his final political testament, appointed Admiral Donitz as head of state and Goebbels as chancellor, and concluded, \""Above all, I charge the leaders of the nation and those under them to scrupulous observance of the laws of race and to merciless opposition to the universal poisoner of all peoples, international Jewry.\"" The following day, Hitler committed suicide with his wife and, in accordance with his instructions, their bodies were carried into the garden of the Reich Chancellery by aides, covered with petrol and burned (as documented by, for example, Trevor-Roper's^:  'The Last Days of Hitler', 1947).",0,0.0,0.6244660827845938,47.581500140950084,False,quest_kg,2
+WebQTest-523,what is the largest nation in europe,Russia,France,0,0.0,0.3118624558559567,68.28169990330935,False,quest_kg,0
+WebQTest-524,where was the first gulf war fought,Israel,Arabian Peninsula,1,1.0,0.41685380796610144,52.43310006335378,False,quest_kg,0
+WebQTest-525,who are the senators of virginia 2013,Jim Webb,"United States Senate elections, 2006",0,0.0,0.25,56.205900153145194,False,quest_kg,0
+WebQTest-526,what band was george clinton in,Funkadellic,Warner Bros. Records,0,0.0,0.25,57.45079996995628,False,quest_kg,0
+WebQTest-527,what country borders slovakia,Ukraine,Bratislava Region,0,0.0,0.25,47.193999867886305,False,quest_kg,0
+WebQTest-528,what was james garfield most known for,US President,Irvin M. Garfield,0,0.0,0.25,44.04819989576936,False,quest_kg,4
+WebQTest-529,where did paula deen go to school,Albany High School,Bobby Deen,0,0.0,0.25,78.2534999307245,False,quest_kg,0
+WebQTest-530,where does robert irvine come from,Salisbury,Annalise Irvine,0,0.0,0.25,35.866300109773874,False,quest_kg,0
+WebQTest-531,what style of music does michael jackson perform,Post-disco,Dance music,1,1.0,0.31216976272526864,53.67689998820424,False,quest_kg,0
+WebQTest-532,what does david beckham play,Football,David Beckham,0,0.0,0.25,41.95500002242625,False,quest_kg,0
+WebQTest-533,what does julian lennon do,Actor,Musician,1,1.0,0.25,44.530199840664864,False,quest_kg,0
+WebQTest-534,what is the milwaukee brewers mascot,Bonnie Brewer,Bernie Brewer,1,1.0,0.5,39.71210005693138,False,quest_kg,2
+WebQTest-535,what is the second biggest state in the united states,Texas,Mississippi,0,0.0,0.31092981739959946,79.34920000843704,False,quest_kg,0
+WebQTest-537,what has charlie hunnam been in,Children of Men,m.0h0ydlf,0,0.0,0.25,47.638299874961376,False,quest_kg,0
+WebQTest-538,what are all the movies taylor swift has been in,Valentine's Day,m.0ysr8tn,0,0.0,0.25,72.50100001692772,False,quest_kg,0
+WebQTest-540,what college did brett favre,University of Southern Mississippi,American football player,0,0.0,0.5,46.59499996341765,False,quest_kg,0
+WebQTest-542,where did alex chilton die,New Orleans,heart attack,0,0.0,0.5490643611392199,51.78520013578236,False,quest_kg,0
+WebQTest-543,what college did martin luther king jr go to,Morehouse College,"Dr. Martin Luther King, Jr. Academic Middle School",0,0.0,0.6220770614045077,51.95800005458295,False,quest_kg,0
+WebQTest-545,what kind of cancer did farrah fawcett die of,Anal cancer,Anal cancer,1,1.0,1.0,43.41989988461137,False,quest_kg,1
+WebQTest-546,who is michael j fox 's wife,Tracy Pollan,Tracy Pollan and her husband Michael J. Fox,0,0.4,0.5,50.68599991500378,False,quest_kg,0
+WebQTest-547,what money do i use in costa rica,Costa Rican colón,m.0nf5k6m,0,0.0,0.25,61.30750011652708,False,quest_kg,0
+WebQTest-548,what guitar did joe walsh play,Fender Stratocaster,Guitarist,0,0.0,0.5,47.249200055375695,False,quest_kg,2
+WebQTest-549,what are the official languages of the eu,Swedish Language,Eurostat,0,0.0,0.623436990243874,46.15020006895065,False,quest_kg,0
+WebQTest-550,what is ryan seacrest radio show,American Top 40,Radio personality,0,0.0,0.5,45.97910004667938,False,quest_kg,0
+WebQTest-552,what language do most italians speak,Italian Language,Italian Language,1,1.0,0.9340656715695551,70.08039997890592,False,quest_kg,1
+WebQTest-554,what money do they use in spain,Euro,Euro,1,1.0,0.6239557950936985,49.626899883151054,False,quest_kg,1
+WebQTest-555,what did drew barrymore go to rehab for,Cocaine,m.05gmpz3,0,0.0,0.5,46.96690011769533,False,quest_kg,0
+WebQTest-556,when is saint george day celebrated,April 23,Feast of Saint George,0,0.0,0.5,33.775800140574574,False,quest_kg,2
+WebQTest-557,what government did the roman empire have,Autocracy,Autocracy,1,1.0,0.5,36.2829000223428,False,quest_kg,1
+WebQTest-559,what instrument did robin gibb play,Vocals,Musician,0,0.0,0.25,38.617399986833334,False,quest_kg,0
+WebQTest-560,who voiced darth vader,Matt Lanter,m.02sg5s6,0,0.0,0.6253558291303789,37.2834000736475,False,quest_kg,0
+WebQTest-561,when was abe lincoln president,Abraham Lincoln 1861 presidential inauguration,Andrew Johnson,0,0.0,0.41580894451960626,48.40720002539456,False,quest_kg,4
+WebQTest-562,where are the texas rangers playing,Rangers Ballpark in Arlington,Arlington,0,0.4,0.6252870438272224,38.85199991054833,False,quest_kg,2
+WebQTest-564,what is arkansas state capitol,Little Rock,Neoclassical architecture,0,0.0,0.25,40.817199973389506,False,quest_kg,0
+WebQTest-567,what is the zip code for nogales az,85621,Area code 520,0,0.0,0.25,44.705700129270554,False,quest_kg,0
+WebQTest-568,when did michael vick start playing for the eagles,2009,American football player,0,0.0,0.25,42.50280000269413,False,quest_kg,0
+WebQTest-570,what is william taft famous for,Lawyer,US President,0,0.0,0.25,48.14840015023947,False,quest_kg,0
+WebQTest-572,where did robin cook die,Inverness,Inverness,1,1.0,0.25,50.5500000435859,False,quest_kg,1
+WebQTest-573,where did melba beals live,Arkansas,United States of America,0,0.0,0.25,52.44749994017184,False,quest_kg,0
+WebQTest-575,who is louisiana state senator,Alexander Barrow,Baton Rouge,0,0.0,0.830680782916267,54.86629996448755,False,quest_kg,0
+WebQTest-576,what are the 7 countries that are part of central america,Panama,Honduras,1,1.0,0.31270930538227576,58.027599938213825,False,quest_kg,3
+WebQTest-577,where did derek fisher go to college,University of Arkansas at Little Rock,John Fisher,0,0.0,0.25,38.25809992849827,False,quest_kg,0
+WebQTest-578,who was kobe bryant drafted by,Charlotte Hornets,Kobe Bryant,0,0.0,0.5,52.35689994879067,False,quest_kg,0
+WebQTest-579,where are the new orleans hornets moving to,Charlotte,Basketball,0,0.0,0.5,45.084299985319376,False,quest_kg,3
+WebQTest-580,what language does algerian people speak,French,Arabic Language,1,1.0,0.8309774522317552,83.65769986994565,False,quest_kg,3
+WebQTest-581,where was anne boleyn executed,Tower of London,"Thomas Boleyn, 1st Earl of Wiltshire",0,0.2222222222222222,0.25,69.50919982045889,False,quest_kg,0
+WebQTest-582,what did galileo do to become famous,Mathematician,Astronomer,1,1.0,0.4167784813582357,69.95860021561384,False,quest_kg,0
+WebQTest-583,what school did martin luther king jr received his doctorate degree from,Boston University,"Martin Luther King, Jr.",0,0.0,0.25,52.38489992916584,False,quest_kg,0
+WebQTest-584,where buddha come from,Kapilavastu,Nepal,0,0.0,0.3123160772153083,56.715600192546844,False,quest_kg,0
+WebQTest-585,what did king henry viii rule,England,Henry-VIII-kingofengland 1491-1547,0,0.0,0.25,51.05869984254241,False,quest_kg,0
+WebQTest-586,what type of cancer did larry hagman have,Leukemia,Cancer,0,0.4,0.5,40.334700141102076,False,quest_kg,3
+WebQTest-588,what wars did robert e lee served in,Battle of South Mountain,The wartime papers of R.E. Lee,0,0.36363636363636365,0.25,48.14200010150671,False,quest_kg,0
+WebQTest-589,what russian language called,Russian Language,Russian Language,1,1.0,0.8236145366093295,53.692399989813566,False,quest_kg,1
+WebQTest-590,who is in charge of libya now,Abdullah al-Thani,National Centrist Party,0,0.0,0.25,46.61550000309944,False,quest_kg,0
+WebQTest-592,when did shays rebellion start,1786,Massachusetts,0,0.0,0.4177528199913179,37.02029981650412,False,quest_kg,0
+WebQTest-593,what kind of disease does montel williams have,Multiple sclerosis,Multiple sclerosis,1,1.0,0.5,37.18469990417361,False,quest_kg,1
+WebQTest-595,when is the last time the ravens won a superbowl,Super Bowl XLVII,Super Bowl XXXV,0,0.6666666666666666,0.31217809543957586,41.43059998750687,False,quest_kg,3
+WebQTest-596,where did kansas city royals come from,Kansas City,Kansas City,1,1.0,0.5,35.44730017893016,False,quest_kg,1
+WebQTest-597,what style of music does john mayer play,Acoustic music,Acoustic music,1,1.0,0.25,47.56540013477206,False,quest_kg,1
+WebQTest-599,what inventions did thomas edison invent list,Carbon microphone,Electric Power Distribution,1,1.0,0.25,43.96639997139573,False,quest_kg,0
+WebQTest-600,where did djokovic come from,Serbia,Srđan Djokovic,0,0.0,0.5,38.08500012382865,False,quest_kg,2
+WebQTest-602,what part of the country is new england,Northeastern United States,Maine,0,0.0,0.25,46.75540002062917,False,quest_kg,0
+WebQTest-603,what money to take to turkey,Turkish lira,Turkish lira,1,1.0,0.879433871996893,75.92009985819459,False,quest_kg,1
+WebQTest-604,what kind of music did jimi hendrix play,Psychedelic rock,Rock music,1,1.0,0.25,64.92699985392392,False,quest_kg,0
+WebQTest-605,what degrees did obama get in college,Juris Doctor,Barack Obama,0,0.0,0.8270414650528506,66.95739994756877,False,quest_kg,0
+WebQTest-606,who were alexander graham bell 's siblings,Edward Charles Bell,Edward Bell,0,0.8,0.5,42.13960003107786,False,quest_kg,0
+WebQTest-608,when did liverpool fc last win the champions league,2012 Football League Cup Final,Liverpool F.C.,0,0.0,0.5,53.75390010885894,False,quest_kg,0
+WebQTest-609,who played jeannie,Barbara Eden,Comedy,0,0.0,0.41631784910546177,53.63380000926554,False,quest_kg,0
+WebQTest-611,where was st peter killed,Rome,St. Peter's Cemetery,0,0.0,0.5,44.219200033694506,False,quest_kg,0
+WebQTest-612,who does jeremy shockey play for in 2012,Carolina Panthers,American football player,0,0.0,0.25,44.191400054842234,False,quest_kg,0
+WebQTest-613,what college did deion sanders jr go to,Florida State University,Athlete,0,0.0,0.5,42.355299927294254,False,quest_kg,0
+WebQTest-614,when did the battle of alamo start,1836-02-23,Republic of Texas,0,0.0,0.3128491042559071,43.409000150859356,False,quest_kg,0
+WebQTest-615,what were the names of henry viii 's three children,"Henry, Duke of Cornwall","Henry, Duke of Cornwall",1,1.0,0.3123088601333805,46.9796999823302,False,quest_kg,1
+WebQTest-616,what was queen elizabeth ii childhood nickname,Elizabeth II,Queen Elizabeth The Queen Mother,0,0.28571428571428575,0.75,41.5694999974221,False,quest_kg,0
+WebQTest-617,where did tim tebow grow up,Makati,American football player,0,0.0,0.25,36.66800004430115,False,quest_kg,0
+WebQTest-618,where is chesapeake bay bridge,Anne Arundel County,Anne Arundel County,1,1.0,0.25,41.32790002040565,False,quest_kg,1
+WebQTest-619,who played victoria barkley,Barbara Stanwyck,Kate Edelman Johnson,0,0.0,0.33356495058303454,42.09950007498264,False,quest_kg,0
+WebQTest-620,where did kennedy 's inaugural address take place,United States Capitol,The inaugural address,0,0.0,0.5,47.52840008586645,False,quest_kg,0
+WebQTest-621,what countries have german as the official language,Belgium,Germany,1,1.0,0.25,43.15409995615482,False,quest_kg,0
+WebQTest-622,where did the taliban began,Afghanistan,Afghanistan,1,1.0,0.25,39.68309983611107,False,quest_kg,1
+WebQTest-624,who plays elena gilbert on vampire diaries,Nina Dobrev,Elena-Gilbert-elena-gilbert-8212104-800-533.jpg,0,0.0,0.6256606195019945,41.802499908953905,False,quest_kg,0
+WebQTest-626,what does the missouri river bisect,South Dakota,Great Falls,0,0.0,0.25,45.19540001638234,False,quest_kg,0
+WebQTest-627,what nationality is taylor lautner jacob black,United States of America,Actor,0,0.0,0.25,39.601000025868416,False,quest_kg,4
+WebQTest-628,what animal represents california,California grizzly bear,Californium,0,0.0,0.25,51.34180001914501,False,quest_kg,0
+WebQTest-629,what company does nike own,NIKE IHM Inc,m.0gl_dcq,0,0.0,0.25,36.82989999651909,False,quest_kg,0
+WebQTest-630,what language do colombian people speak,Cuiba language,Spanish Language,1,1.0,0.8287851410807003,60.91640004888177,False,quest_kg,0
+WebQTest-631,what year did ray allen join the nba,1996,Basketball player,0,0.0,0.25,54.43619983270764,False,quest_kg,0
+WebQTest-633,what is claire danes famous for,Voice Actor,Actor,1,1.0,0.25,39.58280012011528,False,quest_kg,0
+WebQTest-634,what county is san antonio in,Medina County,Comal County,1,1.0,0.6019374634625727,53.95769979804754,False,quest_kg,0
+WebQTest-635,what characters does matt stone do,Terrance Henry Stoot,Sharon Marsh,0,0.0,0.25,59.48469997383654,False,quest_kg,0
+WebQTest-636,what timezone is the state of michigan and,UTC−05:00,Eastern Time Zone,1,1.0,0.25,60.57550013065338,False,quest_kg,3
+WebQTest-637,what type of government did soviet union have,Soviet democracy,Communist state,1,1.0,0.8321329545854056,45.65109987743199,False,quest_kg,2
+WebQTest-638,what languages are there in japan,Esperanto Language,Japanese Language,1,1.0,0.25,62.66129994764924,False,quest_kg,2

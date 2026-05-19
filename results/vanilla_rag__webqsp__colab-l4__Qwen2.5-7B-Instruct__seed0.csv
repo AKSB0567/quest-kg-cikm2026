@@ -1,0 +1,1001 @@
+qid,question,gold,prediction,em,f1,confidence,latency_ms,abstained,x_method,x_rank
+WebQTest-0,what does jamaican people speak,Jamaican English,Jamaican Creole English Language,1,1.0,0.6712366938591003,1582.4176620008075,False,vanilla_rag,0
+WebQTest-1,what did james k polk do before he was president,United States Representative,Politician,0,0.0,0.6844275593757629,1626.782954997907,False,vanilla_rag,0
+WebQTest-3,who plays ken barlow in coronation street,William Roache,m.0wkd82f,0,0.0,0.6088457107543945,1577.8273720025027,False,vanilla_rag,0
+WebQTest-6,where is jamarcus russell from,Mobile,United States of America,0,0.0,0.7490198612213135,1573.8120489986613,False,vanilla_rag,0
+WebQTest-7,where was george washington carver from,Diamond,United States of America,0,0.0,0.758683443069458,1574.4749690020399,False,vanilla_rag,0
+WebQTest-8,what else did ben franklin invent,Lightning rod,Lightning rod,1,1.0,0.6674997806549072,1571.110367000074,False,vanilla_rag,5
+WebQTest-9,who was richard nixon married to,Pat Nixon,Pat Nixon,1,1.0,0.6749003529548645,1579.6321079978952,False,vanilla_rag,4
+WebQTest-12,who is governor of ohio 2011,John Kasich,"The information provided does not include any details about the governor of Ohio in 2011. Therefore, I cannot",0,0.0,0.5660006403923035,1584.2183540007682,False,vanilla_rag,0
+WebQTest-13,who was vice president after kennedy died,Lyndon B. Johnson,Lyndon B. Johnson,1,1.0,0.580604076385498,530.9903589986789,False,vanilla_rag,1
+WebQTest-14,where is the fukushima daiichi nuclear plant located,Japan,Okuma,1,1.0,0.8061147332191467,1580.6381949987554,False,vanilla_rag,1
+WebQTest-16,what countries are part of the uk,Wales,"United Kingdom, with Dependencies and Territories",0,0.0,0.6061448454856873,616.2234110015561,False,vanilla_rag,0
+WebQTest-19,what is my timezone in louisiana,Central Time Zone,Central Time Zone,1,1.0,0.6967781186103821,370.82545299927006,False,vanilla_rag,1
+WebQTest-20,what did st augustine do,Writer,Introduction to the philosophy of Saint Augustine,0,0.0,0.6735773682594299,1575.0366119973478,False,vanilla_rag,0
+WebQTest-21,who is keyshia cole dad,Sal Gibson,Leon Cole,1,1.0,0.6948330998420715,1574.0518150014395,False,vanilla_rag,0
+WebQTest-22,what kind government does egypt have,Semi-presidential system,Semi-presidential system,1,1.0,0.693690836429596,1572.136077000323,False,vanilla_rag,3
+WebQTest-23,what town was martin luther king assassinated in,Memphis,Memphis,1,1.0,0.6050518155097961,259.87115099997027,False,vanilla_rag,2
+WebQTest-24,where did edgar allan poe died,Baltimore,Baltimore,1,1.0,0.6578219532966614,1571.4901149985963,False,vanilla_rag,3
+WebQTest-26,what to do today in atlanta with kids,Fox Theatre,Cobb Energy Performing Arts Centre,1,1.0,0.5611240267753601,1574.8148710008536,False,vanilla_rag,0
+WebQTest-28,what electorate does anna bligh represent,Electoral district of South Brisbane,m.0cr320w,0,0.0,0.6188514828681946,1580.3120709970244,False,vanilla_rag,0
+WebQTest-31,where did andy murray started playing tennis,2005,Not specified in the given facts.,0,0.0,0.6481533646583557,741.3594950012339,False,vanilla_rag,0
+WebQTest-32,what is the australian dollar called,AUD,Australian dollar,0,0.0,0.7436928749084473,1572.4170969988336,False,vanilla_rag,0
+WebQTest-33,what timezone is sweden,Central European Time Zone,Central European Time Zone,1,1.0,0.7481765151023865,1569.3919779987482,False,vanilla_rag,1
+WebQTest-34,who did cam newton sign with,Carolina Panthers,Carolina Panthers,1,1.0,0.6257497668266296,1568.2063150015892,False,vanilla_rag,0
+WebQTest-35,what county is frederick md in,Frederick County,Frederick County,1,1.0,0.7286186814308167,316.6935109984479,False,vanilla_rag,5
+WebQTest-36,what highschool did harper lee go to,Monroe County High School,m.0lwxmy1,0,0.0,0.604285478591919,1572.373883002001,False,vanilla_rag,0
+WebQTest-37,what timezone is utah in,Mountain Time Zone,Mountain Time Zone,1,1.0,0.5802009701728821,1571.5932130005967,False,vanilla_rag,1
+WebQTest-38,who did george w. bush run against for the second term,John Kerry,The information provided does not contain any details about George W. Bush running for a second term or who he might have run,0,0.0,0.41220250725746155,1686.3442579997354,False,vanilla_rag,0
+WebQTest-39,who is niall ferguson 's wife,Ayaan Hirsi Ali,"The information provided does not contain any details about Niall Ferguson or his wife. Therefore, I cannot determine who N",0,0.0,0.40642914175987244,1577.6931139989756,False,vanilla_rag,0
+WebQTest-41,where is the galapagos islands located on a world map,Ecuador,m.02_mg6v,0,0.0,0.4889918267726898,1576.4724769978784,False,vanilla_rag,0
+WebQTest-42,what are the songs that justin bieber wrote,Somebody to Love,Singer-songwriter,0,0.0,0.639211118221283,1568.0228929995792,False,vanilla_rag,0
+WebQTest-43,what did george clemenceau do,Physician,"The given facts do not contain any information about George Clemenceau. Therefore, I cannot determine what George Clemence",0,0.0,0.4103955328464508,1581.6242590008187,False,vanilla_rag,0
+WebQTest-44,what is the state flower of arizona,Saguaro,m.0hz8zdj,0,0.0,0.5176100730895996,1572.041501000058,False,vanilla_rag,0
+WebQTest-45,where was rihanna born and raised,Saint Michael Parish,Barbados,0,0.0,0.5801503658294678,1568.5403009993024,False,vanilla_rag,0
+WebQTest-46,what year did president william henry harrison take office,1841-03-04,1841,0,0.5,0.583448052406311,1574.2365709993464,False,vanilla_rag,0
+WebQTest-47,where george lopez was born,Mission Hills,Mexico,0,0.0,0.5071792006492615,1576.0293189996446,False,vanilla_rag,0
+WebQTest-48,where are samsung based,Suwon,South Korea,0,0.0,0.4213601350784302,1583.3671610016609,False,vanilla_rag,0
+WebQTest-49,what did the islamic people believe in,Ṭūbā,Islamism,0,0.0,0.4882833659648895,321.82869099779055,False,vanilla_rag,0
+WebQTest-51,who will play mr gray in the film,Jamie Dornan,F. Gary Gray,0,0.0,0.5590691566467285,1571.9048280006973,False,vanilla_rag,0
+WebQTest-52,what did george orwell died of,Tuberculosis,"The information provided does not specify the cause of George Orwell's death. Therefore, I cannot provide an answer to what George",0,0.0,0.6260989308357239,1569.3789910001215,False,vanilla_rag,0
+WebQTest-54,what country did adolf hitler control,Nazi Germany,Germany,0,0.6666666666666666,0.41421547532081604,253.78321999960463,False,vanilla_rag,0
+WebQTest-55,who is michael buble,Actor,"The information provided does not contain any details about Michael Bublé. Therefore, I cannot determine who he is based",0,0.0,0.490572452545166,1574.6452170023986,False,vanilla_rag,0
+WebQTest-56,what county is kansas city kansas,Wyandotte County,"The information provided does not specify which county Kansas City, Kansas is located in. Therefore, I cannot provide an answer entity",0,0.08695652173913042,0.480710506439209,1569.6587780003028,False,vanilla_rag,0
+WebQTest-58,who did jackie robinson first play for,UCLA Bruins football,Brooklyn Dodgers,0,0.0,0.37970802187919617,1571.7239750010776,False,vanilla_rag,0
+WebQTest-59,when did annie open,1976-08-10,The question is not clear and does not match the provided facts. There is no information about Annie opening anything in the given,0,0.0,0.2905011475086212,1576.2738279991027,False,vanilla_rag,0
+WebQTest-60,where did eleanor roosevelt die,Manhattan,Manhattan,1,1.0,0.6145613789558411,1575.4268310010957,False,vanilla_rag,1
+WebQTest-61,what are the religions practiced in indonesia,Catholicism,The given facts do not provide information about religions practiced in Indonesia. The facts are specifically about Oriental Orthodoxy and its de,0,0.0,0.5957158207893372,1585.0144629985152,False,vanilla_rag,0
+WebQTest-62,what was jesse james killed with,Firearm,"The information provided does not contain any details about Jesse James or his cause of death. Therefore, I cannot determine what Jesse",0,0.0,0.3801320791244507,1577.1978869997838,False,vanilla_rag,0
+WebQTest-63,who was vp for lincoln,Hannibal Hamlin,Lyndon B. Johnson,0,0.4,0.46919479966163635,1580.4649790006806,False,vanilla_rag,0
+WebQTest-64,what other books did charles dickens write,A Christmas Carol (Chrysalis Children's Classics Series),"The Last Dickens (by Matthew Pearl) is not written by Charles Dickens. Charles Dickens wrote novels such as ""A Tale",0,0.3733333333333333,0.5908776521682739,1569.19476999974,False,vanilla_rag,0
+WebQTest-65,who was the first dictator of the soviet union,Vladimir Lenin,"The question is about the first dictator of the Soviet Union, but the provided facts are about Richard Nixon's visit to the",0,0.0,0.5605721473693848,1610.9635840002738,False,vanilla_rag,0
+WebQTest-66,what is the currency of puerto rico called,United States Dollar,United States Dollar,1,1.0,0.6186683177947998,1569.4664160000684,False,vanilla_rag,1
+WebQTest-67,what kind of cancer did carl wilson have,Lung cancer,"The given facts do not contain information about Carl Wilson or any type of cancer he may have had. Therefore, there is",0,0.08333333333333334,0.4477042853832245,1573.8191789969278,False,vanilla_rag,0
+WebQTest-68,who plays the voice of kitt in knight rider,William Daniels,m.05tb5zv,0,0.0,0.3959360420703888,1583.9386350016866,False,vanilla_rag,0
+WebQTest-69,what county is brentwood tennessee in,Williamson County,Polk County,0,0.5,0.5105717778205872,1576.0881099995458,False,vanilla_rag,0
+WebQTest-71,who did michael j fox marry,Tracy Pollan,Peter K. Wood,0,0.0,0.36972883343696594,1574.2607329993916,False,vanilla_rag,0
+WebQTest-72,what battles did stonewall jackson fight in,Manassas Station Operations,Battle of Forts Jackson and St. Philip,0,0.4,0.5304305553436279,1580.2354080005898,False,vanilla_rag,0
+WebQTest-73,what language do the maasai tribe speak,Maasai Language,The Maasai tribe does not have a specific language listed in the given facts. The facts provided are about Bedawi,0,0.18181818181818182,0.43905702233314514,1573.3838509986526,False,vanilla_rag,0
+WebQTest-74,who did benjamin franklin get married to,Deborah Read,m.0j4kb46,0,0.0,0.5896090865135193,1584.331979000126,False,vanilla_rag,0
+WebQTest-75,what disease did patrick swayze died from,Pancreatic cancer,Amyotrophic lateral sclerosis,0,0.0,0.4113966226577759,1575.8447899970633,False,vanilla_rag,0
+WebQTest-76,what works of art did leonardo da vinci produce,g.121wt37c,None,0,0.0,0.42550280690193176,1572.3091780018876,False,vanilla_rag,0
+WebQTest-77,what capital of austria,Vienna,Vienna,1,1.0,0.5888587832450867,1571.4345230007893,False,vanilla_rag,0
+WebQTest-78,what type of cancer did eva peron have,Cervical cancer,"The information provided does not mention Eva Peron's type of cancer. Therefore, there is no answer to this question based",0,0.08695652173913042,0.3556188642978668,1581.5632949997962,False,vanilla_rag,0
+WebQTest-79,what country did buddha come from,Nepal,India,0,0.0,0.5243949890136719,1573.3347319983295,False,vanilla_rag,0
+WebQTest-80,what county is greeley colorado in,Weld County,Polk County,0,0.5,0.40936279296875,1573.9498240000103,False,vanilla_rag,0
+WebQTest-82,what did peter tchaikovsky do,Musician,"Answer: Peter Tchaikovsky is not mentioned in the given facts, so there is no information about what he",0,0.0,0.4455910921096802,1584.3953799994779,False,vanilla_rag,0
+WebQTest-83,which countries speak german officially,Belgium,Germany,1,1.0,0.6341621279716492,1567.9414530022768,False,vanilla_rag,0
+WebQTest-84,what type of music did john lennon sing,Rock music,"The provided facts do not contain information about the type of music John Lennon sang. The facts mention his nationality, gender,",0,0.08695652173913042,0.5390841364860535,1567.9056750013842,False,vanilla_rag,0
+WebQTest-85,who are the colorado representatives,Mark Udall,CRHOME,0,0.0,0.4686387777328491,1572.5656409995281,False,vanilla_rag,0
+WebQTest-86,which country does greenland belong to,Denmark,Answer: None,0,0.0,0.5685907602310181,1570.8951790002175,False,vanilla_rag,4
+WebQTest-87,what the zip code for seattle washington,98185,"The provided facts do not contain information about Seattle's zip codes. Therefore, I cannot determine the zip code for Seattle from",0,0.0,0.4028206169605255,1586.2624110013712,False,vanilla_rag,0
+WebQTest-88,who is willow smith mom name,Jada Pinkett Smith,Rose Kennedy,0,0.0,0.40829649567604065,1573.184572000173,False,vanilla_rag,0
+WebQTest-89,what do you call the chinese writing system,Simplified Chinese character,Chinese characters,1,1.0,0.45474550127983093,1572.9511050012661,False,vanilla_rag,0
+WebQTest-90,who played on the jeffersons,Damon Evans,1776,0,0.0,0.48708438873291016,1571.7727209994337,False,vanilla_rag,0
+WebQTest-91,what is the name of the san francisco newspaper,Synapse,Los Angeles Sentinel,0,0.0,0.5028936862945557,1572.4170860012237,False,vanilla_rag,0
+WebQTest-93,what continent does armenia belong to,Europe,Asia,0,0.0,0.4763391315937042,1572.0691829992575,False,vanilla_rag,0
+WebQTest-94,what did randy savage died of,heart attack,"The question seems to be about Randy Savage, but the provided facts do not contain any information about Randy Savage's cause",0,0.0,0.3824968636035919,1573.2982190020266,False,vanilla_rag,5
+WebQTest-95,what was the title of the book charles darwin wrote,On evolution,"There is no information provided about Charles Darwin or any book he wrote in the given facts. Therefore, I cannot provide",0,0.23076923076923073,0.4192686975002289,1582.629836997512,False,vanilla_rag,0
+WebQTest-96,where did richard nixon die,New York City,New York City,1,1.0,0.6629740595817566,1580.0174469986814,False,vanilla_rag,6
+WebQTest-97,what songs does smokey robinson sing,Just to See Her,"The information provided does not include any details about Smokey Robinson or his songs. Therefore, there is no answer entity",0,0.18749999999999997,0.44982942938804626,1575.153677000344,False,vanilla_rag,0
+WebQTest-98,who was vice president when jfk was president,Lyndon B. Johnson,Lyndon B. Johnson,1,1.0,0.6255972385406494,543.5985830008576,False,vanilla_rag,2
+WebQTest-99,what is serbian language called,Serbian language,The question does not match any of the provided facts. There is no information about the Serbian language in the given facts.,0,0.16666666666666669,0.46548327803611755,1571.4503780000086,False,vanilla_rag,0
+WebQTest-100,what language is spoken in haiti today,Haitian Creole,Haitian Creole,1,1.0,0.5384368300437927,1574.5085119997384,False,vanilla_rag,1
+WebQTest-102,who played barbara gordon batgirl,Melinda McGraw,Natalie Cole,0,0.0,0.4392298758029938,1570.2878299998702,False,vanilla_rag,0
+WebQTest-103,what basketball teams has shaq played for,Miami Heat,"Answer: Orlando Magic, Los Angeles Lakers",0,0.6666666666666666,0.41328680515289307,1576.6093540005386,False,vanilla_rag,0
+WebQTest-104,where is jay leno from,New Rochelle,United States of America,0,0.0,0.6441585421562195,1613.7253990018507,False,vanilla_rag,0
+WebQTest-105,what language do people from thailand speak,Mon Language,Malay Language,0,0.8,0.48806798458099365,1577.4923329990997,False,vanilla_rag,0
+WebQTest-106,who did armie hammer play in the social network,Cameron Winklevoss,m.09ybysk,0,0.0,0.32970741391181946,1579.2356180027127,False,vanilla_rag,0
+WebQTest-107,what was thomas jefferson role in the declaration of independence,Lawyer,Statesman,1,1.0,0.5297139286994934,348.36555299989413,False,vanilla_rag,0
+WebQTest-108,what was the book written by charles darwin,On evolution,The question does not have an answer based on the provided facts. There is no information about a book written by Charles Darwin,0,0.29197080291970806,0.45019516348838806,1573.8476760016056,False,vanilla_rag,0
+WebQTest-109,who did tim tebow play college football for,Florida Gators football,University of Florida,0,0.3333333333333333,0.3399377763271332,1572.0343240027432,False,vanilla_rag,0
+WebQTest-110,who does peyton manning play football for,Denver Broncos,Indianapolis Colts,0,0.0,0.4420131742954254,1572.916418001114,False,vanilla_rag,0
+WebQTest-111,where is the carpathian mountain range located,Europe,Europe,1,1.0,0.440364271402359,1569.268891998945,False,vanilla_rag,2
+WebQTest-112,what was robert burns,Bard,United States of America,0,0.0,0.5055444836616516,1576.823093000712,False,vanilla_rag,0
+WebQTest-114,who did the voice of darth vader in episode 3,Hayden Christensen,m.0gcp08q,0,0.0,0.3605503737926483,1592.6880960032577,False,vanilla_rag,0
+WebQTest-115,what super bowl did peyton manning win,Super Bowl XLI,"The information provided does not contain any details about Peyton Manning's Super Bowl victories. Therefore, I cannot provide an answer based",0,0.16,0.42582154273986816,1588.2860720012104,False,vanilla_rag,0
+WebQTest-116,which country was justin bieber born in,Canada,Canada,1,1.0,0.6240220069885254,1569.3271790005383,False,vanilla_rag,0
+WebQTest-118,who fought in the gulf war 1991,France,m.043wpjb,0,0.0,0.4856889545917511,1572.9212949991052,False,vanilla_rag,0
+WebQTest-119,who plays london tipton in suite life on deck,Brenda Song,m.0j1xls2,0,0.0,0.3355477750301361,1571.0591629976989,False,vanilla_rag,0
+WebQTest-121,what team did david beckham play for in 2011,LA Galaxy,Manchester United,0,0.0,0.4334723651409149,1570.3337439990719,False,vanilla_rag,0
+WebQTest-122,where did francisco coronado come from,Salamanca,"Spain To answer the question ""Where did Francisco Coronado come from?"" based on the given facts, there is no direct",0,0.0,0.43427714705467224,1571.2599590005993,False,vanilla_rag,0
+WebQTest-123,what all does google now do,Google Glass,"Google's primary industries include search engine optimization (SEO), web development, and web hosting services. However, based on the",0,0.16666666666666666,0.34112444519996643,1569.814292000956,False,vanilla_rag,0
+WebQTest-124,what language does egyptian people speak,Modern Standard Arabic,Egyptian Arabic,0,0.4,0.691767156124115,1576.7042459992808,False,vanilla_rag,0
+WebQTest-125,what are abraham sons names,Midian,Parents,0,0.0,0.42579177021980286,1574.63170399933,False,vanilla_rag,0
+WebQTest-126,who wrote the jana gana mana,Ram Singh Thakur,"The information provided does not mention who wrote ""Jana Gana Mana."" Therefore, I cannot provide an answer based on",0,0.0,0.3451545536518097,1575.2279150001414,False,vanilla_rag,0
+WebQTest-127,what type of cancer did gilda radner die of,Ovarian cancer,The information provided does not include details about Gilda Radner's cause of death or the type of cancer she may have,0,0.08333333333333334,0.358094722032547,1574.0216910016898,False,vanilla_rag,0
+WebQTest-128,who plays juni cortez,Daryl Sabara,Chandra Davis,0,0.0,0.43622446060180664,1571.8729410000378,False,vanilla_rag,0
+WebQTest-129,what was lucille ball,Actor,Autobiography,0,0.0,0.39347323775291443,1571.284284000285,False,vanilla_rag,3
+WebQTest-131,who inspired obama,Nipsey Russell,African American,0,0.0,0.5668522119522095,1582.0411650020105,False,vanilla_rag,0
+WebQTest-132,who is michael j fox wife,Tracy Pollan,m.0j6dyrw,0,0.0,0.4068114459514618,1571.4755959998001,False,vanilla_rag,0
+WebQTest-133,where did dolly parton grow up,Sevierville,United States of America,0,0.0,0.6516028642654419,1579.0143349986465,False,vanilla_rag,0
+WebQTest-134,what type of books did agatha christie wrote,Writer,Novelist,1,1.0,0.6335635185241699,1572.1602510020602,False,vanilla_rag,6
+WebQTest-138,what are the four main languages spoken in spain,Catalan language,Spanish Language,1,1.0,0.47675207257270813,1582.2862639979576,False,vanilla_rag,0
+WebQTest-139,where is the nra headquarters located,Fairfax,Frederick Armory,0,0.0,0.48194923996925354,1575.51918000172,False,vanilla_rag,0
+WebQTest-141,who is gimli 's father in the hobbit,Gloin,BoyBoy,0,0.0,0.3763023614883423,1572.451767999155,False,vanilla_rag,0
+WebQTest-142,who developed the tcp ip reference model,Vint Cerf,The question is not related to the given facts. There is no information about TCP/IP reference model or its developers in the,0,0.0,0.35448744893074036,1576.6724690001865,False,vanilla_rag,0
+WebQTest-145,what college did albert einstein go to,ETH Zurich,"The information provided does not include any details about the colleges that Albert Einstein attended. Therefore, I cannot answer this question based",0,0.0,0.5238657593727112,1568.849149000016,False,vanilla_rag,0
+WebQTest-146,what team does jordan own,Jordan national football team,Atlanta Falcons,0,0.0,0.4597725570201874,1569.1612609989534,False,vanilla_rag,0
+WebQTest-147,who is the state governor of tennessee,William Haslam,m.04j5sk8,0,0.0,0.6641252636909485,1586.5556219978316,False,vanilla_rag,0
+WebQTest-149,what do portuguese people speak,Portuguese Language,Portuguese Language,1,1.0,0.574409544467926,1582.6588029995037,False,vanilla_rag,1
+WebQTest-150,what language does cuba speak,Haitian Creole,Spanish Language,1,1.0,0.6567438244819641,310.7721010019304,False,vanilla_rag,0
+WebQTest-153,what are the sights to see in madrid,Madrid Arena,Not applicable,0,0.0,0.49842819571495056,1573.693832000572,False,vanilla_rag,0
+WebQTest-154,what instruments did louis armstrong play,Cornet,Trumpet,1,1.0,0.4815777540206909,1568.9159520006797,False,vanilla_rag,0
+WebQTest-155,what year was george w bush elected,2000-11-07,1972,0,0.0,0.44766318798065186,1577.9926639988844,False,vanilla_rag,0
+WebQTest-156,what time zone am i in california,Pacific Time Zone,Pacific Time Zone,1,1.0,0.6700764298439026,373.1328069989104,False,vanilla_rag,1
+WebQTest-157,where is mission san buenaventura located,Ventura County,California,0,0.0,0.4235440194606781,1572.3637789997156,False,vanilla_rag,0
+WebQTest-159,what time in hilo hawaii,Hawaii-Aleutian Time Zone,UTC−10:00,0,0.0,0.4342852830886841,1575.8693310017406,False,vanilla_rag,0
+WebQTest-160,where did rudolf virchow conduct his research,Humboldt University of Berlin,"The information provided does not contain any details about Rudolf Virchow or his research. Therefore, I cannot determine where",0,0.0,0.3754134178161621,1641.637760996673,False,vanilla_rag,0
+WebQTest-161,what university did gordon brown attend,University of Edinburgh,The Scots PGC College,0,0.0,0.44729408621788025,1580.9286490002705,False,vanilla_rag,0
+WebQTest-162,what countries does greece share borders with,Albania,"Answer: Albania, Bulgaria, Macedonia, Turkey",0,0.33333333333333337,0.5231955647468567,1570.6679620016075,False,vanilla_rag,0
+WebQTest-163,what year did the seahawks win the superbowl,Super Bowl XLVIII,The information provided does not contain any details about the Seattle Seahawks winning the Super Bowl or the specific year of such an event,0,0.14814814814814814,0.3466760218143463,1582.9138400004013,False,vanilla_rag,0
+WebQTest-164,what did stephen hawking become famous for,Cosmologist,Writer,1,1.0,0.4380512237548828,1572.779805999744,False,vanilla_rag,0
+WebQTest-165,who plays donna noble,Catherine Tate,Patti Austin,0,0.0,0.48584282398223877,1566.4538529999845,False,vanilla_rag,0
+WebQTest-166,what was dr seuss education,"Lincoln College, Oxford",m.040r34v,0,0.0,0.4446936845779419,1574.1328229996725,False,vanilla_rag,0
+WebQTest-167,where did queensland get its name from,Queen Victoria,"The name ""Queensland"" is derived from the British Queen Adelaide, who was the wife of Queen Victoria. However",0,0.2857142857142857,0.6222872138023376,1577.2776039993914,False,vanilla_rag,0
+WebQTest-168,what document did james madison write,"The Papers of James Madison, Secretary of State Series, Vol. 2",The United States Constitutional Convention,0,0.26666666666666666,0.5658071637153625,1572.1863109974947,False,vanilla_rag,0
+WebQTest-169,what are the three official languages of belgium,Dutch Language,"Dutch, French, German",0,0.5,0.5500442385673523,1575.1741150015732,False,vanilla_rag,0
+WebQTest-170,who played bilbo in lord of the rings,Norman Bird,Shawn Hatosy,0,0.0,0.44480326771736145,1583.120911000151,False,vanilla_rag,0
+WebQTest-171,what airport do you fly into to get to destin fl,Destin–Fort Walton Beach Airport,"None of the given facts mention Destin, FL. The provided facts are about airports in other locations.",0,0.1,0.5026904940605164,1574.1985009990458,False,vanilla_rag,0
+WebQTest-172,what do you call members of the senate,Senator,United States Senator,0,0.5,0.5765449404716492,1583.2602549999137,False,vanilla_rag,0
+WebQTest-173,what countries are part of the baltic,Latvia,"Russia, Lithuania, Poland",0,0.5,0.7111582159996033,492.41403300038655,False,vanilla_rag,0
+WebQTest-174,what team does colin kaepernick play for,San Francisco 49ers,m.0zt_f6k,0,0.0,0.30989643931388855,1575.2873979981814,False,vanilla_rag,0
+WebQTest-175,where did joe flacco attend college,University of Delaware,John F. Kennedy College,0,0.0,0.4141627252101898,1573.350703001779,False,vanilla_rag,0
+WebQTest-176,who is emma stone father,Jeff Stone,Rex Kennedy,0,0.0,0.41994819045066833,1570.8005540000158,False,vanilla_rag,0
+WebQTest-177,where was theodore roosevelt buried,Youngs Memorial Cemetery,"English Cemetery, Florence",0,0.3333333333333333,0.5246765613555908,1581.4448529999936,False,vanilla_rag,0
+WebQTest-178,who was the leader of the us during wwii,Franklin D. Roosevelt,Franklin D. Roosevelt,1,1.0,0.4888747036457062,1631.9206510015647,False,vanilla_rag,0
+WebQTest-179,what artistic movement did henri matisse belong to,Neo-impressionism,Fauvism,1,1.0,0.5074711441993713,1043.2692210015375,False,vanilla_rag,0
+WebQTest-180,where the missouri river ends,Mississippi River,Lower Mississippi River,0,0.8,0.5922351479530334,1571.8773609987693,False,vanilla_rag,3
+WebQTest-181,what type of currency do they use in thailand,Thai baht,"The given facts do not provide information about Thailand's currency. Therefore, I cannot determine the currency used in Thailand from this",0,0.0,0.4829147756099701,1566.0772060000454,False,vanilla_rag,0
+WebQTest-182,who is khloe kardashian 's husband,Lamar Odom,Kim Sears,0,0.0,0.40071043372154236,1610.4864660010207,False,vanilla_rag,0
+WebQTest-184,what state does romney live in,Massachusetts,Michigan,0,0.0,0.564132034778595,1575.7152260011935,False,vanilla_rag,0
+WebQTest-185,what type of government does france use,Semi-presidential system,"Semi-presidential system, Unitary state",0,0.7499999999999999,0.5843663811683655,670.512405999034,False,vanilla_rag,1
+WebQTest-186,who rules denmark right now,Helle Thorning-Schmidt,Constitutional monarchy and Hereditary monarchy,0,0.0,0.6118490099906921,549.3672259981395,False,vanilla_rag,0
+WebQTest-187,what did stephen hawking study,Physics,(There is no information provided about Stephen Hawking in the given facts.) The facts provided do not contain any information about,0,0.0,0.38776060938835144,1617.0464560018445,False,vanilla_rag,0
+WebQTest-188,where did bristol palin go to school,West Anchorage High School,"The information provided does not include any details about Bristol Palin's schooling. Therefore, I cannot determine where she went to school",0,0.08,0.34459590911865234,1613.8706389974686,False,vanilla_rag,0
+WebQTest-189,what region of the world is egypt associated with,Middle East,Middle East,1,1.0,0.6545684933662415,324.6282350010006,False,vanilla_rag,0
+WebQTest-190,what did dr. seuss do,Visual Artist,"The given facts do not contain any information about Dr. Seuss. Therefore, I cannot provide an answer based on the",0,0.0,0.39950430393218994,1585.3068500000518,False,vanilla_rag,0
+WebQTest-191,where did drew brees go to college wikianswers,Stanford Graduate School of Business,There is no information provided in the given facts about Drew Brees or his college. The facts mention Quarterback as a,0,0.0,0.29915204644203186,1576.3030970010732,False,vanilla_rag,0
+WebQTest-193,what school did ben roethlisberger go to,Miami University,"The information provided does not contain any details about Ben Roethlisberger's education. Therefore, I cannot determine what school",0,0.0,0.3955094516277313,1573.2657859989558,False,vanilla_rag,0
+WebQTest-194,where did the iroquois indians come from,Québec,North America,0,0.0,0.4348851144313812,1578.0651880013465,False,vanilla_rag,0
+WebQTest-195,what kind of guitar did george harrison use,Rickenbacker 360/12,"The information provided does not contain any details about George Harrison or the type of guitar he used. Therefore, I cannot provide",0,0.0,0.35379377007484436,1573.2950140009052,False,vanilla_rag,0
+WebQTest-196,what language do navajo people speak,Navajo Language,English Language,1,1.0,0.40022966265678406,1574.142331002804,False,vanilla_rag,0
+WebQTest-197,what places make up new england,New Hampshire,"New Hampshire, Vermont, Massachusetts, Rhode Island, Maine",0,0.4444444444444445,0.6585080623626709,1577.9106979971402,False,vanilla_rag,2
+WebQTest-199,what type of government does iraq have now,Parliamentary system,Semi-presidential system,0,0.4,0.5146231651306152,1561.4002960028301,False,vanilla_rag,0
+WebQTest-200,where was the vietnam war location,Vietnam,Vietnam,1,1.0,0.6495422720909119,253.66805500016198,False,vanilla_rag,2
+WebQTest-201,who did gerald ford select as his vice president when he became president,Nelson Rockefeller,There is no information provided about Gerald Ford selecting a vice president in this data. The given facts only state that Gerald Ford,0,0.0,0.5671990513801575,1571.86784300211,False,vanilla_rag,0
+WebQTest-202,what is the currency used in italy,Euro,Euro,1,1.0,0.6162536144256592,1567.068031999952,False,vanilla_rag,1
+WebQTest-204,what is the capital of modern egypt,Cairo,Cairo,1,1.0,0.593026876449585,1570.108658997924,False,vanilla_rag,2
+WebQTest-205,what school did sir ernest rutherford go to,University of Cambridge,"The information provided does not contain any details about Sir Ernest Rutherford's schooling. Therefore, I cannot determine which school Sir",0,0.0,0.3886624276638031,1629.7019480007293,False,vanilla_rag,0
+WebQTest-206,what position does brandon roy play,Small forward,Roy LeCraw,0,0.0,0.3426682651042938,1574.9415760001284,False,vanilla_rag,0
+WebQTest-207,where is harvard university,United States of America,"Cambridge, Massachusetts, United States of America",0,0.8,0.7304015159606934,1567.9849890002515,False,vanilla_rag,1
+WebQTest-209,where is laos in world map,Southeast Asia,"The information provided does not contain any details about Laos. Based on the given facts, Laos is not mentioned at all.",0,0.0,0.4299581050872803,1572.6692319985887,False,vanilla_rag,0
+WebQTest-210,where is tyrese gibson from,Watts,Los Angeles,0,0.0,0.7752680778503418,1584.513847999915,False,vanilla_rag,0
+WebQTest-211,what countries are near italy,Slovenia,Europe,0,0.0,0.6595296859741211,1564.7266779997153,False,vanilla_rag,0
+WebQTest-212,which states does the colorado river run through,Arizona,Colorado,1,1.0,0.47663411498069763,1571.596343001147,False,vanilla_rag,0
+WebQTest-213,who did scarlett johansson date,Patrick Wilson,"The information provided does not contain any details about Scarlett Johansson's romantic relationships. Therefore, I cannot determine who Scarlett Joh",0,0.0,0.40503671765327454,1574.815664000198,False,vanilla_rag,0
+WebQTest-214,which continents were part of the roman empire,Europe,Europe,1,1.0,0.47117146849632263,1569.3069169974478,False,vanilla_rag,0
+WebQTest-215,where was elvis costello born,Paddington,United Kingdom,0,0.0,0.5316404104232788,1576.602887998888,False,vanilla_rag,0
+WebQTest-216,where are the gobi desert located on a map,Mongolia,"The Gobi Desert is not mentioned in the provided facts, so I cannot determine its location based on this information. The",0,0.0,0.48994410037994385,1573.920069000451,False,vanilla_rag,0
+WebQTest-217,what type of government does the us follow,Presidential system,Representative democracy,0,0.0,0.5034067034721375,1575.7220310006232,False,vanilla_rag,0
+WebQTest-218,in which continent is germany,Europe,Europe,1,1.0,0.5936412811279297,258.71654499860597,False,vanilla_rag,3
+WebQTest-220,what language turkey people speak,Ladino Language,Turkish Language,1,1.0,0.5305227637290955,1574.2517899998347,False,vanilla_rag,0
+WebQTest-221,who does jeremy lin play for,Los Angeles Lakers,Actor,0,0.0,0.34204038977622986,1572.868395000114,False,vanilla_rag,0
+WebQTest-222,where is the seychelles on world map,Africa,"Indian Ocean To answer the question ""Where is Seychelles on the world map?"" based on the given facts, the",0,0.0,0.445181280374527,1567.1394700002566,False,vanilla_rag,0
+WebQTest-224,where did william morris go to college,"Exeter College, Oxford","The information provided does not contain any details about William Morris's college attendance. Therefore, I cannot determine where William Morris went",0,0.08,0.4942275583744049,1572.051207000186,False,vanilla_rag,0
+WebQTest-225,what state is mount st. helens in,Washington,The question does not match the provided facts. There is no information about Mount St. Helens or its state in the,0,0.0,0.3868841230869293,1572.5705990007555,False,vanilla_rag,0
+WebQTest-226,who is jimmy savile,Disc jockey,"The information provided does not contain any details about Jimmy Savile. Based on the given facts, there is no entry for",0,0.0,0.3772970736026764,1571.3615349995962,False,vanilla_rag,0
+WebQTest-227,where were the seneca indians located,New York,"The question is about Seneca Indians, but the provided facts are about Seneca the Younger, a Roman philosopher and",0,0.0,0.5954992771148682,1573.7336239981232,False,vanilla_rag,0
+WebQTest-231,when did florida marlins join mlb,1994 Major League Baseball Season,"The information provided does not contain any details about the Florida Marlins joining MLB. Therefore, I cannot determine the answer from the",0,0.0,0.37265074253082275,1581.0640909985523,False,vanilla_rag,0
+WebQTest-232,what countries have spanish as the national language,Equatorial Guinea,"Cuba, Puerto Rico, Argentina, Chile, United States of America",0,0.6153846153846153,0.6282183527946472,1575.9041749988683,False,vanilla_rag,0
+WebQTest-233,what to see in phoenix arizona,Pueblo Grande Ruin,Phoenix Islands,0,0.4,0.4733757972717285,1573.0672069985303,False,vanilla_rag,0
+WebQTest-234,what countries does the panama canal go through,Panama,None,0,0.0,0.38569211959838867,1569.0066989991465,False,vanilla_rag,0
+WebQTest-235,what is charlie chaplin famous for,Actor,Actor,1,1.0,0.42024627327919006,1570.9973140001239,False,vanilla_rag,1
+WebQTest-237,what did fred durst do,Actor,"The information provided does not contain any details about Fred Durst. The facts list Fred Grable as the writer of """,0,0.0,0.32860174775123596,1575.781826999446,False,vanilla_rag,0
+WebQTest-239,where do american bulldogs originate from,United States of America,England,0,0.0,0.6251445412635803,1573.0190020003647,False,vanilla_rag,0
+WebQTest-240,what colleges did albert einstein teach at,ETH Zurich,"The information provided does not include any details about the colleges or universities where Albert Einstein taught. Therefore, I cannot provide an",0,0.0,0.4734947681427002,1573.1687849984155,False,vanilla_rag,0
+WebQTest-241,who plays the voice of brian on family guy,Seth MacFarlane,Eric Benét,0,0.0,0.3836190700531006,1575.2244380018965,False,vanilla_rag,0
+WebQTest-243,where did george w bush live as a child,New Haven,The information provided does not specify where George W. Bush lived as a child. No details about his childhood residence are given,0,0.0,0.5640748143196106,1579.9650990011287,False,vanilla_rag,0
+WebQTest-245,what year was the first miss america pageant held,1921-09,1921,0,0.6666666666666666,0.3608335554599762,1575.9098200032895,False,vanilla_rag,0
+WebQTest-246,what was nikola tesla inventions,Wireless telegraphy,The information provided does not contain any details about Nikola Tesla's inventions. The facts given are specifically about Benjamin Franklin's inventions,0,0.08,0.5246028304100037,1570.7369630035828,False,vanilla_rag,0
+WebQTest-247,where did flemish people come from,France,Belgium,1,1.0,0.45428466796875,1570.7507709994388,False,vanilla_rag,0
+WebQTest-248,what state new york city belong to,New York,New York State,0,0.8,0.567333996295929,376.42047699773684,False,vanilla_rag,1
+WebQTest-249,what was the cause of death for bruce lee,Cerebral edema,Cerebral edema,1,1.0,0.6252309679985046,1572.3250260016357,False,vanilla_rag,1
+WebQTest-250,what type of government does usa follow,Presidential system,Representative democracy,0,0.0,0.49248170852661133,1572.8701689986337,False,vanilla_rag,0
+WebQTest-251,what type of currency do they use in england,Pound sterling,Pound sterling,1,1.0,0.6870660781860352,311.385393000819,False,vanilla_rag,1
+WebQTest-252,where was benjamin franklin educated,Boston Latin School,m.040vjzw,0,0.0,0.5939585566520691,1575.060309998662,False,vanilla_rag,0
+WebQTest-253,what countries included in the uk,Wales,"United Kingdom, with Dependencies and Territories The answer is not explicitly listing all countries included in the UK, but rather the broader",0,0.0,0.609194278717041,1577.2629670027527,False,vanilla_rag,0
+WebQTest-254,what countries in the world speak chinese,Vietnam,China,1,1.0,0.5366600155830383,1218.1212979994598,False,vanilla_rag,0
+WebQTest-255,where obama went to school,Occidental College,John F. Kennedy High School,0,0.28571428571428575,0.5308746099472046,1574.2405780001718,False,vanilla_rag,0
+WebQTest-256,what is the primary language of china,Standard Chinese,English Language,0,0.0,0.502707302570343,1575.7645679987036,False,vanilla_rag,0
+WebQTest-257,who was the soviet leader during world war ii,Leonid Brezhnev,Nikita Khrushchev,1,1.0,0.48912081122398376,1662.5098289987363,False,vanilla_rag,0
+WebQTest-258,which of the following does australia export the most,Energy industry,m.04c6sjf,0,0.0,0.5713486671447754,1581.1910049997095,False,vanilla_rag,0
+WebQTest-260,where was the city of david,Jerusalem,"The question is about the city of David, but the provided facts do not contain any information about a city named David.",0,0.0,0.41663476824760437,1572.7204389986582,False,vanilla_rag,0
+WebQTest-261,what is cindy sherman known for,Visual Artist,Tropical Cyclone,0,0.0,0.4590052664279938,1574.1418969992083,False,vanilla_rag,0
+WebQTest-262,what tv shows did shawnee smith play in,All is Forgiven,"The question seems to be about Shawnee Smith, but the provided facts are about Shawn Hatosy. Based on the",0,0.23999999999999996,0.4521453380584717,1590.2977910009213,False,vanilla_rag,0
+WebQTest-264,what does australia use for currency,Australian dollar,Australian dollar,1,1.0,0.732395350933075,327.39188500272576,False,vanilla_rag,1
+WebQTest-265,which airport to fly into rome,Ciampino–G. B. Pastine International Airport,Norman Manley International Airport is not related to Rome. The correct airport to fly into Rome is not mentioned in the given,0,0.20338983050847456,0.4869542121887207,1571.6678660028265,False,vanilla_rag,0
+WebQTest-266,what is there to do for fun in kansas city,Negro Leagues Baseball Museum,"There are many fun activities to enjoy in Kansas City, including visiting museums like the Nelson-Atkins Museum of Art and",0,0.23076923076923073,0.4802623987197876,1570.4180089996953,False,vanilla_rag,0
+WebQTest-267,where was martin luther king jr raised,Atlanta,New York,0,0.0,0.6584605574607849,1578.1840979980188,False,vanilla_rag,0
+WebQTest-268,what year was lebron james rookie season,2003–04 NBA season,2003,0,0.0,0.29460397362709045,505.7104609986709,False,vanilla_rag,0
+WebQTest-269,where does delaware river start,West Branch Delaware River,"Not enough information provided To answer the question about where the Delaware River starts, the given facts do not contain any information regarding",0,0.14814814814814817,0.5702488422393799,1568.0377459975716,False,vanilla_rag,0
+WebQTest-270,what kind of monarchy does japan have,Parliamentary system,Constitutional monarchy,1,1.0,0.5716860890388489,1570.362959002523,False,vanilla_rag,2
+WebQTest-271,where did mitt romney 's parents come from,Detroit,United States of America,0,0.0,0.5397939085960388,1573.8254220013914,False,vanilla_rag,0
+WebQTest-273,when did michael jordan return to the nba,1984,"The given facts do not contain information about Michael Jordan's return to the NBA. Therefore, I cannot provide an answer based",0,0.0,0.29497942328453064,1571.9449390016962,False,vanilla_rag,0
+WebQTest-276,where was mission san rafael located,94901,"California To determine the location of Mission San Rafael, we need to follow the given facts and make logical inferences:",0,0.0,0.40615522861480713,1591.1562659966876,False,vanilla_rag,0
+WebQTest-277,who was esther 's husband,Ahasuerus,Not provided in the given facts. The facts do not mention Esther Bloom's husband.,0,0.0,0.38592109084129333,1221.8993139977101,False,vanilla_rag,0
+WebQTest-278,who 's dating claire danes,Hugh Dancy,Victoria Hutchinson,0,0.0,0.47234928607940674,1574.5062189998862,False,vanilla_rag,0
+WebQTest-279,what county is st paul va in,Wise County,"The question does not match the provided facts. There is no information about St. Paul, VA in the given data.",0,0.0,0.44549036026000977,1575.8737770011066,False,vanilla_rag,0
+WebQTest-281,what type of sports do japanese play,Japan women's national handball team,Badminton,0,0.0,0.4326649606227875,1571.2662680016365,False,vanilla_rag,0
+WebQTest-282,which countries share a border with russia,Latvia,Euroregion Sesupe,0,0.0,0.5384271144866943,1569.1039150005963,False,vanilla_rag,0
+WebQTest-284,where did the latin language originate from,Indo-European languages,Roman Empire,0,0.0,0.47565945982933044,1571.2827460010885,False,vanilla_rag,0
+WebQTest-286,what school did karl benz go to,Karlsruhe Institute of Technology,"The information provided does not contain any details about Karl Benz's schooling. Therefore, I cannot determine which school he attended from",0,0.0,0.40912386775016785,1579.948858001444,False,vanilla_rag,0
+WebQTest-287,what movies has carmen electra been in,We Are Family,How She Move,0,0.0,0.40741467475891113,1577.6904480007943,False,vanilla_rag,0
+WebQTest-289,when do world war ii end,1945-09-02,1945-09-02,1,1.0,0.46735331416130066,1572.0523689997208,False,vanilla_rag,0
+WebQTest-291,where did morgan freeman graduate,Pasadena Playhouse,Hood College,0,0.3333333333333333,0.4111795723438263,1570.9099189989502,False,vanilla_rag,0
+WebQTest-294,who was carolus linnaeus,Scientist,Botanist,1,1.0,0.4131633937358856,1575.394152001536,False,vanilla_rag,0
+WebQTest-295,what type of government does germany have now,Representative democracy,Representative democracy,1,1.0,0.566477358341217,315.19652100178064,False,vanilla_rag,1
+WebQTest-296,what kind of government does libya have today,Parliamentary republic,Provisional government,1,1.0,0.6327795386314392,1572.1346009995614,False,vanilla_rag,0
+WebQTest-297,what time zone is anaheim california,Pacific Time Zone,Pacific Time Zone,1,1.0,0.5621396899223328,1567.7462660023593,False,vanilla_rag,1
+WebQTest-298,what year did the orioles go to the world series,1970 World Series,The information provided does not mention the Baltimore Orioles or their World Series appearances. The facts given only discuss the Atlanta Braves and,0,0.15384615384615383,0.3725520074367523,1572.5372870001593,False,vanilla_rag,0
+WebQTest-300,who is sir francis bacon,Author,England,0,0.0,0.7204981446266174,1572.9891670016514,False,vanilla_rag,3
+WebQTest-301,what were amelia earhart 's achievements,Pilot,m.0_vnn01,0,0.0,0.41145768761634827,1586.513387002924,False,vanilla_rag,0
+WebQTest-302,what are the official colors of the dallas cowboys,White,Red,0,0.0,0.5472578406333923,1569.050309000886,False,vanilla_rag,2
+WebQTest-303,where did margaret hoover go to college,Bryn Mawr College,"The given facts do not contain any information about Margaret Hoover or her college education. Therefore, I cannot determine where Margaret Hoover",0,0.08333333333333334,0.3446159362792969,1574.8417169997992,False,vanilla_rag,0
+WebQTest-304,what is jamie oliver children names,Poppy Honey Rosie Oliver,None,0,0.0,0.4723148047924042,1575.246934000461,False,vanilla_rag,0
+WebQTest-305,where does bradley walsh live,Los Angeles,m.03ph0k1,0,0.0,0.41178658604621887,1573.0061269969156,False,vanilla_rag,0
+WebQTest-306,who is the head coach of inter milan,Walter Mazzarri,The given facts do not provide information about the head coach of Inter Milan. The provided facts only list Italian nationalities for,0,0.0,0.34990835189819336,1573.2496140008152,False,vanilla_rag,0
+WebQTest-308,who did reese witherspoon get married to,Jim Toth,"The information provided does not contain any details about Reese Witherspoon's marriage. Therefore, I cannot determine who she got",0,0.0,0.3058795630931854,1575.932464998914,False,vanilla_rag,0
+WebQTest-310,what kind of money should i take to costa rica,Costa Rican colón,Not specified in facts,0,0.0,0.5433183312416077,1577.5056630009203,False,vanilla_rag,0
+WebQTest-311,where is the ufc headquarters,Las Vegas,m.0jsl0vq,0,0.0,0.4399007558822632,1597.0424129991443,False,vanilla_rag,0
+WebQTest-312,who plays captain kirk in star trek,William Shatner,The information provided does not contain any details about who plays Captain Kirk in Star Trek. The facts given are about guest roles,0,0.0,0.461727499961853,1579.327123999974,False,vanilla_rag,0
+WebQTest-313,who does albert pujols play for 2012,Scottsdale Scorpions,m.0y833qs,0,0.0,0.28431326150894165,1577.4950239974714,False,vanilla_rag,0
+WebQTest-314,what kind of government is sweden,Parliamentary system,Parliamentary system,1,1.0,0.7407238483428955,1513.2644650002476,False,vanilla_rag,5
+WebQTest-315,where was country singer george jones born,Saratoga,Detroit,0,0.0,0.47448840737342834,1569.173146999674,False,vanilla_rag,0
+WebQTest-316,what did shakespeare become famous for,Author,Author,1,1.0,0.5840117335319519,1568.9954689987644,False,vanilla_rag,1
+WebQTest-317,where does russia import from,Uzbekistan,Asia,0,0.0,0.5585618019104004,1568.4903580004175,False,vanilla_rag,0
+WebQTest-318,what is the money of switzerland called,Swiss franc,Swiss franc,1,1.0,0.4560030400753021,1574.0777749997505,False,vanilla_rag,0
+WebQTest-321,what do people in australia speak,Esperanto Language,"English Language, Esperanto Language",0,0.8571428571428571,0.5091888904571533,1586.6413749972708,False,vanilla_rag,4
+WebQTest-322,what has ian somerhalder acted in,Pulse,"The given facts do not contain any information about Ian Somerhalder's acting roles. Therefore, I cannot provide an",0,0.16,0.43022799491882324,1573.0075700012094,False,vanilla_rag,0
+WebQTest-323,what movies did ron howard director,The Da Vinci Code,There is no information provided about Ron Howard in the given facts. The facts only mention Andrew Fleming and Roger Corman as,0,0.21428571428571427,0.44855841994285583,1568.5998769986327,False,vanilla_rag,0
+WebQTest-326,what did gerald r ford die from,Cardiovascular disease,Cardiovascular disease,1,1.0,0.6348928213119507,1570.4424280011153,False,vanilla_rag,1
+WebQTest-327,what two continents is turkey on,Europe,"Asia, Europe",0,0.6666666666666666,0.6543347239494324,372.8339139997843,False,vanilla_rag,4
+WebQTest-328,where did kevin love go to college,"University of California, Los Angeles",m.0n1mx96,0,0.0,0.42760106921195984,1573.687030999281,False,vanilla_rag,0
+WebQTest-329,what type of government was formed when italy unified,Unitary state,Unitary state,1,1.0,0.5308248400688171,1573.1091809975624,False,vanilla_rag,1
+WebQTest-331,where was the temple of karnak built,Luxor Governorate,"Egypt To answer the question ""Where was the temple of Karnak built?"" based on the given facts, the answer is",0,0.09523809523809523,0.337197870016098,1578.9847260020906,False,vanilla_rag,0
+WebQTest-333,what movies did morgan freeman star in,High Crimes,The Tell-Tale Heart,0,0.3333333333333333,0.4496195316314697,1582.3079369984043,False,vanilla_rag,0
+WebQTest-334,who did john kennedy have affairs with,Marilyn Monroe,An American Affair,0,0.0,0.6341546773910522,1574.4647220017214,False,vanilla_rag,0
+WebQTest-335,what type of money to take to cuba,Cuban peso,United States Dollar,0,0.0,0.5425793528556824,850.0127420011268,False,vanilla_rag,0
+WebQTest-336,what currency should you take to morocco,Moroccan dirham,Moroccan Dirham,1,1.0,0.483805775642395,369.4493959992542,False,vanilla_rag,0
+WebQTest-337,who is mary mcleod bethune for kids,Educator,The information provided does not contain any details about Mary McLeod Bethune or her relationship to any of the individuals listed.,0,0.0,0.4572504758834839,1568.6235280008987,False,vanilla_rag,0
+WebQTest-338,what do they call money in japan,Japanese yen,United States Dollar,0,0.0,0.4856843948364258,1572.3155500018038,False,vanilla_rag,0
+WebQTest-339,what nationality is mother teresa,Ottoman Empire,United States of America,0,0.0,0.4361260235309601,1571.6675040021073,False,vanilla_rag,0
+WebQTest-340,who is richard pryor son,Steven Pryor,There is no information provided about Richard Pryor's son in the given facts.,0,0.23529411764705882,0.3825998306274414,1334.1222670023853,False,vanilla_rag,0
+WebQTest-341,what countries share borders with spain,France,"Answer: Andorra, France, Portugal, Morocco (through the Spanish City of Melilla and the Spanish飞地",0,0.13333333333333333,0.5685125589370728,1570.0594000009005,False,vanilla_rag,0
+WebQTest-342,what countries have english as their official language,Sudan,"United Kingdom, Kingdom of Great Britain, Scotland, Canada, British Virgin Islands",0,0.42857142857142855,0.6099019646644592,1574.847937998129,False,vanilla_rag,0
+WebQTest-343,what international organizations is china part of,G-20 major economies,World Trade Organization,0,0.4,0.5217350721359253,1576.0699790007493,False,vanilla_rag,0
+WebQTest-344,what county is west st paul in,Dakota County,Westmoreland Parish,0,0.0,0.5003412365913391,1573.877368002286,False,vanilla_rag,0
+WebQTest-346,who does donnie wahlberg play in the sixth sense,Vincent Grey,"The question is about ""The Sixth Sense"" but the provided facts are about ""Films from the Sixth Floor"". There",0,0.0,0.40355899930000305,1575.8722710015718,False,vanilla_rag,0
+WebQTest-347,what did baron de montesquie influence,William Blackstone,"Thomas Paine, Isaiah Berlin, Thomas Jefferson, John Adams",0,0.5454545454545454,0.5349113941192627,1573.08234300217,False,vanilla_rag,0
+WebQTest-349,who did carlos boozer play for,Cleveland Cavaliers,"The given facts do not contain any information about Carlos Boozer or his playing teams. Therefore, I cannot determine who Carlos",0,0.0,0.35022273659706116,1573.8274950017512,False,vanilla_rag,0
+WebQTest-351,who owns the portland press herald,"Blethen Maine Newspapers, Inc.","The information provided does not contain details about the ownership of the Portland Press Herald. Based on the given facts, we can",0,0.0,0.43254509568214417,1572.6219700009096,False,vanilla_rag,0
+WebQTest-352,what did albert speer design,Deutsches Stadion,"The information provided does not contain any details about Albert Speer's designs. Therefore, I cannot determine what Albert Speer",0,0.0,0.42466220259666443,1575.763200999063,False,vanilla_rag,0
+WebQTest-354,what art movement did leonardo da vinci belong to,High Renaissance,None,0,0.0,0.4822668135166168,1580.92124399991,False,vanilla_rag,0
+WebQTest-356,what airport is near arlington tx,Arlington Municipal Airport,There is no information provided about airports near Arlington TX in the given facts. The facts mention Arlington County but do not,0,0.14285714285714288,0.5327203273773193,1578.715989999182,False,vanilla_rag,0
+WebQTest-359,what team does heskey play for,Aston Villa F.C.,m.0_00kj8,0,0.0,0.3683149814605713,1574.1565270000137,False,vanilla_rag,0
+WebQTest-360,where did emperor hirohito live,"Aoyama, Minato, Tokyo",Hyōgo Prefecture,0,0.0,0.3690682649612427,1572.4437249991752,False,vanilla_rag,0
+WebQTest-361,what to do and see in vienna austria,Liechtenstein Museum,Vienna,0,0.6666666666666666,0.6251794695854187,1572.4307050004427,False,vanilla_rag,0
+WebQTest-362,when did conflict start in ireland,Irish Confederate Wars,"The given facts do not provide information about a conflict starting in Ireland. Therefore, I cannot determine an answer from the provided",0,0.15384615384615385,0.455187052488327,1582.896930998686,False,vanilla_rag,0
+WebQTest-365,what is there to do in peoria illinois,John C. Flanagan House Museum,m.0wg90c3,0,0.0,0.40695920586586,1570.171464998566,False,vanilla_rag,0
+WebQTest-366,what language do british speak,Esperanto Language,English Language,1,1.0,0.5469725728034973,1579.1269679975812,False,vanilla_rag,0
+WebQTest-367,what makes elvis presley famous,Musician,Actor,1,1.0,0.6666762232780457,1581.3448410008277,False,vanilla_rag,0
+WebQTest-370,what language do people speak in the netherlands,Dutch Language,Dutch,0,0.6666666666666666,0.5033251643180847,1577.7125469976454,False,vanilla_rag,0
+WebQTest-371,what are the major languages spoken in greece,Greek Language,Greek Language,1,1.0,0.4720313847064972,1210.1278949994594,False,vanilla_rag,0
+WebQTest-374,what type of artist is henri matisse,Painting,The question does not match any of the provided facts. There is no information about Henri Matisse in the given facts,0,0.0,0.4918581545352936,1574.979983997764,False,vanilla_rag,0
+WebQTest-375,what was the first book charles dickens wrote,Oliver Twist,There is no information provided about the first book Charles Dickens wrote. The given facts only mention that Charles Dickens is an author,0,0.0,0.5580835342407227,1569.1524139983812,False,vanilla_rag,0
+WebQTest-376,what books did agatha christie wrote,Death On The Nile (Hercule Poirot Mysteries (Paperback)),"The question cannot be fully answered with the given information, as it does not list any specific book titles written by Agatha",0,0.25000000000000006,0.6248202919960022,1568.2318049985042,False,vanilla_rag,0
+WebQTest-377,what school did michael jordan attend,University of North Carolina at Chapel Hill,John F. Kennedy High School,0,0.4000000000000001,0.48069247603416443,1575.064142998599,False,vanilla_rag,0
+WebQTest-379,what year does hitler die,1945-04-30,Hitler died in 1945.,0,0.28571428571428575,0.40414711833000183,1575.0196289991436,False,vanilla_rag,0
+WebQTest-380,where is mount st helens volcano,North America,"The information provided does not contain any details about Mount St. Helens or its location. Therefore, I cannot provide an",0,0.0,0.39213791489601135,1576.6573430009885,False,vanilla_rag,0
+WebQTest-381,what shows are shot in new york,Trial Heat,American Gangster,0,0.0,0.4868148863315582,1581.6132990003098,False,vanilla_rag,0
+WebQTest-382,what book did tupac write,The Rose That Grew from Concrete,None,0,0.0,0.5541999936103821,1571.7708930023946,False,vanilla_rag,0
+WebQTest-383,what language do chinese people write in,Simplified Chinese character,Chinese characters,1,1.0,0.4908633530139923,314.37582099897554,False,vanilla_rag,0
+WebQTest-384,what was robert burns famous for,Bard,"Robert F. Kennedy, not Ambrose Burnside, was a famous writer and politician. However, based on the given",0,0.1111111111111111,0.492816686630249,1572.1733309983392,False,vanilla_rag,0
+WebQTest-385,when did william mckinley died,1901-09-14,"October 14, 1901",0,0.6666666666666666,0.6189038753509521,1571.670717003144,False,vanilla_rag,0
+WebQTest-386,how deep is lake merritt oakland,3.048,"The question contains an error. There is no lake named ""Lake Merritt Oakland."" The correct name for the lake in",0,0.0,0.44336962699890137,1572.5343609992706,False,vanilla_rag,0
+WebQTest-388,what are the important holidays of islam,Mawlid,None,0,0.0,0.5798006057739258,1573.301051997987,False,vanilla_rag,0
+WebQTest-389,what type of music did claude debussy play,Incidental music,Impressionist,0,0.0,0.5113816857337952,1582.538228998601,False,vanilla_rag,0
+WebQTest-390,when was the last time the toronto maple leafs were in the stanley cup finals,1967 Stanley Cup Finals,"The information provided does not contain any details about the Toronto Maple Leafs' Stanley Cup Finals appearances. Therefore, I cannot provide",0,0.24,0.27893295884132385,1583.3176550004282,False,vanilla_rag,0
+WebQTest-392,what team is hank baskett on 2010,Indianapolis Colts,m.0_00kj8,0,0.0,0.41249024868011475,1580.0539310002932,False,vanilla_rag,0
+WebQTest-393,what are the two official languages of paraguay,Spanish Language,Spanish Language,1,1.0,0.5565122961997986,1569.7746169971651,False,vanilla_rag,1
+WebQTest-395,what state is the steelers from,Pittsburgh,Pennsylvania,0,0.0,0.4453507661819458,1517.957429998205,False,vanilla_rag,0
+WebQTest-396,what college did sir isaac newton go to,"Trinity College, Cambridge",Answer: Not provided in the given facts.,0,0.0,0.5529348254203796,1567.1015230000194,False,vanilla_rag,0
+WebQTest-397,what are the school colors for harvard university,Crimson,"The information provided does not include the school colors for Harvard University. Based on the given facts, the school colors for the",0,0.0,0.608322262763977,1579.2110369984584,False,vanilla_rag,0
+WebQTest-398,where is the university of the rockies located,Colorado,"CRHOME To answer the question ""where is the University of the Rockies located,"" we need to identify the relevant information from",0,0.08,0.4189671576023102,1573.634447002405,False,vanilla_rag,2
+WebQTest-399,what disease does robin roberts have,Breast cancer,None,0,0.0,0.5042857527732849,1575.5007299994759,False,vanilla_rag,0
+WebQTest-400,what was the capital city of the east roman empire,Constantinople,Constantinople,1,1.0,0.47481974959373474,1570.129988998815,False,vanilla_rag,0
+WebQTest-401,who plays edward scissorhands,Johnny Depp,"The information provided does not contain any details about who plays Edward Scissorhands. Therefore, I cannot determine the answer from",0,0.0,0.42819416522979736,1581.572020000749,False,vanilla_rag,0
+WebQTest-402,what does joey jordison play in slipknot,Drums,"The question is about Joey Jordison and Slipknot, but the provided facts do not contain any information related to Joey",0,0.0,0.30472442507743835,1569.185540000035,False,vanilla_rag,0
+WebQTest-403,what kind of language does turkey speak,Ladino Language,Turkish Language,1,1.0,0.527363657951355,1570.8224029986013,False,vanilla_rag,0
+WebQTest-404,what was lebron james first team,Cleveland Cavaliers,United States of America,0,0.0,0.33960390090942383,1572.5355389986362,False,vanilla_rag,0
+WebQTest-405,who fought the battle of gettysburg,Confederate States of America,Confederate States of America,1,1.0,0.5842636227607727,1574.6307660010643,False,vanilla_rag,6
+WebQTest-406,who is the coach of the sf giants,Bill Hayes,The question does not match any of the provided facts. There is no information about the San Francisco Giants or their coach in,0,0.0,0.4113483726978302,1577.0396080006321,False,vanilla_rag,0
+WebQTest-408,who was the first president of the afl,Bud Adams,"The given facts do not contain information about the first president of the AFL. Therefore, I cannot provide an answer based on",0,0.0,0.3526672124862671,1572.112900998036,False,vanilla_rag,0
+WebQTest-409,where did giuliana rancic grow up,Naples,"The information provided does not contain any details about Giuliana Rancic's place of growth or upbringing. Therefore, I",0,0.0,0.3842349946498871,1579.228393999074,False,vanilla_rag,0
+WebQTest-410,what are the major cities in ukraine,Kiev,"The question asks about major cities in Ukraine, but the provided facts do not contain any information about Ukraine or its cities.",0,0.0,0.4286927282810211,1578.015744998993,False,vanilla_rag,0
+WebQTest-414,who does brian dawkins play for 2011,Denver Broncos,m.0y833qs,0,0.0,0.3065355122089386,1581.6630820008868,False,vanilla_rag,0
+WebQTest-415,what movies did tupac star in,Juice,Tupac Shakur: Thug Angel: The Life of an Outlaw,0,0.16666666666666666,0.6310570240020752,1103.3435609970184,False,vanilla_rag,0
+WebQTest-416,what form of currency does china have,Renminbi,Chinese Yuan,0,0.0,0.5338049530982971,1566.5347969988943,False,vanilla_rag,0
+WebQTest-417,who plays kenneth,Jack McBrayer,Kevin Willmott,0,0.0,0.4924716055393219,1577.2796730016125,False,vanilla_rag,0
+WebQTest-418,what league are the indianapolis colts in,AFC South,American football,0,0.8,0.3306047022342682,1575.7516820012825,False,vanilla_rag,0
+WebQTest-419,what country did magellan represent,Kingdom of Portugal,"The information provided does not contain any details about Magellan or the country he represented. Therefore, I cannot determine the answer",0,0.0,0.39366093277931213,1574.830498000665,False,vanilla_rag,0
+WebQTest-420,where is perpignan located,France,"The given facts do not contain information about the location of Perpignan. Therefore, I cannot provide an answer based",0,0.0,0.39771512150764465,1579.2671039998822,False,vanilla_rag,0
+WebQTest-421,who did kim richards marry,G. Monty Brinson,Kim Sears,0,0.0,0.46631455421447754,1586.7088470004092,False,vanilla_rag,0
+WebQTest-422,what happened in bosnia in the 90s,Foča massacres,The information provided does not mention any events that occurred in Bosnia in the 90s. The facts given are about,0,0.20689655172413793,0.4639437198638916,1578.07812199826,False,vanilla_rag,0
+WebQTest-423,when 's the last time the steelers won the superbowl,Super Bowl XLIII,The information provided does not contain any details about the Pittsburgh Steelers winning the Super Bowl. The facts given are related to the,0,0.15384615384615383,0.39104199409484863,1580.958365000697,False,vanilla_rag,0
+WebQTest-425,where english is spoken,Nigeria,"United Kingdom, Scotland, England, Kingdom of Great Britain",0,0.7692307692307693,0.5775259137153625,1567.3775939976622,False,vanilla_rag,0
+WebQTest-426,where is giza pyramids located,Egypt,Egypt,1,1.0,0.6046989560127258,253.73602400213713,False,vanilla_rag,1
+WebQTest-427,what is the zip code for midland tx,79701,"The given facts do not contain information about Midland, TX. The provided facts are related to Frederick, which is in",0,0.0,0.41269350051879883,1572.951567999553,False,vanilla_rag,0
+WebQTest-428,what states make up the midwest us,Ohio,"Indiana, East North Central States, West North Central States, Illinois",0,0.8235294117647058,0.6337009072303772,1575.4189580002276,False,vanilla_rag,0
+WebQTest-430,what instruments does justin bieber use,Vocals,None,0,0.0,0.6124290823936462,1570.215506999375,False,vanilla_rag,0
+WebQTest-431,what language does australians speak,Esperanto Language,English Language,1,1.0,0.4936111867427826,1577.0407950003573,False,vanilla_rag,4
+WebQTest-432,who did annie oakley married,Frank E. Butler,"The information provided does not contain any details about Annie Oakley's marriage. Therefore, I cannot determine who Annie Oakley",0,0.0,0.3178037106990814,1579.0998530028446,False,vanilla_rag,0
+WebQTest-433,who has played lex luthor,Kevin Spacey,The information provided does not include any details about Lex Luthor or actors who have played the role of Lex Luthor.,0,0.0,0.4268256723880768,1575.0862679997226,False,vanilla_rag,0
+WebQTest-434,where does the zambezi river start,Mwinilunga,"The fact provided does not contain information about the Zambezi River's starting point. Therefore, I cannot provide an answer",0,0.0,0.44033312797546387,1571.1221339988697,False,vanilla_rag,0
+WebQTest-436,what is the nigeria time,West Africa Time Zone,Eastern European Time Zone,0,0.5,0.5362777709960938,1567.1789360021648,False,vanilla_rag,0
+WebQTest-437,where did they find jenni rivera 's body,Iturbide,"The information provided does not contain any details about Jenni Rivera's body being found. Therefore, I cannot determine the location",0,0.0,0.39155635237693787,1573.2544420025079,False,vanilla_rag,0
+WebQTest-438,what university did romney graduated from,Brigham Young University,"The information provided does not include any details about the university George W. Romney graduated from. Therefore, I cannot provide an",0,0.08333333333333333,0.5245335698127747,1573.5066199995345,False,vanilla_rag,0
+WebQTest-439,where is the time zone line in south dakota,Mountain Time Zone,Central Time Zone,1,1.0,0.6096805930137634,1572.9805740011216,False,vanilla_rag,2
+WebQTest-440,where is jason mraz from,Mechanicsville,"The information provided does not mention Jason Mraz. The nationality of Jason Morgan is given as Jamaica, but there is no",0,0.0,0.47497978806495667,1582.907621999766,False,vanilla_rag,0
+WebQTest-441,what killed john bonham,Inhalation of vomit,"The given facts do not contain any information about John Bonham or his cause of death. Therefore, I cannot determine",0,0.08695652173913045,0.3859010934829712,1577.8676139998424,False,vanilla_rag,0
+WebQTest-442,what industry does walmart operate in,Retail,Retail,1,1.0,0.4185697138309479,1569.1142879986728,False,vanilla_rag,3
+WebQTest-443,what county is texarkana arkansas in,Miller County,Dallas County,0,0.5,0.5993862748146057,314.73074599853135,False,vanilla_rag,0
+WebQTest-446,what music period did beethoven live in,Opera,Classical,0,0.6666666666666666,0.5161576867103577,264.0327059998526,False,vanilla_rag,0
+WebQTest-447,what did laura ingalls wilder wrote,Going West (My First Little Houe Books),There is no information provided about Laura Ingalls Wilder in the given facts. The facts mention Emily Dickinson and a book,0,0.345679012345679,0.3958693742752075,1580.1896849989134,False,vanilla_rag,0
+WebQTest-448,what type of government system does italy have,Unitary state,Unitary state,1,1.0,0.5623628497123718,1571.79913499931,False,vanilla_rag,1
+WebQTest-449,what did john irving wrote,A Prayer for Owen Meany,Harvey and Lee,0,0.0,0.4412475526332855,1581.0621509990597,False,vanilla_rag,0
+WebQTest-450,what is the national flower of hawaii,Hawaiian hibiscus,m.0hz8zdj,0,0.0,0.4392513036727905,1577.0046950019605,False,vanilla_rag,0
+WebQTest-451,what did alice paul accomplish,Organization founder,Alice Lee,0,0.0,0.5116205215454102,1581.1339169995335,False,vanilla_rag,0
+WebQTest-453,what languages do they speak in costa rica,Bribri Language,Jamaican Creole English Language,1,1.0,0.6500928997993469,1576.8493260002288,False,vanilla_rag,0
+WebQTest-454,where did hank marvin come from,Newcastle upon Tyne,"Washington, D.C.",0,0.0,0.4692247807979584,1573.7684300002002,False,vanilla_rag,0
+WebQTest-455,when did chipper jones get drafted,1990 Major League Baseball Draft,The given facts do not contain any information about Chipper Jones or his draft date. The facts provided are about Donell,0,0.07692307692307693,0.3560873568058014,1569.3976669972471,False,vanilla_rag,0
+WebQTest-456,what part did winona ryder play in star trek,Amanda Grayson,"The information provided does not contain any details about Winona Ryder or her role in Star Trek. Therefore, I cannot determine",0,0.0,0.3612898290157318,1575.9061980024853,False,vanilla_rag,0
+WebQTest-459,where did jovan belcher kill himself,Kansas City,Baltimore,0,0.0,0.3664316236972809,1584.7050320007838,False,vanilla_rag,0
+WebQTest-461,where did clay matthews go to school,University of Southern California,The information provided does not contain any details about Clay Matthews going to school. The facts mention Stanley Matthews's place of birth,0,0.07692307692307691,0.3544882833957672,1571.172686999489,False,vanilla_rag,0
+WebQTest-462,what time is it in texas houston right now,Central Time Zone,Central Time Zone,1,1.0,0.5098361372947693,1567.2157240005617,False,vanilla_rag,2
+WebQTest-463,who is princess leia in star wars,Carrie Fisher,m.0gbxxkz,0,0.0,0.3568515479564667,1577.3995269992156,False,vanilla_rag,0
+WebQTest-464,what is the political structure of china,Single-party state,Republic of China,0,0.0,0.5513198971748352,1170.8720579990768,False,vanilla_rag,0
+WebQTest-465,what is new york city airport,Newark Liberty International Airport,"There is no New York City airport mentioned in the given facts. The facts only mention Frederick Municipal Airport, Cobb County Airport",0,0.21428571428571427,0.4527491331100464,1578.2657099989592,False,vanilla_rag,0
+WebQTest-466,what language brazil speak,Brazilian Portuguese,Portuguese Language,1,1.0,0.6332588791847229,1568.1167900002038,False,vanilla_rag,0
+WebQTest-467,who played obi wan in episode 2,Ewan McGregor,m.012zjyzv,0,0.0,0.3414081037044525,1574.1655819983862,False,vanilla_rag,0
+WebQTest-468,where did venus williams come from,Lynwood,"The information provided does not include details about Venus Williams' nationality or ethnicity. Therefore, I cannot determine her origin based on",0,0.0,0.4480454623699188,1574.2850489987177,False,vanilla_rag,0
+WebQTest-469,what currency is used in panama,Panamanian balboa,Panama uses the Panamanian balboa as its currency.,0,0.4,0.5495385527610779,1568.8771390014153,False,vanilla_rag,0
+WebQTest-470,where does the zambezi river originate,Mwinilunga,"The fact provided does not contain information about the Zambezi River's origin. Therefore, I cannot provide an answer based",0,0.0,0.44724133610725403,1576.6785830019217,False,vanilla_rag,0
+WebQTest-472,what team did ronaldo play for in 2003,Real Madrid C.F.,There is no information provided about which team Ronaldo played for in 2003. The given facts do not contain,0,0.08695652173913043,0.36389973759651184,1578.4773959967424,False,vanilla_rag,0
+WebQTest-473,where does robin williams live 2011,San Francisco,Hollywood,0,0.0,0.402365118265152,1579.2311520017392,False,vanilla_rag,0
+WebQTest-474,who played jacob black in twilight,Taylor Lautner,J. Charles Haydon,0,0.0,0.48566892743110657,1575.2663880011823,False,vanilla_rag,0
+WebQTest-477,which airport to fly into in buenos aires,Aeroparque Jorge Newbery,Ministro Pistarini International Airport,1,1.0,0.5564908981323242,1573.031023999647,False,vanilla_rag,0
+WebQTest-479,what team did adrian peterson play for in college,University of Oklahoma,"The information provided does not contain any details about Adrian Peterson or his college teams. Therefore, I cannot determine which team Adrian",0,0.0,0.3747316896915436,1572.1679920025053,False,vanilla_rag,0
+WebQTest-480,where does name pennsylvania come from,William Penn,location.location.contains,0,0.0,0.517207682132721,1573.8309749976906,False,vanilla_rag,0
+WebQTest-481,what kind of money do they use in germany,Euro,Eurostat,0,0.0,0.5248101353645325,1578.138062999642,False,vanilla_rag,0
+WebQTest-482,who plays blaine in batman,Tom Hardy,m.0v8zw9v,0,0.0,0.3783992528915405,1576.636942998448,False,vanilla_rag,0
+WebQTest-484,what language does australia use,Esperanto Language,English Language,1,1.0,0.5667712092399597,1572.8359899985662,False,vanilla_rag,3
+WebQTest-487,who did veronica lake mary,Joseph A. McCarthy,Mary Mary,0,0.0,0.39920687675476074,1588.734797998768,False,vanilla_rag,0
+WebQTest-488,who did sir francis drake marry,Elizabeth Sydenham,m.0j4ks8g,0,0.0,0.36099275946617126,1574.335493001854,False,vanilla_rag,0
+WebQTest-489,who plays stephanie plum in one for the money,Katherine Heigl,m.0mzl_0g,0,0.0,0.35942599177360535,1571.1187979977694,False,vanilla_rag,0
+WebQTest-490,what did the ancient romans speak,Latin Language,Latin Language,1,1.0,0.4517563283443451,1573.2643740011554,False,vanilla_rag,1
+WebQTest-491,what does ringo sing,Love Me Do,"The information provided does not mention Ringo singing. The facts list John Lennon and Joseph Bowie as artists, but there is",0,0.22222222222222224,0.4021656811237335,1572.9425819990865,False,vanilla_rag,0
+WebQTest-492,where was st. lucy born,Syracuse,"The information provided does not contain any details about St. Lucy's birthplace. Therefore, I cannot determine where St.",0,0.0,0.47451052069664,1573.6955430002126,False,vanilla_rag,0
+WebQTest-493,what type of government does australia have,Parliamentary system,Constitutional monarchy,1,1.0,0.65315181016922,1572.2743730002549,False,vanilla_rag,1
+WebQTest-497,who was the father of king george vi,George V,George V,1,1.0,0.40952447056770325,1612.6106180017814,False,vanilla_rag,0
+WebQTest-500,what is the zip code for trenton,08607,There is no zip code listed for Trenton in the provided facts. The facts only contain postal codes for Mobile.,0,0.0,0.44605663418769836,1577.1207920006418,False,vanilla_rag,0
+WebQTest-501,what has ashley greene been in,King of California,Singer-songwriter,0,0.0,0.5029046535491943,1571.2386819977837,False,vanilla_rag,0
+WebQTest-502,where did al qaeda attack,September 11 attacks,Syria,0,0.0,0.4300656318664551,1573.569875999965,False,vanilla_rag,0
+WebQTest-503,what language is spoken in switzerland,French,French,1,1.0,0.5842176079750061,1568.3759720013768,False,vanilla_rag,1
+WebQTest-504,who was philip in acts chapter 8,Apostle Philip,Philip K. Dick,0,0.4,0.38658738136291504,1576.5823469992029,False,vanilla_rag,0
+WebQTest-506,what the time zone in england,Greenwich Mean Time Zone,Greenwich Mean Time Zone,1,1.0,0.6891324520111084,430.5586660011613,False,vanilla_rag,1
+WebQTest-508,what is the best currency to take to turkey,Turkish lira,Turkish Lira,1,1.0,0.49603065848350525,1570.4448850010522,False,vanilla_rag,0
+WebQTest-509,what system of government is practiced in nigeria,Presidential system,Parliamentary system,0,0.5,0.5251111388206482,1576.3213700010965,False,vanilla_rag,0
+WebQTest-512,who were mary shelley,Author,"Novelist, Playwright, Writer, Author",0,0.4,0.7574893832206726,1569.8220859994763,False,vanilla_rag,6
+WebQTest-513,what language do most australians speak,Esperanto Language,English Language,1,1.0,0.4777024984359741,1574.0946980004082,False,vanilla_rag,4
+WebQTest-514,where is denmark situated,Scandinavia,Europe,0,0.0,0.7290997505187988,1566.541068998049,False,vanilla_rag,2
+WebQTest-515,where was teddy roosevelt 's house,"Washington, D.C.","The facts provided do not contain information about Theodore Roosevelt's house location. Therefore, I cannot determine the answer based on the",0,0.0,0.5145584940910339,1570.9328980010469,False,vanilla_rag,0
+WebQTest-516,what is the government system of malaysia,Parliamentary system,Malaysia does not have a parliamentary system based on the given facts. The provided facts only list countries that do have a parliamentary,0,0.23076923076923078,0.5162670612335205,1572.0669139991514,False,vanilla_rag,0
+WebQTest-517,what do people speak in canada,Lojban,English Language,1,1.0,0.5984635949134827,1570.0251089983794,False,vanilla_rag,0
+WebQTest-518,what type of money do they use in costa rica,Costa Rican colón,Costa Rican Colón,1,1.0,0.5789840221405029,441.54250000065076,False,vanilla_rag,0
+WebQTest-519,what timezone is nashville tn,Central Time Zone,"Eastern Time Zone, Central Time Zone",0,0.9090909090909091,0.7129891514778137,1567.4991120031336,False,vanilla_rag,2
+WebQTest-521,who was anakin skywalker,Ted Bracewell,There is no information in the provided facts about Anakin Skywalker. The facts only mention Shawn Hatosy as an,0,0.0,0.42536020278930664,1578.2452240018756,False,vanilla_rag,0
+WebQTest-522,where did adolf hitler die,Berlin,Berlin,1,1.0,0.45683977007865906,1579.3782500004454,False,vanilla_rag,1
+WebQTest-523,what is the largest nation in europe,Russia,Spain,0,0.0,0.4945410490036011,1573.1547360010154,False,vanilla_rag,0
+WebQTest-524,where was the first gulf war fought,Israel,The information provided does not mention the location of the first Gulf War. The facts given are about other conflicts and their locations,0,0.08,0.485971599817276,1572.3258050020377,False,vanilla_rag,0
+WebQTest-525,who are the senators of virginia 2013,Jim Webb,The information provided does not contain details about Virginia senators in 2013. The facts given are related to United,0,0.0,0.5354782938957214,1575.7504229986807,False,vanilla_rag,0
+WebQTest-526,what band was george clinton in,Funkadellic,None,0,0.0,0.6619079113006592,1567.3582469971734,False,vanilla_rag,0
+WebQTest-527,what country borders slovakia,Ukraine,Czech Republic,1,1.0,0.42330804467201233,1573.8130819991056,False,vanilla_rag,0
+WebQTest-528,what was james garfield most known for,US President,"The information provided does not contain any details about James Garfield. Therefore, I cannot determine what he was most known for",0,0.0,0.4323974549770355,1570.694939000532,False,vanilla_rag,1
+WebQTest-529,where did paula deen go to school,Albany High School,"The information provided does not contain any details about Paula Deen's schooling. Therefore, I cannot determine where she went to",0,0.0,0.33682405948638916,1581.7035010004474,False,vanilla_rag,0
+WebQTest-530,where does robert irvine come from,Salisbury,United States of America,0,0.0,0.41700872778892517,1574.9408529991342,False,vanilla_rag,0
+WebQTest-531,what style of music does michael jackson perform,Post-disco,"Dance music, Contemporary R&B, Rock music, Rhythm and blues Pop music (from The Jackson 5) is",0,0.38095238095238093,0.6605873107910156,1571.2148169986904,False,vanilla_rag,0
+WebQTest-532,what does david beckham play,Football,Actor,0,0.0,0.5085050463676453,1568.1694489976508,False,vanilla_rag,0
+WebQTest-533,what does julian lennon do,Actor,The information provided does not contain details about Julian Lennon's profession or activities. It only provides information about John Lennon. Therefore,0,0.0,0.5642421841621399,1565.1652449996618,False,vanilla_rag,5
+WebQTest-534,what is the milwaukee brewers mascot,Bonnie Brewer,"The information provided does not contain details about the Milwaukee Brewers' mascot. Based on the given facts, there is no mascot",0,0.0,0.40918251872062683,1574.0603459998965,False,vanilla_rag,0
+WebQTest-535,what is the second biggest state in the united states,Texas,Texas,1,1.0,0.4067186117172241,1566.2737749989901,False,vanilla_rag,6
+WebQTest-537,what has charlie hunnam been in,Children of Men,Fictional Character,0,0.0,0.3861784040927887,1568.2378009987588,False,vanilla_rag,0
+WebQTest-538,what are all the movies taylor swift has been in,Valentine's Day,None,0,0.0,0.4370516240596771,1624.1292650011019,False,vanilla_rag,0
+WebQTest-540,what college did brett favre,University of Southern Mississippi,"The information provided does not contain any details about Brett Favre's college. Therefore, I cannot determine his college from the",0,0.0,0.437521368265152,1580.317597999965,False,vanilla_rag,0
+WebQTest-542,where did alex chilton die,New Orleans,"The information provided does not contain any details about Alex Chilton's place of death. Therefore, I cannot determine the answer",0,0.0,0.3202831745147705,1574.2758960004721,False,vanilla_rag,0
+WebQTest-543,what college did martin luther king jr go to,Morehouse College,The information provided does not mention which college Martin Luther King Jr. attended. The facts only list high schools associated with the,0,0.08333333333333334,0.6591585278511047,1577.4625449994346,False,vanilla_rag,0
+WebQTest-545,what kind of cancer did farrah fawcett die of,Anal cancer,Breast cancer,0,0.5,0.4019627273082733,1573.2192079995002,False,vanilla_rag,0
+WebQTest-546,who is michael j fox 's wife,Tracy Pollan,"m.0w_h87_ The answer is an identifier for Jayne Hollinson, who is a TV program",0,0.0,0.4046114385128021,1573.00290999774,False,vanilla_rag,0
+WebQTest-547,what money do i use in costa rica,Costa Rican colón,United States Dollar,0,0.0,0.5559415817260742,1567.0998489986232,False,vanilla_rag,0
+WebQTest-548,what guitar did joe walsh play,Fender Stratocaster,The question does not match any of the provided facts. There is no information about Joe Walsh or his guitar in the given,0,0.0,0.40467604994773865,1576.3246140013507,False,vanilla_rag,0
+WebQTest-549,what are the official languages of the eu,Swedish Language,"German Language, Polish Language, Swedish Language, Finnish Language",0,0.7692307692307693,0.5266864895820618,1572.0306639996124,False,vanilla_rag,4
+WebQTest-550,what is ryan seacrest radio show,American Top 40,radioIO Todays RNB,0,0.0,0.4684828817844391,1603.888036999706,False,vanilla_rag,0
+WebQTest-552,what language do most italians speak,Italian Language,Italian Language,1,1.0,0.5983936190605164,1571.1894030027906,False,vanilla_rag,2
+WebQTest-554,what money do they use in spain,Euro,Euro,1,1.0,0.4957645833492279,1568.2783529991866,False,vanilla_rag,1
+WebQTest-555,what did drew barrymore go to rehab for,Cocaine,"The given facts do not contain any information about Drew Barrymore or her reasons for going to rehab. Therefore, I cannot",0,0.0,0.3007719814777374,1575.4659370031732,False,vanilla_rag,0
+WebQTest-556,when is saint george day celebrated,April 23,"The information provided does not include the celebration date for Saint George's Day. Therefore, I cannot provide an answer based on",0,0.0,0.4640430212020874,1574.121435998677,False,vanilla_rag,0
+WebQTest-557,what government did the roman empire have,Autocracy,Republic and Empire,0,0.0,0.4836660325527191,1568.9573609997751,False,vanilla_rag,0
+WebQTest-559,what instrument did robin gibb play,Vocals,"The facts provided do not contain information about Robin Gibb or his instrument. Therefore, there is no answer entity for this",0,0.0,0.38827499747276306,1568.810996999673,False,vanilla_rag,0
+WebQTest-560,who voiced darth vader,Matt Lanter,m.0gchqhm,0,0.0,0.36092960834503174,1579.5124209980713,False,vanilla_rag,0
+WebQTest-561,when was abe lincoln president,Abraham Lincoln 1861 presidential inauguration,"1861-1865 To answer the question ""When was Abe Lincoln president?"", the relevant period",0,0.21052631578947364,0.4707619249820709,1582.4978060009016,False,vanilla_rag,0
+WebQTest-562,where are the texas rangers playing,Rangers Ballpark in Arlington,Dallas,0,0.0,0.43899044394493103,1574.380595000548,False,vanilla_rag,0
+WebQTest-564,what is arkansas state capitol,Little Rock,Arkadelphia,0,0.0,0.5496405959129333,1573.6044149998634,False,vanilla_rag,0
+WebQTest-567,what is the zip code for nogales az,85621,"There is no information provided about the zip code for Nogales, AZ in the given facts. The facts only contain",0,0.0,0.41069021821022034,1573.9480379997985,False,vanilla_rag,0
+WebQTest-568,when did michael vick start playing for the eagles,2009,"2009 NFL season To determine when Michael Vick started playing for the Eagles based on the given facts, we",0,0.1,0.33882057666778564,1580.661270996643,False,vanilla_rag,0
+WebQTest-570,what is william taft famous for,Lawyer,William Taft is not mentioned in the given facts. The facts provided are about Robert A. Taft and his relatives,0,0.0,0.6763184666633606,1574.9552519991994,False,vanilla_rag,0
+WebQTest-572,where did robin cook die,Inverness,The question does not match any of the provided facts. There is no information about a person named Robin Cook in the given,0,0.0,0.3930095136165619,1574.2954119996284,False,vanilla_rag,0
+WebQTest-573,where did melba beals live,Arkansas,The question does not match any of the provided facts. There is no information about Melba Beals in the given facts,0,0.0,0.3448597192764282,1582.5127370007976,False,vanilla_rag,0
+WebQTest-575,who is louisiana state senator,Alexander Barrow,"m.0gl5bs7, m.012gg8tg, m.012rcf",0,0.0,0.6798446774482727,1582.4596250022296,False,vanilla_rag,0
+WebQTest-576,what are the 7 countries that are part of central america,Panama,"Honduras, Guatemala, Belize, and three others not listed in the given facts.",0,0.15384615384615385,0.6536931991577148,1577.825430998928,False,vanilla_rag,0
+WebQTest-577,where did derek fisher go to college,University of Arkansas at Little Rock,Fisher Fine Arts Library,0,0.0,0.41543686389923096,1579.462126999715,False,vanilla_rag,0
+WebQTest-578,who was kobe bryant drafted by,Charlotte Hornets,m.02kqcsf,0,0.0,0.3803352415561676,1576.4150639988657,False,vanilla_rag,0
+WebQTest-579,where are the new orleans hornets moving to,Charlotte,Atlanta,0,0.0,0.4419635534286499,1573.7712400004966,False,vanilla_rag,0
+WebQTest-580,what language does algerian people speak,French,Arabic,0,0.6666666666666666,0.5269712805747986,1573.961430000054,False,vanilla_rag,0
+WebQTest-581,where was anne boleyn executed,Tower of London,The question does not match any of the provided facts. There is no information about Anne Boleyn or her execution location,0,0.08333333333333333,0.33339202404022217,1577.094093998312,False,vanilla_rag,0
+WebQTest-582,what did galileo do to become famous,Mathematician,GalileoBungalowsDuringReconstructionAtGalileoBungalows16and17ShownInPictureAndN,0,0.0,0.44357219338417053,1585.3673499987053,False,vanilla_rag,0
+WebQTest-583,what school did martin luther king jr received his doctorate degree from,Boston University,There is no information provided about Martin Luther King Jr. receiving a doctorate degree in the given facts. The facts only,0,0.0,0.5993376970291138,1603.3482370003185,False,vanilla_rag,0
+WebQTest-584,where buddha come from,Kapilavastu,Not applicable,0,0.0,0.5518512725830078,1572.399183998641,False,vanilla_rag,0
+WebQTest-585,what did king henry viii rule,England,The information provided does not contain any details about King Henry VIII. The facts given are about Edward VIII and Edward VII ruling,0,0.0,0.4985674321651459,1572.740106999845,False,vanilla_rag,0
+WebQTest-586,what type of cancer did larry hagman have,Leukemia,Anaplastic thyroid cancer,0,0.28571428571428575,0.36988434195518494,1573.5831099991628,False,vanilla_rag,0
+WebQTest-588,what wars did robert e lee served in,Battle of South Mountain,The information provided does not include any details about Robert E. Lee's military service or the conflicts he participated in. Therefore,0,0.1935483870967742,0.4384116232395172,1583.1974130014714,False,vanilla_rag,0
+WebQTest-589,what russian language called,Russian Language,Yiddish Language,0,0.5,0.5417835116386414,1573.3170960011194,False,vanilla_rag,0
+WebQTest-590,who is in charge of libya now,Abdullah al-Thani,"The information provided does not specify who is currently in charge of Libya. To answer this question accurately, I would need up",0,0.0,0.6398279070854187,1567.2210100019583,False,vanilla_rag,0
+WebQTest-592,when did shays rebellion start,1786,"The Indian Rebellion of 1857 started in 1857, but Shays' Rebellion is a",0,0.0,0.38102924823760986,1632.6689880006597,False,vanilla_rag,0
+WebQTest-593,what kind of disease does montel williams have,Multiple sclerosis,Not specified in the given facts.,0,0.0,0.41011837124824524,1574.9532129993895,False,vanilla_rag,0
+WebQTest-595,when is the last time the ravens won a superbowl,Super Bowl XLVII,The information provided does not contain any details about the Ravens winning a Super Bowl. The facts given are related to the,0,0.16,0.3721262216567993,1583.90768100071,False,vanilla_rag,0
+WebQTest-596,where did kansas city royals come from,Kansas City,United States of America,0,0.0,0.36215314269065857,1574.1960949999338,False,vanilla_rag,0
+WebQTest-597,what style of music does john mayer play,Acoustic music,Pop music,1,1.0,0.6810019612312317,1565.292816998408,False,vanilla_rag,0
+WebQTest-599,what inventions did thomas edison invent list,Carbon microphone,"Thomas Edison is not mentioned in the provided facts. The facts only mention Benjamin Franklin as an inventor of the Franklin stove,",0,0.0,0.5830872654914856,1571.2148079983308,False,vanilla_rag,0
+WebQTest-600,where did djokovic come from,Serbia,Serbia,1,1.0,0.6077075600624084,1571.3174530028482,False,vanilla_rag,0
+WebQTest-602,what part of the country is new england,Northeastern United States,Eastern United States,0,0.6666666666666666,0.6122590899467468,370.67371100056334,False,vanilla_rag,0
+WebQTest-603,what money to take to turkey,Turkish lira,Turkish Lira,1,1.0,0.4380549192428589,1574.770549999812,False,vanilla_rag,0
+WebQTest-604,what kind of music did jimi hendrix play,Psychedelic rock,"The given facts do not contain information about Jimi Hendrix's genre of music. Therefore, I cannot provide an answer",0,0.09090909090909091,0.3835427761077881,1574.2135410000628,False,vanilla_rag,0
+WebQTest-605,what degrees did obama get in college,Juris Doctor,None,0,0.0,0.44293642044067383,1587.3447249978199,False,vanilla_rag,0
+WebQTest-606,who were alexander graham bell 's siblings,Edward Charles Bell,"The information provided does not contain details about Alexander Graham Bell's siblings. Therefore, I cannot provide an answer based on the",0,0.08,0.4214741289615631,1570.1999880002404,False,vanilla_rag,0
+WebQTest-608,when did liverpool fc last win the champions league,2012 Football League Cup Final,"The information provided does not contain any details about Liverpool FC or their Champions League victories. Therefore, I cannot determine when Liverpool",0,0.07407407407407407,0.22783739864826202,1582.0758279987785,False,vanilla_rag,0
+WebQTest-609,who played jeannie,Barbara Eden,Jean Kennedy Smith,0,0.0,0.45962217450141907,1571.9667980010854,False,vanilla_rag,0
+WebQTest-611,where was st peter killed,Rome,"Cambridge To answer the question ""where was St Peter killed"", we need to clarify that there is no information provided about St",0,0.0,0.40632209181785583,1577.1193389991822,False,vanilla_rag,0
+WebQTest-612,who does jeremy shockey play for in 2012,Carolina Panthers,m.0y833qs,0,0.0,0.32460278272628784,1583.1986269986373,False,vanilla_rag,0
+WebQTest-613,what college did deion sanders jr go to,Florida State University,John F. Kennedy College,0,0.0,0.42210617661476135,1580.116568999074,False,vanilla_rag,0
+WebQTest-614,when did the battle of alamo start,1836-02-23,The Battle of the Alamo was not one of the events listed in the provided facts. The facts mention several military conflicts,0,0.0,0.40622222423553467,1582.0084920014779,False,vanilla_rag,0
+WebQTest-615,what were the names of henry viii 's three children,"Henry, Duke of Cornwall","The question is about Henry VIII's children, but the provided facts are about Edward VIII. There is no information given about",0,0.07692307692307693,0.4234875440597534,1577.106132001063,False,vanilla_rag,0
+WebQTest-616,what was queen elizabeth ii childhood nickname,Elizabeth II,There is no information provided about Queen Elizabeth II's childhood nickname in the given facts. The available facts only mention her nationality,0,0.16,0.5754453539848328,1568.1242829996336,False,vanilla_rag,3
+WebQTest-617,where did tim tebow grow up,Makati,"The information provided does not contain any details about Tim Tebow's place of upbringing. Therefore, I cannot determine the answer",0,0.0,0.32308244705200195,1571.1221960009425,False,vanilla_rag,0
+WebQTest-618,where is chesapeake bay bridge,Anne Arundel County,"The information provided does not contain any facts about the Chesapeake Bay Bridge. Therefore, I cannot determine its location from the",0,0.0,0.46215900778770447,1572.3649689971353,False,vanilla_rag,0
+WebQTest-619,who played victoria barkley,Barbara Stanwyck,m.0mzl_0g,0,0.0,0.42213174700737,1574.8629080007959,False,vanilla_rag,0
+WebQTest-620,where did kennedy 's inaugural address take place,United States Capitol,"Washington, D.C. To answer the question based on the given facts, we need more information about the location of Kennedy",0,0.25,0.6819571852684021,1608.4158929988916,False,vanilla_rag,0
+WebQTest-621,what countries have german as the official language,Belgium,"Germany, Switzerland (Note: Only Germany and Switzerland are explicitly mentioned in the facts with German as the official language)",0,0.1904761904761905,0.6490107178688049,1571.2347830012732,False,vanilla_rag,0
+WebQTest-622,where did the taliban began,Afghanistan,Afghanistan,1,1.0,0.4476946294307709,1586.702846998378,False,vanilla_rag,2
+WebQTest-624,who plays elena gilbert on vampire diaries,Nina Dobrev,Nina Dobrev,1,1.0,0.4640466272830963,1587.1089270003722,False,vanilla_rag,0
+WebQTest-626,what does the missouri river bisect,South Dakota,Mississippi River,0,0.0,0.5216977596282959,1574.276662999182,False,vanilla_rag,0
+WebQTest-627,what nationality is taylor lautner jacob black,United States of America,The nationality of Jacob Black in the context of the given facts is not provided. The facts mention Charles Taylor and Jayce,0,0.13333333333333333,0.4352128803730011,1572.7161230024649,False,vanilla_rag,3
+WebQTest-628,what animal represents california,California grizzly bear,Toy Bulldog,0,0.0,0.4204131066799164,1576.2407000001986,False,vanilla_rag,0
+WebQTest-629,what company does nike own,NIKE IHM Inc,"The information provided does not contain any details about Nike or its ownership of other companies. Therefore, I cannot determine the answer",0,0.08333333333333334,0.34505224227905273,1572.037468002236,False,vanilla_rag,0
+WebQTest-630,what language do colombian people speak,Cuiba language,Spanish Language,1,1.0,0.5051386952400208,1575.5071380008303,False,vanilla_rag,0
+WebQTest-631,what year did ray allen join the nba,1996,2000,0,0.0,0.3071317672729492,1579.873413000314,False,vanilla_rag,0
+WebQTest-633,what is claire danes famous for,Voice Actor,g.1259dx7m5,0,0.0,0.4880641996860504,1581.623607999063,False,vanilla_rag,0
+WebQTest-634,what county is san antonio in,Medina County,San Antonio is not mentioned in the given facts. The facts provided are about Middlesex County in Jamaica and its relation,0,0.08695652173913042,0.43000662326812744,1578.0621170015365,False,vanilla_rag,0
+WebQTest-635,what characters does matt stone do,Terrance Henry Stoot,None,0,0.0,0.45025134086608887,1569.7533040001872,False,vanilla_rag,0
+WebQTest-636,what timezone is the state of michigan and,UTC−05:00,Eastern Time Zone,1,1.0,0.6846107840538025,1571.599528000661,False,vanilla_rag,1
+WebQTest-637,what type of government did soviet union have,Soviet democracy,Communist,0,0.6666666666666666,0.48181959986686707,275.67108099901816,False,vanilla_rag,0
+WebQTest-638,what languages are there in japan,Esperanto Language,"English Language, Esperanto Language, Japanese (not explicitly mentioned but implied)",0,0.4615384615384615,0.5600594878196716,1091.281610999431,False,vanilla_rag,2
+WebQTest-639,what year did the bulls get rodman,1995,1995,1,1.0,0.36944863200187683,1575.4249839992553,False,vanilla_rag,0
+WebQTest-640,who was saint paul the apostle,Missionary,Saint Paul the Apostle was a male missionary and writer in Christianity. He was venerated in Christianity and his nationality was from,0,0.08695652173913045,0.6684210300445557,1569.0668640017975,False,vanilla_rag,3
+WebQTest-642,where did vince scully go to college,Fordham University,Navy,0,0.0,0.33758941292762756,1578.5725179994188,False,vanilla_rag,0
+WebQTest-643,where does princess leia live,Alderaan,Palmyra Atoll,0,0.0,0.38774946331977844,1579.2536549997749,False,vanilla_rag,0
+WebQTest-644,what famous people are from el salvador,Mario Wilfredo Contreras,There is no information provided about famous people from El Salvador in the given facts. The only person mentioned is Pedro Calderón,0,0.08333333333333334,0.5837392210960388,1572.2048339994217,False,vanilla_rag,0
+WebQTest-645,what type of art did leonardo da vinci make,Painting,"The question is about Leonardo da Vinci, but the provided facts are about Leonardo Polo. There is no information about Leonardo da",0,0.0,0.4448483884334564,1571.885953999299,False,vanilla_rag,0
+WebQTest-646,where did mary bell live,Newcastle upon Tyne,m.03pgrbw,0,0.0,0.4463162422180176,1567.9506310007127,False,vanilla_rag,0
+WebQTest-648,who did kimberly williams marry,Brad Paisley,Hosea Williams,0,0.0,0.45245659351348877,384.33960499969544,False,vanilla_rag,0
+WebQTest-649,what other movies has ryan gosling been in,Lars and the Real Girl,"The information provided does not contain any data about Ryan Gosling or his movies. Therefore, I cannot answer this question based",0,0.12903225806451613,0.4064750671386719,1573.3215479995124,False,vanilla_rag,0
+WebQTest-650,what political party does julia gillard belong to,Australian Labor Party,Julia Gillard does not belong to any political party based on the provided facts. The facts only mention Julia Ward,0,0.08695652173913045,0.4622197151184082,1568.7746850016993,False,vanilla_rag,0
+WebQTest-651,what is the currency of germany now,Euro,"The given facts do not mention Germany. Based on the provided information, the countries using Euro as their currency are Belgium,",0,0.0909090909090909,0.5187656879425049,1566.275654000492,False,vanilla_rag,1
+WebQTest-652,what kind of hispanic is selena gomez,Italian American,"The information provided does not contain any details about Selena Gomez's ethnicity. Therefore, I cannot determine what kind of Hispanic",0,0.0,0.5055524110794067,1575.4930280018016,False,vanilla_rag,0
+WebQTest-653,who did denise van outen married,Lee Mead,No information provided about Denise Van Outen's spouse in the given facts. The facts mention Yvonne Cole but do,0,0.0,0.3461361825466156,1585.8423259996925,False,vanilla_rag,0
+WebQTest-654,what are egyptian money called,Egyptian pound,Egyptian pound,1,1.0,0.5676490068435669,1575.3424139984418,False,vanilla_rag,2
+WebQTest-655,what is the zip code for wyoming michigan,49509,"There is no single zip code for Wyoming, Michigan; it has multiple zip codes. The city of Wyoming, Michigan,",0,0.0,0.43472394347190857,1572.4130509988754,False,vanilla_rag,0
+WebQTest-656,who is the president of costa rica in 2012,Laura Chinchilla,Noam Leiberman,0,0.0,0.527884840965271,1570.969727999909,False,vanilla_rag,0
+WebQTest-657,where did martin luther king got shot at,Memphis,Memphis,1,1.0,0.5972580909729004,257.7642989999731,False,vanilla_rag,2
+WebQTest-658,who wrote the gospel according to john,John the Evangelist,Origen,0,0.0,0.6367319226264954,1576.683060000505,False,vanilla_rag,0
+WebQTest-659,what form of government is the uk,Parliamentary system,Parliamentary system,1,1.0,0.6893758177757263,1572.32783499785,False,vanilla_rag,3
+WebQTest-661,who did nasri play for before arsenal,Olympique de Marseille,The question does not match the provided facts. There is no information about Nasri or any football player in the given data,0,0.0,0.2669282555580139,1567.5862400021288,False,vanilla_rag,0
+WebQTest-662,what currency does the czech republic use now,Czech koruna,Euro,0,0.0,0.5222713351249695,1574.6758620007313,False,vanilla_rag,0
+WebQTest-663,what age did william penn get married,1672-04-04,The information provided does not contain any details about William Penn's age at marriage. The facts mention that William Franklin was a,0,0.0,0.4737316071987152,1612.4650209967513,False,vanilla_rag,0
+WebQTest-664,what was firefox programmed in,JavaScript,The question is not related to the provided facts. There is no information about Firefox or programming languages in the given data.,0,0.0,0.27004727721214294,1567.3364889989898,False,vanilla_rag,0
+WebQTest-665,what government does new zealand have,Parliamentary system,"Parliamentary system, Constitutional monarchy, Unitary state",0,0.5,0.6475222110748291,1573.044082000706,False,vanilla_rag,1
+WebQTest-666,where is isthmus of panama located on the map,South America,"Central America To answer the question ""Where is the Isthmus of Panama located on the map?"" based on the given",0,0.09090909090909091,0.4558661878108978,1570.9902579983464,False,vanilla_rag,0
+WebQTest-667,what is the capital of republic of ireland,Dublin,Dublin,1,1.0,0.6270304322242737,1584.6612570021534,False,vanilla_rag,0
+WebQTest-668,what has kristen stewart acted in,The Flintstones in Viva Rock Vegas,The Yellow Handkerchief trailer,0,0.8571428571428571,0.4941132962703705,1578.1443640007637,False,vanilla_rag,0
+WebQTest-669,what did dr josef mengele do,Physician,"The given facts do not provide information about Dr Josef Mengele. Therefore, I cannot determine what Dr Josef Menge",0,0.0,0.39196696877479553,1578.9835949981352,False,vanilla_rag,0
+WebQTest-670,what kind of language does egypt speak,Modern Standard Arabic,Modern Standard Arabic,1,1.0,0.688959538936615,1585.1532189990394,False,vanilla_rag,1
+WebQTest-671,who are the senators of hawaii 2012,Mazie Hirono,The given facts do not provide information about the senators of Hawaii in 2012. The facts only mention United,0,0.0,0.49893879890441895,1599.9725129986473,False,vanilla_rag,0
+WebQTest-672,what form of government does north korea have,Single-party state,Answer: None,0,0.0,0.4127894341945648,1573.9161349993083,False,vanilla_rag,0
+WebQTest-673,where did robert kardashian go to college,University of San Diego School of Law,John F. Kennedy College,0,0.0,0.39916250109672546,1579.066602000239,False,vanilla_rag,0
+WebQTest-675,what county is st james city fl in,Lee County,Polk County,0,0.5,0.5089264512062073,1572.8203290018428,False,vanilla_rag,0
+WebQTest-676,what did the akkadian empire include,Akkad,Iraq,0,0.0,0.47903379797935486,1574.6434020002198,False,vanilla_rag,0
+WebQTest-677,after how many years are the olympic games held,Quadrennial,4 years,0,0.0,0.5216352343559265,1576.1271310002485,False,vanilla_rag,0
+WebQTest-678,what system of government does guyana have,Semi-presidential system,"Not enough information provided To determine the form of government in Guyana based on the given facts, we would need specific information",0,0.0,0.5197808146476746,1579.1065170014917,False,vanilla_rag,0
+WebQTest-680,what team did aguero play for,Manchester City F.C.,"The information provided does not contain any details about Lionel Messi's (Aguero) team. Therefore, I cannot provide",0,0.0909090909090909,0.3373544216156006,1582.9615450020356,False,vanilla_rag,0
+WebQTest-681,who is the president of the european union 2012,Jerzy Buzek,m.011422q9,0,0.0,0.43377485871315,1580.0995610006794,False,vanilla_rag,0
+WebQTest-683,what year was kenya moore crowned miss usa,Miss USA 1993,"The question is about Kenya Moore, but the provided facts mention Muhammad Kenyatta, not Kenya Moore. There is no",0,0.0,0.3881765902042389,1572.8343480004696,False,vanilla_rag,0
+WebQTest-684,what sort of government does nigeria have,Presidential system,Federal Republic,1,1.0,0.5963954925537109,1567.6995339999849,False,vanilla_rag,0
+WebQTest-685,where does chef ina garten live,Brooklyn,"The information provided does not contain any details about Ina Garten's place of residence. Therefore, I cannot determine where Chef",0,0.0,0.3962794840335846,1575.1814040013414,False,vanilla_rag,0
+WebQTest-686,when the atlanta braves won the world series,1995 World Series,1999,0,0.0,0.5591790080070496,1573.034932000155,False,vanilla_rag,0
+WebQTest-688,what kind of language do they speak in iran,Pashto language,Iranian languages,0,0.5,0.5271270275115967,1577.7005620002456,False,vanilla_rag,0
+WebQTest-689,what was the first language spoken in spain,Spanish Language,Spanish Language,1,1.0,0.46851691603660583,1571.1697199985792,False,vanilla_rag,1
+WebQTest-690,what did scott joplin play,Jazz piano,Scott Joplin played the piano.,0,0.33333333333333337,0.5436527729034424,1576.6274569978123,False,vanilla_rag,0
+WebQTest-691,what school did miley cyrus,Heritage Elementary School,"The given facts do not provide information about Miley Cyrus's school. Therefore, there is no answer to the question based",0,0.08333333333333333,0.6227429509162903,1571.6362029997981,False,vanilla_rag,0
+WebQTest-693,what language do most people speak in afghanistan,"Farsi, Eastern Language",Urdu Language,0,0.5,0.4879857003688812,1568.6001950016362,False,vanilla_rag,0
+WebQTest-694,who is the prime minister of jamaica west indies,Portia Simpson-Miller,m.010fq1f2,0,0.0,0.6621803045272827,1580.1529549971747,False,vanilla_rag,0
+WebQTest-695,what role did paul mccartney play in the beatles,Bass,Answer: Not available in the given facts.,0,0.0,0.3796670436859131,1574.094547999266,False,vanilla_rag,0
+WebQTest-696,when did juventus win the champions league,1996 UEFA Champions League Final,"The information provided does not contain any details about Juventus winning the Champions League. Therefore, I cannot provide an answer based on",0,0.14814814814814814,0.2530301511287689,1572.2947749964078,False,vanilla_rag,0
+WebQTest-698,who is robin roberts father,Lawrence E. Roberts,Not specified in the given facts.,0,0.0,0.5626445412635803,732.2827850002795,False,vanilla_rag,0
+WebQTest-699,what is the capital of australia victoria state,Melbourne,Canberra,0,0.0,0.6030603051185608,1570.9856659996149,False,vanilla_rag,0
+WebQTest-700,where is french spoken most,Equatorial Guinea,France,1,1.0,0.6103538870811462,1569.8715219987207,False,vanilla_rag,0
+WebQTest-701,what team is reggie bush on 2011,Miami Dolphins,There is no information provided about Reggie Bush's team in the 2011 season in the given facts. The,0,0.0,0.38339710235595703,1588.9507880019664,False,vanilla_rag,0
+WebQTest-702,what highschool did emily osment go to,Flintridge Preparatory School,"The information provided does not contain any details about Emily Osment or her schooling. Therefore, I cannot determine which high school",0,0.08333333333333333,0.41759157180786133,1581.4824989975023,False,vanilla_rag,0
+WebQTest-703,what currency should i take to mexico,Mexican peso,United States Dollar,0,0.0,0.5311784744262695,1568.4152460016776,False,vanilla_rag,0
+WebQTest-704,who is thor heyerdahl,Ethnographer,The question does not match any of the provided facts. There is no information about Thor Heyerdahl in the given,0,0.0,0.3765846788883209,1573.3858599996893,False,vanilla_rag,0
+WebQTest-706,where did troy aikman play football,Dallas Cowboys,Football Almanac ID,0,0.0,0.33796370029449463,1569.0070960008597,False,vanilla_rag,0
+WebQTest-707,who played cletus hogg,Jack Polick,m.0cg0kdm,0,0.0,0.40625011920928955,1575.2404609993391,False,vanilla_rag,0
+WebQTest-708,who won fa cup 1976,Southampton F.C.,"The information provided does not contain any details about the FA Cup winner in 1976. Therefore, I cannot",0,0.0,0.41618612408638,1585.0551439980336,False,vanilla_rag,0
+WebQTest-709,what did general robert e lee die from,Pneumonia,The information provided does not contain any details about General Robert E. Lee's cause of death. The facts given are about,0,0.0,0.4633357524871826,1585.1909689990862,False,vanilla_rag,0
+WebQTest-710,what style of art did henri matisse do,Neo-impressionism,Francis Bacon,0,0.0,0.4872845411300659,1588.1722079975589,False,vanilla_rag,0
+WebQTest-711,who plays chuck bass in gossip girl,Ed Westwick,Keyshia Cole,0,0.0,0.464129239320755,1570.2668720005022,False,vanilla_rag,0
+WebQTest-712,what countries have territories in oceania,Wallis and Futuna,"Australia, Polynesia, Coral Sea Islands, Norfolk Island",0,0.4444444444444445,0.6941850185394287,1566.70666699938,False,vanilla_rag,0
+WebQTest-713,what county is st. louis park in,Hennepin County,St. Louis County,0,0.4,0.6014809608459473,1571.6826580028282,False,vanilla_rag,0
+WebQTest-714,what is the political system of south africa,Parliamentary republic,African National Congress,0,0.0,0.4726850986480713,1574.1742430000158,False,vanilla_rag,0
+WebQTest-716,what language group does germany belong to,Indo-European languages,German Language,0,0.0,0.6126031279563904,1568.2451329994365,False,vanilla_rag,0
+WebQTest-717,what timezone is tucson arizona in right now,Mountain Time Zone,Mountain Time Zone,1,1.0,0.5190398693084717,1567.5560370000312,False,vanilla_rag,1
+WebQTest-718,when was lucy lawless born,1968-03-29,"The information provided does not contain any details about Lucy Lawless's birth date. Therefore, I cannot determine her birth date",0,0.0,0.33005213737487793,1577.9006789998675,False,vanilla_rag,0
+WebQTest-719,which political party does barack obama represent,Democratic Party,Democratic Party,1,1.0,0.5288478136062622,1573.282517001644,False,vanilla_rag,0
+WebQTest-721,what kind of leukemia did jill clayburgh have,Leukemia,Aplastic anemia,0,0.0,0.31130149960517883,1573.995790000481,False,vanilla_rag,0
+WebQTest-723,what is there to see in sydney australia,Sydney Markets,City/Town/Village,0,0.0,0.5438215136528015,1572.9826469978434,False,vanilla_rag,0
+WebQTest-724,where was marilyn monroe found dead,Brentwood,United States of America,0,0.0,0.5290741324424744,1574.2857529985486,False,vanilla_rag,0
+WebQTest-725,what states does the sierra nevada run through,Nevada,Nevada,1,1.0,0.516478955745697,1577.4934159999248,False,vanilla_rag,1
+WebQTest-726,what language is spoken in greek,Albanian language,Greek Language,1,1.0,0.49473926424980164,1572.6313420018414,False,vanilla_rag,0
+WebQTest-728,what is the name of the speaker of the house of representatives now 2011,Nancy Pelosi,"m.0944j8_ To provide a more precise and useful response, I need to clarify that """,0,0.0,0.47678518295288086,1579.7228519986675,False,vanilla_rag,0
+WebQTest-729,who plays stanley hudson,Leslie David Baker,Mr Hudson,0,0.0,0.5033374428749084,1619.3523520014423,False,vanilla_rag,0
+WebQTest-730,what record label is kelly clarkson signed with,Sony Music Entertainment,None,0,0.0,0.5036439299583435,1578.8907210007892,False,vanilla_rag,0
+WebQTest-731,where does tim roth come from,Dulwich,United Kingdom,0,0.0,0.6487537622451782,1568.6751779976476,False,vanilla_rag,0
+WebQTest-733,what currency should you take to vietnam,Vietnamese dong,Vietnamese dong,1,1.0,0.4726787805557251,1572.3849030000565,False,vanilla_rag,0
+WebQTest-734,who did roger federer married,Mirka Federer,"The information provided does not contain any details about Roger Federer's marital status or spouse. Therefore, I cannot determine who",0,0.08695652173913042,0.5589185357093811,1572.1777430007933,False,vanilla_rag,0
+WebQTest-735,what kind of money do i need in costa rica,Costa Rican colón,colon,0,0.0,0.5563992857933044,1570.3538939997088,False,vanilla_rag,0
+WebQTest-737,what is the name of the capital of belgium,City of Brussels,Brussels,1,1.0,0.5969436168670654,1568.4846059994015,False,vanilla_rag,0
+WebQTest-738,what kind of government does japan have now,Parliamentary system,Constitutional monarchy and parliamentary system and unitary state,0,0.4,0.6510291695594788,1573.3584520021395,False,vanilla_rag,1
+WebQTest-739,what pieces of music did claude debussy compose,La Flûte de Pan,Un Rêve,0,0.5,0.48539236187934875,1583.299824000278,False,vanilla_rag,0
+WebQTest-740,who was selena gomez in barney and friends,Gianna,Miss Gomez and the Brethren,0,0.0,0.36470237374305725,1590.0267910001276,False,vanilla_rag,0
+WebQTest-741,who plays caesar flickerman in the hunger games,Stanley Tucci,"The information provided does not contain any details about the character Caesar Flickerman in The Hunger Games. Therefore, I cannot",0,0.0,0.3635028898715973,1573.2467099987844,False,vanilla_rag,0
+WebQTest-742,where did the gettysburg address,Gettysburg,Pennsylvania,0,0.0,0.555286169052124,1577.7882860020327,False,vanilla_rag,0
+WebQTest-743,what was the name of jfk 's brothers,"Joseph P. Kennedy, Jr.",Robert F. Kennedy,1,1.0,0.638698399066925,1577.3988719993213,False,vanilla_rag,0
+WebQTest-744,who was tupac signed to,Death Row Records,Interscope Records,1,1.0,0.6059827208518982,1572.2530860002735,False,vanilla_rag,0
+WebQTest-745,what was augustus caesar famous for,Politician,Politician,1,1.0,0.5287923216819763,1571.8779449998692,False,vanilla_rag,5
+WebQTest-747,what language does colombia,Cuiba language,Spanish Language,1,1.0,0.588843584060669,1571.1293999993359,False,vanilla_rag,0
+WebQTest-748,what is the zip code for schenectady new york,12305,"The provided facts do not contain information about Schenectady, New York's zip code. Therefore, I cannot determine",0,0.0,0.3858703672885895,1581.8207550000807,False,vanilla_rag,0
+WebQTest-749,who was president in 1988 in the united states,Ronald Reagan,Ronald Reagan,1,1.0,0.46552762389183044,1589.199287998781,False,vanilla_rag,0
+WebQTest-751,who owns google 2012,David Drummond,No answer entity found. The provided facts do not contain information about Google or its ownership in 2012.,0,0.0,0.3206767737865448,1575.1857629984443,False,vanilla_rag,0
+WebQTest-752,what drink did john pemberton create,Coca-Cola,None,0,0.0,0.35546907782554626,1572.2682880004868,False,vanilla_rag,0
+WebQTest-753,what position did stanley matthews play,Outside forward,m.0bfmklt,0,0.0,0.477312296628952,1572.0845510004438,False,vanilla_rag,0
+WebQTest-755,what was bonnie prince charlie full name,Charles Edward Stuart,The question does not match any of the provided facts. There is no information about Bonnie Prince Charlie or his full name in,0,0.0,0.45143166184425354,1568.1980570007,False,vanilla_rag,0
+WebQTest-756,who makes the voice of stewie griffin,Seth MacFarlane,"The information provided does not contain any details about who voices Stewie Griffin. To accurately answer this question, additional information",0,0.0,0.3867649734020233,1573.1302929998492,False,vanilla_rag,0
+WebQTest-757,who is angelina jolie mom and dad,Jon Voight,Not enough information provided.,0,0.0,0.47621676325798035,1574.020071002451,False,vanilla_rag,0
+WebQTest-758,who is the governor of indiana 2009,Mitch Daniels,The information provided does not contain any details about the governor of Indiana in 2009. The facts given are,0,0.0,0.4412933886051178,1579.7326270003396,False,vanilla_rag,0
+WebQTest-759,who brad pitt has dated,Robin Givens,Angelina Jolie,0,0.0,0.5569530129432678,1575.1246680010809,False,vanilla_rag,0
+WebQTest-760,what party does barack obama belong to,Democratic Party,"The information provided does not specify which political party Barack Obama belongs to. Based on the given facts, he is identified as",0,0.08333333333333334,0.5307072997093201,1571.9941969982756,False,vanilla_rag,0
+WebQTest-761,what is san francisco zip code,94122,94109,1,1.0,0.49896514415740967,1572.0869790020515,False,vanilla_rag,0
+WebQTest-762,who has stephen ireland played for,Aston Villa F.C.,No entity found.,0,0.0,0.4691201448440552,1571.5334209999128,False,vanilla_rag,0
+WebQTest-764,where did john mayer go to college,Berklee College of Music,"The information provided does not include any details about John Mayer's college education. Therefore, I cannot determine where he went to",0,0.07692307692307693,0.6183586716651917,1567.697190999752,False,vanilla_rag,0
+WebQTest-765,what celebrities has brody jenner dated,Haylie Duff,"The information provided does not contain any data about Brody Jenner's dating history. Therefore, there is no answer to this",0,0.0,0.4406418800354004,1577.5737740004843,False,vanilla_rag,0
+WebQTest-766,what is malaysian currency,Malaysian ringgit,Malaysian Ringgit,1,1.0,0.49850714206695557,1576.112053997349,False,vanilla_rag,0
+WebQTest-768,who owns volkswagen car company,Volkswagen Group,m.0v_8nmn,0,0.0,0.3183344900608063,1577.6132959981624,False,vanilla_rag,0
+WebQTest-769,which is the main train station in rome,Roma Termini railway station,m.0wy3szz,0,0.0,0.5036006569862366,1571.3256360031664,False,vanilla_rag,0
+WebQTest-770,what did steve mcnair died from,Ballistic trauma,The information provided does not contain details about Steve McNair's cause of death. The facts given are about Quarterbacks and,0,0.0,0.34832167625427246,1573.479810002027,False,vanilla_rag,0
+WebQTest-771,who is the newly elected governor of california,Arnold Schwarzenegger,Nixon 30-0316a,0,0.0,0.4872159957885742,1576.362641997548,False,vanilla_rag,0
+WebQTest-772,who plays roxanne in ghost rider,Eva Mendes,"The information provided does not contain any details about ""Roxanne"" or ""Ghost Rider"". Therefore, there is no",0,0.0,0.4404573440551758,1577.5196149988915,False,vanilla_rag,0
+WebQTest-773,where is the sony ericsson company,Minato,m.04dj2lc,0,0.0,0.3946879208087921,1573.5561510009575,False,vanilla_rag,0
+WebQTest-774,what kind of currency does the dominican republic have,Dominican peso,Currency Used,0,0.0,0.5571651458740234,1570.0135949991818,False,vanilla_rag,0
+WebQTest-775,what to do this weekend in manchester with kids,Whitworth Art Gallery,The Gateway,0,0.28571428571428575,0.5212157368659973,1578.146961001039,False,vanilla_rag,0
+WebQTest-776,what sport is popular in italy,Italy national handball team,Fencing,0,0.0,0.5312049984931946,1594.3008009999176,False,vanilla_rag,0
+WebQTest-777,where is the main headquarters of google,Mountain View,United States of America,0,0.0,0.43106701970100403,1576.3715700013563,False,vanilla_rag,0
+WebQTest-778,what was jesse owens education,East Technical High School,The information provided does not contain any details about Jesse Owens' education. The facts given are related to Martin Luther King III,0,0.0,0.428700715303421,1578.2303560008586,False,vanilla_rag,0
+WebQTest-779,where does carlos santana live,Jalisco,m.03pvgd1,0,0.0,0.4606548547744751,1576.730001001124,False,vanilla_rag,0
+WebQTest-780,what is the new movie john carter about,Action Film,"There is no information provided about a new movie called ""John Carter"" in the given facts. The facts mention ""Damn",0,0.0,0.43067219853401184,1575.0147459984873,False,vanilla_rag,0
+WebQTest-782,what countries does nafta include,United States of America,North America,0,0.3333333333333333,0.4179989993572235,1572.8228899970418,False,vanilla_rag,0
+WebQTest-783,what county is houston tx in,Montgomery County,"Houston is not directly in a county, but it is located in Harris County, Texas. Since this information is not provided",0,0.16,0.554448664188385,1568.4329780015105,False,vanilla_rag,0
+WebQTest-784,where do the seattle seahawks play,CenturyLink Field,Russ Chandler Stadium,0,0.0,0.4490579664707184,1579.4672740012174,False,vanilla_rag,0
+WebQTest-785,who does michael keaton play in cars,Chick Hicks,"The answer is not provided in the given facts. There is no information about Michael Keaton or the movie ""Cars",0,0.0,0.38824376463890076,1586.6895459985244,False,vanilla_rag,0
+WebQTest-787,where is the riviera casino,Las Vegas,Las Vegas,1,1.0,0.32667210698127747,1575.0041930004954,False,vanilla_rag,0
+WebQTest-788,what is the holy book of the buddhist religion,Gangōji Garan Engi,The holy book of the Buddhist religion is not mentioned in the given facts. The facts provided are related to the texts and,0,0.07692307692307691,0.4739605486392975,1573.453110002447,False,vanilla_rag,0
+WebQTest-789,who became president when henry harrison died,John Tyler,m.0bfmkg2,0,0.0,0.5545855164527893,1576.0892990001594,False,vanilla_rag,0
+WebQTest-790,where did richard arkwright grow up,"Preston, Lancashire",United States of America,0,0.0,0.39376845955848694,1573.7625929978094,False,vanilla_rag,0
+WebQTest-791,what other books did louis sachar write,Sixth Grade Secrets,On Poe,0,0.3333333333333333,0.4602501094341278,1572.2068169998238,False,vanilla_rag,0
+WebQTest-792,when did roth ira originate,"William V. Roth, Jr.","The question is about the origin of Roth IRA, which is not related to the provided facts about Philip Roth. There is",0,0.13333333333333333,0.3646892309188843,1572.3325469989504,False,vanilla_rag,0
+WebQTest-794,who does the voice for darth vader,James Earl Jones,Chandra Davis,0,0.0,0.3828805983066559,1578.33734399901,False,vanilla_rag,0
+WebQTest-796,what did thomas malthus do,Scientist,"The information provided does not contain any details about Thomas Malthus or his profession. Therefore, I cannot determine what Thomas",0,0.0,0.4537073075771332,1575.981188998412,False,vanilla_rag,0
+WebQTest-797,what is the zip code for newark california,94560,"The provided facts do not contain information about the zip code for Newark, California. Therefore, I cannot determine the zip code",0,0.0,0.4230481684207916,1578.0447520010057,False,vanilla_rag,0
+WebQTest-798,what states share a border with tennessee,Georgia,"North Carolina, Kentucky, Virginia, Mississippi, and Arkansas",0,0.4444444444444445,0.5832429528236389,1568.245141999796,False,vanilla_rag,0
+WebQTest-800,what war did the us lose the most soldiers,World War II,World War II,1,1.0,0.4725703299045563,1217.1842219977407,False,vanilla_rag,0
+WebQTest-801,what kind of government is egypt,Semi-presidential system,Semi-presidential system,1,1.0,0.7075009346008301,1571.9974519997777,False,vanilla_rag,3
+WebQTest-802,what musical instruments does justin bieber play,Vocals,None,0,0.0,0.6059596538543701,1566.519469000923,False,vanilla_rag,0
+WebQTest-805,where do john lennon die,New York City,New York City,1,1.0,0.611204981803894,1574.4835940022313,False,vanilla_rag,1
+WebQTest-809,what is the current time in bangalore india,India Time Zone,"The facts provided do not contain information about Bangalore, India. Therefore, I cannot determine the current time in Bangalore based on",0,0.16666666666666666,0.3849968910217285,1574.3054049999046,False,vanilla_rag,0
+WebQTest-810,what language do people from greece speak,Albanian language,Greek Language,1,1.0,0.5296223759651184,1578.8422710029408,False,vanilla_rag,0
+WebQTest-811,where is the phillies spring training stadium,Bright House Field,Nymeo Field at Harry Grove Stadium,0,0.2222222222222222,0.4366586208343506,1578.9124539987824,False,vanilla_rag,0
+WebQTest-812,what movies does matt dallas play in,Naughty or Nice,"Our Friend, Martin",0,0.0,0.43487629294395447,1571.1133000004338,False,vanilla_rag,0
+WebQTest-813,who was john f kennedy 's family,John F. Kennedy Jr.,Kennedy family,0,0.5,0.7728808522224426,1573.2865979989583,False,vanilla_rag,2
+WebQTest-814,where is harley davidson corporate headquarters,Milwaukee,Windsor Heights,0,0.0,0.403104305267334,1573.5339370003203,False,vanilla_rag,0
+WebQTest-818,where was the ottoman empire based,Near East,Konya,0,0.0,0.6057031154632568,1573.8794399985636,False,vanilla_rag,0
+WebQTest-819,where was bin laden found and killed,Abbottabad,Pakistan,0,0.0,0.4516613483428955,1567.9292370004987,False,vanilla_rag,0
+WebQTest-820,what are the names of harry potter movies in order,Harry Potter and the Order of the Phoenix,"The information provided does not contain any details about Harry Potter movies. Therefore, I cannot provide an answer to the question",0,0.3225806451612903,0.4347689151763916,1578.5717819999263,False,vanilla_rag,0
+WebQTest-821,what did pamela courson die from,Heroin overdose,"The question does not provide enough information to determine if ""Pamela Courson"" is related to any of the entities",0,0.0,0.38509491086006165,1596.410696998646,False,vanilla_rag,0
+WebQTest-822,what did dr jack kevorkian do,Assisted suicide,"The information provided does not include any details about Dr. Jack Kevorkian. Therefore, I cannot provide an answer",0,0.0,0.4330332279205322,1573.7595390019123,False,vanilla_rag,0
+WebQTest-823,what does bolivia border,Peru,The given facts do not provide information about Bolivia's borders. The facts only mention Guatemala's geographical relationships but do not include,0,0.0,0.39915701746940613,1567.7575869995053,False,vanilla_rag,0
+WebQTest-825,who does nolan ryan play for,Houston Astros,m.0k8ngml,0,0.0,0.35686901211738586,1577.4612109998998,False,vanilla_rag,0
+WebQTest-827,what country does justin bieber come from,Canada,Canada,1,1.0,0.6317508816719055,1567.401833999611,False,vanilla_rag,0
+WebQTest-828,what is the head judge of the supreme court called,Chief Justice of the United States,Associate Justice of the Supreme Court of the United States,0,0.7608695652173915,0.5730761289596558,804.5568760026072,False,vanilla_rag,0
+WebQTest-829,who was frida kahlo influenced by,Diego Rivera,None,0,0.0,0.4481488764286041,1575.03744999849,False,vanilla_rag,0
+WebQTest-830,where is taylor swift from,Reading,"The information provided does not contain any details about Taylor Swift's place of origin. Based on the given facts, none of",0,0.0,0.5886011123657227,1571.7173310004,False,vanilla_rag,0
+WebQTest-831,what type of religion does argentina have,Judaism,Catholicism,1,1.0,0.4661126136779785,1571.4038900005107,False,vanilla_rag,0
+WebQTest-832,when is the last time the giants won the world series,2014 World Series,The information provided does not contain any details about the San Francisco Giants winning the World Series. The facts given are about,0,0.16,0.31926682591438293,1581.761096000264,False,vanilla_rag,0
+WebQTest-833,what is the main language used in china,Standard Chinese,Chinese Language,0,0.5,0.49758508801460266,1573.139424999681,False,vanilla_rag,0
+WebQTest-834,where did the battle of waterloo occur,Waterloo,United Kingdom,0,0.0,0.5383743643760681,1576.730934997613,False,vanilla_rag,0
+WebQTest-836,who did vladimir lenin marry,Nadezhda Krupskaya,"The information provided does not contain any details about Vladimir Lenin's marriage. Therefore, I cannot provide an answer based on the",0,0.0,0.44883260130882263,1606.7222290002974,False,vanilla_rag,0
+WebQTest-837,what year did the baltimore ravens win superbowl,Super Bowl XXXV,The information provided does not contain any details about the Baltimore Ravens winning the Super Bowl or the year of such an event.,0,0.15384615384615383,0.3545408248901367,1583.226039998408,False,vanilla_rag,0
+WebQTest-838,what team does cristiano ronaldo play for 2011,Real Madrid C.F.,"The given facts do not contain any information about Cristiano Ronaldo or his team in 2011. Therefore, I",0,0.0909090909090909,0.3437636196613312,1573.0018239992205,False,vanilla_rag,0
+WebQTest-841,what is money called in italy,Euro,Euro,1,1.0,0.5477628111839294,1568.4550369987846,False,vanilla_rag,1
+WebQTest-843,where did theodor schwann study,Humboldt University of Berlin,"The information provided does not contain any details about Theodor Schwann's studies. Therefore, I cannot provide an answer based",0,0.0,0.4175286293029785,1582.4522579969198,False,vanilla_rag,0
+WebQTest-845,who are the virginia senators 2013,Jim Webb,The information provided does not contain details about Virginia senators in 2013. The facts given are related to United,0,0.0,0.5248916745185852,1579.1461819972028,False,vanilla_rag,0
+WebQTest-846,what was dr seuss 's real name,Theodor Seuss Geisel,"The question cannot be answered using the provided facts, as there is no information about Dr. Seuss's real name in",0,0.08333333333333333,0.43842950463294983,1571.7885039994144,False,vanilla_rag,0
+WebQTest-847,what countries are members of the security council,Vietnam,United Nations Security Council m.08__j13,0,0.22222222222222224,0.5657904148101807,916.1334100026579,False,vanilla_rag,0
+WebQTest-848,where are the nordic countries,Faroe Islands,Northern Europe,0,0.0,0.7395099997520447,1566.0855829992215,False,vanilla_rag,0
+WebQTest-849,what country sponsored ferdinand magellan,Kingdom of Portugal,Spain,0,0.0,0.4088939130306244,1572.416813000018,False,vanilla_rag,0
+WebQTest-850,what did vera ellen die from,Cancer,"The information provided does not specify the cause of death for Vera West (assuming ""Vera West"" is meant to be",0,0.0,0.4394603669643402,1574.53296300082,False,vanilla_rag,0
+WebQTest-851,what is the capital of modern day egypt,Cairo,Cairo,1,1.0,0.5930353999137878,1568.7709459998587,False,vanilla_rag,3
+WebQTest-852,what province is toronto in ( 7 letters ),Ontario,Ontario,1,1.0,0.5671948790550232,1576.6428290007752,False,vanilla_rag,0
+WebQTest-855,what is the currency of brazil now,Brazilian real,Brazilian Real,1,1.0,0.5062832236289978,1581.7984209970746,False,vanilla_rag,0
+WebQTest-856,what types of art did andy warhol do,Modern art,"Screenwriting, Writing, Acting",0,0.0,0.6289530396461487,1572.9395960006514,False,vanilla_rag,0
+WebQTest-857,what other states border florida,Alabama,None,0,0.0,0.5358526110649109,1568.752659000893,False,vanilla_rag,0
+WebQTest-859,what are the predominant religions in russia,Islam,Eastern Christianity,0,0.0,0.5924186706542969,1573.5237759981828,False,vanilla_rag,0
+WebQTest-861,who will coach carolina panthers in 2013,Ron Rivera,American football head coach,0,0.0,0.4203545153141022,1577.9290270002093,False,vanilla_rag,0
+WebQTest-862,where did louis sachar grow up,East Meadow,There is no information provided about Louis Sachar in the given facts. The facts mention Louis Lavelle and Louis XIII,0,0.0,0.4432257115840912,1569.0369450021535,False,vanilla_rag,0
+WebQTest-865,what to do for fun in houston,The Galleria,"Dealey Plaza is a tourist attraction in Dallas, not directly related to fun activities in Houston. For fun in Houston,",0,0.16666666666666669,0.5277604460716248,1570.1717299998563,False,vanilla_rag,0
+WebQTest-866,where did otto frank go to college,Heidelberg University,"The information provided does not contain any details about Otto Frank's college education. Therefore, I cannot determine where Otto Frank went",0,0.0,0.3768955171108246,1576.1057050003728,False,vanilla_rag,0
+WebQTest-867,what else has jennifer lawrence played in,X-Men: Days of Future Past,"The information provided does not include any performances by Jennifer Lawrence. All the actors mentioned are Florence Roberts. Therefore, there is",0,0.16,0.5420108437538147,1584.5078730017121,False,vanilla_rag,0
+WebQTest-868,who is the governor of pennsylvania state now,Tom Corbett,"The information provided does not include the current governor of Pennsylvania. To answer this question accurately, I would need up-to-date",0,0.0,0.5291280150413513,1583.21587699902,False,vanilla_rag,0
+WebQTest-869,where is ancient phoenician,Lebanon,Eurasia,0,0.0,0.4217727482318878,1572.6564819997293,False,vanilla_rag,0
+WebQTest-870,where does the celtics practice,TD Garden,"The information provided does not contain details about the Boston Celtics' practice location. Therefore, I cannot determine where the Celtics practice",0,0.0,0.42005836963653564,1574.7514240028977,False,vanilla_rag,0
+WebQTest-872,where bin laden got killed,Abbottabad,Pakistan,0,0.0,0.523765504360199,1570.4535459990439,False,vanilla_rag,0
+WebQTest-873,where does toronto get its water from,Ashbridges Bay Wastewater Treatment Plant,Lake Erie,0,0.0,0.42036744952201843,1569.6670619981887,False,vanilla_rag,0
+WebQTest-874,what language do people from bosnia speak,Bosnian language,"The given facts do not provide information about the language spoken in Bosnia. Therefore, I cannot determine the answer based on the",0,0.08333333333333334,0.43924474716186523,1568.0011570002534,False,vanilla_rag,0
+WebQTest-875,where did hugo chavez go to school,Bolivarian Military University of Venezuela,"The question is about Hugo Chavez, but the provided facts are about Cesar Chavez, not Hugo Chavez. There is no",0,0.0,0.5088368654251099,1571.7094770006952,False,vanilla_rag,0
+WebQTest-876,who does japan import from,Sudan,World Trade Organization,0,0.0,0.5301670432090759,1571.6151540000283,False,vanilla_rag,0
+WebQTest-877,what is the name of sonia gandhi daughter,Priyanka Gandhi,"The question asks for the name of Sonia Gandhi's daughter, but the provided facts do not contain any information about Sonia Gandhi",0,0.14814814814814817,0.4187796115875244,1578.5532819973014,False,vanilla_rag,0
+WebQTest-878,who do islamic people pray to,Ramdev Pir,God,1,1.0,0.4434097707271576,1572.042285999487,False,vanilla_rag,0
+WebQTest-879,where was mary todd lincoln from,Lexington,United States of America,0,0.0,0.4125581979751587,1574.117018000834,False,vanilla_rag,0
+WebQTest-880,where did charles darwin die,Down House,"The question is about Charles Darwin, but the provided facts are about Charles Mathias. There is no information about Charles Darwin",0,0.0,0.3750061094760895,1572.0388879999518,False,vanilla_rag,0
+WebQTest-881,what movies does nick cannon play in,Garfield: The Movie,None,0,0.0,0.4063390791416168,1572.8837229980854,False,vanilla_rag,0
+WebQTest-882,when did the big earthquake hit san francisco,1906-04-18,The given facts do not mention any earthquake in San Francisco. The facts provided are about the 1932 San,0,0.0,0.35644614696502686,1576.6222210004344,False,vanilla_rag,0
+WebQTest-883,who was king george vi married to,Queen Elizabeth The Queen Mother,The question does not match the provided facts. There is no mention of King George VI in the given information. The facts,0,0.1904761904761905,0.38692840933799744,1638.6822079984995,False,vanilla_rag,0
+WebQTest-884,where was jesus after he died on the cross,Judea,Judea,1,1.0,0.42710280418395996,1583.1289620000462,False,vanilla_rag,1
+WebQTest-885,who is sir james dyson,Designer,"The given facts do not provide information about Sir James Dyson. Therefore, there is no answer entity for this question based",0,0.0,0.4369313716888428,1575.5091249993711,False,vanilla_rag,0
+WebQTest-886,who voiced darth vader in the original star wars movies,James Earl Jones,Not Lucas Scott. The information provided does not contain any details about Darth Vader or his voice actor in the original Star Wars,0,0.0,0.31015995144844055,1576.2760539982992,False,vanilla_rag,0
+WebQTest-887,what high school did maya angelou go to,George Washington High School,"The information provided does not include any details about the high school Maya Angelou attended. Therefore, I cannot provide an answer",0,0.16,0.6552462577819824,1566.784266000468,False,vanilla_rag,0
+WebQTest-888,what 5 countries border switzerland,France,"Liechtenstein, Austria, Germany, France, Italy",0,0.33333333333333337,0.5196401476860046,849.1860630019801,False,vanilla_rag,0
+WebQTest-889,what country did benito mussolini govern,Italy,Italy,1,1.0,0.4120485782623291,254.06509499953245,False,vanilla_rag,2
+WebQTest-891,who was the leader of the first communist party of china,Mao Zedong,Mao Zedong,1,1.0,0.5033102631568909,1574.0939730021637,False,vanilla_rag,0
+WebQTest-892,what did miles davis died of,Stroke,The question cannot be answered based on the given facts. There is no information provided about Miles Davis or the cause of his,0,0.0,0.45069220662117004,1571.6862250010308,False,vanilla_rag,0
+WebQTest-893,what is the zip code for azle texas,76098,Not specified in the given facts.,0,0.0,0.34831979870796204,1609.6468139985518,False,vanilla_rag,0
+WebQTest-894,what date did sally pearson won gold,The London 2012 Summer Olympics,"The given facts do not contain any information about Sally Pearson or her winning date for a gold medal. Therefore, I",0,0.07692307692307693,0.3491726815700531,1593.7887680011045,False,vanilla_rag,0
+WebQTest-895,when did the detroit pistons last win the championship,2004 NBA Finals,1989,0,0.0,0.3093816339969635,1576.4156920013193,False,vanilla_rag,0
+WebQTest-896,when did the philadelphia flyers win the cup,1974 Stanley Cup Finals,2010,0,0.0,0.28560519218444824,1574.3270049970306,False,vanilla_rag,0
+WebQTest-898,what county is st paul nc in,Robeson County,Polk County,0,0.5,0.4621526896953583,1573.017622999032,False,vanilla_rag,0
+WebQTest-899,where is olympic national park wa,Jefferson County,"The question seems to be about Olympic National Park in Washington, but the provided facts are about Centennial Olympic Park in Atlanta",0,0.08695652173913045,0.6164183616638184,1572.0765799997025,False,vanilla_rag,0
+WebQTest-900,where did nat turner 1831 rebellion occur,Southampton County,The information provided does not contain any details about Nat Turner's 1831 rebellion. The facts given are about,0,0.0,0.40838101506233215,1586.7983440002718,False,vanilla_rag,0
+WebQTest-901,who would play luke skywalker,Mark Hamill,"The information provided does not contain any details about Luke Skywalker. Therefore, I cannot determine who would play Luke Skywalker from the",0,0.0,0.45079734921455383,1572.187652996945,False,vanilla_rag,0
+WebQTest-903,where turkish people originate,Bulgaria,Turkey,1,1.0,0.5657936334609985,1576.101431997813,False,vanilla_rag,0
+WebQTest-904,what state is barack obama from,Hawaii,"Washington, D.C. The provided facts do not specify which state Barack Obama is from. However, it mentions that his",0,0.0,0.6068307161331177,1580.970985996828,False,vanilla_rag,0
+WebQTest-905,what years did joe montana win super bowl,1982-01-24,"1989, 1990, 1994, 1995",0,0.28571428571428575,0.3268982172012329,1579.7494079997705,False,vanilla_rag,0
+WebQTest-908,what awards gary paulsen won,Margaret Edwards Award,Chuck Foreman,0,0.0,0.426157146692276,1581.1930670024594,False,vanilla_rag,0
+WebQTest-910,where did alexander graham bell die,"Beinn Bhreagh, Nova Scotia","The question is about Alexander Graham Bell's place of death, but there is no information provided for him in the given facts",0,0.0,0.463651180267334,1573.7146190003841,False,vanilla_rag,0
+WebQTest-911,what year did the golden state warriors win their first nba championship,1975 NBA Finals,The information provided does not contain any details about the Golden State Warriors or their NBA championships. The facts given are related,0,0.08,0.3061019480228424,1609.060729999328,False,vanilla_rag,0
+WebQTest-912,what currency should i take to turkey,Turkish lira,Turkish Lira,1,1.0,0.5327147245407104,1569.4139170009294,False,vanilla_rag,0
+WebQTest-914,what countries are in the uk yahoo,Wales,United Kingdom,0,0.0,0.6013162732124329,1566.8560640006035,False,vanilla_rag,0
+WebQTest-915,what superbowl did the baltimore ravens win,Super Bowl XXXV,The information provided does not contain any details about Super Bowl victories for the Baltimore Ravens. The facts given are related to the,0,0.15384615384615383,0.36172962188720703,1584.2888699989999,False,vanilla_rag,0
+WebQTest-916,what is the language of russia s spoken,Erzya Language,Yiddish Language,1,1.0,0.5051898956298828,1592.3668110008293,False,vanilla_rag,0
+WebQTest-918,who is the king of cambodia now,Norodom Sihamoni,The question does not match any of the provided facts. There is no information about the king of Cambodia in the given facts,0,0.0,0.43017780780792236,1613.3830689977913,False,vanilla_rag,0
+WebQTest-919,who are serena williams parents,Oracene Price,"The information provided does not contain any details about Serena Williams' parents. Therefore, I cannot determine her parents from the given",0,0.08695652173913042,0.4915667772293091,1575.924146000034,False,vanilla_rag,0
+WebQTest-920,what schools did sir isaac newton go to,"Trinity College, Cambridge","The information provided does not include details about the schools Sir Isaac Newton attended. Therefore, I cannot provide an answer based on",0,0.12500000000000003,0.5533446669578552,1568.3457830018597,False,vanilla_rag,0
+WebQTest-921,what was the cause of death for huell howser,Prostate cancer,The cause of death for Huell Howser is not provided in the given facts.,0,0.0,0.44928714632987976,1575.2705840022827,False,vanilla_rag,0
+WebQTest-922,what books are written by suzanne collins,Gregor the Overlander,None,0,0.0,0.4676096737384796,1579.6090479998384,False,vanilla_rag,0
+WebQTest-923,what countries does england border,Wales,Scotland,1,1.0,0.5365802049636841,1573.5380179976346,False,vanilla_rag,0
+WebQTest-924,what team did messi play for in 2010,FC Barcelona,"The given facts do not contain any information about Lionel Messi or his team in 2010. Therefore, I",0,0.0909090909090909,0.362891286611557,1580.3544190021057,False,vanilla_rag,0
+WebQTest-925,what time zone is greensburg indiana,Eastern Time Zone,Eastern Time Zone,1,1.0,0.5345578789710999,1577.127623000706,False,vanilla_rag,3
+WebQTest-927,who plays voldemort,Richard Bremmer,Yolanda King,0,0.0,0.47288239002227783,1580.072608001501,False,vanilla_rag,0
+WebQTest-928,what colleges did harper lee attend,University of Alabama,m.0lwxmy1,0,0.0,0.5667898654937744,1573.6318090021086,False,vanilla_rag,0
+WebQTest-929,who founded the kkk,James R. Crowe,"The information provided does not mention the founding of the KKK. Therefore, I cannot determine the answer from the given facts",0,0.0,0.49272140860557556,1576.2740860009217,False,vanilla_rag,0
+WebQTest-931,what jobs did john adams have before he was president,United States Ambassador to the United Kingdom,Politician,0,0.0,0.6131815910339355,1569.7877230013546,False,vanilla_rag,0
+WebQTest-932,what year did super mario bros 2 come out,1988-10,1988,0,0.6666666666666666,0.23161470890045166,1576.506719000463,False,vanilla_rag,0
+WebQTest-933,what political party did andrew johnson belong to,National Union Party,Whig,0,0.0,0.6128875613212585,1569.4091750010557,False,vanilla_rag,0
+WebQTest-935,where was osama bin laden killed,Abbottabad,Pakistan,0,0.0,0.4684133529663086,1575.9486479983025,False,vanilla_rag,0
+WebQTest-936,where were greek temples built,Shahhat,Greece,0,0.0,0.3846319913864136,1580.3002040011052,False,vanilla_rag,0
+WebQTest-937,where are people who speak arabic from,Jordan,Jordan,1,1.0,0.623532235622406,1575.614224999299,False,vanilla_rag,2
+WebQTest-938,who was queen elizabeth ii mom,Queen Elizabeth The Queen Mother,There is no information provided about Queen Elizabeth II's mother in the given facts. The facts only provide information about her nationality,0,0.3571428571428571,0.5721701979637146,1568.280194002,False,vanilla_rag,0
+WebQTest-939,what type of art did pablo picasso paint,Picasso's African Period,Oil paint,0,0.0,0.4211902618408203,1572.5935299997218,False,vanilla_rag,0
+WebQTest-941,what is ella fitzgerald parents name,William Fitzgerald,Mandy Richardson,0,0.0,0.5513372421264648,1571.4191129991377,False,vanilla_rag,0
+WebQTest-942,who is anne hathaway parents,Gerald Hathaway,The question does not match any of the provided facts. There is no information about Anne Hathaway's parents in the given,0,0.08333333333333334,0.4594346582889557,1567.0687580022786,False,vanilla_rag,0
+WebQTest-943,who does don draper gets engaged to,Betty Draper,m.0j7f9t2,0,0.0,0.3459954261779785,1575.3207429988834,False,vanilla_rag,0
+WebQTest-944,what was van halen first album,Ain't Talkin' 'Bout Love,Last Night,0,0.0,0.3548314869403839,1594.6839950011054,False,vanilla_rag,0
+WebQTest-945,what political system did spain have,Monarchy,Constitutional monarchy and Unitary state,0,0.5714285714285715,0.5668221712112427,1582.548736998433,False,vanilla_rag,0
+WebQTest-948,what are the supreme court cases,League of United Latin American Citizens v. Perry,"Cline v. American Aggregates Corp. To answer the question ""what are the supreme court cases"", based on",0,0.26666666666666666,0.6309738755226135,1576.4608360004786,False,vanilla_rag,0
+WebQTest-949,what is penn state 's main campus,University Park,University of Pennsylvania,0,0.4,0.5572251677513123,1571.205939999345,False,vanilla_rag,0
+WebQTest-952,what country does alaska belong to,United States of America,United States of America,1,1.0,0.6558464765548706,1571.9300040000235,False,vanilla_rag,2
+WebQTest-953,where is kansas city,Platte County,"Kansas City is located in Kansas, which is part of the West North Central States and the Contiguous United States. Given",0,0.0,0.5552215576171875,1567.9709709984309,False,vanilla_rag,0
+WebQTest-954,what was pink floyd 's first album,Psychedelic Session-compilation album,"The given facts do not contain any information about Pink Floyd or their albums. Therefore, I cannot provide an answer based on",0,0.0,0.3168890178203583,1571.899411999766,False,vanilla_rag,0
+WebQTest-955,who did granville t. woods married,Loretta Woods,Peter K. Wood,0,0.0,0.37677130103111267,1576.7352510010824,False,vanilla_rag,0
+WebQTest-957,what language did the sioux indians speak,Sioux language,English Language,1,1.0,0.35660937428474426,1577.5961389990698,False,vanilla_rag,0
+WebQTest-958,what are some famous people from el salvador,Mario Wilfredo Contreras,Pedro Calderón de la Barca is not from El Salvador. There is no information provided about famous people specifically from El,0,0.08695652173913042,0.5745505690574646,1581.2699769994651,False,vanilla_rag,0
+WebQTest-959,who did brett gardner play for in 2008,New York Yankees,"The information provided does not contain any details about Brett Gardner or his teams in 2008. Therefore, I",0,0.0,0.2863798439502716,1576.5968539999449,False,vanilla_rag,0
+WebQTest-960,who plays dwight in the office,Rainn Wilson,Jim Parson斯,0,0.0,0.4604322910308838,1572.954657000082,False,vanilla_rag,0
+WebQTest-962,what county is san diego ca,San Diego County,San Diego County,1,1.0,0.5116237998008728,1572.2642369983078,False,vanilla_rag,0
+WebQTest-963,who is the miami dolphins quarterback,Ryan Tannehill,m.0b48rms,0,0.0,0.40863871574401855,1457.039523000276,False,vanilla_rag,0
+WebQTest-965,where did anne frank go to school,Montessori Lyceum Amsterdam,Martin Luther King Magnet at Pearl High School,0,0.0,0.36016276478767395,1574.4052669979283,False,vanilla_rag,0
+WebQTest-966,what basketball player is married to monica,Shannon Brown,None,0,0.0,0.46356356143951416,1569.838063998759,False,vanilla_rag,0
+WebQTest-967,what did hitler use to kill himself,Ballistic trauma,Toxic gas,0,0.0,0.35709187388420105,1575.4455470014364,False,vanilla_rag,0
+WebQTest-968,what do people speak in germany,Low German,German Language,1,1.0,0.5757710933685303,325.722677000158,False,vanilla_rag,0
+WebQTest-969,when is the last time the denver broncos won the superbowl,Super Bowl XXXIII,The information provided does not contain any details about the Denver Broncos winning the Super Bowl. The facts given are related to the,0,0.15384615384615383,0.28501150012016296,1583.9387249980064,False,vanilla_rag,0
+WebQTest-970,where was caesar when he was stabbed,Theatre of Pompey,"Rome To answer the question ""where was Caesar when he was stabbed,"" we need to identify the relevant information from the provided",0,0.0,0.36409857869148254,1574.0809449998778,False,vanilla_rag,0
+WebQTest-971,what style of music did bessie smith perform,Blues,Rhythm and blues,0,0.5,0.4154428541660309,1568.2192059975932,False,vanilla_rag,0
+WebQTest-972,what team did jackie robinson,Los Angeles Bulldogs,There is no information provided about Jackie Robinson's team in the given facts.,0,0.0,0.38698479533195496,1272.8969569980109,False,vanilla_rag,0
+WebQTest-973,what time zone is chicago in right now,Central Time Zone,Central Time Zone,1,1.0,0.567172646522522,370.42240600203513,False,vanilla_rag,1
+WebQTest-975,who was the vice president under ronald reagan,George H. W. Bush,Answer: George H. W. Bush,0,0.888888888888889,0.5416828393936157,1583.1507069997315,False,vanilla_rag,0
+WebQTest-976,where do the chicago white sox play home games,Comiskey Park,m.0wz1z5x,0,0.0,0.36424747109413147,1572.041845000058,False,vanilla_rag,0
+WebQTest-977,what part did jeff conaway play in grease,Kenickie Murdoch,Answer: Answer not found in the given facts.,0,0.0,0.336701899766922,1574.0770190022886,False,vanilla_rag,0
+WebQTest-978,what book did benjamin franklin published,The Drinker's Dictionary,The autobiography of Benjamin Franklin & selections from his other writings,0,0.9523809523809523,0.7879445552825928,1585.6862159998855,False,vanilla_rag,0
+WebQTest-979,what currency to take to barbados,Barbadian dollar,Jamaican dollar is not the currency for Barbados. The correct currency for Barbados is not directly listed in the given,0,0.09090909090909091,0.5644698739051819,1575.6390399983502,False,vanilla_rag,0
+WebQTest-980,where did they get the name stanley cup,"Frederick Stanley, 16th Earl of Derby","The Stanley Cup is named after Lord Stanley of Preston, who was the Governor General of Canada and a father of ice hockey",0,0.26315789473684204,0.4257827699184418,1574.9429630013765,False,vanilla_rag,0
+WebQTest-982,what is the zip code of syracuse ny,13220,"The provided facts do not contain information about Syracuse, NY or its zip codes. Therefore, I cannot determine the zip code",0,0.0,0.39411941170692444,1573.0422619999445,False,vanilla_rag,0
+WebQTest-983,where did tennessee williams go to college,University of Missouri,"The information provided does not include any details about Tennessee Williams' college education. Therefore, I cannot determine where he went to",0,0.08333333333333333,0.5742859244346619,1571.507536998979,False,vanilla_rag,0
+WebQTest-984,what is the name of airport in new york,John F. Kennedy International Airport,"There is no airport named in the given facts that is located in New York. The facts provided mention airports in Frederick,",0,0.07407407407407407,0.4969017803668976,1572.5107309990562,False,vanilla_rag,0
+WebQTest-985,who was queen victoria 's husband,"Albert, Prince Consort",There is no information provided about Queen Victoria's husband in the given facts. The facts only mention her children and her role,0,0.0,0.4795211851596832,1566.482880996773,False,vanilla_rag,0
+WebQTest-986,where did benjamin franklin work,United States Postal Service,"m.040vj_k, m.040vk04, m.040vj_w",0,0.0,0.622935950756073,1575.9542410014546,False,vanilla_rag,0
+WebQTest-987,what does barbara bush do for work,First Lady,Person,0,0.0,0.5402694344520569,1571.6688299980888,False,vanilla_rag,0
+WebQTest-988,who is jacob latimore,Actor,Kenny Lattimore,0,0.0,0.4932454526424408,1574.2943720033509,False,vanilla_rag,2
+WebQTest-989,what happened to dunkirk during ww2,Siege of Dunkirk,Battle of Dunkirk,1,1.0,0.5698895454406738,1574.6410290012136,False,vanilla_rag,0
+WebQTest-990,what was scottie pippen good at,Basketball,Basketball,1,1.0,0.33885201811790466,1570.8897719996457,False,vanilla_rag,0
+WebQTest-991,who played donna on west wing,Janel Moloney,Donna Ludlow,0,0.0,0.4036392867565155,1570.320023001841,False,vanilla_rag,0
+WebQTest-993,who played meg in season 1 of family guy,Lacey Chabert,"The question is about ""Family Guy,"" but the provided facts are about ""Keyshia & Daniel: Family First.""",0,0.0,0.3403766453266144,1583.0116949982767,False,vanilla_rag,0
+WebQTest-994,when was the last time the dallas cowboys won the superbowl,Super Bowl XXX,2019,0,0.0,0.39530250430107117,1573.0064199997287,False,vanilla_rag,0
+WebQTest-996,where do ireland play rugby union,Aviva Stadium,United Kingdom,0,0.0,0.5520502924919128,1574.6732859988697,False,vanilla_rag,0
+WebQTest-997,who killed lee harvey oswald shot,Jack Ruby,"Jack Ruby, a nightclub owner.",0,0.5714285714285715,0.6978122591972351,632.2816009997041,False,vanilla_rag,0
+WebQTest-998,when was the last time knicks won the championship,1973 NBA Finals,1977 NCAA Men's Division I Basketball Tournament - National Championship,0,0.0,0.265289306640625,1598.9558519977436,False,vanilla_rag,0
+WebQTest-999,when did celtics win the championship,1968 NBA Finals,"The given facts do not contain any information about the Boston Celtics winning a championship. Therefore, I cannot provide an answer based",0,0.0,0.3376394808292389,1668.7140289977833,False,vanilla_rag,0
+WebQTest-1000,what countries included in oceania,Vanuatu,"Australia, Polynesia, Coral Sea Islands",0,0.33333333333333337,0.6811779141426086,1567.0695310000156,False,vanilla_rag,0
+WebQTest-1001,what country is nicki minaj from,United States of America,United States of America,1,1.0,0.7338358759880066,1573.2832530011365,False,vanilla_rag,1
+WebQTest-1002,who played harry potter dumbledore actor,Toby Regbo,None,0,0.0,0.4564005136489868,1575.4671129980125,False,vanilla_rag,0
+WebQTest-1003,who was the prime minister of pakistan in 1999,Nawaz Sharif,"The given facts do not provide information about the prime minister of Pakistan in 1999. Therefore, I cannot",0,0.0,0.4156081974506378,1571.2252230005106,False,vanilla_rag,0
+WebQTest-1004,what movies did christopher plummer play in,The Night of the Generals,m.0pdmd7y,0,0.0,0.40398380160331726,1573.4221059974516,False,vanilla_rag,0
+WebQTest-1005,what is capital city of morocco,Rabat,There is no information provided about the capital city of Morocco in the given facts. The facts only mention locations in North Africa,0,0.0,0.4295520782470703,1575.6298529995547,False,vanilla_rag,0
+WebQTest-1006,what movies is omar epps in,Major League II,m.0k_rb_b,0,0.0,0.3942115008831024,1586.2466050020885,False,vanilla_rag,0
+WebQTest-1007,what district does nancy pelosi represent,California’s 8th congressional district,m.04dmfx8,0,0.0,0.46268031001091003,1593.5314539965475,False,vanilla_rag,0
+WebQTest-1008,where is walton indiana,Indiana,Indiana,1,1.0,0.48884665966033936,1568.2257750013378,False,vanilla_rag,1
+WebQTest-1009,where did george herbert walker bush go to college,University Yale,"The information provided does not contain details about George H. W. Bush's college education. Based on the given facts,",0,0.0,0.4162861406803131,1661.0386819993437,False,vanilla_rag,0
+WebQTest-1010,what did bruce jenner win gold medal for,Athletics at the 1976 Summer Olympics - Men's Decathlon,"The information provided does not mention Bruce Jenner or his gold medal wins. The facts list Bruce Golding, but do not",0,0.10256410256410256,0.4451051652431488,1581.5636229999654,False,vanilla_rag,0
+WebQTest-1011,where do they speak tibetan,Tibet,"The information provided does not mention Tibetan language. Therefore, I cannot determine from this data alone where Tibetan is spoken. Based",0,0.0,0.4267409145832062,1568.4093279996887,False,vanilla_rag,0
+WebQTest-1012,what to do in hollywood ca this weekend,TCL Chinese Theatre,"United States of America To answer the question ""what to do in hollywood ca this weekend"", the most relevant information provided",0,0.16,0.4908260107040405,1573.2466549998207,False,vanilla_rag,0
+WebQTest-1014,where did kim kardashian come from,Los Angeles,United States of America,0,0.0,0.5261433124542236,1574.2292430004454,False,vanilla_rag,0
+WebQTest-1015,what town did justin bieber grew up in,Stratford,Canada,1,1.0,0.6262208819389343,1578.631223001139,False,vanilla_rag,0
+WebQTest-1017,who plays charlie in the santa clause movies,Eric Lloyd,Clive Owen,0,0.0,0.45839086174964905,1575.5234400021436,False,vanilla_rag,0
+WebQTest-1020,what highschool did r. kelly attend,Kenwood Academy,"The information provided does not include any details about R. Kelly's high school attendance. Therefore, I cannot provide an answer",0,0.0,0.4737450182437897,1567.8304969987948,False,vanilla_rag,0
+WebQTest-1021,what happened at benghazi,2013 Benghazi conflict,"The given facts do not mention any event that occurred in Benghazi. Therefore, there is no information provided to answer what happened",0,0.08,0.49017009139060974,1569.3555959987862,False,vanilla_rag,0
+WebQTest-1022,what country is nike based in,United States of America,United States,0,0.6666666666666666,0.43392011523246765,1571.7094460014778,False,vanilla_rag,0
+WebQTest-1024,what kind of money do i bring to mexico,Mexican peso,United States Dollar,0,0.0,0.445670485496521,375.0310840005113,False,vanilla_rag,0
+WebQTest-1025,who did steve spurrier play pro football for,San Francisco 49ers,"The information provided does not contain any details about Steve Spurrier or his professional football career. Therefore, I cannot determine",0,0.0,0.3427814245223999,1575.3260400015279,False,vanilla_rag,0
+WebQTest-1027,where do the blackhawks play,United Center,Philips Arena,0,0.0,0.4698079824447632,1574.3210920009005,False,vanilla_rag,0
+WebQTest-1028,who plays john connor,Christian Bale,"The question ""who plays john connor"" cannot be answered based on the provided facts. There is no information about John",0,0.0,0.4703567922115326,1578.8094749987067,False,vanilla_rag,0
+WebQTest-1029,what is the main language spoken in mexico,"Tlapanec, Azoyú Language",Spanish Language,1,1.0,0.557319700717926,1573.3951729998807,False,vanilla_rag,0
+WebQTest-1030,what are italians classified as,Latin European peoples,European American,0,0.4,0.6330443024635315,1572.7915950010356,False,vanilla_rag,0
+WebQTest-1031,what has angelina jolie accomplished,Voice Actor,Humanitarian,0,0.0,0.4155178368091583,1574.0487680013757,False,vanilla_rag,0
+WebQTest-1032,who played captain kirk in star trek movie,William Shatner,The information provided does not specify who played Captain Kirk in a Star Trek movie. Shawn Hatosy is mentioned as a,0,0.0,0.3810822665691376,1577.9997079989698,False,vanilla_rag,0
+WebQTest-1033,who played dana scully in x files,Gillian Anderson,"The question is about ""who played Dana Scully in X-Files,"" but the provided facts are about Professor Charles Xavier",0,0.0,0.38764870166778564,1576.4669180025521,False,vanilla_rag,0
+WebQTest-1035,what was f. scott fitzgerald,Writer,Notable_author,0,0.0,0.5804764628410339,1580.637556999136,False,vanilla_rag,0
+WebQTest-1036,what is the dominant language spoken in jamaica,Jamaican English,Jamaican English,1,1.0,0.6854402422904968,1578.9939030000824,False,vanilla_rag,2
+WebQTest-1037,who is the coach for the new york knicks,Derek Fisher,"The information provided does not include details about the current coach of the New York Knicks. Therefore, I cannot determine the answer",0,0.0,0.37588492035865784,1582.8679709993594,False,vanilla_rag,0
+WebQTest-1038,who was wesley snipes,Actor,m.0_sp3dv,0,0.0,0.3848629891872406,1577.2119339999335,False,vanilla_rag,0
+WebQTest-1039,where does sherrod brown live,Avon,United States of America,0,0.0,0.49332523345947266,1572.3474679980427,False,vanilla_rag,0
+WebQTest-1040,what kind of language does colombia speak,Cuiba language,Spanish Language,1,1.0,0.551651656627655,1568.8729920002515,False,vanilla_rag,0
+WebQTest-1041,what currency does england use now,Pound sterling,Pound sterling,1,1.0,0.7002177238464355,311.7573790004826,False,vanilla_rag,1
+WebQTest-1042,who was the original voice of meg griffin on family guy,Lacey Chabert,Griffin Bell,0,0.0,0.3434799909591675,1571.734077999281,False,vanilla_rag,0
+WebQTest-1043,what kind of government is mali,Semi-presidential system,"The information provided does not include details about Mali's form of government. Therefore, I cannot determine the type of government in",0,0.0,0.5228061676025391,1573.7330070005555,False,vanilla_rag,2
+WebQTest-1044,who did cristiano ronaldo play for in 2010,Real Madrid C.F.,None,0,0.0,0.33357998728752136,1573.3594299999822,False,vanilla_rag,0
+WebQTest-1045,what is the zip code for morgantown wv,26504,"The given facts do not contain information about Morgantown, WV. Therefore, there is no available zip code for Morg",0,0.0,0.48876556754112244,1580.1317509976798,False,vanilla_rag,0
+WebQTest-1046,what is jacksonville fl timezone,Eastern Time Zone,Eastern Time Zone,1,1.0,0.6025821566581726,1575.9050019987626,False,vanilla_rag,3
+WebQTest-1047,who does amy stiller play in dodgeball,Keno Waitress,"The information provided does not contain any details about Amy Stiller or her role in Dodgeball. Therefore, I cannot determine",0,0.0,0.31490638852119446,1577.700822999759,False,vanilla_rag,0
+WebQTest-1048,who were king henry vii children,"Arthur, Prince of Wales",Louis XIV of France,0,0.4444444444444445,0.4469059705734253,1571.8901670006744,False,vanilla_rag,0
+WebQTest-1050,who does mila kunis play on family guy,Meg Griffin,Answer: Mila Kunis does not play any character on Family Guy based on the given facts. The facts provided do,0,0.0,0.31334465742111206,1569.3342180020409,False,vanilla_rag,0
+WebQTest-1051,when did the san francisco earthquake occur,1906-04-18,The facts provided do not contain information about the San Francisco earthquake. The facts mention San Francisco as a county seat but do,0,0.0,0.3673471510410309,1578.6080320031033,False,vanilla_rag,0
+WebQTest-1052,who played damien in the omen 2006,Seamus Davey-Fitzpatrick,David Oyelowo,0,0.0,0.3162117004394531,1574.664395997388,False,vanilla_rag,0
+WebQTest-1054,who played denver in four christmases,Jon Favreau filmography,"There is no information provided about any cast members for ""Four Christmases"" in the given facts. The facts",0,0.0,0.37117716670036316,1568.8927179980965,False,vanilla_rag,0
+WebQTest-1055,what to do with kids in essex,Cudmore Grove Country Park,"There are various activities and places you can visit with kids in Essex, such as visiting parks like Southend-on-Sea",0,0.0,0.4194583594799042,1578.88277299935,False,vanilla_rag,0
+WebQTest-1056,who did the cleveland cavaliers draft,Dion Waiters,The information provided does not contain any details about the Cleveland Cavaliers' draft picks. The facts given are related to the Oakland,0,0.0,0.3670005798339844,1641.523030000826,False,vanilla_rag,0
+WebQTest-1057,what concentration camp did anne frank died in,Bergen-Belsen concentration camp,The given facts do not mention Anne Frank or any concentration camps. The correct answer cannot be derived from the provided information.,0,0.07692307692307693,0.3025592565536499,1593.0495169995993,False,vanilla_rag,0
+WebQTest-1059,what language does east timor speak,Tukudede Language,"The question does not provide information about East Timor's official or primary language. Based on the given facts, there is",0,0.08695652173913042,0.4435560703277588,1569.1964569996344,False,vanilla_rag,0
+WebQTest-1060,what is the currency in italy,Euro,Euro,1,1.0,0.5954824090003967,1568.310858001496,False,vanilla_rag,1
+WebQTest-1061,where does greek language come from,Attic Group,Greece,0,0.0,0.47344979643821716,1576.8376150008407,False,vanilla_rag,0
+WebQTest-1062,what is the name of the currency used in italy,Euro,Euro,1,1.0,0.614744246006012,1567.435764001857,False,vanilla_rag,1
+WebQTest-1063,where is audrey hepburn from,Ixelles,United States of America,0,0.0,0.43793177604675293,1574.2072190005274,False,vanilla_rag,0
+WebQTest-1065,who does darth vaders voice,James Earl Jones,Chandra Davis,0,0.0,0.3699670135974884,1579.074633998971,False,vanilla_rag,0
+WebQTest-1067,what school did douglas macarthur go to,TMI — The Episcopal School of Texas,"The information provided does not include any details about the schools Douglas MacArthur attended. Therefore, I cannot provide an answer based",0,0.11428571428571427,0.5892654061317444,1581.109868002386,False,vanilla_rag,0
+WebQTest-1068,what famous people are from barbados,Shawn Terry Cox,"The information provided does not include any specific famous people from Barbados. However, notable figures from Barbados include Rihanna and",0,0.0,0.5928924679756165,1573.0102960005752,False,vanilla_rag,0
+WebQTest-1069,what is the name of the currency used in china,Renminbi,Chinese yuan,0,0.0,0.5170534253120422,1567.9541770005017,False,vanilla_rag,0
+WebQTest-1070,what are the names of michael jackson 's 3 children,"Michael Joseph Jackson, Jr.","The information provided does not include the names of Michael Jackson's children. Therefore, I cannot provide an answer based on the",0,0.15384615384615385,0.5497373938560486,1573.7426669984416,False,vanilla_rag,0
+WebQTest-1072,who is the current governor of arizona 2010,Jan Brewer,Jeff Arnold,0,0.0,0.4388009309768677,1577.9535789988586,False,vanilla_rag,0
+WebQTest-1074,who is lamar odom playing for this year,Saski Baskonia,m.04qff7w,0,0.0,0.3555256128311157,1571.76583600085,False,vanilla_rag,0
+WebQTest-1075,where were the great pyramids of giza built,Giza Plateau,Giza Governorate,0,0.5,0.4736122190952301,1574.492764997558,False,vanilla_rag,0
+WebQTest-1077,what language do the russian speak,Erzya Language,Russian Language,1,1.0,0.530864953994751,1579.2675909979152,False,vanilla_rag,0
+WebQTest-1078,what language do australia people speak,Esperanto Language,English Language,1,1.0,0.5492198467254639,1337.8995790008048,False,vanilla_rag,4
+WebQTest-1079,what country was king tut 's tomb found,Egypt,Egypt,1,1.0,0.41358253359794617,1456.4610769994033,False,vanilla_rag,2
+WebQTest-1080,where did abraham and his descendants live,Canaan,United States of America,0,0.0,0.4104149341583252,1573.9299279994157,False,vanilla_rag,0
+WebQTest-1081,where did george washington carver go to collage,Simpson College,m.0n1916z,0,0.0,0.6918699145317078,1576.0823390010046,False,vanilla_rag,0
+WebQTest-1082,what are the sports in spain,CB 1939 Canarias,"The given facts do not provide information about sports in Spain. The facts mention European Summer Time and cultural events in Spain,",0,0.13333333333333333,0.5314026474952698,1571.3988389979932,False,vanilla_rag,0
+WebQTest-1083,where president obama was born,Honolulu,"Washington, D.C. To be precise, President Obama was born in Honolulu, Hawaii, but based on the given facts",0,0.1,0.5500722527503967,1574.1819639988535,False,vanilla_rag,0
+WebQTest-1084,what sports do people play in poland,Turów Zgorzelec,"The given facts do not provide information about sports played in Poland. Therefore, I cannot answer the question based on the provided",0,0.07692307692307693,0.5400320291519165,1573.5103209990484,False,vanilla_rag,0
+WebQTest-1085,who was demi lovato dating,Cody Linley,"The information provided does not contain any details about Demi Lovato's dating history. Therefore, I cannot determine who Dem",0,0.0,0.3388567268848419,1574.5250440013479,False,vanilla_rag,0
+WebQTest-1087,what films has scarlett johansson been in,Ghost World,The given facts do not contain any information about Scarlett Johansson. The facts provided are about Florence Roberts and her films.,0,0.16,0.43885359168052673,1577.5389849986823,False,vanilla_rag,0
+WebQTest-1088,who originally voiced meg on family guy,Lacey Chabert,"The information provided does not contain any details about who originally voiced Meg on Family Guy. Therefore, I cannot determine the answer",0,0.0,0.32970622181892395,1575.3855190014292,False,vanilla_rag,0
+WebQTest-1089,who played amy squirrel in bad teacher,Lucy Punch,Vanessa Kerry,0,0.0,0.4040069878101349,1572.3061729986512,False,vanilla_rag,0
+WebQTest-1090,where are boeing headquarters,Chicago,m.0jsl0vq,0,0.0,0.4375700056552887,1576.045111996791,False,vanilla_rag,0
+WebQTest-1091,what type of religions are in the united states,Hinduism,Protestantism,0,0.0,0.5733678936958313,1574.9930659985694,False,vanilla_rag,0
+WebQTest-1092,who did viggo mortensen play in lord of the rings,Aragorn,Yolanda King,0,0.0,0.3795686662197113,1573.0316349981877,False,vanilla_rag,0
+WebQTest-1094,who was isaac newton and what did he do,Chemist,"Philosopher, Scientist, Academic",0,0.5,0.6886484026908875,1570.2752079996571,False,vanilla_rag,0
+WebQTest-1095,who did william shakespeare marry,Anne Hathaway,"Spouse (or domestic partner) The answer provided in the facts is ""Spouse (or domestic partner)"", but it",0,0.0,0.535270631313324,1603.1930329991155,False,vanilla_rag,0
+WebQTest-1096,what movies queen latifah is in,We Are Family,The given facts do not provide information about Queen Latifah's movies. The facts mention Yolanda King as an,0,0.2376237623762376,0.44313493371009827,1581.294888001139,False,vanilla_rag,0
+WebQTest-1097,where did michelle obama graduated from,Princeton University,There is no information provided about Michelle Obama's educational background in the given facts. The facts mention Michelle Jerott and Michelle,0,0.0,0.4617804288864136,1583.9461470022798,False,vanilla_rag,0
+WebQTest-1098,what kind of music did franz liszt compose,Romantic music,composer,0,0.0,0.5193867087364197,1627.88584000009,False,vanilla_rag,0
+WebQTest-1099,what country does david luiz play for,Brazil national football team,"The information provided does not contain any details about David Luiz or his national team. Therefore, I cannot determine the country",0,0.16,0.44468727707862854,1572.226648000651,False,vanilla_rag,0
+WebQTest-1100,what document did thomas jefferson wrote,The Literary Bible of Thomas Jefferson,Declaration of Independence,0,0.7499999999999999,0.5515842437744141,1570.2705590010737,False,vanilla_rag,0
+WebQTest-1101,who is martin luther king jr facts,Writer,United States of America,0,0.0,0.677018404006958,1576.1618850010564,False,vanilla_rag,0
+WebQTest-1102,where is victoria british columbia,British Columbia,"Canada To answer the question ""Where is Victoria British Columbia?"", we need to determine the country in which Victoria, British Columbia",0,0.32,0.49742355942726135,1567.1690429990122,False,vanilla_rag,0
+WebQTest-1103,how many mary mary sisters,Tina Campbell,2,0,0.0,0.45657750964164734,1575.6384559972503,False,vanilla_rag,0
+WebQTest-1104,what do we call the currency of france,CFP franc,Euro,1,1.0,0.6343216300010681,1581.0339730014675,False,vanilla_rag,0
+WebQTest-1106,what team does david beckham play for in 2012,LA Galaxy,"The information provided does not include any details about which team David Beckham played for in 2012. Therefore,",0,0.0,0.43210265040397644,1589.6507280012884,False,vanilla_rag,0
+WebQTest-1107,what movies did nick cannon star in,Garfield: The Movie,None,0,0.0,0.3703082501888275,1577.099766000174,False,vanilla_rag,0
+WebQTest-1108,what radio station is npr on in nyc,WNYC,"NPR is not mentioned in the provided facts, and there is no information about NPR being on any of the listed radio stations",0,0.0,0.5237078666687012,1572.6783940008318,False,vanilla_rag,0
+WebQTest-1109,who did tom landry play for,New York Yankees,m.0d6bw4t,0,0.0,0.3138366639614105,1576.2267220015929,False,vanilla_rag,0
+WebQTest-1110,where was john jay born,New York City,United States of America,0,0.0,0.48836174607276917,1575.0356690004992,False,vanilla_rag,0
+WebQTest-1111,where is mount fuji located,Japan,Kanagawa Prefecture,0,0.0,0.40129169821739197,1572.4236549976922,False,vanilla_rag,1
+WebQTest-1113,where was toussaint l'ouverture born,Saint-Domingue,"France To answer the question ""where was Toussaint Louverture born"", we need to find information about his place of",0,0.0,0.3659963607788086,1576.2891400008812,False,vanilla_rag,0
+WebQTest-1114,what countries makes up the uk,Wales,"Kingdom of Great Britain, with Dependencies and Territories",0,0.0,0.5632748007774353,1582.1850690008432,False,vanilla_rag,0
+WebQTest-1115,what is lawton ok zip code,73507,"There is no information provided about Lawton, OK or its zip code in the given facts. The facts only contain information",0,0.0,0.44037750363349915,1579.2815159984457,False,vanilla_rag,0
+WebQTest-1116,what is the capital city of spain wiki answers,Madrid,Madrid,1,1.0,0.5987722277641296,1568.6730880006508,False,vanilla_rag,0
+WebQTest-1117,where do they speak german,Second Polish Republic,Germany,1,1.0,0.5979642271995544,1567.7850570027658,False,vanilla_rag,0
+WebQTest-1118,when did mark mcgwire retired,2001 Major League Baseball Season,"The given facts do not contain any information about Mark McGwire or his retirement date. Therefore, I cannot provide an answer",0,0.0,0.3198622763156891,1575.914154000202,False,vanilla_rag,0
+WebQTest-1119,what is colorado technical university,College/University,Colorado Technical University,0,0.4,0.4506329596042633,1573.0487039982108,False,vanilla_rag,0
+WebQTest-1120,what was the currency used in france before the euro,French franc,French franc,1,1.0,0.5998667478561401,1568.9794969985087,False,vanilla_rag,0
+WebQTest-1121,what is kentucky state slogan,"United we stand, divided we fall",Ever Upward,0,0.0,0.48674800992012024,1577.081019000616,False,vanilla_rag,0
+WebQTest-1124,who played samantha stephens in bewitched,Elizabeth Montgomery,Chandra Davis,0,0.0,0.44206658005714417,1593.2710339984624,False,vanilla_rag,0
+WebQTest-1125,what area of science did sir isaac newton study,Chemist,Scientist,1,1.0,0.6104705333709717,262.3167530000501,False,vanilla_rag,0
+WebQTest-1126,what county is san diego in,San Diego County,San Diego County,1,1.0,0.5091258883476257,1579.0060279978206,False,vanilla_rag,0
+WebQTest-1127,which country in north america is divided into provinces,Canada,Montana,0,0.0,0.49811556935310364,1572.7750270016259,False,vanilla_rag,0
+WebQTest-1130,what is real name of santa claus,Saint Nicholas,Antonio López de Santa Anna,0,0.0,0.43574798107147217,1568.7698449983145,False,vanilla_rag,0
+WebQTest-1131,when did kelly slater go pro,1990,"The given facts do not contain any information about Kelly Slater or his professional career. Therefore, I cannot provide an answer to",0,0.0,0.37731218338012695,1570.4104910000751,False,vanilla_rag,0
+WebQTest-1132,what did coretta scott king died from,Respiratory failure,"The information provided does not include the cause of Coretta Scott King's death. Therefore, I cannot provide an answer",0,0.0,0.6054052710533142,1571.13336600014,False,vanilla_rag,0
+WebQTest-1133,what does wh smith stand for,WHSmith,Samuel Smith,0,0.0,0.47376999258995056,1571.49609499902,False,vanilla_rag,0
+WebQTest-1135,who was vp for nixon,Spiro Agnew,Eisenhower,0,0.0,0.6631019711494446,1642.994206998992,False,vanilla_rag,0
+WebQTest-1136,what religion did adolf hitler follow,Catholicism,"The information provided does not contain any details about Adolf Hitler's religion. Based on the given facts, we cannot determine his",0,0.0,0.44349852204322815,1596.2068680019001,False,vanilla_rag,0
+WebQTest-1137,where is the illinois river on a map,United States of America,Illinois,1,1.0,0.6469109654426575,1575.1307450009335,False,vanilla_rag,0
+WebQTest-1138,where honduras in the world,Americas,Americas,1,1.0,0.7965400218963623,1567.7223359998607,False,vanilla_rag,5
+WebQTest-1142,who does ronaldinho play for now 2011,Clube de Regatas do Flamengo,There is no information provided about Ronaldinho's current team in 2011 in the given facts. The facts,0,0.0909090909090909,0.3158758580684662,1572.6637990010204,False,vanilla_rag,0
+WebQTest-1143,what galileo galilei was famous for,Heliocentrism,electrical experiments,0,0.0,0.43589338660240173,1578.609026997583,False,vanilla_rag,0
+WebQTest-1144,what are the major trading partners of germany,Scotland,European Union,0,0.0,0.47394874691963196,1572.1152719997917,False,vanilla_rag,0
+WebQTest-1145,where did romney graduated college,Brigham Young University,"The information provided does not include details about George W. Romney's college education. Therefore, I cannot determine where he graduated",0,0.0,0.5151190161705017,1572.7062890000525,False,vanilla_rag,0
+WebQTest-1146,who did johnny depp play in corpse bride,Victor Van Dort,m.02vbsp9,0,0.0,0.39550134539604187,1576.8236549993162,False,vanilla_rag,0
+WebQTest-1147,what is the zip code for jonesboro ar,72402,There is no information provided about Jonesboro AR and its zip code in the given facts. The facts mention Jonesville,0,0.0,0.4607582092285156,1578.2566839989158,False,vanilla_rag,0
+WebQTest-1148,what college did se hinton go,University of Tulsa,"The information provided does not contain any details about Se Hinton or the college they attended. Therefore, I cannot determine what",0,0.0,0.35725831985473633,1578.5481880011503,False,vanilla_rag,0
+WebQTest-1149,when was taylor swift fearless tour,2009-04-23,2009,0,0.5,0.42996323108673096,1573.3576689999609,False,vanilla_rag,0
+WebQTest-1151,where did charles darwin and his wife live,London,"The question is about Charles Darwin, but the provided facts are about a fictional character named Professor Charles Xavier. There is no",0,0.0,0.3990078866481781,1574.8205290001351,False,vanilla_rag,0
+WebQTest-1152,who is the voice of kitt,William Daniels,"The information provided does not contain any details about the voice actor for KITT from the show ""Knight Rider."" Therefore,",0,0.0,0.37516823410987854,1571.3465720000386,False,vanilla_rag,0
+WebQTest-1153,what is eminem 's real full name,Marshall Bruce Mathers III,Marshall Mathers,0,0.6666666666666666,0.5858583450317383,1572.6803899997321,False,vanilla_rag,0
+WebQTest-1154,who is amy grant 's first husband,Gary Chapman,m.0j4k1q4,0,0.0,0.36791589856147766,1570.9740640013479,False,vanilla_rag,0
+WebQTest-1155,what are the seven nations of central america,Panama,Honduras,1,1.0,0.6163413524627686,1570.329316000425,False,vanilla_rag,0
+WebQTest-1156,what is jamie spears baby name,Maddie Briann Aldridge,There is no information provided about Jamie Murray's baby name in the given facts. The facts mention Jamie Murray and Brit,0,0.0,0.4560130536556244,1580.407640998601,False,vanilla_rag,0
+WebQTest-1160,who is the mother of prince michael jackson,Katherine Jackson,Janet Jackson,0,0.5,0.5241888761520386,1567.6230770004622,False,vanilla_rag,0
+WebQTest-1161,what is the clemson mascot name,Clemson University The Tiger,"The information provided does not include the mascot for Clemson University. Therefore, I cannot determine the Clemson mascot name from the given",0,0.4468085106382979,0.5421379208564758,1576.8534060007369,False,vanilla_rag,0
+WebQTest-1163,what rainforest is in south america,Amazon rainforest,Amazon Rainforest,1,1.0,0.47661077976226807,1568.7101939984132,False,vanilla_rag,0
+WebQTest-1164,what type of art does claude monet do,Modern art,Claude Monet is not mentioned in the given facts. The facts provided are about different individuals and their professions or influences.,0,0.0,0.4147160053253174,1573.7098099998548,False,vanilla_rag,0
+WebQTest-1166,when did we start war with iraq,2003-03-20,2003 invasion of Iraq m.043wpqd The 2003 invasion of Iraq,0,0.23529411764705885,0.3879481554031372,1576.0914029997366,False,vanilla_rag,0
+WebQTest-1168,what guitar did kurt cobain,Fender Jag-Stang,"The question is about Kurt Cobain, but there is no information provided about him in the given facts. Therefore, I",0,0.0,0.3783458173274994,1567.5172960000054,False,vanilla_rag,0
+WebQTest-1169,who did jennifer lawrence play in x men,Raven / Mystique,Professor Charles Xavier,0,0.0,0.385732501745224,1585.7295309979236,False,vanilla_rag,0
+WebQTest-1170,who is the governor of virginia 2011,Bob McDonnell,The information provided does not contain any details about the governor of Virginia in 2011. The facts given are,0,0.0,0.4272998869419098,1583.9711379994696,False,vanilla_rag,0
+WebQTest-1171,who did darth vaders voice,James Earl Jones,m.0gchqhm,0,0.0,0.3856559693813324,1582.278841000516,False,vanilla_rag,0
+WebQTest-1173,where is walton county ga,Georgia,"The information provided does not contain details about Walton County, Georgia. Therefore, I cannot determine its location based on the given",0,0.0909090909090909,0.5676686763763428,1573.1821590015898,False,vanilla_rag,3
+WebQTest-1174,what cancer did jackie kennedy die of,Lymphoma,Pneumonia,0,0.0,0.551884114742279,1626.3607039982162,False,vanilla_rag,0
+WebQTest-1175,what does lauren conrad major in,Fashion design,"The question is about Lauren Conrad, but there is no information provided about her major in the given facts. Therefore, I",0,0.0,0.5412251949310303,1568.4035000012955,False,vanilla_rag,0
+WebQTest-1176,what time zone is pennsylvania in right now,UTC−05:00,Eastern Time Zone,1,1.0,0.6284011006355286,1575.3452089993516,False,vanilla_rag,1
+WebQTest-1177,where did mario lopez go to school,Chula Vista High School,The information provided does not contain any details about Mario Lopez's schooling. The only person with educational information is John F.,0,0.0,0.44821450114250183,1574.6903760009445,False,vanilla_rag,0
+WebQTest-1178,where is tupac from originally,East Harlem,United States of America,0,0.0,0.6384096741676331,1624.2870839996613,False,vanilla_rag,0
+WebQTest-1179,what role did george lucas play in star wars,Baron Papanoida,Writer,0,0.0,0.4126194417476654,1583.171565001976,False,vanilla_rag,0
+WebQTest-1180,what sarah dessen books are movies,How to Deal,Books on film -- which do you want to see? To determine if this is directly related to Sarah Jessica Parker's books,0,0.1935483870967742,0.48567378520965576,1576.2732120019791,False,vanilla_rag,0
+WebQTest-1181,what is the current time in kauai hawaii,Hawaii-Aleutian Time Zone,"Hawaii Time Zone To determine the current time in Kauai, Hawaii, we need to identify the relevant time zone for",0,0.4772727272727271,0.4589712619781494,1571.2915689982765,False,vanilla_rag,0
+WebQTest-1183,where was farrah fawcett buried,Westwood Village Memorial Park Cemetery,Green Mount Cemetery,0,0.25,0.3972056806087494,1572.4534090004454,False,vanilla_rag,0
+WebQTest-1185,what inspired steinbeck,Thomas Malory,Colum McCann,0,0.0,0.6331241130828857,1581.0637119975581,False,vanilla_rag,0
+WebQTest-1186,what kind of government does cuba have today,Semi-presidential system,Marxist,0,0.0,0.5859609842300415,1575.0763999967603,False,vanilla_rag,0
+WebQTest-1187,where are english speakers distributed,Nigeria,"United Kingdom, Scotland, British Virgin Islands, New Zealand, Norfolk Island",0,0.33333333333333337,0.4831632375717163,1567.6029069982178,False,vanilla_rag,0
+WebQTest-1189,what is the capital of italy today,Rome,Rome,1,1.0,0.5594318509101868,1453.677418998268,False,vanilla_rag,1
+WebQTest-1191,what language do people speak in the bahamas,English Language,English Language,1,1.0,0.6177360415458679,1592.262391000986,False,vanilla_rag,1
+WebQTest-1192,where did george michael go to school,Bushey Meads School,"The information provided does not include any details about where George Michael went to school. Therefore, I cannot provide an answer based",0,0.08,0.45861008763313293,1574.2181509995135,False,vanilla_rag,0
+WebQTest-1194,what club does cristiano ronaldo play for in 2010,Real Madrid C.F.,"The given facts do not contain any information about Cristiano Ronaldo or his club in 2010. Therefore, I",0,0.0,0.3533245623111725,1580.7307770010084,False,vanilla_rag,0
+WebQTest-1195,what time zone is in the bahamas,UTC−05:00,UTC−05:00,1,1.0,0.6651324033737183,1571.632007999142,False,vanilla_rag,1
+WebQTest-1197,what language do people speak in brazil,Brazilian Portuguese,Portuguese Language,1,1.0,0.6448819041252136,1570.2799259997846,False,vanilla_rag,0
+WebQTest-1198,who influenced samuel taylor coleridge,Immanuel Kant,Robert Southey,0,0.5,0.7758397459983826,1575.4680340032792,False,vanilla_rag,0
+WebQTest-1199,what does kim kardashian work as,Actor,"The question seems to be about Kim Kardashian, but the provided facts are about Lil' Kim and Kim Sears. There is",0,0.0,0.5544996857643127,1569.1848319984274,False,vanilla_rag,4
+WebQTest-1200,where did the mississippi river end,Gulf of Mexico,Lower Mississippi River,0,0.0,0.6049112677574158,1579.0161510012695,False,vanilla_rag,0
+WebQTest-1201,who played carlton lassiter on psych,Timothy Omundson,Jan McVerry,0,0.0,0.3596477806568146,1577.0246499996574,False,vanilla_rag,0
+WebQTest-1203,who is president of israel,Reuven Rivlin,"The information provided does not contain any details about the current or past presidents of Israel. Therefore, I cannot provide an answer",0,0.0,0.4974333941936493,1577.073119002307,False,vanilla_rag,0
+WebQTest-1204,where did the anasazi indians live,Four Corners,Indigenous peoples of the Americas,0,0.0,0.36450013518333435,1575.9743790003995,False,vanilla_rag,0
+WebQTest-1205,who plays harley quinn,Mia Sara,"The information provided does not mention anyone playing Harley Quinn. The facts given are about Shawn Hatosy's acting roles,",0,0.0,0.5061414837837219,1576.6961820008873,False,vanilla_rag,0
+WebQTest-1206,what was francis bacon contributions,Author,"Author, Statesman, Philosopher, Scientist",0,0.4,0.6894409656524658,1567.795016002492,False,vanilla_rag,2
+WebQTest-1209,when does ziva start on ncis,NCIS - Season 3,"The information provided does not contain any details about Ziva starting on NCIS. The facts given are related to ""The",0,0.08695652173913045,0.3298054039478302,1580.7696580013726,False,vanilla_rag,0
+WebQTest-1210,what is the name of the national anthem of canada ( 2 words ),O Canada,God Save the Queen,0,0.0,0.550208330154419,1590.0396110009751,False,vanilla_rag,0
+WebQTest-1212,what did mark zuckerberg study,Psychology,m.03p7vjb,0,0.0,0.41221675276756287,1583.0597120002494,False,vanilla_rag,0
+WebQTest-1213,which country was michael jackson born,United States of America,United States of America,1,1.0,0.6280038356781006,1575.0867499991728,False,vanilla_rag,1
+WebQTest-1215,who was stephen r covey,Author,The given facts do not contain information about Stephen R. Covey. There is no entry for Stephen R. Covey,0,0.0,0.436505526304245,1568.8581249996787,False,vanilla_rag,0
+WebQTest-1216,what country was stalin in charge of,Soviet Union,Soviet Union,1,1.0,0.39625605940818787,1588.361187998089,False,vanilla_rag,0
+WebQTest-1217,what is monta ellis career high points,NBA Most Improved Player Award,"The provided facts do not contain information about Monta Ellis's career high points. The facts are about Warren Ellis, who",0,0.0,0.35450252890586853,1575.8671240000695,False,vanilla_rag,0
+WebQTest-1219,what nationality is rihanna,Barbados,Country of nationality,0,0.0,0.6630792021751404,1571.6011859985883,False,vanilla_rag,0
+WebQTest-1220,what has shannen doherty played in,Another Day,The information provided does not contain any details about Shannen Doherty's roles. The facts given are all about,0,0.22641509433962267,0.4364118278026581,1576.6827949992148,False,vanilla_rag,0
+WebQTest-1221,what college did joakim noah,University of Florida,The given facts do not contain information about Joakim Noah or his college. The facts provided are about Noah (a,0,0.0,0.3813847601413727,1578.346705999138,False,vanilla_rag,0
+WebQTest-1223,who plays billy elliot,Jamie Bell,Fox Theatre,0,0.0,0.4670541286468506,1575.267228003213,False,vanilla_rag,0
+WebQTest-1225,what kourtney kardashian boyfriends name,Scott Disick,"The information provided does not contain any details about Kourtney Kardashian or her boyfriends. Therefore, I cannot determine her",0,0.0,0.372740775346756,1576.7779630004952,False,vanilla_rag,0
+WebQTest-1226,what form of government does australia use,Parliamentary system,Constitutional monarchy,1,1.0,0.6811547875404358,1570.8635740011232,False,vanilla_rag,1
+WebQTest-1227,what team did howie long,Oakland Raiders,m.0d6501l,0,0.0,0.38028454780578613,1573.274466998555,False,vanilla_rag,0
+WebQTest-1228,where did the greek alphabet come from,Phoenician alphabet,Egypt,0,0.0,0.40609002113342285,1572.768340996845,False,vanilla_rag,0
+WebQTest-1229,what timezone is elizabethtown kentucky,Eastern Time Zone,Central Time Zone,0,0.6666666666666666,0.5614718198776245,1578.01250799821,False,vanilla_rag,3
+WebQTest-1230,what to see in christchurch new zealand,Air Force Museum of New Zealand,Phila-christchurchb3,0,0.0,0.47511646151542664,1571.2331169997924,False,vanilla_rag,0
+WebQTest-1231,where is chris paul from,United States of America,United States of America,1,1.0,0.5010063052177429,1574.954643001547,False,vanilla_rag,1
+WebQTest-1232,what year was albert pujols rookie year,2001 Major League Baseball Season,2001,0,0.33333333333333337,0.3145938813686371,1584.3524589981826,False,vanilla_rag,0
+WebQTest-1233,what are the colors of the ny giants,Red,"The provided facts do not contain information about the New York Giants' colors. Therefore, I cannot determine the answer from the",0,0.0,0.4141777455806732,1571.4142379983969,False,vanilla_rag,1
+WebQTest-1234,what business did andrew carnegie dominate,financier,steel industry,0,0.6666666666666666,0.39914456009864807,1572.680864999711,False,vanilla_rag,0
+WebQTest-1235,what was sir isaac newton 's inventions,Pet door,None of the provided facts mention specific inventions by Isaac Newton. He is known for his laws of motion and universal gravitation,0,0.0,0.6279568076133728,1566.9323549991532,False,vanilla_rag,0
+WebQTest-1237,who did shaq first play for,Orlando Magic,The information provided does not contain any details about Shaq's (presumably Shaquille O'Neal) professional basketball,0,0.0,0.37305930256843567,1568.5772840006393,False,vanilla_rag,0
+WebQTest-1238,who was the artist of mickey mouse,Ub Iwerks,Minnie Riperton,0,0.0,0.4480855464935303,1572.4495819995354,False,vanilla_rag,0
+WebQTest-1239,what is the zip code for concord,94518,30324,0,0.0,0.41554296016693115,1573.053522999544,False,vanilla_rag,0
+WebQTest-1240,what football team is michael vick on,New York Jets,Atlanta Falcons,0,0.0,0.40626606345176697,1578.4538660009275,False,vanilla_rag,0
+WebQTest-1241,where does the columbia river start,Columbia Lake,geography.river.cities,0,0.0,0.5187795162200928,1583.440315000189,False,vanilla_rag,0
+WebQTest-1242,what are all the names of the harry potter books,Harry Potter and the Chamber of Secrets,None,0,0.0,0.4352336823940277,1576.309656000376,False,vanilla_rag,0
+WebQTest-1244,who was sir walter raleigh and what did he do,Courtier,"The given facts do not contain any information about Sir Walter Raleigh. Therefore, I cannot provide an answer to the question based",0,0.0,0.44841572642326355,1586.341075002565,False,vanilla_rag,0
+WebQTest-1245,what countries are in the euro dollar,Kingdom of the Netherlands,"France, Belgium, Netherlands The answer should be ""France, Belgium, Netherlands"" as these are the countries that use the",0,0.35714285714285715,0.6597400307655334,1568.1488279988116,False,vanilla_rag,0
+WebQTest-1246,what currency can you use in barbados,Barbadian dollar,Barbadian dollar,1,1.0,0.5878262519836426,1571.0581159983121,False,vanilla_rag,0
+WebQTest-1247,who is angelina jolie,Voice Actor,"The information provided does not contain any details about Angelina Jolie. Therefore, there is no answer entity for the question",0,0.0,0.5037227272987366,1569.2405379995762,False,vanilla_rag,0
+WebQTest-1248,where is nineveh city,Iraq,Saint Ann Parish,0,0.0,0.4017467796802521,1573.553112000809,False,vanilla_rag,0
+WebQTest-1249,what is the state flower of new mexico,Yucca flower,m.0hz8zdj,0,0.0,0.5093739628791809,1398.1166269986716,False,vanilla_rag,0
+WebQTest-1250,where is the national ffa foundation located today,Alexandria,The information provided does not contain details about the location of the National FFA Foundation. The facts given are related to the,0,0.0,0.4482816755771637,1639.678229999845,False,vanilla_rag,0
+WebQTest-1251,which countries speak germanic languages,Belgium,"Germany, Switzerland, Austria, Luxembourg, Denmark, Netherlands, Norway, Sweden, Iceland, Faroe Islands, Greenland,",0,0.15384615384615385,0.5663250088691711,1570.5672980002419,False,vanilla_rag,0
+WebQTest-1252,who plays eowyn in lord of the rings,Miranda Otto,The information provided does not contain any details about who plays Eowyn in Lord of the Rings. The facts given are,0,0.0,0.47179457545280457,1573.8943249998556,False,vanilla_rag,0
+WebQTest-1254,where is augusta masters 2012,Augusta National Golf Course,m.0_ys5c0,0,0.0,0.40454986691474915,1580.518229999143,False,vanilla_rag,0
+WebQTest-1255,what type of cancer did eva peron die from,Cervical cancer,"The information provided does not mention Eva Peron's cause of death. Therefore, there is no answer to the question based",0,0.0,0.37760207056999207,1573.8470100004633,False,vanilla_rag,0
+WebQTest-1256,who did terrell owens play for in 2010,Cincinnati Bengals,There is no information provided about Terrell Owens or his team in 2010 in the given facts.,0,0.0,0.3473191559314728,1582.766644001822,False,vanilla_rag,0
+WebQTest-1257,where is denmark south carolina,Bamberg County,"Denmark, South Carolina is not mentioned in the given facts. The provided information only discusses Denmark as a country in Northern Europe",0,0.16666666666666669,0.5209945440292358,1567.826808000973,False,vanilla_rag,0
+WebQTest-1259,what books did ernest hemingway write,"Ernest Hemingway, selected letters, 1917-1961",Wild Nights!,0,0.4,0.6813629269599915,1574.6546970003692,False,vanilla_rag,0
+WebQTest-1260,what year did baltimore ravens win super bowl,Super Bowl XXXV,The information provided does not contain any details about the Baltimore Ravens winning the Super Bowl or the year of such an event.,0,0.15384615384615383,0.33025315403938293,1599.333262998698,False,vanilla_rag,0
+WebQTest-1261,where did the battle of passchendaele happen,Flanders,"Flanders, Belgium",0,0.6666666666666666,0.6618739366531372,1584.6238439989975,False,vanilla_rag,0
+WebQTest-1262,what part of the country is ohio considered,Midwestern United States,Contiguous United States,0,0.6666666666666666,0.6395113468170166,1212.381175999326,False,vanilla_rag,0

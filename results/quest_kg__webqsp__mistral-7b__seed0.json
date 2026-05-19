@@ -1,0 +1,17 @@
+{
+  "n": 100,
+  "n_attempted": 0,
+  "abstention_rate": 1.0,
+  "exact_match": 0.0,
+  "exact_match_when_attempted": 0.0,
+  "token_f1": 0.0,
+  "mean_latency_ms": 212091.5339623498,
+  "p95_latency_ms": 119477.72776449852,
+  "method": "quest_kg",
+  "dataset": "webqsp",
+  "llm": "mistral-7b",
+  "encoder": "e5-large-v2",
+  "seed": 0,
+  "wallclock_s": 21209.154445559,
+  "csv_path": "/content/drive/MyDrive/quest_kg/results/quest_kg__webqsp__mistral-7b__seed0.csv"
+}
