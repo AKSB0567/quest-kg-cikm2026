@@ -39,17 +39,19 @@ def main():
     enc = SentenceTransformerEncoder("sentence-transformers/all-MiniLM-L6-v2")
     print(f"[abl] encoder ready on {enc.device}")
 
+    # Each dataset uses its LOCKED config from run_local_questkg_only.py
+    # (top_k, locked_hops, locked_agg, bidir). The "full" variant uses these
+    # locked values; ablations toggle ONE component off at a time.
     DATASETS = {
-        "orgaccess": dict(kg=20000,  top_k=32,  bidir_default=True,  n=200, task="yes_no",
-                          eval_task="access_control", checker="orgaccess"),
-        "icews18":   dict(kg=20000,  top_k=32,  bidir_default=False, n=150, task="entity",
-                          eval_task="link_prediction", checker="icews18"),
+        "orgaccess": dict(kg=20000, top_k=32, bidir_default=True,  locked_hops=2, locked_agg="max",
+                          n=200, task="yes_no",        eval_task="access_control", checker="orgaccess"),
+        "icews18":   dict(kg=20000, top_k=32, bidir_default=False, locked_hops=1, locked_agg="max",
+                          n=150, task="entity",        eval_task="link_prediction", checker="icews18"),
         # WebQSP/CWQ: kg=None enables per-query graph mode (Iter 5b).
-        # top_k matches the LOCKED configs in run_local_questkg_only.py (Iter 5d).
-        "webqsp":    dict(kg=None,   top_k=4,   bidir_default=True,  n=200, task="entity",
-                          eval_task="qa", checker="freebase"),
-        "cwq":       dict(kg=None,   top_k=4,   bidir_default=True,  n=200, task="entity",
-                          eval_task="qa", checker="freebase"),
+        "webqsp":    dict(kg=None,  top_k=4,  bidir_default=True,  locked_hops=1, locked_agg="max",
+                          n=200, task="entity",        eval_task="qa", checker="freebase"),
+        "cwq":       dict(kg=None,  top_k=8,  bidir_default=True,  locked_hops=3, locked_agg="sum",
+                          n=200, task="entity",        eval_task="qa", checker="freebase"),
     }
 
     def build_checker(name, ds):
@@ -84,17 +86,24 @@ def main():
         queries = ds.queries[: cfg["n"]]
         use_ans_default = ds_name in ("webqsp", "cwq")
 
-        # Component-removal variants
+        # Component-removal variants — "full" uses the LOCKED config; each
+        # other variant toggles ONE component off at a time so the row delta
+        # measures that component's contribution.
+        hops_locked = cfg["locked_hops"]
+        agg_locked  = cfg["locked_agg"]
         variants = [
-            ("full",              dict(rel=0.4, bidir=cfg["bidir_default"], ans=use_ans_default, max_hops=2)),
-            ("no_bidir",          dict(rel=0.4, bidir=False,                ans=use_ans_default, max_hops=2)),
-            ("no_rel_bias",       dict(rel=0.0, bidir=cfg["bidir_default"], ans=use_ans_default, max_hops=2)),
-            ("no_answer_rescore", dict(rel=0.4, bidir=cfg["bidir_default"], ans=False,           max_hops=2)),
+            ("full",              dict(rel=0.4, bidir=cfg["bidir_default"], ans=use_ans_default, max_hops=hops_locked, agg=agg_locked)),
+            ("no_bidir",          dict(rel=0.4, bidir=False,                ans=use_ans_default, max_hops=hops_locked, agg=agg_locked)),
+            ("no_rel_bias",       dict(rel=0.0, bidir=cfg["bidir_default"], ans=use_ans_default, max_hops=hops_locked, agg=agg_locked)),
+            ("no_answer_rescore", dict(rel=0.4, bidir=cfg["bidir_default"], ans=False,           max_hops=hops_locked, agg=agg_locked)),
+            ("agg_max" if agg_locked == "sum" else "agg_sum",
+                                  dict(rel=0.4, bidir=cfg["bidir_default"], ans=use_ans_default, max_hops=hops_locked, agg=("max" if agg_locked == "sum" else "sum"))),
         ]
-        # Hop sweep
+        # Hop sweep — explore k in {1, 2, 3, 4} while keeping all other
+        # locked config intact (incl. dataset-specific agg).
         for k in (1, 2, 3, 4):
             variants.append((f"hop_k={k}",
-                             dict(rel=0.4, bidir=cfg["bidir_default"], ans=use_ans_default, max_hops=k)))
+                             dict(rel=0.4, bidir=cfg["bidir_default"], ans=use_ans_default, max_hops=k, agg=agg_locked)))
 
         for vname, vcfg in variants:
             t0 = time.perf_counter()
@@ -110,6 +119,7 @@ def main():
                 task_type=cfg["task"],
                 answer_rescoring=vcfg["ans"],
                 max_path_length=vcfg["max_hops"],
+                answer_aggregation=vcfg["agg"],
             )
             results = run_method(qkg, queries, method_name=f"qkg_{vname}",
                                  is_questkg=True)
