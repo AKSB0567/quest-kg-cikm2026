@@ -5,7 +5,7 @@
   "exact_match": 0.397,
   "exact_match_when_attempted": 0.397,
   "token_f1": null,
-  "mean_latency_ms": null,
+  "mean_latency_ms": 571,
   "p95_latency_ms": null,
   "task_type": "qa",
   "primary_metric": "accuracy",
@@ -25,5 +25,9 @@
   "top_k": 4,
   "hops": 1,
   "answer_aggregation": "max",
-  "bidirectional": true
+  "bidirectional": true,
+  "ECE": 0.104,
+  "AURC": 0.544,
+  "n_bins_ece": 15,
+  "calibration_source": "session-1 calibration cell, re-ran AFTER gap-fill locked CSV overwrite -> reflects LOCKED config"
 }

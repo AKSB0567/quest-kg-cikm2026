@@ -5,7 +5,7 @@
   "exact_match": 0.149,
   "exact_match_when_attempted": 0.149,
   "token_f1": null,
-  "mean_latency_ms": null,
+  "mean_latency_ms": 1600,
   "p95_latency_ms": null,
   "task_type": "qa",
   "primary_metric": "accuracy",
@@ -20,5 +20,9 @@
   "limit": 1000,
   "kg_subset": 100000,
   "tag": "colab-l4__pasted__seed0",
-  "provenance": "colab-l4 session 1: completed in gap-fill SKIP path (JSON existed). N=1000, kg_subset=100k."
+  "provenance": "colab-l4 session 1: completed in gap-fill SKIP path (JSON existed). N=1000, kg_subset=100k.",
+  "ECE": 0.415,
+  "AURC": 0.767,
+  "n_bins_ece": 15,
+  "calibration_source": "session-1 calibration cell from per-query CSVs"
 }

@@ -1,0 +1,23 @@
+{
+  "n": 50,
+  "n_attempted": 50,
+  "abstention_rate": 0.0,
+  "exact_match": 0.14,
+  "exact_match_when_attempted": 0.14,
+  "token_f1": 0.202678084753715,
+  "mean_latency_ms": 13796.537477993406,
+  "p95_latency_ms": 15380.779895070009,
+  "task_type": "qa",
+  "primary_metric": "accuracy",
+  "primary_value": 0.14,
+  "method": "tog1",
+  "dataset": "cwq",
+  "llm": "Qwen/Qwen2.5-1.5B-Instruct",
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "seed": 0,
+  "wallclock_s": 689.8,
+  "limit": 50,
+  "kg_subset": 20000,
+  "tag": "local-1080ti__Qwen2.5-1.5B-Instruct__seed0",
+  "hits_at_1": 0.14
+}

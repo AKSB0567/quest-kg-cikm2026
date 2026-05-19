@@ -5,7 +5,7 @@
   "exact_match": 0.072,
   "exact_match_when_attempted": 0.072,
   "token_f1": null,
-  "mean_latency_ms": null,
+  "mean_latency_ms": 9332,
   "p95_latency_ms": null,
   "task_type": "qa",
   "primary_metric": "accuracy",
@@ -20,5 +20,9 @@
   "limit": 500,
   "kg_subset": 100000,
   "tag": "colab-l4__pasted__seed0",
-  "provenance": "colab-l4 gap-fill session 2: ran from scratch (session 1 computed 0.051 at N=1000 but did not save). N=500."
+  "provenance": "colab-l4 gap-fill session 2: ran from scratch (session 1 computed 0.051 at N=1000 but did not save). N=500.",
+  "ECE": 0.749,
+  "AURC": 0.932,
+  "n_bins_ece": 15,
+  "calibration_source": "session-1 calibration cell from per-query CSVs"
 }

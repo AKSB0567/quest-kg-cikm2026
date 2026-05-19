@@ -5,7 +5,7 @@
   "exact_match": 0.055,
   "exact_match_when_attempted": 0.055,
   "token_f1": null,
-  "mean_latency_ms": null,
+  "mean_latency_ms": 8836,
   "p95_latency_ms": null,
   "task_type": "qa",
   "primary_metric": "accuracy",
@@ -20,5 +20,9 @@
   "limit": 1000,
   "kg_subset": 100000,
   "tag": "colab-l4__pasted__seed0",
-  "provenance": "colab-l4 session 1: completed but JSON not saved to Drive in time; recovered from notebook output. Per-query CSV missing."
+  "provenance": "colab-l4 session 1: completed but JSON not saved to Drive in time; recovered from notebook output. Per-query CSV missing.",
+  "ECE": 0.695,
+  "AURC": 0.937,
+  "n_bins_ece": 15,
+  "calibration_source": "session-1 calibration cell from per-query CSVs"
 }
