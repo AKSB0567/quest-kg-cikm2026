@@ -1,7 +1,7 @@
 | Method | orgaccess (BAcc) | icews18 (MRR) | webqsp (Acc) | cwq (Acc) |
 |---|---|---|---|---|
 | \textbf{QUEST-KG} | 0.963 | 0.053 | 0.330 | 0.204 |
-| \textbf{QUEST-KG-LLM} | 0.963 | 0.036 | 0.397 | 0.236 |
+| \textbf{QUEST-KG-LLM} | 0.963 | 0.053 | 0.397 | 0.236 |
 | Vanilla-RAG | 0.507 | 0.016 | 0.185 | 0.149 |
 | GraphRAG | 0.507 | 0.035 | 0.114 | 0.145 |
 | ToG-1 | 0.515 | 0.013 | 0.019 | 0.051 |

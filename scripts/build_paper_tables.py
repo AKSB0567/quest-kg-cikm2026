@@ -84,8 +84,23 @@ def load_cells(tag_filter: str | None = None) -> pd.DataFrame:
             tag_priority = (3 if "local-1080ti__symbolic__seed0" == tag
                              else 1 if "colab-l4__Qwen2.5-7B" in tag
                              else 0)
-        elif method in ("quest_kg_llm", "vanilla_rag", "graphrag",
-                         "tog1", "tog2", "cok"):
+        elif method == "quest_kg_llm":
+            # quest_kg_llm has TWO canonical sources:
+            #   OrgAccess + ICEWS18 -> local-1080ti__symbolic (mirrors quest_kg
+            #     because LLM is no-op on yes_no and the Colab ICEWS18 run used
+            #     stale pre-Iter-5b config that's not a fair comparison).
+            #   WebQSP + CWQ -> colab-l4__Qwen2.5-7B (gap-fill LOCKED rerun).
+            # Both win over the stale Colab quest_kg_llm Colab CSV on the
+            # non-QA datasets.
+            if dataset in ("orgaccess", "icews18"):
+                tag_priority = (3 if "local-1080ti__symbolic__seed0" == tag
+                                 else 1 if "colab-l4__Qwen2.5-7B" in tag
+                                 else 0)
+            else:  # webqsp, cwq
+                tag_priority = (3 if "colab-l4__Qwen2.5-7B" in tag
+                                 else 1 if "local-1080ti__symbolic__seed0" == tag
+                                 else 0)
+        elif method in ("vanilla_rag", "graphrag", "tog1", "tog2", "cok"):
             tag_priority = (3 if "colab-l4__Qwen2.5-7B" in tag
                              else 1 if "mistral-7b" in tag
                              else 1 if "local-1080ti__Qwen2.5-3B" in tag
