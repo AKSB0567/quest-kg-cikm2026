@@ -44,9 +44,11 @@ def main():
                           eval_task="access_control", checker="orgaccess"),
         "icews18":   dict(kg=20000,  top_k=32,  bidir_default=False, n=150, task="entity",
                           eval_task="link_prediction", checker="icews18"),
-        "webqsp":    dict(kg=100000, top_k=128, bidir_default=True,  n=200, task="entity",
+        # WebQSP/CWQ: kg=None enables per-query graph mode (Iter 5b).
+        # top_k matches the LOCKED configs in run_local_questkg_only.py (Iter 5d).
+        "webqsp":    dict(kg=None,   top_k=4,   bidir_default=True,  n=200, task="entity",
                           eval_task="qa", checker="freebase"),
-        "cwq":       dict(kg=100000, top_k=64,  bidir_default=True,  n=200, task="entity",
+        "cwq":       dict(kg=None,   top_k=4,   bidir_default=True,  n=200, task="entity",
                           eval_task="qa", checker="freebase"),
     }
 
@@ -63,7 +65,21 @@ def main():
     for ds_name, cfg in DATASETS.items():
         print(f"\n[abl] === {ds_name} ===")
         ds = load_dataset(ds_name, str(ROOT / "data"))
-        if cfg["kg"] and len(ds.triples) > cfg["kg"]:
+        # Per-query graph mode for CWQ/WebQSP (Iter 5b): KG = union of first N
+        # query graphs only; queries restrict retrieval to their own subgraph.
+        if cfg["kg"] is None and ds.queries and ds.queries[0].get("graph_triple_idx"):
+            n_eval = cfg["n"] or len(ds.queries)
+            queries_eval = ds.queries[: n_eval]
+            all_idx_set: set[int] = set()
+            for q in queries_eval:
+                all_idx_set.update(q.get("graph_triple_idx", []))
+            sorted_idx = sorted(all_idx_set)
+            remap = {old: new for new, old in enumerate(sorted_idx)}
+            ds.triples = [ds.triples[i] for i in sorted_idx]
+            for q in queries_eval:
+                q["graph_triple_idx"] = [remap[i] for i in q.get("graph_triple_idx", []) if i in remap]
+            print(f"[abl]   per-query KG: {len(ds.triples)} triples (union of first {n_eval} query graphs)")
+        elif cfg["kg"] and len(ds.triples) > cfg["kg"]:
             ds.triples = ds.triples[: cfg["kg"]]
         queries = ds.queries[: cfg["n"]]
         use_ans_default = ds_name in ("webqsp", "cwq")

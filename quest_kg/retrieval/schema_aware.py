@@ -202,6 +202,7 @@ class SchemaAwareRetriever:
         query: str,
         expected_types: Optional[set[str]] = None,
         explicit_anchors: Optional[Iterable[str]] = None,
+        restrict_triples: Optional[Iterable[int]] = None,
     ) -> Subgraph:
         """Run Stage 1 retrieval and return Subgraph Gq.
 
@@ -213,14 +214,38 @@ class SchemaAwareRetriever:
                               when the query metadata names specific KG entities
                               (e.g. OrgAccess: user + resource; WebQSP: q_entity).
                               Unknown anchor names are silently dropped.
+            restrict_triples: if provided, restrict the candidate-edge pool to
+                              these triple indices only. Used for per-query
+                              subgraph retrieval (CWQ/WebQSP) where each query
+                              ships with its relevant local graph. Reduces
+                              retrieval scope from 2M-edge global KG to a
+                              ~1000-5000-edge per-query graph -- matches
+                              graphrag's setup for fair comparison.
         """
         expected_types = expected_types or set()
         q_emb = self._l2norm(np.asarray(self.encoder(query), dtype=np.float32))
         q_tokens = _content_tokens(query)
 
+        # Per-query restrict mask: only these triple indices are eligible.
+        allowed_idx: Optional[set[int]] = (
+            set(int(i) for i in restrict_triples) if restrict_triples is not None else None
+        )
+        # Restrict entity-anchor candidates to nodes that touch the allowed
+        # triples (otherwise anchor linking picks entities not in the per-query
+        # graph, and the hop expansion finds nothing).
+        allowed_entities: Optional[set[str]] = None
+        if allowed_idx is not None:
+            allowed_entities = set()
+            for i in allowed_idx:
+                if 0 <= i < len(self.triples):
+                    t = self.triples[i]
+                    allowed_entities.add(t.s); allowed_entities.add(t.o)
+
         # ---- Anchor linking ------------------------------------------------
         if explicit_anchors is not None:
             anchors = {a for a in explicit_anchors if a in self._entity_idx}
+            if allowed_entities is not None:
+                anchors &= allowed_entities
             # If no explicit anchors resolved, fall back to top-K semantic
             if not anchors and self._entity_emb is not None:
                 ent_norm = self._l2norm(self._entity_emb)
@@ -228,10 +253,14 @@ class SchemaAwareRetriever:
                 top_idx = np.argpartition(-sims, min(self.top_k, len(sims) - 1))[: self.top_k]
                 top_idx = top_idx[np.argsort(-sims[top_idx])]
                 anchors = {self._entities[i] for i in top_idx if sims[i] > 0}
+                if allowed_entities is not None:
+                    anchors &= allowed_entities
         elif self._entity_emb is None:
             # Fallback path (slow; tests only)
             anchor_scores = []
             for e in self._entities:
+                if allowed_entities is not None and e not in allowed_entities:
+                    continue
                 sim = float(np.dot(q_emb, self._l2norm(self._embed_entity(e))))
                 if sim > 0:
                     anchor_scores.append((e, sim))
@@ -240,6 +269,12 @@ class SchemaAwareRetriever:
         else:
             ent_norm = self._l2norm(self._entity_emb)
             sims = ent_norm @ q_emb  # (|V|,)
+            if allowed_entities is not None:
+                # Mask out non-allowed entities by sending their sim to -inf.
+                mask = np.array(
+                    [e in allowed_entities for e in self._entities], dtype=bool
+                )
+                sims = np.where(mask, sims, -np.inf)
             top_idx = np.argpartition(-sims, min(self.top_k, len(sims) - 1))[: self.top_k]
             top_idx = top_idx[np.argsort(-sims[top_idx])]
             anchors = {self._entities[i] for i in top_idx if sims[i] > 0}
@@ -257,6 +292,8 @@ class SchemaAwareRetriever:
                 cand_set.update(self._out_idx.get(v, []))
                 if self.bidirectional:
                     cand_set.update(self._in_idx.get(v, []))
+            if allowed_idx is not None:
+                cand_set &= allowed_idx
             if not cand_set:
                 break
             # Sort by triple index for deterministic candidate order. Set

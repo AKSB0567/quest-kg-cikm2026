@@ -57,7 +57,7 @@ def _load_rmanluo_hf(root: Path, dataset_name: str) -> Dataset:
 
     # Materialize KG: dedupe triples across all examples (test only for now;
     # add train/validation in Phase 3 if we need a larger KG)
-    triples_seen: set[tuple[str, str, str]] = set()
+    triples_seen: dict[tuple[str, str, str], int] = {}
     triples: list[Triple] = []
     queries: list[dict] = []
     for ex in split:
@@ -72,13 +72,15 @@ def _load_rmanluo_hf(root: Path, dataset_name: str) -> Dataset:
             all_answers = [answer_str]
         q_entity = ex.get("q_entity") or ex.get("topic_entity") or []
         graph_raw = ex.get("graph") or []
+        per_query_idx: list[int] = []
         for tr in graph_raw:
             if len(tr) >= 3:
                 h, r, t = tr[0], tr[1], tr[2]
                 key = (h, r, t)
                 if key not in triples_seen:
-                    triples_seen.add(key)
+                    triples_seen[key] = len(triples)
                     triples.append(Triple(s=h, r=r, o=t))
+                per_query_idx.append(triples_seen[key])
         queries.append({
             "qid": str(gid),
             "question": str(question),
@@ -86,6 +88,11 @@ def _load_rmanluo_hf(root: Path, dataset_name: str) -> Dataset:
             "all_answers": [str(a) for a in all_answers],
             "q_entity": list(q_entity) if isinstance(q_entity, (list, tuple)) else [str(q_entity)],
             "expected_types": set(),  # filled per-example via Freebase types if available
+            # Indices into the global `triples` list that belong to THIS query's
+            # local graph (from HF dataset's `graph` field). Used to restrict
+            # retrieval to the query's relevant subgraph -- matches graphrag's
+            # per-query scope and avoids the kg_subset truncation problem.
+            "graph_triple_idx": per_query_idx,
         })
 
     return Dataset(

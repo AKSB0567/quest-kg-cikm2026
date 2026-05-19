@@ -36,7 +36,13 @@ class GraphRAG:
         )
 
     def predict(self, query: str, **kwargs) -> BaselinePrediction:
-        sg = self.retriever.retrieve(query)
+        # Iter 5b: per-query graph restriction matches the dataset's prescribed
+        # retrieval scope (rmanluo HF datasets attach query-local graphs).
+        restrict = None
+        qm = kwargs.get("query_meta") or {}
+        if qm and qm.get("graph_triple_idx"):
+            restrict = qm["graph_triple_idx"]
+        sg = self.retriever.retrieve(query, restrict_triples=restrict)
         context = "\n".join(f"({t.s}, {t.r}, {t.o})" for t in sg.triples)
         prompt = (
             "Use the knowledge-graph subgraph below to answer the question. "

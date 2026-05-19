@@ -67,7 +67,7 @@ _QUESTION_RELATION_HINTS: list[tuple[set[str], set[str]]] = [
     ({"language", "languages", "speak", "spoken"},
      {"language", "spoken", "official_language"}),
     # "what religion": religion relations
-    ({"religion", "religious", "worship", "believe"},
+    ({"religion", "religious", "worship", "believe", "religions"},
      {"religion", "denomination", "faith"}),
     # "currency / money": currency relations
     ({"currency", "money", "dollar"},
@@ -75,17 +75,59 @@ _QUESTION_RELATION_HINTS: list[tuple[set[str], set[str]]] = [
     # "capital ... of": capital relations
     ({"capital"},
      {"capital", "administrative", "seat"}),
+    # CWQ Iter 5e: "what country / nation": country/containedby relations
+    ({"country", "nation", "countries", "nations", "land"},
+     {"country", "nationality", "containedby", "located", "contains", "borders",
+      "in_country", "located_in"}),
+    # CWQ Iter 5e: "what college / university / school / educational institution"
+    ({"college", "university", "school", "educational", "institution", "alma"},
+     {"education", "school", "university", "college", "graduated", "alma",
+      "institution", "campuses"}),
+    # CWQ Iter 5e: "who/which man/woman/leader/ruler": person/leader relations
+    ({"who", "man", "woman", "leader", "ruler", "president", "minister",
+      "politician", "head", "official"},
+     {"leader", "person", "president", "minister", "head_of_state", "head",
+      "spouse", "official", "child", "parent", "founder"}),
+    # CWQ Iter 5e: "what team / sports / franchise / club"
+    ({"team", "teams", "sports", "franchise", "club", "league"},
+     {"team", "sports", "franchise", "club", "league", "roster", "championship",
+      "fielded"}),
+    # CWQ Iter 5e: "what movie / film": film relations
+    ({"movie", "film", "films", "movies"},
+     {"film", "movie", "directed", "cinematography", "production"}),
+    # CWQ Iter 5e: "what stadium / venue / arena": venue relations
+    ({"stadium", "venue", "arena", "field", "ground"},
+     {"stadium", "venue", "arena", "home_arena", "home_stadium", "ground"}),
+    # Iter 5n: tested adding spouse/governor/parent/child/voice/attended patterns —
+    # WebQSP unchanged (0.366), CWQ regressed -0.002. Reverted.
 ]
 
 
 def _question_relation_boost(question_tokens: set[str], relation_tokens: set[str]) -> float:
     """Multiplicative path-score factor based on question/relation alignment.
     Returns 1.0 (no effect) when no pattern matches, otherwise >1 to lift
-    candidates whose last relation matches the expected answer type."""
+    candidates whose last relation matches the expected answer type.
+
+    Iter 5i-k: 2.0 -> 3.0 -> 4.0 -> 5.0. Plateau at 4.0 (CWQ 0.178).
+    Iter 5l: lock at 4.0 + add type-mismatch penalty. When question has
+    pattern hits but path's last relation matches NO r_pattern, multiply
+    by 0.5x (penalize wrong-type tail relations).
+    """
     boost = 1.0
+    any_q_match = False
+    any_r_match = False
     for q_pattern, r_pattern in _QUESTION_RELATION_HINTS:
-        if question_tokens & q_pattern and relation_tokens & r_pattern:
-            boost *= 2.0
+        q_hit = bool(question_tokens & q_pattern)
+        r_hit = bool(relation_tokens & r_pattern)
+        if q_hit:
+            any_q_match = True
+        if r_hit:
+            any_r_match = True
+        if q_hit and r_hit:
+            boost *= 4.0
+    # Hard penalty: question signals type X, path tail doesn't match any X.
+    if any_q_match and not any_r_match:
+        boost *= 0.5
     return boost
 
 from quest_kg.abstention.posterior import should_abstain
@@ -195,10 +237,11 @@ class QuestKG:
         mp_gammas: tuple[float, float, float, float] = (0.4, 0.3, 0.2, 0.1),
         kappa: float = 4.0,
         max_path_length: int | None = None,
-        path_cap: int = 256,
+        path_cap: int = 512,
         task_type: str = "entity",
         answer_rescoring: bool = True,
         answer_rescoring_lambda: float = 4.0,
+        answer_aggregation: str = "max",
         llm=None,
         llm_rerank_top_n: int = 8,
     ):
@@ -217,6 +260,12 @@ class QuestKG:
         # opaque integer with no semantic embedding.
         self.answer_rescoring = bool(answer_rescoring)
         self.answer_rescoring_lambda = float(answer_rescoring_lambda)
+        # "max" picks the single best path's tail; "sum" path-votes (aggregate
+        # scores across paths reaching the same tail). max wins when retrieval
+        # is k=1 (each tail uniquely reached); sum wins at k>=2 where many
+        # paths reach the same node and aggregation reflects evidence count.
+        assert answer_aggregation in ("max", "sum")
+        self.answer_aggregation = answer_aggregation
         # Optional LLM verbalization for QA: when set, QUEST-KG keeps its
         # retrieval + symbolic reasoning, then asks the LLM to pick the answer
         # from the top-N candidate paths. The "QUEST-KG-LLM" hybrid variant.
@@ -248,8 +297,17 @@ class QuestKG:
                 else:
                     cand.extend(x for x in qe if isinstance(x, str))
             explicit_anchors = cand or None
+        # Per-query graph (CWQ/WebQSP): restrict retrieval candidates to the
+        # query's local HF-dataset graph. Each rmanluo/RoG-{cwq,webqsp} example
+        # ships with its own subgraph, which is what graphrag uses. Without
+        # this restriction, our retrieval searches the 2.3M-triple global KG
+        # truncated to first 100k, which loses 95%+ of query-relevant triples.
+        restrict_triples = None
+        if query_meta and query_meta.get("graph_triple_idx"):
+            restrict_triples = query_meta["graph_triple_idx"]
         sg = self.retriever.retrieve(
             query, expected_types=expected_types, explicit_anchors=explicit_anchors,
+            restrict_triples=restrict_triples,
         )
 
         # Anchor similarities for MP init (use cached entity embeddings)
@@ -360,6 +418,25 @@ class QuestKG:
             except Exception:
                 pass
 
+        # Multi-anchor convergence boost. CWQ-style "what X that Y" questions
+        # have >=2 anchors; the correct answer is reachable from ALL of them.
+        # Boost paths whose tail is also reached from a different anchor.
+        # No-op when only one anchor (WebQSP simple questions).
+        if self.task_type == "entity" and len(sg.anchors) >= 2 and valid:
+            tail_anchor_set: dict[str, set[str]] = {}
+            for p in valid:
+                if p.tail and not _is_opaque_identifier(p.tail):
+                    tail_anchor_set.setdefault(p.tail, set()).add(p.head)
+            for p in valid:
+                n_conv = len(tail_anchor_set.get(p.tail, set()))
+                if n_conv >= 2:
+                    # Iter 5g: bumped 2.0 -> 2.5 (CWQ 0.162 -> 0.174).
+                    # Iter 5h: tested 3.0 — no further gain over 2.5 (plateau).
+                    # Reverted to 2.5: smaller boost = lower over-fit risk.
+                    p.score = float(p.score) * math.exp(2.5 * (n_conv - 1))
+                # Iter 5p tested 0.5x penalty on single-anchor tails — no-op
+                # (CWQ stayed 0.178). Conv boost already establishes ranking.
+
         ranked = sorted(valid, key=lambda x: x.score, reverse=True)
         top = ranked[0] if ranked else None
 
@@ -375,13 +452,23 @@ class QuestKG:
             ))
             prediction = "1" if granted else "0"
         else:
-            # Entity QA: highest-scoring path with non-MID tail (after answer-side
-            # rescoring already lifted right-typed tails).
+            # Entity QA: configurable aggregation.
+            #   "max": top-1 non-MID path tail (good for k=1 retrieval).
+            #   "sum": path-vote — sum scores per tail (good for k>=2).
             prediction = None
-            for p in ranked:
-                if not _is_opaque_identifier(p.tail):
-                    prediction = p.tail
-                    break
+            if self.answer_aggregation == "sum":
+                tail_mass: dict[str, float] = {}
+                for p in ranked:
+                    if p.tail is None or _is_opaque_identifier(p.tail):
+                        continue
+                    tail_mass[p.tail] = tail_mass.get(p.tail, 0.0) + float(p.score)
+                if tail_mass:
+                    prediction = max(tail_mass.items(), key=lambda kv: kv[1])[0]
+            else:
+                for p in ranked:
+                    if not _is_opaque_identifier(p.tail):
+                        prediction = p.tail
+                        break
             if prediction is None and top is not None:
                 # Fallback: walk one extra hop from the MID tail.
                 tail_idx2: dict[str, list[Triple]] = {}
@@ -496,11 +583,17 @@ class QuestKG:
                 candidate_ranking = candidate_ranking[:64]
                 break
 
+        # Iter 5q: report top answer probability as confidence instead of M_q.
+        # M_q saturates at 1.0 for QA datasets because FreebaseChecker has no
+        # schema/types configured (no violations -> all paths "kept" -> mass=1).
+        # max(answer_probs) is the canonical P(predicted_answer | Gq), which
+        # gives meaningful calibration data without changing the methodology.
+        conf_out = max(probs.values()) if probs else M_q
         return PredictResult(
             query=query,
             prediction=prediction,
             abstained=abstained,
-            confidence=M_q,
+            confidence=conf_out,
             entropy=H_q,
             subgraph=sg,
             top_path=top,

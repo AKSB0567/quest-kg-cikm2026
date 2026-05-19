@@ -32,15 +32,22 @@ def main():
     TAG = "local-1080ti__symbolic__seed0"
 
     DATA_ROOT = ROOT / "data"
-    encoder = SentenceTransformerEncoder("sentence-transformers/all-MiniLM-L6-v2")
+    encoder = SentenceTransformerEncoder("sentence-transformers/all-MiniLM-L6-v2", batch_size=256)
     print(f"[qkg] encoder ready on {encoder.device}")
 
-    # Per-dataset config
+    # Per-dataset config (Iter 5):
+    #   hops: WebQSP/ICEWS18 1, OrgAccess/CWQ 2 (ablation Table evidence)
+    #   answer_aggregation: "max" for k=1 datasets, "sum" (path-vote) for k=2 QA
     DATASETS = {
-        "orgaccess": dict(kg_subset=20000, top_k=32,  bidir=True,  n=750,  task_type="yes_no", checker_kind="orgaccess"),
-        "icews18":   dict(kg_subset=20000, top_k=32,  bidir=False, n=150,  task_type="entity", checker_kind="icews18"),
-        "webqsp":    dict(kg_subset=100000, top_k=128, bidir=True,  n=500,  task_type="entity", checker_kind="freebase"),
-        "cwq":       dict(kg_subset=100000, top_k=64,  bidir=True,  n=500,  task_type="entity", checker_kind="freebase"),
+        "orgaccess": dict(kg_subset=20000,  top_k=32,  bidir=True,  hops=2, agg="max", n=750,  task_type="yes_no", checker_kind="orgaccess"),
+        # Iter 6b: bumped ICEWS18 N=150->200, WebQSP N=500->1000 to match
+        # the N's used by the Colab L4 baselines (paper headline matched-N).
+        "icews18":   dict(kg_subset=20000,  top_k=32,  bidir=False, hops=1, agg="max", n=200,  task_type="entity", checker_kind="icews18"),
+        # WebQSP/CWQ: kg_subset=None to keep ALL triples from each query's
+        # local HF graph. Inference uses query['graph_triple_idx'] to restrict
+        # retrieval per query, matching graphrag's per-query-graph setup.
+        "webqsp":    dict(kg_subset=None,   top_k=4,   bidir=True,  hops=1, agg="max", n=1000, task_type="entity", checker_kind="freebase"),
+        "cwq":       dict(kg_subset=None,   top_k=8,   bidir=True,  hops=3, agg="sum", n=500,  task_type="entity", checker_kind="freebase"),
     }
 
     TASK_TYPE_MAP = {
@@ -60,11 +67,27 @@ def main():
         t_all = time.perf_counter()
         print(f"[qkg] === {ds_name} (n={cfg['n']}, kg={cfg['kg_subset']}, top_k={cfg['top_k']}, bidir={cfg['bidir']}) ===")
         ds = load_dataset(ds_name, str(DATA_ROOT))
-        if cfg["kg_subset"] and len(ds.triples) > cfg["kg_subset"]:
+        # WebQSP/CWQ: when queries carry per-query graphs (graph_triple_idx),
+        # build the KG from the UNION of the first N per-query graphs only.
+        # Avoids embedding 2M+ irrelevant triples; ensures every query's
+        # local graph survives intact (kg_subset truncation would drop them).
+        if cfg["kg_subset"] is None and ds.queries and ds.queries[0].get("graph_triple_idx"):
+            n_eval = cfg["n"] or len(ds.queries)
+            queries_eval = ds.queries[: n_eval]
+            all_idx_set: set[int] = set()
+            for q in queries_eval:
+                all_idx_set.update(q.get("graph_triple_idx", []))
+            sorted_idx = sorted(all_idx_set)
+            remap = {old: new for new, old in enumerate(sorted_idx)}
+            ds.triples = [ds.triples[i] for i in sorted_idx]
+            for q in queries_eval:
+                q["graph_triple_idx"] = [remap[i] for i in q.get("graph_triple_idx", []) if i in remap]
+            print(f"[qkg]   per-query KG: union of first {n_eval} query graphs = {len(ds.triples)} triples")
+        elif cfg["kg_subset"] and len(ds.triples) > cfg["kg_subset"]:
             ds.triples = ds.triples[: cfg["kg_subset"]]
         t0 = time.perf_counter()
         retriever = SchemaAwareRetriever(
-            triples=ds.triples, encoder=encoder, k=2,
+            triples=ds.triples, encoder=encoder, k=cfg["hops"],
             top_k=cfg["top_k"], precompute=True, bidirectional=cfg["bidir"],
         )
         print(f"[qkg]   retriever ready in {time.perf_counter()-t0:.1f}s")
@@ -82,6 +105,8 @@ def main():
             retriever=retriever, symbolic_checker=checker,
             task_type=cfg["task_type"],
             answer_rescoring=use_ans_rescore,
+            max_path_length=cfg["hops"],
+            answer_aggregation=cfg.get("agg", "max"),
         )
 
         queries = ds.queries[: cfg["n"]] if cfg["n"] else ds.queries
