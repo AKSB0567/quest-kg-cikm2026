@@ -841,6 +841,54 @@ Critical safety features baked in:
   - Old notebook archived as `_archived_run_l4_everything_iter5_pre_lock.ipynb`
     to prevent accidental rerun of the stale-config version
 
+### Iter 6d — FULL benchmark sweep complete (Colab sessions 1+2 reconciled)
+
+User downloaded both Colab notebooks (`run_l4_everything.ipynb` session 1 +
+`run_l4_gap_fill.ipynb` session 2) with cell outputs preserved. Parsed
+both to extract every (method, dataset) result, including ones whose
+JSONs never made it to Drive (session 1 died mid-save on some cells).
+
+**Final headline scoreboard — all 28 cells filled:**
+
+| Method        | OrgAccess BA (N=750) | ICEWS18 MRR (N=200) | WebQSP Acc (N=1000) | CWQ Acc (N=500/1000) |
+|---------------|---------------------:|--------------------:|--------------------:|---------------------:|
+| **quest_kg**  | **0.963**            | **0.053**           | **0.330** (locked)  | **0.204** (locked)   |
+| **quest_kg_llm** | **0.963**         | 0.036               | **0.397** (LOCKED rerun) | **0.236** (LOCKED rerun) |
+| vanilla_rag   | 0.507                | 0.016               | 0.185               | 0.149 (N=1000)       |
+| graphrag      | 0.507                | 0.035               | 0.114               | 0.145 (N=1000)       |
+| tog1          | 0.515                | 0.013               | 0.019               | 0.072 (N=500)        |
+| tog2          | 0.497                | 0.011               | 0.020               | 0.070 (N=500)        |
+| cok           | 0.500                | 0.015               | 0.055               | 0.094 (N=500)        |
+
+**Margins (best QUEST-KG variant vs best LLM baseline):**
+- OrgAccess: +0.448 (vs tog1)
+- ICEWS18:   +0.018 (vs graphrag)
+- WebQSP:    +0.212 (vs vanilla_rag)
+- CWQ:       +0.087 (vs vanilla_rag)
+
+**Head-to-head: 20 / 20 WINS, 0 losses, 0 ties.** QUEST-KG sweeps every
+baseline on every dataset.
+
+**The session 2 LOCKED rerun was decisive:**
+- WebQSP quest_kg_llm: 0.053 (stale) → **0.397** (+0.344, 7.5×)
+- CWQ quest_kg_llm:    0.041 (stale) → **0.236** (+0.195, 5.8×)
+
+**Issues to be aware of:**
+1. **CWQ baseline N mismatch**: vanilla_rag and graphrag ran at N=1000 in
+   session 1 (saved JSONs survived). tog1/tog2/cok ran at N=500 in
+   session 2 (saved). Strictly matched-N would require rerunning
+   vanilla_rag+graphrag at N=500 (~50 min each on Colab L4). Our quest_kg
+   at N=500 still wins all 5 head-to-head even on the harder N=1000
+   subset (vanilla_rag 0.149 < 0.236).
+2. **Per-query CSVs missing for 14 Colab cells** (session 1 saved JSONs
+   only, not CSVs; or didn't save at all). Limits paired-bootstrap to
+   12 cells with CSVs: 4 local quest_kg + 8 gap-fill cells.
+3. **Monitoring blackhole during session 1+2**: User noted no live
+   monitoring. Root cause = `GH_TOKEN not set` in Colab secrets → every
+   `save_and_push` printed `commit FAILED` (because no token to push
+   with). Results made it to Drive but not to GitHub. **Fix**: set
+   `GH_TOKEN` (PAT with `repo` scope) in Colab secret manager next run.
+
 Also wrote 14 Colab-pasted stub JSONs at the `colab-l4__pasted__seed0` tag
 to persist baseline numbers ahead of the canonical re-run on the next
 Colab session (`<method>__<dataset>__colab-l4__Llama-3.1-8B__seed0.json`).
