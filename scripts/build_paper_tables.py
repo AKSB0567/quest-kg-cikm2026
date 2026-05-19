@@ -74,8 +74,27 @@ def load_cells(tag_filter: str | None = None) -> pd.DataFrame:
         method = parts[0]
         dataset = parts[1] if len(parts) > 1 else None
         tag = "__".join(parts[2:]) if len(parts) > 2 else ""
+        # Tag priority: canonical run for each method gets max priority.
+        # - quest_kg: local-1080ti__symbolic is LOCKED (per-query graphs +
+        #   patterns + boost). Colab quest_kg is STALE pre-Iter-5b.
+        # - All LLM methods: colab-l4__Qwen2.5-7B is the canonical 7B run.
+        # - Mistral-7B and local 1.5B/3B runs are alternate-LLM rows
+        #   reserved for §4 robustness, not the headline.
+        if method == "quest_kg":
+            tag_priority = (3 if "local-1080ti__symbolic__seed0" == tag
+                             else 1 if "colab-l4__Qwen2.5-7B" in tag
+                             else 0)
+        elif method in ("quest_kg_llm", "vanilla_rag", "graphrag",
+                         "tog1", "tog2", "cok"):
+            tag_priority = (3 if "colab-l4__Qwen2.5-7B" in tag
+                             else 1 if "mistral-7b" in tag
+                             else 1 if "local-1080ti__Qwen2.5-3B" in tag
+                             else 0)
+        else:
+            tag_priority = 0
         rows.append({
             "method": method, "dataset": dataset, "tag": tag, "n": d.get("n", 0),
+            "tag_priority": tag_priority,
             "exact_match": d.get("exact_match"),
             "accuracy": d.get("accuracy", d.get("exact_match")),
             "balanced_accuracy": d.get("balanced_accuracy"),
@@ -88,6 +107,8 @@ def load_cells(tag_filter: str | None = None) -> pd.DataFrame:
             "primary_metric": d.get("primary_metric"),
             "primary_value": d.get("primary_value"),
             "wallclock_s": d.get("wallclock_s"),
+            "ECE": d.get("ECE"),
+            "AURC": d.get("AURC"),
         })
     return pd.DataFrame(rows)
 
@@ -95,7 +116,8 @@ def load_cells(tag_filter: str | None = None) -> pd.DataFrame:
 def headline_table(df: pd.DataFrame, out_stem: str) -> None:
     """Table 2: primary metric per (method, dataset). One row per method."""
     # Pick the "best" tag per (method, dataset) by max n (most reliable run)
-    best = (df.sort_values("n", ascending=False)
+    # Primary sort: tag_priority (canonical run first), tiebreak by n desc
+    best = (df.sort_values(["tag_priority", "n"], ascending=[False, False])
               .drop_duplicates(["method", "dataset"], keep="first"))
     pivot = best.pivot_table(index="method", columns="dataset",
                               values="primary_value", aggfunc="first")
@@ -147,7 +169,8 @@ def headline_table(df: pd.DataFrame, out_stem: str) -> None:
 
 def latency_table(df: pd.DataFrame, out_stem: str) -> None:
     """Mean latency (ms) per (method, dataset)."""
-    best = (df.sort_values("n", ascending=False)
+    # Primary sort: tag_priority (canonical run first), tiebreak by n desc
+    best = (df.sort_values(["tag_priority", "n"], ascending=[False, False])
               .drop_duplicates(["method", "dataset"], keep="first"))
     pivot = best.pivot_table(index="method", columns="dataset",
                               values="mean_latency_ms", aggfunc="first")
@@ -165,27 +188,33 @@ def latency_table(df: pd.DataFrame, out_stem: str) -> None:
     print(f"  wrote {TABLES_DIR / out_stem}.md (latency ms)")
 
 
-def calibration_table(out_stem: str) -> None:
-    """ECE / AURC per (method, dataset) from _calibration_*.csv files."""
-    cal_csvs = list(RESULTS.glob("_calibration_*.csv"))
-    if not cal_csvs:
-        print(f"  skip {out_stem}: no _calibration_*.csv")
+def calibration_table(df_cells: pd.DataFrame, out_stem: str) -> None:
+    """ECE + AURC per (method, dataset) from the canonical-tag JSONs.
+
+    Picks the same canonical row as the headline (tag_priority desc, n desc)
+    so calibration matches the values from the headline table.
+    """
+    best = (df_cells.sort_values(["tag_priority", "n"], ascending=[False, False])
+                    .drop_duplicates(["method", "dataset"], keep="first"))
+    out = best[best["ECE"].notna()][[
+        "method", "dataset", "n", "ECE", "AURC", "primary_value"
+    ]].sort_values(["dataset", "ECE"])
+    if out.empty:
+        print(f"  skip {out_stem}: no JSONs with ECE/AURC")
         return
-    df = pd.concat([pd.read_csv(p) for p in cal_csvs], ignore_index=True)
-    # Keep best (lowest ECE) per (method, dataset)
-    df = df.sort_values("ECE").drop_duplicates(["method", "dataset"], keep="first")
-    out = df[["method", "dataset", "n", "ECE", "Brier", "NLL", "AURC",
-              "mean_conf", "accuracy"]].sort_values(["dataset", "ECE"])
     out.to_csv(TABLES_DIR / f"{out_stem}.csv", index=False)
-    md_lines = ["| Method | Dataset | n | ECE | Brier | NLL | AURC | mean_conf | acc |",
-                "|---|---|---|---|---|---|---|---|---|"]
-    for _, r in out.iterrows():
-        md_lines.append(
-            f"| {METHOD_DISPLAY.get(r['method'], r['method'])} | {r['dataset']} | "
-            f"{int(r['n'])} | {r['ECE']:.4f} | {r['Brier']:.4f} | "
-            f"{r['NLL']:.4f} | {r['AURC']:.4f} | {r['mean_conf']:.3f} | {r['accuracy']:.3f} |"
-        )
-    (TABLES_DIR / f"{out_stem}.md").write_text("\n".join(md_lines) + "\n")
+    pivot_ece = best.pivot_table(index="method", columns="dataset",
+                                  values="ECE", aggfunc="first")
+    pivot_ece = pivot_ece.reindex([m for m in METHOD_ORDER if m in pivot_ece.index])
+    md = ["| Method | " + " | ".join(f"{ds} ECE" for ds in DATASETS if ds in pivot_ece.columns) + " |",
+          "|" + "---|" * (1 + len([ds for ds in DATASETS if ds in pivot_ece.columns]))]
+    for m in pivot_ece.index:
+        cells = [f"{pivot_ece.loc[m, ds]:.3f}" if ds in pivot_ece.columns
+                                                   and pd.notna(pivot_ece.loc[m, ds])
+                                              else "-"
+                 for ds in DATASETS]
+        md.append(f"| {METHOD_DISPLAY.get(m, m)} | " + " | ".join(cells) + " |")
+    (TABLES_DIR / f"{out_stem}.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print(f"  wrote {TABLES_DIR / out_stem}.md ({len(out)} rows)")
 
 
@@ -271,7 +300,7 @@ def main():
     print("\nBuilding tables in", TABLES_DIR)
     headline_table(df, "T2_headline")
     latency_table(df, "T_latency")
-    calibration_table("T_calibration")
+    calibration_table(df, "T_calibration")
     ablation_table("T_ablation")
     bootstrap_table("T_bootstrap")
     print("\nDone.")
