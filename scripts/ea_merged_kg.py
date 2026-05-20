@@ -51,43 +51,32 @@ def build_neighbors(triples: list[tuple[int, int, int]]) -> dict[int, set[int]]:
     return nb
 
 
-def structural_scores(test_anchors_e1: list[int],
-                       train_pairs: list[tuple[int, int]],
-                       k1_nb: dict[int, set[int]],
-                       k2_nb: dict[int, set[int]],
-                       k2_ids_sorted: list[int],
-                       k2_row_of: dict[int, int]) -> np.ndarray:
-    """For each test anchor e1, compute structural score for every K2 candidate.
-
-    score(e1, k2_cand) = #{n1 in K1-neighbors(e1) : seed_align(n1) in K2-neighbors(k2_cand)}
-
-    Returns: numpy array (n_anchors, |K2|) of integer scores.
-    """
+def build_structural_indexes(train_pairs, k2_nb):
+    """Precompute index needed for per-anchor structural scoring.
+    Returns (seed_align_dict, inv_dict) — both small enough to keep in RAM."""
     seed_align = {e1: e2 for e1, e2 in train_pairs}
-    # Inverted index: aligned_K2_partner p -> set of K2 entities that have p as neighbor
-    # This lets us aggregate per-query in O(|aligned_partners| * |K2_neighbors(p)|).
     inv: dict[int, set[int]] = {}
     aligned_K2_partners = set(seed_align.values())
     for p in aligned_K2_partners:
         for nb in k2_nb.get(p, ()):
             inv.setdefault(p, set()).add(nb)
+    return seed_align, inv
 
-    nA, nK = len(test_anchors_e1), len(k2_ids_sorted)
-    scores = np.zeros((nA, nK), dtype=np.float32)
-    for i, e1 in enumerate(test_anchors_e1):
-        e1_K1_neighbors = k1_nb.get(e1, set())
-        partners = {seed_align[n] for n in e1_K1_neighbors if n in seed_align}
-        if not partners:
-            continue
-        counter: Counter = Counter()
-        for p in partners:
-            for k2_cand in inv.get(p, ()):
-                counter[k2_cand] += 1
-        for k2_cand, c in counter.items():
-            row = k2_row_of.get(k2_cand)
-            if row is not None:
-                scores[i, row] = c
-    return scores
+
+def structural_score_one(e1: int,
+                          k1_nb: dict[int, set[int]],
+                          seed_align: dict[int, int],
+                          inv: dict[int, set[int]]) -> Counter:
+    """Sparse counter: k2_entity_id -> shared-aligned-neighbor count for one e1."""
+    e1_K1_neighbors = k1_nb.get(e1, set())
+    partners = {seed_align[n] for n in e1_K1_neighbors if n in seed_align}
+    counter: Counter = Counter()
+    if not partners:
+        return counter
+    for p in partners:
+        for k2_cand in inv.get(p, ()):
+            counter[k2_cand] += 1
+    return counter
 
 
 def run_merged_kg(data: dict, dataset_name: str, encoder_name: str, tag: str,
@@ -148,20 +137,14 @@ def run_merged_kg(data: dict, dataset_name: str, encoder_name: str, tag: str,
     a_t = torch.nn.functional.normalize(a_t, dim=1)
     k_t = torch.nn.functional.normalize(k_t, dim=1)
 
-    # Structural channel: compute scores per anchor
-    print("[merged-kg] computing structural scores via aligned-bridge propagation...")
-    t = time.perf_counter()
-    test_anchors_e1 = [e1 for e1, _ in eval_pairs]
-    struct = structural_scores(test_anchors_e1, data["train_pairs"], k1_nb,
-                                k2_nb, k2_ids_sorted, k2_row_of)
-    print(f"  computed structural scores in {time.perf_counter()-t:.1f}s "
-          f"({(struct > 0).sum() / struct.size * 100:.2f}% non-zero)")
+    # Structural channel: build precomputed indexes (small)
+    print("[merged-kg] building structural indexes (seed alignments + K2 inverted)...")
+    seed_align, inv = build_structural_indexes(data["train_pairs"], k2_nb)
+    print(f"  |seed_align|={len(seed_align)}  |inv|={len(inv)}")
 
-    # Normalize structural by per-anchor max (so it's in [0,1] before combining)
-    struct_max = struct.max(axis=1, keepdims=True)
-    struct_norm = np.where(struct_max > 0, struct / np.maximum(struct_max, 1), 0.0)
-
-    # Combine: hybrid score
+    # Per-anchor: compute cosine vec on GPU (no big matmul stored), structural
+    # sparse counter, combine into a single (|K2|,) tensor, then rank. NEVER
+    # materialize (n_anchors x |K2|) which would OOM at full N=70K.
     t = time.perf_counter()
     try:
         from tqdm import tqdm
@@ -178,24 +161,31 @@ def run_merged_kg(data: dict, dataset_name: str, encoder_name: str, tag: str,
     gold_e2: list[int] = []
     confidence: list[float] = []
     correct = 0
-    BATCH = 64
+    nK = len(k2_ids_sorted)
     for i, (e1, e2_gold) in pbar:
-        # Cosine for this anchor against all K2
-        cos = (a_t[i] @ k_t.T).cpu().numpy()
+        # Cosine (on GPU, no per-anchor copy to CPU until reduction)
+        cos = a_t[i] @ k_t.T  # (|K2|,) on GPU
         cos01 = (cos + 1.0) / 2.0
-        combined = alpha * cos01 + (1.0 - alpha) * struct_norm[i]
+        # Structural counter for this anchor
+        counter = structural_score_one(e1, k1_nb, seed_align, inv)
+        # Compose hybrid score directly on GPU (sparse-add the counter)
+        combined = alpha * cos01
+        if counter:
+            max_c = max(counter.values())
+            for k2_cand, c in counter.items():
+                row = k2_row_of.get(k2_cand)
+                if row is not None:
+                    combined[row] = combined[row] + (1.0 - alpha) * (c / max_c)
         true_row = k2_row_of[e2_gold]
-        s_true = float(combined[true_row])
-        n_above = int((combined > s_true).sum())
+        s_true = float(combined[true_row].item())
+        # rank = 1 + number strictly greater
+        n_above = int((combined > combined[true_row]).sum().item())
         rank = n_above + 1
-        ranks.append(rank)
-        em.append(1 if rank == 1 else 0)
+        top_idx = int(torch.argmax(combined).item())
+        ranks.append(rank); em.append(1 if rank == 1 else 0)
         correct += int(rank == 1)
-        qids.append(i)
-        top_idx = int(combined.argmax())
-        pred_e2.append(k2_ids_sorted[top_idx])
-        gold_e2.append(e2_gold)
-        confidence.append(float(combined[top_idx]))
+        qids.append(i); pred_e2.append(k2_ids_sorted[top_idx])
+        gold_e2.append(e2_gold); confidence.append(float(combined[top_idx].item()))
         if hasattr(pbar, "set_postfix"):
             pbar.set_postfix(h1=f"{correct/max(len(em),1):.3f}")
     inference_s = time.perf_counter() - t
