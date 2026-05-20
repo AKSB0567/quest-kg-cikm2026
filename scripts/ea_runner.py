@@ -356,7 +356,15 @@ def run_one(data: dict, dataset_name: str, n_sample: int | None, tag: str,
     pred_e2: list[int] = []
     gold_e2: list[int] = []
     BATCH = 256
-    for i in range(0, len(eval_pairs), BATCH):
+    try:
+        from tqdm import tqdm
+        pbar = tqdm(range(0, len(eval_pairs), BATCH),
+                    desc=f"scoring {dataset_name}", unit="batch",
+                    dynamic_ncols=True)
+    except ImportError:
+        pbar = range(0, len(eval_pairs), BATCH)
+    correct = 0
+    for i in pbar:
         ai = a_t[i : i + BATCH]
         sims = ai @ k_t.T
         for j, (e1, e2) in enumerate(eval_pairs[i : i + BATCH]):
@@ -370,9 +378,12 @@ def run_one(data: dict, dataset_name: str, n_sample: int | None, tag: str,
             confidence.append(row_max_val)
             sim_at_truth.append(s_true)
             em.append(1 if rank == 1 else 0)
+            correct += int(rank == 1)
             qids.append(i + j)
             pred_e2.append(k2_ids_sorted[row_max_idx])
             gold_e2.append(e2)
+        if hasattr(pbar, "set_postfix"):
+            pbar.set_postfix(h1=f"{correct/max(len(em),1):.3f}")
     inference_s = time.perf_counter() - t
     print(f"  scored {len(eval_pairs)} pairs in {inference_s:.1f}s")
 
