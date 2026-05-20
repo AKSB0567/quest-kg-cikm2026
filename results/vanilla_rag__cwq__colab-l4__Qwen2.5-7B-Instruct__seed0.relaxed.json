@@ -1,0 +1,9 @@
+{
+  "csv": "results\\vanilla_rag__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv",
+  "n": 1000,
+  "hits_at_1_strict": 0.149,
+  "hits_at_1_paren_stripped": 0.149,
+  "hits_at_1_substring": 0.186,
+  "hits_at_1_relaxed_both": 0.186,
+  "gain_over_strict": 0.037000000000000005
+}

@@ -1,0 +1,9 @@
+{
+  "csv": "results\\graphrag__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv",
+  "n": 1000,
+  "hits_at_1_strict": 0.145,
+  "hits_at_1_paren_stripped": 0.145,
+  "hits_at_1_substring": 0.192,
+  "hits_at_1_relaxed_both": 0.192,
+  "gain_over_strict": 0.047000000000000014
+}

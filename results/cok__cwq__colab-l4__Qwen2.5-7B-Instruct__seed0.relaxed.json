@@ -1,0 +1,9 @@
+{
+  "csv": "results\\cok__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv",
+  "n": 500,
+  "hits_at_1_strict": 0.094,
+  "hits_at_1_paren_stripped": 0.094,
+  "hits_at_1_substring": 0.172,
+  "hits_at_1_relaxed_both": 0.172,
+  "gain_over_strict": 0.07799999999999999
+}
