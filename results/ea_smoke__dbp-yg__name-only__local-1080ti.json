@@ -1,0 +1,18 @@
+{
+  "dataset": "dbp-yg",
+  "task_type": "entity_alignment",
+  "method": "name_only_minilm",
+  "n_sample": 1000,
+  "n_candidates": 100000,
+  "hits_at_1": 1.0,
+  "hits_at_3": 1.0,
+  "hits_at_10": 1.0,
+  "mrr": 1.0,
+  "median_rank": 1.0,
+  "mean_rank": 1.0,
+  "wallclock_s": 38.9,
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "seed": 0,
+  "tag": "ea-smoke__dbp-yg__name-only__local-1080ti",
+  "notes": "Smoke test: pure name cosine baseline. If Hits@1 >= 0.60, full QUEST-KG adaptation is the next step (neighborhood-aware retrieval + evidential MP)."
+}
