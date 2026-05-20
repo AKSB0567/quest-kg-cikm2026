@@ -151,9 +151,45 @@ def load_dwy100k(root: Path) -> dict:
     )
 
 
+def _find_openea_file(root: Path, candidates: list[str]) -> Path | None:
+    """Look for one of `candidates` either directly in root or one level below."""
+    for name in candidates:
+        p = root / name
+        if p.exists():
+            return p
+    for sub in root.iterdir():
+        if not sub.is_dir():
+            continue
+        for name in candidates:
+            p = sub / name
+            if p.exists():
+                return p
+    return None
+
+
 def load_openea(root: Path) -> dict:
     """OpenEA IDS100K format. Files: ent_links, rel_triples_1/2, attr_triples_1/2,
-    721_5fold/1/{train,valid,test}_links."""
+    721_5fold/1/{train,valid,test}_links.
+
+    Some OpenEA archives put these files inside a `Mapping/` subfolder; some use
+    slightly different file names. We resolve robustly."""
+    # Resolve actual paths (some archives nest these inside Mapping/ etc.)
+    rel1_path = _find_openea_file(root, ["rel_triples_1", "rel_triples1", "triples_1"])
+    rel2_path = _find_openea_file(root, ["rel_triples_2", "rel_triples2", "triples_2"])
+    if rel1_path is None or rel2_path is None:
+        contents = sorted(p.name for p in root.iterdir())
+        sub_contents = {}
+        for sub in root.iterdir():
+            if sub.is_dir():
+                sub_contents[sub.name] = sorted(p.name for p in sub.iterdir())[:20]
+        raise FileNotFoundError(
+            f"OpenEA: could not find rel_triples_1/2 under {root}.\n"
+            f"  contents: {contents}\n"
+            f"  subfolders: {sub_contents}"
+        )
+    # Use the parent of rel_triples_1 as the effective root (handles nesting)
+    base = rel1_path.parent
+    print(f"  OpenEA effective base: {base}")
     # Read attribute triples to get labels (OpenEA's entity labels are here)
     def parse_attr_triples(p: Path) -> dict[str, str]:
         labels: dict[str, str] = {}
@@ -185,10 +221,12 @@ def load_openea(root: Path) -> dict:
     def parse_pair_file(p: Path) -> list[tuple[str, str]]:
         return [tuple(line.split("\t")) for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
 
-    rel_tri_1, ents1, rels1 = parse_rel_triples(root / "rel_triples_1")
-    rel_tri_2, ents2, rels2 = parse_rel_triples(root / "rel_triples_2")
-    attr_labels_1 = parse_attr_triples(root / "attr_triples_1") if (root / "attr_triples_1").exists() else {}
-    attr_labels_2 = parse_attr_triples(root / "attr_triples_2") if (root / "attr_triples_2").exists() else {}
+    rel_tri_1, ents1, rels1 = parse_rel_triples(rel1_path)
+    rel_tri_2, ents2, rels2 = parse_rel_triples(rel2_path)
+    attr1_p = _find_openea_file(base, ["attr_triples_1", "attr_triples1"])
+    attr2_p = _find_openea_file(base, ["attr_triples_2", "attr_triples2"])
+    attr_labels_1 = parse_attr_triples(attr1_p) if attr1_p else {}
+    attr_labels_2 = parse_attr_triples(attr2_p) if attr2_p else {}
 
     # Build string -> int id mappings
     ents1_list = sorted(ents1); ents2_list = sorted(ents2)
@@ -206,13 +244,16 @@ def load_openea(root: Path) -> dict:
     triples2 = [(e2_id_of[h], r2_id_of[r], e2_id_of[t]) for h, r, t in rel_tri_2]
 
     # Find seed/test links — OpenEA uses 721_5fold/1/{train,valid,test}_links
-    fold_root = root / "721_5fold" / "1"
+    fold_root = base / "721_5fold" / "1"
     if fold_root.exists():
         train_str = parse_pair_file(fold_root / "train_links")
         test_str = parse_pair_file(fold_root / "test_links")
     else:
         # fallback: ent_links is the full set
-        all_str = parse_pair_file(root / "ent_links")
+        ent_links_p = _find_openea_file(base, ["ent_links"])
+        if ent_links_p is None:
+            raise FileNotFoundError(f"OpenEA: no 721_5fold/1 nor ent_links under {base}")
+        all_str = parse_pair_file(ent_links_p)
         n = len(all_str)
         train_str = all_str[: int(0.3 * n)]
         test_str = all_str[int(0.3 * n) :]
