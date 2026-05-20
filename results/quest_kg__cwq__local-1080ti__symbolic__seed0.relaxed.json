@@ -1,0 +1,9 @@
+{
+  "csv": "results\\quest_kg__cwq__local-1080ti__symbolic__seed0.csv",
+  "n": 500,
+  "hits_at_1_strict": 0.204,
+  "hits_at_1_paren_stripped": 0.204,
+  "hits_at_1_substring": 0.284,
+  "hits_at_1_relaxed_both": 0.284,
+  "gain_over_strict": 0.07999999999999999
+}

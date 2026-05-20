@@ -108,10 +108,22 @@ def score_csv(csv_path: Path, gold_lookup: dict[str, list[str]]):
 
 def main():
     cells = [
+        # Ours
         ("webqsp", "results/quest_kg_llm__webqsp__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
         ("cwq",    "results/quest_kg_llm__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
         ("webqsp", "results/quest_kg__webqsp__local-1080ti__symbolic__seed0.csv"),
         ("cwq",    "results/quest_kg__cwq__local-1080ti__symbolic__seed0.csv"),
+        # LLM baselines — must use SAME eval for fair comparison
+        ("webqsp", "results/vanilla_rag__webqsp__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("webqsp", "results/graphrag__webqsp__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("webqsp", "results/tog1__webqsp__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("webqsp", "results/tog2__webqsp__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("webqsp", "results/cok__webqsp__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("cwq",    "results/vanilla_rag__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("cwq",    "results/graphrag__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("cwq",    "results/tog1__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("cwq",    "results/tog2__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
+        ("cwq",    "results/cok__cwq__colab-l4__Qwen2.5-7B-Instruct__seed0.csv"),
     ]
     print(f"{'config':<70s} {'strict':>8s} {'paren':>8s} {'subst':>8s} {'both':>8s} {'+both':>8s}")
     print("-" * 120)
