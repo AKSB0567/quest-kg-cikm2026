@@ -115,6 +115,37 @@ cells.append(code(
 ))
 
 cells.append(md(
+    "## 3b. Link the data from Drive (or download if missing)\n\n"
+    "The loaders expect data at `{REPO_DIR}/data/raw/{dataset}/dataset` "
+    "(HuggingFace datasets `load_from_disk` format). We symlink the "
+    "Drive data folder into the repo so the loaders find it. If WebQSP "
+    "or CWQ aren't on Drive yet, this cell downloads them."
+))
+cells.append(code(
+    "import os\n"
+    "DATA_ROOT = f'{ROOT}/data'\n"
+    "pathlib.Path(f'{DATA_ROOT}/raw').mkdir(parents=True, exist_ok=True)\n"
+    "if not os.path.exists(f'{REPO_DIR}/data'):\n"
+    "    os.symlink(DATA_ROOT, f'{REPO_DIR}/data')\n"
+    "elif not os.path.islink(f'{REPO_DIR}/data') and not os.listdir(f'{REPO_DIR}/data'):\n"
+    "    os.rmdir(f'{REPO_DIR}/data'); os.symlink(DATA_ROOT, f'{REPO_DIR}/data')\n"
+    "elif not os.path.islink(f'{REPO_DIR}/data'):\n"
+    "    print(f'  WARNING: {REPO_DIR}/data exists and is not a symlink. Skipping link.')\n"
+    "\n"
+    "for ds in ['webqsp', 'cwq']:\n"
+    "    p = f'{DATA_ROOT}/raw/{ds}'\n"
+    "    ok = os.path.exists(f'{p}/.done') or os.path.exists(f'{p}/dataset')\n"
+    "    print(f'  {\"OK \" if ok else \"MISS\"} {ds}')\n"
+    "missing = [ds for ds in ['webqsp', 'cwq']\n"
+    "           if not (os.path.exists(f'{DATA_ROOT}/raw/{ds}/.done') or os.path.exists(f'{DATA_ROOT}/raw/{ds}/dataset'))]\n"
+    "if missing:\n"
+    "    print(f'\\nDownloading missing datasets: {missing}')\n"
+    "    !python -m scripts.download.download_all --root $DATA_ROOT\n"
+    "else:\n"
+    "    print('\\nAll required datasets present on Drive.')"
+))
+
+cells.append(md(
     "## 4. Config (smoke-test default; flip to full-scale when ready)"
 ))
 cells.append(code(
