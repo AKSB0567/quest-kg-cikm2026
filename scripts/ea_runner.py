@@ -307,10 +307,82 @@ def train_projection(anchor_embs: np.ndarray, target_embs: np.ndarray,
     return model
 
 
+def build_neighbor_sets(triples: list[tuple[int, int, int]]) -> dict[int, set[int]]:
+    """For each entity, set of 1-hop neighbors (in + out direction)."""
+    nb: dict[int, set[int]] = {}
+    for h, _, t in triples:
+        nb.setdefault(h, set()).add(t)
+        nb.setdefault(t, set()).add(h)
+    return nb
+
+
+def shared_anchor_rerank(eval_pairs, sims_a_t, sims_k_t, k2_ids_sorted,
+                          k2_row_of, train_pairs, triples1, triples2,
+                          top_n: int = 50, alpha: float = 0.5):
+    """Re-rank top-N cosine candidates by counting shared aligned 1-hop neighbors.
+
+    For each (test) anchor e1:
+      1. Compute K1 neighbors(e1); intersect with seed-aligned entities;
+         project to their K2 counterparts -> anchor1_K2.
+      2. For each cosine top-N candidate e2, count shared neighbors:
+            shared = |anchor1_K2 \\cap K2-neighbors(e2)|
+      3. Combine: score = alpha * cosine + (1-alpha) * (shared / max(|anchor1_K2|, 1)).
+
+    This is the MTransE/JAPE-style "anchor propagation" idea added on top of
+    text-grounded cosine retrieval. Returns reranked ranks + new top-1 scores.
+    """
+    import torch
+    seed_align = {e1: e2 for e1, e2 in train_pairs}
+    k1_nb = build_neighbor_sets(triples1)
+    k2_nb = build_neighbor_sets(triples2)
+
+    ranks: list[int] = []
+    top1_scores: list[float] = []
+    correct = 0
+    for i, (e1, e2_gold) in enumerate(eval_pairs):
+        sims_i = sims_a_t[i:i+1] @ sims_k_t.T  # (1, |K2|)
+        sims_row = sims_i[0]
+        # Get top-N cosine candidates
+        topn_vals, topn_idx = torch.topk(sims_row, top_n)
+        topn_idx_list = topn_idx.tolist()
+        # Compute anchor1_K2: K1 neighbors of e1 that map via seeds to K2
+        anchor1_K2: set[int] = set()
+        for n1 in k1_nb.get(e1, ()):
+            if n1 in seed_align:
+                anchor1_K2.add(seed_align[n1])
+        # Score each top-N candidate
+        denom = max(len(anchor1_K2), 1)
+        rerank_scores: list[tuple[float, int]] = []
+        for k_idx, j in enumerate(topn_idx_list):
+            cand_e2 = k2_ids_sorted[j]
+            k2_neighbors = k2_nb.get(cand_e2, set())
+            shared = len(anchor1_K2 & k2_neighbors) if anchor1_K2 else 0
+            cosine = float(topn_vals[k_idx].item())
+            cosine01 = (cosine + 1.0) / 2.0
+            combined = alpha * cosine01 + (1 - alpha) * (shared / denom)
+            rerank_scores.append((combined, j))
+        rerank_scores.sort(key=lambda x: -x[0])
+        true_row = k2_row_of[e2_gold]
+        # Rank of true_row in reranked top-N; if not present, fall back to cosine rank
+        rerank_indices = [j for _, j in rerank_scores]
+        if true_row in rerank_indices:
+            rank = rerank_indices.index(true_row) + 1
+        else:
+            n_above = int((sims_row > sims_row[true_row]).sum().item())
+            rank = n_above + 1
+        ranks.append(rank)
+        top1_scores.append(rerank_scores[0][0])
+        correct += int(rank == 1)
+    return ranks, top1_scores, correct
+
+
 def run_one(data: dict, dataset_name: str, n_sample: int | None, tag: str,
             encoder_name: str = "sentence-transformers/all-MiniLM-L6-v2",
             propagate: bool = False,
-            train_projection_flag: bool = True) -> dict:
+            train_projection_flag: bool = True,
+            reranker: bool = False,
+            rerank_top_n: int = 50,
+            rerank_alpha: float = 0.5) -> dict:
     t_total = time.perf_counter()
     print(f"[ea] {dataset_name}: K1={len(data['ent1'])} K2={len(data['ent2'])} "
           f"train_pairs={len(data['train_pairs'])} test_pairs={len(data['test_pairs'])}")
@@ -397,6 +469,106 @@ def run_one(data: dict, dataset_name: str, n_sample: int | None, tag: str,
     pred_e2: list[int] = []
     gold_e2: list[int] = []
     BATCH = 256
+
+    # Shared-anchor reranker path (uses train_pairs to count shared K1<->K2
+    # 1-hop neighbors among the top-N cosine candidates).
+    if reranker and data.get("train_pairs"):
+        print(f"[ea] shared-anchor reranker ON (top_n={rerank_top_n}, "
+              f"alpha={rerank_alpha}, |train_pairs|={len(data['train_pairs'])})")
+        try:
+            from tqdm import tqdm
+            it = tqdm(enumerate(eval_pairs), total=len(eval_pairs),
+                      desc=f"rerank {dataset_name}", unit="q",
+                      dynamic_ncols=True)
+        except ImportError:
+            it = enumerate(eval_pairs)
+        # Pre-compute neighbor maps once
+        seed_align = {e1: e2 for e1, e2 in data["train_pairs"]}
+        k1_nb = build_neighbor_sets(data["triples1"])
+        k2_nb = build_neighbor_sets(data["triples2"])
+        correct = 0
+        for i, (e1, e2_gold) in it:
+            sims_row = a_t[i] @ k_t.T  # (|K2|,)
+            topn_vals, topn_idx = torch.topk(sims_row, rerank_top_n)
+            topn_idx_list = topn_idx.tolist()
+            anchor1_K2: set[int] = set()
+            for n1 in k1_nb.get(e1, ()):
+                if n1 in seed_align:
+                    anchor1_K2.add(seed_align[n1])
+            denom = max(len(anchor1_K2), 1)
+            best = (-1e9, -1, -1.0)  # (combined, j, cosine)
+            true_row = k2_row_of[e2_gold]
+            true_in_topn = false_value = (true_row in topn_idx_list)
+            rerank_rows = []
+            for k_idx, j in enumerate(topn_idx_list):
+                cand_e2 = k2_ids_sorted[j]
+                k2_neighbors = k2_nb.get(cand_e2, set())
+                shared = len(anchor1_K2 & k2_neighbors) if anchor1_K2 else 0
+                cosine = float(topn_vals[k_idx].item())
+                cosine01 = (cosine + 1.0) / 2.0
+                combined = rerank_alpha * cosine01 + (1 - rerank_alpha) * (shared / denom)
+                rerank_rows.append((combined, j, cosine))
+                if combined > best[0]:
+                    best = (combined, j, cosine)
+            rerank_rows.sort(key=lambda x: -x[0])
+            rerank_indices = [r[1] for r in rerank_rows]
+            if true_in_topn:
+                rank = rerank_indices.index(true_row) + 1
+            else:
+                n_above = int((sims_row > sims_row[true_row]).sum().item())
+                rank = n_above + 1
+            row_max_idx = best[1]
+            row_max_val = best[2]
+            s_true = float(sims_row[true_row].item())
+            ranks.append(rank)
+            confidence.append(row_max_val)
+            sim_at_truth.append(s_true)
+            em.append(1 if rank == 1 else 0)
+            correct += int(rank == 1)
+            qids.append(i)
+            pred_e2.append(k2_ids_sorted[row_max_idx])
+            gold_e2.append(e2_gold)
+            if hasattr(it, "set_postfix"):
+                it.set_postfix(h1=f"{correct/max(len(em),1):.3f}")
+        inference_s = time.perf_counter() - t
+        print(f"  reranked {len(eval_pairs)} pairs in {inference_s:.1f}s")
+        # Skip the no-reranker scoring loop below
+        ranks_a = np.asarray(ranks)
+        em_a = np.asarray(em, dtype=float)
+        conf_a = np.asarray(confidence, dtype=float)
+        hits1 = float(em_a.mean())
+        hits3 = float((ranks_a <= 3).mean())
+        hits10 = float((ranks_a <= 10).mean())
+        mrr = float((1.0 / np.maximum(ranks_a, 1)).mean())
+        from quest_kg.eval.metrics import ece, aurc
+        conf_norm = np.clip((conf_a + 1.0) / 2.0, 0.0, 1.0)
+        e_ece = float(ece(conf_norm, em_a, n_bins=15))
+        e_aurc = float(aurc(conf_norm, em_a))
+        df = pd.DataFrame({"qid": qids, "gold_e2": gold_e2, "pred_e2": pred_e2,
+                            "em": em, "x_rank": ranks, "confidence": conf_norm})
+        wallclock = time.perf_counter() - t_total
+        out_json = {
+            "n": len(eval_pairs), "n_attempted": len(eval_pairs),
+            "abstention_rate": 0.0, "exact_match": hits1,
+            "exact_match_when_attempted": hits1, "token_f1": None,
+            "mean_latency_ms": (inference_s * 1000.0) / max(len(eval_pairs), 1),
+            "p95_latency_ms": None, "task_type": "entity_alignment",
+            "primary_metric": "hits_at_1", "primary_value": hits1,
+            "hits_at_1": hits1, "hits_at_3": hits3, "hits_at_10": hits10,
+            "mrr": mrr, "ECE": e_ece, "AURC": e_aurc, "n_bins_ece": 15,
+            "mean_conf": float(conf_norm.mean()), "method": "quest_kg_ea_reranked",
+            "dataset": dataset_name, "llm": "none", "encoder": encoder_name,
+            "seed": 0, "wallclock_s": round(wallclock, 1),
+            "limit": len(eval_pairs), "kg_subset": None, "tag": tag,
+            "candidate_pool_size": len(k2_ids_sorted),
+            "signature_strategy": "name + 1-hop in/out neighborhood (max 8 each)",
+            "reranker": "shared-anchor",
+            "rerank_top_n": rerank_top_n,
+            "rerank_alpha": rerank_alpha,
+        }
+        return out_json, df
+
+    # ---- Original cosine-only scoring path (when reranker is OFF) ----
     try:
         from tqdm import tqdm
         pbar = tqdm(range(0, len(eval_pairs), BATCH),
@@ -504,6 +676,12 @@ def main():
                     help="Enable seed-pair projection training (default OFF — empirically hurt on DBP-YG)")
     ap.add_argument("--encoder", default="sentence-transformers/all-MiniLM-L6-v2",
                     help="Encoder model; use multilingual variant for cross-lingual datasets")
+    ap.add_argument("--reranker", action="store_true",
+                    help="Enable shared-anchor reranker over top-N cosine candidates (MTransE/JAPE-style anchor propagation)")
+    ap.add_argument("--rerank_top_n", type=int, default=50,
+                    help="How many cosine top candidates to consider for reranking")
+    ap.add_argument("--rerank_alpha", type=float, default=0.5,
+                    help="Combination weight: alpha*cosine + (1-alpha)*shared_anchor_fraction")
     args = ap.parse_args()
 
     root = Path(args.root)
@@ -515,7 +693,10 @@ def main():
     out, df = run_one(data, args.dataset, args.n_sample, args.tag,
                        encoder_name=args.encoder,
                        propagate=args.propagate,
-                       train_projection_flag=args.projection)
+                       train_projection_flag=args.projection,
+                       reranker=args.reranker,
+                       rerank_top_n=args.rerank_top_n,
+                       rerank_alpha=args.rerank_alpha)
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
