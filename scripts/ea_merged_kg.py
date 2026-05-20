@@ -63,25 +63,68 @@ def build_structural_indexes(train_pairs, k2_nb):
     return seed_align, inv
 
 
+def k1_neighbors_k_hops(e1, k1_nb, hops: int) -> dict[int, int]:
+    """BFS k1 neighbors up to `hops` hops. Returns {neighbor_id: min_hop_distance}."""
+    if hops <= 0:
+        return {e1: 0}
+    dist = {e1: 0}
+    frontier = {e1}
+    for h in range(1, hops + 1):
+        new_frontier = set()
+        for n in frontier:
+            for nb in k1_nb.get(n, ()):
+                if nb not in dist:
+                    dist[nb] = h
+                    new_frontier.add(nb)
+        frontier = new_frontier
+        if not frontier:
+            break
+    return dist
+
+
 def structural_score_one(e1: int,
                           k1_nb: dict[int, set[int]],
                           seed_align: dict[int, int],
-                          inv: dict[int, set[int]]) -> Counter:
-    """Sparse counter: k2_entity_id -> shared-aligned-neighbor count for one e1."""
-    e1_K1_neighbors = k1_nb.get(e1, set())
-    partners = {seed_align[n] for n in e1_K1_neighbors if n in seed_align}
+                          inv: dict[int, set[int]],
+                          hops: int = 1,
+                          hop_decay: float = 0.5) -> Counter:
+    """Sparse counter: k2_entity_id -> shared-aligned-neighbor weight for one e1.
+
+    Now supports multi-hop K1 traversal. Each K1 neighbor at distance d contributes
+    weight hop_decay^(d-1). Aligned partner counts are weighted accordingly.
+    """
     counter: Counter = Counter()
-    if not partners:
+    if hops <= 1:
+        # Original 1-hop path (faster)
+        e1_K1_neighbors = k1_nb.get(e1, set())
+        partners = {seed_align[n] for n in e1_K1_neighbors if n in seed_align}
+        if not partners:
+            return counter
+        for p in partners:
+            for k2_cand in inv.get(p, ()):
+                counter[k2_cand] += 1.0
         return counter
-    for p in partners:
-        for k2_cand in inv.get(p, ()):
-            counter[k2_cand] += 1
+
+    # Multi-hop: BFS K1 neighbors, weight each contributing partner by hop_decay**dist
+    dist = k1_neighbors_k_hops(e1, k1_nb, hops)
+    # Strip self
+    dist.pop(e1, None)
+    if not dist:
+        return counter
+    for n, d in dist.items():
+        if n in seed_align:
+            p = seed_align[n]
+            w = hop_decay ** (d - 1)
+            for k2_cand in inv.get(p, ()):
+                counter[k2_cand] += w
     return counter
 
 
 def run_merged_kg(data: dict, dataset_name: str, encoder_name: str, tag: str,
                    n_sample: int | None = None, alpha: float = 0.5,
-                   propagate: bool = False) -> tuple[dict, pd.DataFrame]:
+                   propagate: bool = False,
+                   struct_hops: int = 1,
+                   hop_decay: float = 0.5) -> tuple[dict, pd.DataFrame]:
     t_total = time.perf_counter()
     print(f"[merged-kg] {dataset_name}: K1={len(data['ent1'])} K2={len(data['ent2'])} "
           f"train_pairs={len(data['train_pairs'])} test_pairs={len(data['test_pairs'])}")
@@ -167,7 +210,8 @@ def run_merged_kg(data: dict, dataset_name: str, encoder_name: str, tag: str,
         cos = a_t[i] @ k_t.T  # (|K2|,) on GPU
         cos01 = (cos + 1.0) / 2.0
         # Structural counter for this anchor
-        counter = structural_score_one(e1, k1_nb, seed_align, inv)
+        counter = structural_score_one(e1, k1_nb, seed_align, inv,
+                                         hops=struct_hops, hop_decay=hop_decay)
         # Compose hybrid score directly on GPU (sparse-add the counter)
         combined = alpha * cos01
         if counter:
@@ -238,6 +282,10 @@ def main():
     ap.add_argument("--alpha", type=float, default=0.5,
                     help="alpha * cosine + (1-alpha) * structural")
     ap.add_argument("--propagate", action="store_true")
+    ap.add_argument("--struct_hops", type=int, default=1,
+                    help="Multi-hop K1 traversal depth for structural channel")
+    ap.add_argument("--hop_decay", type=float, default=0.5,
+                    help="Per-hop decay for distance>1 contributions")
     ap.add_argument("--out_dir", default="results")
     args = ap.parse_args()
 
@@ -245,7 +293,9 @@ def main():
     data = load_dwy100k(root) if args.format == "dwy100k" else load_openea(root)
     out, df = run_merged_kg(data, args.dataset, args.encoder, args.tag,
                               n_sample=args.n_sample, alpha=args.alpha,
-                              propagate=args.propagate)
+                              propagate=args.propagate,
+                              struct_hops=args.struct_hops,
+                              hop_decay=args.hop_decay)
     out_dir = Path(args.out_dir); out_dir.mkdir(parents=True, exist_ok=True)
     json_p = out_dir / f"quest_kg_ea_merged__{args.dataset}__{args.tag}.json"
     csv_p  = out_dir / f"quest_kg_ea_merged__{args.dataset}__{args.tag}.csv"
