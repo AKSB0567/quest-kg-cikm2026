@@ -70,6 +70,46 @@ def parse_pairs(path: Path) -> list[tuple[int, int]]:
     return out
 
 
+def propagate_labels(ent2_orig: dict[int, str], ent1: dict[int, str],
+                      train_pairs: list[tuple[int, int]],
+                      triples2: list[tuple[int, int, int]],
+                      n_propagation_rounds: int = 1) -> dict[int, str]:
+    """Anchor-based label propagation for KGs where one side has opaque IDs.
+
+    1. For each (e1, e2) in train_pairs, copy label(e1) to e2 if e2 looks opaque
+       (i.e., starts with 'Q' followed by digits — Wikidata convention).
+    2. For each remaining opaque e2, gather labels from 1-hop neighbors that DO
+       have labels; concatenate them as a multi-sentence pseudo-label.
+    """
+    ent2 = dict(ent2_orig)
+    opaque = re.compile(r"^(Q|P)\d+$")
+
+    # Direct seed propagation
+    for e1, e2 in train_pairs:
+        if e2 in ent2 and opaque.match(ent2[e2]) and e1 in ent1:
+            ent2[e2] = ent1[e1]  # adopt K1 label
+
+    # Neighbor propagation (1 round by default)
+    for _ in range(n_propagation_rounds):
+        out_n: dict[int, list[int]] = {}
+        in_n: dict[int, list[int]] = {}
+        for h, _, t in triples2:
+            out_n.setdefault(h, []).append(t)
+            in_n.setdefault(t, []).append(h)
+        new_ent2 = dict(ent2)
+        for ent_id, lab in ent2.items():
+            if not opaque.match(lab):
+                continue
+            cand_labels = []
+            for n in (out_n.get(ent_id, []) + in_n.get(ent_id, []))[:8]:
+                if n in ent2 and not opaque.match(ent2[n]):
+                    cand_labels.append(ent2[n])
+            if cand_labels:
+                new_ent2[ent_id] = "neighbor_of " + ", ".join(cand_labels[:4])
+        ent2 = new_ent2
+    return ent2
+
+
 def build_signatures(ent_labels: dict[int, str], rel_labels: dict[int, str],
                       triples: list[tuple[int, int, int]],
                       max_neighbors: int = 8) -> dict[int, str]:
@@ -187,10 +227,20 @@ def load_openea(root: Path) -> dict:
 
 
 def run_one(data: dict, dataset_name: str, n_sample: int | None, tag: str,
-            encoder_name: str = "sentence-transformers/all-MiniLM-L6-v2") -> dict:
+            encoder_name: str = "sentence-transformers/all-MiniLM-L6-v2",
+            propagate: bool = False) -> dict:
     t_total = time.perf_counter()
     print(f"[ea] {dataset_name}: K1={len(data['ent1'])} K2={len(data['ent2'])} "
           f"train_pairs={len(data['train_pairs'])} test_pairs={len(data['test_pairs'])}")
+
+    if propagate:
+        opaque = re.compile(r"^(Q|P)\d+$")
+        n_before = sum(1 for v in data["ent2"].values() if opaque.match(v))
+        data["ent2"] = propagate_labels(
+            data["ent2"], data["ent1"], data["train_pairs"], data["triples2"]
+        )
+        n_after = sum(1 for v in data["ent2"].values() if opaque.match(v))
+        print(f"[ea] label propagation: opaque K2 labels {n_before} -> {n_after} ({n_before - n_after} replaced)")
 
     print("[ea] building signatures...")
     t = time.perf_counter()
@@ -331,6 +381,8 @@ def main():
                     help="number of test pairs to evaluate (None = all)")
     ap.add_argument("--tag", default="local-1080ti__symbolic__seed0")
     ap.add_argument("--out_dir", default="results")
+    ap.add_argument("--propagate", action="store_true",
+                    help="Anchor-based label propagation (use for KGs with opaque IDs e.g., Wikidata Q-numbers)")
     args = ap.parse_args()
 
     root = Path(args.root)
@@ -339,7 +391,7 @@ def main():
     else:
         data = load_openea(root)
 
-    out, df = run_one(data, args.dataset, args.n_sample, args.tag)
+    out, df = run_one(data, args.dataset, args.n_sample, args.tag, propagate=args.propagate)
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
