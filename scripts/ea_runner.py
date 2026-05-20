@@ -226,9 +226,50 @@ def load_openea(root: Path) -> dict:
     )
 
 
+def train_projection(anchor_embs: np.ndarray, target_embs: np.ndarray,
+                      n_epochs: int = 100, lr: float = 1e-3,
+                      hidden_dim: int = 384) -> "torch.nn.Module":
+    """Train a small MLP to project K1 (anchor) embeddings into K2 (target) space.
+
+    Loss = MSE + cosine-similarity (anchor-aware contrastive). Trained on seed
+    alignment pairs from sup_ent_ids. Mirrors what MTransE/BootEA do at the
+    embedding-alignment level, but on top of MiniLM features instead of from
+    scratch.
+    """
+    import torch.nn as nn
+    dim = anchor_embs.shape[1]
+    model = nn.Sequential(
+        nn.Linear(dim, hidden_dim), nn.LayerNorm(hidden_dim), nn.GELU(),
+        nn.Linear(hidden_dim, hidden_dim), nn.LayerNorm(hidden_dim), nn.GELU(),
+        nn.Linear(hidden_dim, dim),
+    ).cuda()
+    optim = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=1e-4)
+    a_t = torch.as_tensor(anchor_embs, dtype=torch.float32, device="cuda")
+    t_t = torch.as_tensor(target_embs, dtype=torch.float32, device="cuda")
+    # Pre-normalize for cosine
+    a_norm = torch.nn.functional.normalize(a_t, dim=1)
+    t_norm = torch.nn.functional.normalize(t_t, dim=1)
+    for ep in range(n_epochs):
+        pred = model(a_t)
+        pred_norm = torch.nn.functional.normalize(pred, dim=1)
+        # MSE on unnormalized; cosine sim loss on normalized
+        loss_mse = torch.nn.functional.mse_loss(pred, t_t)
+        loss_cos = (1.0 - (pred_norm * t_norm).sum(dim=1)).mean()
+        loss = 0.3 * loss_mse + loss_cos
+        optim.zero_grad(); loss.backward(); optim.step()
+        if ep == 0 or (ep + 1) % 20 == 0:
+            with torch.no_grad():
+                top1 = (pred_norm @ t_norm.T).argmax(dim=1)
+                acc = (top1 == torch.arange(len(a_t), device="cuda")).float().mean().item()
+            print(f"    proj epoch {ep+1:3d}: loss={loss.item():.4f} train-top1={acc:.3f}")
+    model.eval()
+    return model
+
+
 def run_one(data: dict, dataset_name: str, n_sample: int | None, tag: str,
             encoder_name: str = "sentence-transformers/all-MiniLM-L6-v2",
-            propagate: bool = False) -> dict:
+            propagate: bool = False,
+            train_projection_flag: bool = True) -> dict:
     t_total = time.perf_counter()
     print(f"[ea] {dataset_name}: K1={len(data['ent1'])} K2={len(data['ent2'])} "
           f"train_pairs={len(data['train_pairs'])} test_pairs={len(data['test_pairs'])}")
@@ -275,6 +316,30 @@ def run_one(data: dict, dataset_name: str, n_sample: int | None, tag: str,
     t = time.perf_counter()
     k2_emb = enc(k2_sigs)
     print(f"  encoded {len(k2_sigs)} K2 entities in {time.perf_counter()-t:.1f}s")
+
+    # Train projection K1 -> K2 on the seed alignment pairs (sup_ent_ids).
+    # Mirrors MTransE/BootEA's embedding-alignment step but starts from MiniLM
+    # features so it converges in ~30s instead of hours.
+    train_pairs_data = data["train_pairs"]
+    if train_projection_flag and len(train_pairs_data) > 100:
+        print(f"[ea] training projection on {len(train_pairs_data)} seed pairs...")
+        t = time.perf_counter()
+        train_e1_sigs = [sig1[e1] for e1, _ in train_pairs_data]
+        train_e2_sigs = [sig2[e2] for _, e2 in train_pairs_data]
+        # Encode only a sample (5000) of seed pairs to keep training fast
+        max_train = min(5000, len(train_e1_sigs))
+        train_idx = np.random.default_rng(0).choice(
+            len(train_e1_sigs), size=max_train, replace=False)
+        train_e1_embs = enc([train_e1_sigs[i] for i in train_idx])
+        train_e2_embs = enc([train_e2_sigs[i] for i in train_idx])
+        proj_model = train_projection(train_e1_embs, train_e2_embs, n_epochs=100)
+        print(f"  trained in {time.perf_counter()-t:.1f}s on {max_train} pairs")
+        # Apply projection to all anchor embeddings
+        with torch.no_grad():
+            anchor_t = torch.as_tensor(anchor_emb, dtype=torch.float32, device="cuda")
+            anchor_emb_proj = proj_model(anchor_t).cpu().numpy()
+        anchor_emb = anchor_emb_proj  # replace
+        print("[ea] projection applied to anchor embeddings")
 
     # GPU normalize + matmul in chunks
     a_t = torch.as_tensor(anchor_emb, dtype=torch.float32, device="cuda")
@@ -383,6 +448,10 @@ def main():
     ap.add_argument("--out_dir", default="results")
     ap.add_argument("--propagate", action="store_true",
                     help="Anchor-based label propagation (use for KGs with opaque IDs e.g., Wikidata Q-numbers)")
+    ap.add_argument("--projection", action="store_true",
+                    help="Enable seed-pair projection training (default OFF — empirically hurt on DBP-YG)")
+    ap.add_argument("--encoder", default="sentence-transformers/all-MiniLM-L6-v2",
+                    help="Encoder model; use multilingual variant for cross-lingual datasets")
     args = ap.parse_args()
 
     root = Path(args.root)
@@ -391,7 +460,10 @@ def main():
     else:
         data = load_openea(root)
 
-    out, df = run_one(data, args.dataset, args.n_sample, args.tag, propagate=args.propagate)
+    out, df = run_one(data, args.dataset, args.n_sample, args.tag,
+                       encoder_name=args.encoder,
+                       propagate=args.propagate,
+                       train_projection_flag=args.projection)
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
