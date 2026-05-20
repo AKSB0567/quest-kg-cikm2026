@@ -83,10 +83,17 @@ cells.append(code(
     "print('cwd:', os.getcwd())"
 ))
 
-cells.append(md("## 2. Install deps (peft + transformers + bitsandbytes + accelerate)"))
+cells.append(md(
+    "## 2. Install deps (peft + transformers + bitsandbytes + accelerate)\n\n"
+    "Pinning `bitsandbytes>=0.45` is critical: older versions (0.44.x) try to "
+    "import `triton.ops` which was removed in Triton 3.x (which is what Colab "
+    "ships now). The 0.45+ branch fixed this incompatibility."
+))
 cells.append(code(
     "!pip install -q --upgrade pip\n"
-    "!pip install -q transformers==4.46.3 peft==0.13.2 accelerate==1.1.1 bitsandbytes==0.44.1\n"
+    "# bitsandbytes 0.45+ is required -- older versions trigger 'triton.ops' import error\n"
+    "!pip install -q --upgrade 'bitsandbytes>=0.45.3'\n"
+    "!pip install -q 'transformers>=4.46.3' 'peft>=0.13.2' 'accelerate>=1.1.1'\n"
     "!pip install -q datasets sentence-transformers safetensors\n"
     "import torch\n"
     "p = torch.cuda.get_device_properties(0)\n"
